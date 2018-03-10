@@ -37,11 +37,13 @@ plus2 pc_plus2
 	.out(pc_plus2_out)
 );
 
+
+lc3b_word addr_adder_out_out_EX_MEM;
 mux2 pcmux
 (
 	.sel(branch_enable),
 	.a(pc_plus2_out),
-	.b(addr_adder_out_out),
+	.b(addr_adder_out_out_EX_MEM),
 	.f(pcmux_out)
 );
 
@@ -214,7 +216,6 @@ assign is_br_out_ID_EX = ctrl_out_ID_EX.is_br;
 
 // >>>>> EX/MEM PIPELINE <<<<< //
 lc3b_word pc_out_EX_MEM;
-lc3b_word addr_adder_out_out_EX_MEM;
 lc3b_reg dest_out_EX_MEM;
 lc3b_word alu_out_out_EX_MEM;
 lc3b_nzp nzp_out_EX_MEM;
