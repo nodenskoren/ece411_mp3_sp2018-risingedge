@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mp1
-Sat Mar 10 13:37:49 2018
+Sat Mar 10 15:28:19 2018
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -72,17 +72,17 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Sat Mar 10 13:37:48 2018       ;
+; Analysis & Synthesis Status   ; Successful - Sat Mar 10 15:28:19 2018       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp1                                         ;
-; Top-level Entity Name         ; mp1                                         ;
+; Top-level Entity Name         ; mp3                                         ;
 ; Family                        ; Stratix III                                 ;
 ; Logic utilization             ; N/A                                         ;
-;     Combinational ALUTs       ; 98                                          ;
+;     Combinational ALUTs       ; 99                                          ;
 ;     Memory ALUTs              ; 0                                           ;
-;     Dedicated logic registers ; 149                                         ;
-; Total registers               ; 149                                         ;
-; Total pins                    ; 88                                          ;
+;     Dedicated logic registers ; 148                                         ;
+; Total registers               ; 148                                         ;
+; Total pins                    ; 588                                         ;
 ; Total virtual pins            ; 0                                           ;
 ; Total block memory bits       ; 384                                         ;
 ; DSP block 18-bit elements     ; 0                                           ;
@@ -97,7 +97,7 @@ applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; EP3SE50F780C2      ;                    ;
-; Top-level entity name                                                           ; mp1                ; mp1                ;
+; Top-level entity name                                                           ; mp3                ; mp1                ;
 ; Family name                                                                     ; Stratix III        ; Cyclone IV GX      ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
@@ -202,12 +202,13 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                ; Library ;
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
+; mp3.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/koren3/ece411/mp3/mp3.sv                                              ;         ;
+; wishbone.sv                      ; yes             ; User SystemVerilog HDL File  ; /home/koren3/ece411/mp3/wishbone.sv                                         ;         ;
 ; lc3b_types.sv                    ; yes             ; User SystemVerilog HDL File  ; /home/koren3/ece411/mp3/lc3b_types.sv                                       ;         ;
 ; adj.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/koren3/ece411/mp3/adj.sv                                              ;         ;
 ; alu.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/koren3/ece411/mp3/alu.sv                                              ;         ;
 ; datapath.sv                      ; yes             ; User SystemVerilog HDL File  ; /home/koren3/ece411/mp3/datapath.sv                                         ;         ;
 ; gencc.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/koren3/ece411/mp3/gencc.sv                                            ;         ;
-; mp1.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/koren3/ece411/mp3/mp1.sv                                              ;         ;
 ; plus2.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/koren3/ece411/mp3/plus2.sv                                            ;         ;
 ; regfile.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/koren3/ece411/mp3/regfile.sv                                          ;         ;
 ; register.sv                      ; yes             ; User SystemVerilog HDL File  ; /home/koren3/ece411/mp3/register.sv                                         ;         ;
@@ -234,52 +235,52 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+-----------------------------------------------+-----------+
-; Resource                                      ; Usage     ;
-+-----------------------------------------------+-----------+
-; Estimated ALUTs Used                          ; 98        ;
-;     -- Combinational ALUTs                    ; 98        ;
-;     -- Memory ALUTs                           ; 0         ;
-;     -- LUT_REGs                               ; 0         ;
-; Dedicated logic registers                     ; 149       ;
-;                                               ;           ;
-; Estimated ALUTs Unavailable                   ; 15        ;
-;     -- Due to unpartnered combinational logic ; 15        ;
-;     -- Due to Memory ALUTs                    ; 0         ;
-;                                               ;           ;
-; Total combinational functions                 ; 98        ;
-; Combinational ALUT usage by number of inputs  ;           ;
-;     -- 7 input functions                      ; 15        ;
-;     -- 6 input functions                      ; 19        ;
-;     -- 5 input functions                      ; 5         ;
-;     -- 4 input functions                      ; 25        ;
-;     -- <=3 input functions                    ; 34        ;
-;                                               ;           ;
-; Combinational ALUTs by mode                   ;           ;
-;     -- normal mode                            ; 52        ;
-;     -- extended LUT mode                      ; 15        ;
-;     -- arithmetic mode                        ; 31        ;
-;     -- shared arithmetic mode                 ; 0         ;
-;                                               ;           ;
-; Estimated ALUT/register pairs used            ; 176       ;
-;                                               ;           ;
-; Total registers                               ; 149       ;
-;     -- Dedicated logic registers              ; 149       ;
-;     -- I/O registers                          ; 0         ;
-;     -- LUT_REGs                               ; 0         ;
-;                                               ;           ;
-;                                               ;           ;
-; I/O pins                                      ; 88        ;
-; Total MLAB memory bits                        ; 0         ;
-; Total block memory bits                       ; 384       ;
-; DSP block 18-bit elements                     ; 0         ;
-; Maximum fan-out node                          ; clk~input ;
-; Maximum fan-out                               ; 197       ;
-; Total fan-out                                 ; 1328      ;
-; Average fan-out                               ; 2.82      ;
-+-----------------------------------------------+-----------+
++------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                      ;
++-----------------------------------------------+------------------+
+; Resource                                      ; Usage            ;
++-----------------------------------------------+------------------+
+; Estimated ALUTs Used                          ; 99               ;
+;     -- Combinational ALUTs                    ; 99               ;
+;     -- Memory ALUTs                           ; 0                ;
+;     -- LUT_REGs                               ; 0                ;
+; Dedicated logic registers                     ; 148              ;
+;                                               ;                  ;
+; Estimated ALUTs Unavailable                   ; 15               ;
+;     -- Due to unpartnered combinational logic ; 15               ;
+;     -- Due to Memory ALUTs                    ; 0                ;
+;                                               ;                  ;
+; Total combinational functions                 ; 99               ;
+; Combinational ALUT usage by number of inputs  ;                  ;
+;     -- 7 input functions                      ; 15               ;
+;     -- 6 input functions                      ; 19               ;
+;     -- 5 input functions                      ; 5                ;
+;     -- 4 input functions                      ; 25               ;
+;     -- <=3 input functions                    ; 35               ;
+;                                               ;                  ;
+; Combinational ALUTs by mode                   ;                  ;
+;     -- normal mode                            ; 53               ;
+;     -- extended LUT mode                      ; 15               ;
+;     -- arithmetic mode                        ; 31               ;
+;     -- shared arithmetic mode                 ; 0                ;
+;                                               ;                  ;
+; Estimated ALUT/register pairs used            ; 176              ;
+;                                               ;                  ;
+; Total registers                               ; 148              ;
+;     -- Dedicated logic registers              ; 148              ;
+;     -- I/O registers                          ; 0                ;
+;     -- LUT_REGs                               ; 0                ;
+;                                               ;                  ;
+;                                               ;                  ;
+; I/O pins                                      ; 588              ;
+; Total MLAB memory bits                        ; 0                ;
+; Total block memory bits                       ; 384              ;
+; DSP block 18-bit elements                     ; 0                ;
+; Maximum fan-out node                          ; memory.CLK~input ;
+; Maximum fan-out                               ; 196              ;
+; Total fan-out                                 ; 1829             ;
+; Average fan-out                               ; 1.24             ;
++-----------------------------------------------+------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -287,27 +288,27 @@ applicable agreement for further details.
 +----------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                             ; Library Name ;
 +----------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+--------------+
-; |mp1                                         ; 98 (0)            ; 149 (0)      ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 88   ; 0            ; |mp1                                                                                            ; work         ;
-;    |control_rom:control_rom|                 ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|control_rom:control_rom                                                                    ; work         ;
-;    |datapath:the_datapath|                   ; 90 (2)            ; 149 (0)      ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:the_datapath                                                                      ; work         ;
-;       |EX_MEM_pipeline:EX_MEM_pipeline|      ; 0 (0)             ; 40 (40)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline                                      ; work         ;
-;       |ID_EX_pipeline:ID_EX_pipeline|        ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline                                        ; work         ;
-;       |IF_ID_pipeline:IF_ID_pipeline|        ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:the_datapath|IF_ID_pipeline:IF_ID_pipeline                                        ; work         ;
-;       |MEM_WB_pipeline:MEM_WB_pipeline|      ; 0 (0)             ; 20 (20)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:the_datapath|MEM_WB_pipeline:MEM_WB_pipeline                                      ; work         ;
-;       |alu:alu|                              ; 32 (32)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:the_datapath|alu:alu                                                              ; work         ;
-;       |gencc:the_gencc|                      ; 7 (7)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:the_datapath|gencc:the_gencc                                                      ; work         ;
-;       |mux2:sr2mux|                          ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:the_datapath|mux2:sr2mux                                                          ; work         ;
-;       |mux4:regfilemux|                      ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:the_datapath|mux4:regfilemux                                                      ; work         ;
-;       |plus2:pc_plus2|                       ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:the_datapath|plus2:pc_plus2                                                       ; work         ;
-;       |regfile:regfile|                      ; 2 (2)             ; 23 (23)      ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:the_datapath|regfile:regfile                                                      ; work         ;
-;          |altsyncram:data_rtl_0|             ; 0 (0)             ; 0 (0)        ; 128               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_0                                ; work         ;
-;             |altsyncram_b7n1:auto_generated| ; 0 (0)             ; 0 (0)        ; 128               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_0|altsyncram_b7n1:auto_generated ; work         ;
-;          |altsyncram:data_rtl_1|             ; 0 (0)             ; 0 (0)        ; 128               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_1                                ; work         ;
-;             |altsyncram_b7n1:auto_generated| ; 0 (0)             ; 0 (0)        ; 128               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_1|altsyncram_b7n1:auto_generated ; work         ;
-;          |altsyncram:data_rtl_2|             ; 0 (0)             ; 0 (0)        ; 128               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2                                ; work         ;
-;             |altsyncram_b7n1:auto_generated| ; 0 (0)             ; 0 (0)        ; 128               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2|altsyncram_b7n1:auto_generated ; work         ;
-;       |register:cc|                          ; 0 (0)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:the_datapath|register:cc                                                          ; work         ;
-;       |register:program_counter|             ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:the_datapath|register:program_counter                                             ; work         ;
+; |mp3                                         ; 99 (1)            ; 148 (0)      ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 588  ; 0            ; |mp3                                                                                            ; work         ;
+;    |control_rom:control_rom|                 ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|control_rom:control_rom                                                                    ; work         ;
+;    |datapath:the_datapath|                   ; 90 (2)            ; 148 (0)      ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath                                                                      ; work         ;
+;       |EX_MEM_pipeline:EX_MEM_pipeline|      ; 0 (0)             ; 39 (39)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline                                      ; work         ;
+;       |ID_EX_pipeline:ID_EX_pipeline|        ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline                                        ; work         ;
+;       |IF_ID_pipeline:IF_ID_pipeline|        ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|IF_ID_pipeline:IF_ID_pipeline                                        ; work         ;
+;       |MEM_WB_pipeline:MEM_WB_pipeline|      ; 0 (0)             ; 20 (20)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|MEM_WB_pipeline:MEM_WB_pipeline                                      ; work         ;
+;       |alu:alu|                              ; 32 (32)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|alu:alu                                                              ; work         ;
+;       |gencc:the_gencc|                      ; 7 (7)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|gencc:the_gencc                                                      ; work         ;
+;       |mux2:sr2mux|                          ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|mux2:sr2mux                                                          ; work         ;
+;       |mux4:regfilemux|                      ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|mux4:regfilemux                                                      ; work         ;
+;       |plus2:pc_plus2|                       ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|plus2:pc_plus2                                                       ; work         ;
+;       |regfile:regfile|                      ; 2 (2)             ; 23 (23)      ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|regfile:regfile                                                      ; work         ;
+;          |altsyncram:data_rtl_0|             ; 0 (0)             ; 0 (0)        ; 128               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_0                                ; work         ;
+;             |altsyncram_b7n1:auto_generated| ; 0 (0)             ; 0 (0)        ; 128               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_0|altsyncram_b7n1:auto_generated ; work         ;
+;          |altsyncram:data_rtl_1|             ; 0 (0)             ; 0 (0)        ; 128               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_1                                ; work         ;
+;             |altsyncram_b7n1:auto_generated| ; 0 (0)             ; 0 (0)        ; 128               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_1|altsyncram_b7n1:auto_generated ; work         ;
+;          |altsyncram:data_rtl_2|             ; 0 (0)             ; 0 (0)        ; 128               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2                                ; work         ;
+;             |altsyncram_b7n1:auto_generated| ; 0 (0)             ; 0 (0)        ; 128               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2|altsyncram_b7n1:auto_generated ; work         ;
+;       |register:cc|                          ; 0 (0)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|register:cc                                                          ; work         ;
+;       |register:program_counter|             ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|register:program_counter                                             ; work         ;
 +----------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -323,63 +324,64 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                             ;
-+----------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
-; Register name                                                              ; Reason for Removal                                                                ;
-+----------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[0]       ; Stuck at GND due to stuck port data_in                                            ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|offset6[0]             ; Stuck at GND due to stuck port data_in                                            ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.alumux_sel[1]     ; Stuck at GND due to stuck port data_in                                            ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.regfilemux_sel[1] ; Stuck at GND due to stuck port data_in                                            ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.aluop[2,3]        ; Stuck at GND due to stuck port data_in                                            ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|regfilemux_sel[1]    ; Stuck at GND due to stuck port data_in                                            ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[1..15]   ; Lost fanout                                                                       ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[0]                ; Lost fanout                                                                       ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[0]                  ; Lost fanout                                                                       ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[1]                ; Lost fanout                                                                       ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[1]                  ; Lost fanout                                                                       ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[2]                ; Lost fanout                                                                       ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[2]                  ; Lost fanout                                                                       ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[3]                ; Lost fanout                                                                       ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[3]                  ; Lost fanout                                                                       ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[4]                ; Lost fanout                                                                       ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[4]                  ; Lost fanout                                                                       ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[5]                ; Lost fanout                                                                       ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[5]                  ; Lost fanout                                                                       ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[6]                ; Lost fanout                                                                       ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[6]                  ; Lost fanout                                                                       ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[7]                ; Lost fanout                                                                       ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[7]                  ; Lost fanout                                                                       ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[8]                ; Lost fanout                                                                       ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[8]                  ; Lost fanout                                                                       ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[9]                ; Lost fanout                                                                       ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[9]                  ; Lost fanout                                                                       ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[10]               ; Lost fanout                                                                       ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[10]                 ; Lost fanout                                                                       ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[11]               ; Lost fanout                                                                       ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[11]                 ; Lost fanout                                                                       ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[12]               ; Lost fanout                                                                       ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[12]                 ; Lost fanout                                                                       ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[13]               ; Lost fanout                                                                       ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[13]                 ; Lost fanout                                                                       ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[14]               ; Lost fanout                                                                       ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[14]                 ; Lost fanout                                                                       ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[15]               ; Lost fanout                                                                       ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[15]                 ; Lost fanout                                                                       ;
-; datapath:the_datapath|register:program_counter|data[0]                     ; Stuck at GND due to stuck port data_in                                            ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|nzp[0]                 ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|dest[0]           ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|nzp[1]                 ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|dest[1]           ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|nzp[2]                 ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|dest[2]           ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|offset6[7..15]         ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|offset6[6]        ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.regfilemux_sel[0] ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.mem_read     ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.load_cc           ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.load_regfile ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|load_cc              ; Merged with datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|load_regfile    ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|dest[0]              ; Merged with datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|nzp[0]          ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|dest[1]              ; Merged with datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|nzp[1]          ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|dest[2]              ; Merged with datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|nzp[2]          ;
-; Total Number of Removed Registers = 73                                     ;                                                                                   ;
-+----------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                               ;
++----------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
+; Register name                                                              ; Reason for Removal                                                                  ;
++----------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[0]       ; Stuck at GND due to stuck port data_in                                              ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|offset6[0]             ; Stuck at GND due to stuck port data_in                                              ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.alumux_sel[1]     ; Stuck at GND due to stuck port data_in                                              ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.regfilemux_sel[1] ; Stuck at GND due to stuck port data_in                                              ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.aluop[2,3]        ; Stuck at GND due to stuck port data_in                                              ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|regfilemux_sel[1]    ; Stuck at GND due to stuck port data_in                                              ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[1..15]   ; Lost fanout                                                                         ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[0]                ; Lost fanout                                                                         ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[0]                  ; Lost fanout                                                                         ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[1]                ; Lost fanout                                                                         ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[1]                  ; Lost fanout                                                                         ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[2]                ; Lost fanout                                                                         ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[2]                  ; Lost fanout                                                                         ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[3]                ; Lost fanout                                                                         ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[3]                  ; Lost fanout                                                                         ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[4]                ; Lost fanout                                                                         ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[4]                  ; Lost fanout                                                                         ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[5]                ; Lost fanout                                                                         ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[5]                  ; Lost fanout                                                                         ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[6]                ; Lost fanout                                                                         ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[6]                  ; Lost fanout                                                                         ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[7]                ; Lost fanout                                                                         ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[7]                  ; Lost fanout                                                                         ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[8]                ; Lost fanout                                                                         ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[8]                  ; Lost fanout                                                                         ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[9]                ; Lost fanout                                                                         ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[9]                  ; Lost fanout                                                                         ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[10]               ; Lost fanout                                                                         ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[10]                 ; Lost fanout                                                                         ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[11]               ; Lost fanout                                                                         ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[11]                 ; Lost fanout                                                                         ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[12]               ; Lost fanout                                                                         ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[12]                 ; Lost fanout                                                                         ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[13]               ; Lost fanout                                                                         ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[13]                 ; Lost fanout                                                                         ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[14]               ; Lost fanout                                                                         ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[14]                 ; Lost fanout                                                                         ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[15]               ; Lost fanout                                                                         ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[15]                 ; Lost fanout                                                                         ;
+; datapath:the_datapath|register:program_counter|data[0]                     ; Stuck at GND due to stuck port data_in                                              ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|nzp[0]                 ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|dest[0]             ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|nzp[1]                 ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|dest[1]             ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|nzp[2]                 ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|dest[2]             ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|offset6[7..15]         ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|offset6[6]          ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.regfilemux_sel[0] ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.mem_read       ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.load_cc           ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.load_regfile   ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|mem_read             ; Merged with datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|regfilemux_sel[0] ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|load_cc              ; Merged with datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|load_regfile      ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|dest[0]              ; Merged with datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|nzp[0]            ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|dest[1]              ; Merged with datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|nzp[1]            ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|dest[2]              ; Merged with datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|nzp[2]            ;
+; Total Number of Removed Registers = 74                                     ;                                                                                     ;
++----------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -435,7 +437,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 149   ;
+; Total registers                              ; 148   ;
 ; Number of registers using Synchronous Clear  ; 15    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -492,8 +494,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; Yes        ; |mp1|datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|sr2[0]       ;
-; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; Yes        ; |mp1|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|alu_out[9] ;
+; 3:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3|datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|sr2[12]      ;
+; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|alu_out[8] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
 
 
@@ -938,9 +940,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
-    Info: Processing started: Sat Mar 10 13:37:43 2018
+    Info: Processing started: Sat Mar 10 15:28:12 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp1 -c mp1
 Info (11104): Parallel Compilation has detected 24 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 12 of the 12 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file mp3.sv
+    Info (12023): Found entity 1: mp3
+Info (12021): Found 1 design units, including 1 entities, in source file magic_memory_dual_port.sv
+    Info (12023): Found entity 1: magic_memory
+Info (12021): Found 1 design units, including 1 entities, in source file wishbone.sv
+    Info (12023): Found entity 1: wishbone
 Info (12021): Found 1 design units, including 0 entities, in source file lc3b_types.sv
     Info (12022): Found design unit 1: lc3b_types (SystemVerilog)
 Info (12021): Found 1 design units, including 1 entities, in source file adj.sv
@@ -953,8 +961,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file gencc.s
     Info (12023): Found entity 1: gencc
 Info (12021): Found 1 design units, including 1 entities, in source file ir.sv
     Info (12023): Found entity 1: ir
-Info (12021): Found 1 design units, including 1 entities, in source file mp1.sv
-    Info (12023): Found entity 1: mp1
 Info (12021): Found 1 design units, including 1 entities, in source file plus2.sv
     Info (12023): Found entity 1: plus2
 Info (12021): Found 1 design units, including 1 entities, in source file regfile.sv
@@ -995,9 +1001,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file MEM_WB_
     Info (12023): Found entity 1: MEM_WB_pipeline
 Info (12021): Found 1 design units, including 1 entities, in source file control_rom.sv
     Info (12023): Found entity 1: control_rom
-Info (12127): Elaborating entity "mp1" for the top level hierarchy
+Info (12127): Elaborating entity "mp3" for the top level hierarchy
 Info (12128): Elaborating entity "datapath" for hierarchy "datapath:the_datapath"
-Warning (10034): Output port "mem_byte_enable" at datapath.sv(12) has no driver
 Info (12128): Elaborating entity "plus2" for hierarchy "datapath:the_datapath|plus2:pc_plus2"
 Info (12128): Elaborating entity "mux2" for hierarchy "datapath:the_datapath|mux2:pcmux"
 Info (12128): Elaborating entity "register" for hierarchy "datapath:the_datapath|register:program_counter"
@@ -1087,26 +1092,525 @@ Info (12133): Instantiated megafunction "datapath:the_datapath|regfile:regfile|a
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_b7n1.tdf
     Info (12023): Found entity 1: altsyncram_b7n1
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "mem_byte_enable[0]" is stuck at GND
-    Warning (13410): Pin "mem_byte_enable[1]" is stuck at GND
-    Warning (13410): Pin "ifetch_read" is stuck at VCC
-    Warning (13410): Pin "ifetch_address[0]" is stuck at GND
+    Warning (13410): Pin "ifetch.ADR[0]" is stuck at GND
+    Warning (13410): Pin "ifetch.SEL[0]" is stuck at GND
+    Warning (13410): Pin "ifetch.SEL[1]" is stuck at GND
+    Warning (13410): Pin "ifetch.SEL[2]" is stuck at GND
+    Warning (13410): Pin "ifetch.SEL[3]" is stuck at GND
+    Warning (13410): Pin "ifetch.SEL[4]" is stuck at GND
+    Warning (13410): Pin "ifetch.SEL[5]" is stuck at GND
+    Warning (13410): Pin "ifetch.SEL[6]" is stuck at GND
+    Warning (13410): Pin "ifetch.SEL[7]" is stuck at GND
+    Warning (13410): Pin "ifetch.SEL[8]" is stuck at GND
+    Warning (13410): Pin "ifetch.SEL[9]" is stuck at GND
+    Warning (13410): Pin "ifetch.SEL[10]" is stuck at GND
+    Warning (13410): Pin "ifetch.SEL[11]" is stuck at GND
+    Warning (13410): Pin "ifetch.SEL[12]" is stuck at GND
+    Warning (13410): Pin "ifetch.SEL[13]" is stuck at GND
+    Warning (13410): Pin "ifetch.SEL[14]" is stuck at GND
+    Warning (13410): Pin "ifetch.SEL[15]" is stuck at GND
+    Warning (13410): Pin "ifetch.WE" is stuck at GND
+    Warning (13410): Pin "ifetch.STB" is stuck at VCC
+    Warning (13410): Pin "ifetch.CYC" is stuck at VCC
+    Warning (13410): Pin "ifetch.DAT_M[0]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[1]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[2]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[3]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[4]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[5]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[6]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[7]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[8]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[9]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[10]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[11]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[12]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[13]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[14]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[15]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[16]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[17]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[18]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[19]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[20]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[21]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[22]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[23]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[24]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[25]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[26]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[27]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[28]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[29]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[30]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[31]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[32]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[33]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[34]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[35]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[36]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[37]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[38]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[39]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[40]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[41]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[42]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[43]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[44]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[45]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[46]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[47]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[48]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[49]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[50]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[51]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[52]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[53]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[54]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[55]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[56]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[57]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[58]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[59]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[60]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[61]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[62]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[63]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[64]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[65]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[66]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[67]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[68]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[69]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[70]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[71]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[72]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[73]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[74]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[75]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[76]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[77]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[78]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[79]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[80]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[81]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[82]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[83]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[84]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[85]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[86]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[87]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[88]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[89]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[90]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[91]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[92]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[93]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[94]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[95]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[96]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[97]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[98]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[99]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[100]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[101]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[102]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[103]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[104]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[105]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[106]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[107]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[108]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[109]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[110]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[111]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[112]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[113]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[114]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[115]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[116]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[117]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[118]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[119]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[120]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[121]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[122]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[123]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[124]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[125]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[126]" is stuck at GND
+    Warning (13410): Pin "ifetch.DAT_M[127]" is stuck at GND
+    Warning (13410): Pin "memory.SEL[0]" is stuck at GND
+    Warning (13410): Pin "memory.SEL[1]" is stuck at GND
+    Warning (13410): Pin "memory.SEL[2]" is stuck at GND
+    Warning (13410): Pin "memory.SEL[3]" is stuck at GND
+    Warning (13410): Pin "memory.SEL[4]" is stuck at GND
+    Warning (13410): Pin "memory.SEL[5]" is stuck at GND
+    Warning (13410): Pin "memory.SEL[6]" is stuck at GND
+    Warning (13410): Pin "memory.SEL[7]" is stuck at GND
+    Warning (13410): Pin "memory.SEL[8]" is stuck at GND
+    Warning (13410): Pin "memory.SEL[9]" is stuck at GND
+    Warning (13410): Pin "memory.SEL[10]" is stuck at GND
+    Warning (13410): Pin "memory.SEL[11]" is stuck at GND
+    Warning (13410): Pin "memory.SEL[12]" is stuck at GND
+    Warning (13410): Pin "memory.SEL[13]" is stuck at GND
+    Warning (13410): Pin "memory.SEL[14]" is stuck at GND
+    Warning (13410): Pin "memory.SEL[15]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[16]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[17]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[18]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[19]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[20]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[21]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[22]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[23]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[24]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[25]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[26]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[27]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[28]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[29]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[30]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[31]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[32]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[33]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[34]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[35]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[36]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[37]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[38]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[39]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[40]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[41]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[42]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[43]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[44]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[45]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[46]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[47]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[48]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[49]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[50]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[51]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[52]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[53]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[54]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[55]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[56]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[57]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[58]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[59]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[60]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[61]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[62]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[63]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[64]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[65]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[66]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[67]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[68]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[69]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[70]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[71]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[72]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[73]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[74]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[75]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[76]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[77]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[78]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[79]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[80]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[81]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[82]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[83]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[84]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[85]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[86]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[87]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[88]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[89]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[90]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[91]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[92]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[93]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[94]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[95]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[96]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[97]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[98]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[99]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[100]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[101]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[102]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[103]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[104]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[105]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[106]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[107]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[108]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[109]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[110]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[111]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[112]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[113]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[114]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[115]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[116]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[117]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[118]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[119]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[120]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[121]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[122]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[123]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[124]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[125]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[126]" is stuck at GND
+    Warning (13410): Pin "memory.DAT_M[127]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 47 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "mem_resp"
-    Warning (15610): No output dependent on input pin "ifetch_resp"
-Info (21057): Implemented 323 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 35 input pins
-    Info (21059): Implemented 53 output pins
+Warning (21074): Design contains 229 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "ifetch.RTY"
+    Warning (15610): No output dependent on input pin "ifetch.ACK"
+    Warning (15610): No output dependent on input pin "ifetch.CLK"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[16]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[17]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[18]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[19]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[20]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[21]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[22]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[23]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[24]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[25]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[26]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[27]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[28]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[29]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[30]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[31]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[32]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[33]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[34]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[35]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[36]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[37]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[38]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[39]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[40]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[41]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[42]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[43]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[44]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[45]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[46]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[47]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[48]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[49]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[50]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[51]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[52]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[53]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[54]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[55]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[56]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[57]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[58]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[59]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[60]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[61]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[62]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[63]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[64]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[65]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[66]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[67]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[68]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[69]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[70]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[71]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[72]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[73]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[74]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[75]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[76]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[77]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[78]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[79]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[80]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[81]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[82]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[83]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[84]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[85]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[86]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[87]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[88]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[89]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[90]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[91]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[92]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[93]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[94]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[95]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[96]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[97]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[98]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[99]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[100]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[101]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[102]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[103]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[104]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[105]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[106]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[107]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[108]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[109]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[110]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[111]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[112]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[113]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[114]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[115]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[116]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[117]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[118]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[119]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[120]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[121]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[122]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[123]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[124]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[125]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[126]"
+    Warning (15610): No output dependent on input pin "ifetch.DAT_S[127]"
+    Warning (15610): No output dependent on input pin "memory.RTY"
+    Warning (15610): No output dependent on input pin "memory.ACK"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[16]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[17]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[18]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[19]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[20]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[21]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[22]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[23]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[24]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[25]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[26]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[27]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[28]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[29]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[30]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[31]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[32]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[33]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[34]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[35]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[36]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[37]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[38]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[39]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[40]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[41]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[42]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[43]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[44]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[45]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[46]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[47]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[48]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[49]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[50]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[51]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[52]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[53]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[54]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[55]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[56]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[57]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[58]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[59]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[60]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[61]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[62]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[63]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[64]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[65]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[66]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[67]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[68]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[69]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[70]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[71]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[72]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[73]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[74]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[75]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[76]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[77]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[78]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[79]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[80]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[81]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[82]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[83]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[84]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[85]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[86]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[87]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[88]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[89]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[90]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[91]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[92]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[93]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[94]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[95]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[96]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[97]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[98]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[99]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[100]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[101]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[102]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[103]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[104]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[105]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[106]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[107]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[108]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[109]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[110]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[111]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[112]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[113]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[114]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[115]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[116]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[117]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[118]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[119]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[120]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[121]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[122]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[123]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[124]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[125]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[126]"
+    Warning (15610): No output dependent on input pin "memory.DAT_S[127]"
+Info (21057): Implemented 823 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 262 input pins
+    Info (21059): Implemented 326 output pins
     Info (21061): Implemented 187 logic cells
     Info (21064): Implemented 48 RAM segments
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 486 megabytes
-    Info: Processing ended: Sat Mar 10 13:37:49 2018
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:04
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 508 warnings
+    Info: Peak virtual memory: 483 megabytes
+    Info: Processing ended: Sat Mar 10 15:28:19 2018
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:05
 
 

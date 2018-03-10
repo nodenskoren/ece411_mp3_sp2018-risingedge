@@ -3,14 +3,14 @@ import lc3b_types::*;
 module datapath
 (
 	input clk,
-	input lc3b_word mem_rdata,
+	input lc3b_line mem_rdata,
 	input logic mem_resp,
 	output logic mem_read,
 	output logic mem_write,
 	output lc3b_word mem_wdata,
 	output lc3b_word mem_address,
 	output logic [1:0] mem_byte_enable,
-	input lc3b_word ifetch_rdata,
+	input lc3b_line ifetch_rdata,
 	input logic ifetch_resp,
 	output logic ifetch_read,
 	output lc3b_word ifetch_address,
@@ -21,6 +21,8 @@ module datapath
 	input logic offset_sel,
 	input logic sr2mux_sel
 );
+
+assign mem_byte_enable = 2'b00;
 
 /* PC */
 lc3b_word pc;
@@ -56,7 +58,7 @@ lc3b_word instruction;
 IF_ID_pipeline IF_ID_pipeline
 (
 	.clk,
-	.instruction_in(ifetch_rdata),
+	.instruction_in(ifetch_rdata[15:0]),
 	.instruction_out(instruction)
 );
 // >>>>> IF/ID PIPELINE <<<<< //
@@ -254,7 +256,7 @@ mux4 regfilemux
 (
     .sel(regfilemux_sel_EX_MEM),
     .a(alu_out_out_EX_MEM),
-	 .b(mem_rdata),
+	 .b(mem_rdata[15:0]),
 	 .c(pc_out_EX_MEM),
 	 .d(16'h0000),
     .f(regfilemux_out)
