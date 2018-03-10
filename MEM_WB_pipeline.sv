@@ -1,3 +1,5 @@
+import lc3b_types::*;
+
 module MEM_WB_pipeline
 (
 	input clk,

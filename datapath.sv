@@ -7,9 +7,9 @@ module datapath
 	input logic mem_resp,
 	output logic mem_read,
 	output logic mem_write,
-	output lc3b_word mem_wdata,
+	output lc3b_c_line mem_wdata,
 	output lc3b_word mem_address,
-	output logic [1:0] mem_byte_enable,
+	output lc3b_word mem_sel,
 	input lc3b_line ifetch_rdata,
 	input logic ifetch_resp,
 	output logic ifetch_read,
@@ -22,7 +22,8 @@ module datapath
 	input logic sr2mux_sel
 );
 
-assign mem_byte_enable = 2'b00;
+logic [1:0] mem_byte_enable;
+assign mem_byte_enable = 2'b11;
 
 /* PC */
 lc3b_word pc;
@@ -51,14 +52,23 @@ register program_counter
 	.in(pcmux_out),
 	.out(pc)
 );
-assign ifetch_address = pc;
+assign ifetch_address = pc[15:4];
 assign ifetch_read = 1'b1;
+
+lc3b_word ifetch_word_out;
+line_to_word ifetch_line_to_word
+(
+	.in(ifetch_rdata),
+	.offset(pc[3:0]),
+	.out(ifetch_word_out)
+);
+
 // >>>>> IF/ID PIPELINE <<<<< //
 lc3b_word instruction;
 IF_ID_pipeline IF_ID_pipeline
 (
 	.clk,
-	.instruction_in(ifetch_rdata[15:0]),
+	.instruction_in(ifetch_word_out),
 	.instruction_out(instruction)
 );
 // >>>>> IF/ID PIPELINE <<<<< //
@@ -248,15 +258,30 @@ EX_MEM_pipeline EX_MEM_pipeline
 
 assign mem_read = mem_read_EX_MEM;
 assign mem_write = mem_write_EX_MEM;
-assign mem_address = alu_out_out_EX_MEM;
-assign mem_wdata = dest_data_out_EX_MEM;
+assign mem_address = alu_out_out_EX_MEM[15:4];
+
+lc3b_word memory_word_out;
+line_to_word memory_line_to_word
+(
+	.in(mem_rdata),
+	.offset(alu_out_out_EX_MEM[3:0]),
+	.out(memory_word_out)
+);
+set_sel set_sel
+(
+	.mem_wdata_word(dest_data_out_EX_MEM),
+	.offset(alu_out_out_EX_MEM[3:0]),
+	.mem_byte_enable(mem_byte_enable),
+	.out(mem_wdata),
+	.mem_sel(mem_sel)
+);
 
 lc3b_word regfilemux_out;
 mux4 regfilemux
 (
     .sel(regfilemux_sel_EX_MEM),
     .a(alu_out_out_EX_MEM),
-	 .b(mem_rdata[15:0]),
+	 .b(memory_word_out),
 	 .c(pc_out_EX_MEM),
 	 .d(16'h0000),
     .f(regfilemux_out)

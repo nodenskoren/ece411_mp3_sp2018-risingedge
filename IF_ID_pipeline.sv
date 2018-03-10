@@ -1,3 +1,5 @@
+import lc3b_types::*;
+
 module IF_ID_pipeline
 (
 	input clk,

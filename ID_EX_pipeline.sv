@@ -1,3 +1,5 @@
+import lc3b_types::*;
+
 module ID_EX_pipeline
 (
 	input clk,

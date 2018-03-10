@@ -1,3 +1,6 @@
+import lc3b_types::*;
+
+
 module EX_MEM_pipeline
 (
 	input clk,
