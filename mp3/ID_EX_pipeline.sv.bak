@@ -1,0 +1,16 @@
+module ID_EX_pipeline
+(
+	input clk,
+	input lc3b_control_word ctrl_in,
+	output lc3b_control_word ctrl_out
+);
+
+lc3b_control_word ctrl;
+
+always_ff @(posedge clk)
+begin
+	ctrl <= ctrl_in;
+	ctrl_out <= ctrl;
+end
+
+endmodule : ID_EX_pipeline

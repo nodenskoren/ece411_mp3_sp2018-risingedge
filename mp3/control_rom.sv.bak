@@ -1,0 +1,20 @@
+import lc3b_types::*;
+
+module control_rom
+(
+	input lc3b_opcode,
+	output lc3b_control_word ctrl
+);
+
+always_comb
+begin
+	ctrl.opcode = opcode;
+	ctrl.load_cc = 1'b0;
+	ctrl.is_br = 1'b0;
+	ctrl.is_j = 1'b0;
+	ctrl.sr2mux_sel = 1'b0;
+	ctrl.word_byte_sel = 1'b0;
+	ctrl.offset_sel = 1'b0;
+	ctrl.aluop = alu_add;
+end
+endmodule : control_rom
