@@ -5,7 +5,7 @@ cModel Technology
 Z0 d/home/ridenou2/ece411/risingedge/simulation/modelsim
 vadj
 Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
-Z2 DXx4 work 10 lc3b_types 0 22 Ig6[<o=i>mK0`SbI3zPA:1
+Z2 DXx4 work 10 lc3b_types 0 22 6cMeoODg?[80fn`NhT^C;2
 DXx4 work 11 adj_sv_unit 0 22 WWUH_fZ4JYPh>]fKJChGi3
 VE;zLPZ?c`8[LaP1M[Ui<V1
 r1
@@ -18,7 +18,7 @@ Z5 8/home/ridenou2/ece411/risingedge/adj.sv
 Z6 F/home/ridenou2/ece411/risingedge/adj.sv
 L0 6
 Z7 OV;L;10.1d;51
-Z8 !s108 1520722551.255075
+Z8 !s108 1520723171.260300
 Z9 !s107 /home/ridenou2/ece411/risingedge/adj.sv|
 Z10 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/adj.sv|
 Z11 o-sv -work work -O0
@@ -67,7 +67,7 @@ Z13 8/home/ridenou2/ece411/risingedge/alu.sv
 Z14 F/home/ridenou2/ece411/risingedge/alu.sv
 L0 3
 R7
-Z15 !s108 1520722551.403893
+Z15 !s108 1520723171.377335
 Z16 !s107 /home/ridenou2/ece411/risingedge/alu.sv|
 Z17 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/alu.sv|
 R11
@@ -120,7 +120,7 @@ R12
 !s100 eTRSYBYPHYA3g7lZW1`AH1
 !s105 badder_sv_unit
 !s85 0
-!s108 1520722550.913894
+!s108 1520723170.919050
 !s107 /home/ridenou2/ece411/risingedge/badder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/badder.sv|
 !s101 -O0
@@ -139,7 +139,7 @@ Z18 8/home/ridenou2/ece411/risingedge/branch_unit.sv
 Z19 F/home/ridenou2/ece411/risingedge/branch_unit.sv
 L0 3
 R7
-Z20 !s108 1520722552.159644
+Z20 !s108 1520723172.049559
 Z21 !s107 /home/ridenou2/ece411/risingedge/branch_unit.sv|
 Z22 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/branch_unit.sv|
 R11
@@ -188,7 +188,7 @@ Z23 8/home/ridenou2/ece411/risingedge/control_rom.sv
 Z24 F/home/ridenou2/ece411/risingedge/control_rom.sv
 L0 3
 R7
-Z25 !s108 1520722553.689583
+Z25 !s108 1520723173.599468
 Z26 !s107 /home/ridenou2/ece411/risingedge/control_rom.sv|
 Z27 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/control_rom.sv|
 R11
@@ -226,25 +226,25 @@ vdatapath
 R1
 R2
 DXx4 work 16 datapath_sv_unit 0 22 KUj_POmlQcCHn3PZNIDaF1
-V]RHaIf=L`BW8`B6NJiLd>0
+VXAXY[2[B4_if1BVblR[eV0
 r1
 31
-IE@2K`BL3=7NFhVG];G:ef1
+I3JSl`iM9HF?75zU_@H4D80
 S1
 R3
-Z28 w1520721403
+Z28 w1520723152
 Z29 8/home/ridenou2/ece411/risingedge/datapath.sv
 Z30 F/home/ridenou2/ece411/risingedge/datapath.sv
 L0 3
 R7
-Z31 !s108 1520722554.450971
+Z31 !s108 1520723174.039610
 Z32 !s107 /home/ridenou2/ece411/risingedge/datapath.sv|
 Z33 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/datapath.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 X:K:IdNi1l]ZITe0IWQa31
+!s100 DDY_k9@9H;^CLR`_24Ca23
 !s105 datapath_sv_unit
 !s101 -O0
 Xdatapath_sv_unit
@@ -281,14 +281,14 @@ r1
 I^``Y>f=eBgS6nQn1gK:dN3
 S1
 R3
-R28
-Z34 8/home/ridenou2/ece411/risingedge/EX_MEM_pipeline.sv
-Z35 F/home/ridenou2/ece411/risingedge/EX_MEM_pipeline.sv
+Z34 w1520721403
+Z35 8/home/ridenou2/ece411/risingedge/EX_MEM_pipeline.sv
+Z36 F/home/ridenou2/ece411/risingedge/EX_MEM_pipeline.sv
 L0 4
 R7
-Z36 !s108 1520722553.250478
-Z37 !s107 /home/ridenou2/ece411/risingedge/EX_MEM_pipeline.sv|
-Z38 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/EX_MEM_pipeline.sv|
+Z37 !s108 1520723172.665911
+Z38 !s107 /home/ridenou2/ece411/risingedge/EX_MEM_pipeline.sv|
+Z39 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/EX_MEM_pipeline.sv|
 R11
 R12
 n@e@x_@m@e@m_pipeline
@@ -306,14 +306,14 @@ r1
 IS8bhh7:M=d17S2XZ9mldL3
 S1
 R3
-R28
 R34
 R35
+R36
 L0 1
 R7
-R36
 R37
 R38
+R39
 R11
 R12
 n@e@x_@m@e@m_pipeline_sv_unit
@@ -332,14 +332,14 @@ r1
 IkR<L:NAR_LZ[AY7ZSh;ed1
 S1
 R3
-Z39 w1520714382
-Z40 8/home/ridenou2/ece411/risingedge/gencc.sv
-Z41 F/home/ridenou2/ece411/risingedge/gencc.sv
+Z40 w1520714382
+Z41 8/home/ridenou2/ece411/risingedge/gencc.sv
+Z42 F/home/ridenou2/ece411/risingedge/gencc.sv
 L0 3
 R7
-Z42 !s108 1520722551.655757
-Z43 !s107 /home/ridenou2/ece411/risingedge/gencc.sv|
-Z44 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/gencc.sv|
+Z43 !s108 1520723171.724127
+Z44 !s107 /home/ridenou2/ece411/risingedge/gencc.sv|
+Z45 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/gencc.sv|
 R11
 R12
 !s85 0
@@ -356,14 +356,14 @@ r1
 Ij@cQfQe??OmmMI9H_aO5P2
 S1
 R3
-R39
 R40
 R41
+R42
 L0 1
 R7
-R42
 R43
 R44
+R45
 R11
 R12
 !s85 0
@@ -381,14 +381,14 @@ r1
 I`JShGN^z^XbYhO8]m[7HJ3
 S1
 R3
-R28
-Z45 8/home/ridenou2/ece411/risingedge/ID_EX_pipeline.sv
-Z46 F/home/ridenou2/ece411/risingedge/ID_EX_pipeline.sv
+R34
+Z46 8/home/ridenou2/ece411/risingedge/ID_EX_pipeline.sv
+Z47 F/home/ridenou2/ece411/risingedge/ID_EX_pipeline.sv
 L0 3
 R7
-Z47 !s108 1520722552.978097
-Z48 !s107 /home/ridenou2/ece411/risingedge/ID_EX_pipeline.sv|
-Z49 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/ID_EX_pipeline.sv|
+Z48 !s108 1520723172.501302
+Z49 !s107 /home/ridenou2/ece411/risingedge/ID_EX_pipeline.sv|
+Z50 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/ID_EX_pipeline.sv|
 R11
 R12
 n@i@d_@e@x_pipeline
@@ -406,14 +406,14 @@ r1
 IfiOf`nUh5nVJm41`YKl7:0
 S1
 R3
-R28
-R45
+R34
 R46
+R47
 L0 1
 R7
-R47
 R48
 R49
+R50
 R11
 R12
 n@i@d_@e@x_pipeline_sv_unit
@@ -432,14 +432,14 @@ r1
 IAEFWS18AUfZ2BfcGZA7[m1
 S1
 R3
-R28
-Z50 8/home/ridenou2/ece411/risingedge/IF_ID_pipeline.sv
-Z51 F/home/ridenou2/ece411/risingedge/IF_ID_pipeline.sv
+R34
+Z51 8/home/ridenou2/ece411/risingedge/IF_ID_pipeline.sv
+Z52 F/home/ridenou2/ece411/risingedge/IF_ID_pipeline.sv
 L0 3
 R7
-Z52 !s108 1520722552.713017
-Z53 !s107 /home/ridenou2/ece411/risingedge/IF_ID_pipeline.sv|
-Z54 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/IF_ID_pipeline.sv|
+Z53 !s108 1520723172.359795
+Z54 !s107 /home/ridenou2/ece411/risingedge/IF_ID_pipeline.sv|
+Z55 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/IF_ID_pipeline.sv|
 R11
 R12
 n@i@f_@i@d_pipeline
@@ -457,14 +457,14 @@ r1
 IS0e7X;S:d3UAA?5I0dNRN1
 S1
 R3
-R28
-R50
+R34
 R51
+R52
 L0 1
 R7
-R52
 R53
 R54
+R55
 R11
 R12
 n@i@f_@i@d_pipeline_sv_unit
@@ -475,11 +475,11 @@ n@i@f_@i@d_pipeline_sv_unit
 !s101 -O0
 Xlc3b_types
 R1
-IIg6[<o=i>mK0`SbI3zPA:1
-VIg6[<o=i>mK0`SbI3zPA:1
+I6cMeoODg?[80fn`NhT^C;2
+V6cMeoODg?[80fn`NhT^C;2
 S1
 R3
-Z55 w1520721404
+w1520722972
 8/home/ridenou2/ece411/risingedge/lc3b_types.sv
 F/home/ridenou2/ece411/risingedge/lc3b_types.sv
 L0 1
@@ -489,9 +489,9 @@ r1
 R11
 R12
 !i10b 1
-!s100 EJMSmb_obBbTeT^]h;C=<3
+!s100 [?QRkLmZ_5OUVEnCh<F2j1
 !s85 0
-!s108 1520722550.412576
+!s108 1520723170.375793
 !s107 /home/ridenou2/ece411/risingedge/lc3b_types.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/lc3b_types.sv|
 !s101 -O0
@@ -505,14 +505,14 @@ r1
 I:mCFRbKlWW:F`M0:<lkZA3
 S1
 R3
-R55
-Z56 8/home/ridenou2/ece411/risingedge/line_to_word.sv
-Z57 F/home/ridenou2/ece411/risingedge/line_to_word.sv
+Z56 w1520721404
+Z57 8/home/ridenou2/ece411/risingedge/line_to_word.sv
+Z58 F/home/ridenou2/ece411/risingedge/line_to_word.sv
 L0 3
 R7
-Z58 !s108 1520722553.851435
-Z59 !s107 /home/ridenou2/ece411/risingedge/line_to_word.sv|
-Z60 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/line_to_word.sv|
+Z59 !s108 1520723173.743248
+Z60 !s107 /home/ridenou2/ece411/risingedge/line_to_word.sv|
+Z61 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/line_to_word.sv|
 R11
 R12
 !s85 0
@@ -529,14 +529,14 @@ r1
 Ig<Qd;lS`>=;:iNW;GVPN42
 S1
 R3
-R55
 R56
 R57
+R58
 L0 1
 R7
-R58
 R59
 R60
+R61
 R11
 R12
 !s85 0
@@ -563,7 +563,7 @@ R12
 !s100 oke=C6nSgE`6DMMJ0SPY22
 !s105 magic_memory_dual_port_sv_unit
 !s85 0
-!s108 1520722554.672989
+!s108 1520723174.378971
 !s107 /home/ridenou2/ece411/risingedge/magic_memory_dual_port.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/magic_memory_dual_port.sv|
 !s101 -O0
@@ -577,14 +577,14 @@ r1
 IQc`F4g3674U`KB;mUaeA91
 S1
 R3
-R28
-Z61 8/home/ridenou2/ece411/risingedge/MEM_WB_pipeline.sv
-Z62 F/home/ridenou2/ece411/risingedge/MEM_WB_pipeline.sv
+R34
+Z62 8/home/ridenou2/ece411/risingedge/MEM_WB_pipeline.sv
+Z63 F/home/ridenou2/ece411/risingedge/MEM_WB_pipeline.sv
 L0 3
 R7
-Z63 !s108 1520722553.468315
-Z64 !s107 /home/ridenou2/ece411/risingedge/MEM_WB_pipeline.sv|
-Z65 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/MEM_WB_pipeline.sv|
+Z64 !s108 1520723172.880103
+Z65 !s107 /home/ridenou2/ece411/risingedge/MEM_WB_pipeline.sv|
+Z66 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/MEM_WB_pipeline.sv|
 R11
 R12
 n@m@e@m_@w@b_pipeline
@@ -602,14 +602,14 @@ r1
 IoL>?o[D<4Q74jbOg@IKeM3
 S1
 R3
-R28
-R61
+R34
 R62
+R63
 L0 1
 R7
-R63
 R64
 R65
+R66
 R11
 R12
 n@m@e@m_@w@b_pipeline_sv_unit
@@ -628,14 +628,14 @@ r1
 I9T1<VHCzE`1`ZBMg<;B;M0
 S1
 R3
-R55
-Z66 8/home/ridenou2/ece411/risingedge/mp3.sv
-Z67 F/home/ridenou2/ece411/risingedge/mp3.sv
+R56
+Z67 8/home/ridenou2/ece411/risingedge/mp3.sv
+Z68 F/home/ridenou2/ece411/risingedge/mp3.sv
 L0 3
 R7
-Z68 !s108 1520722554.823433
-Z69 !s107 /home/ridenou2/ece411/risingedge/mp3.sv|
-Z70 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/mp3.sv|
+Z69 !s108 1520723174.505813
+Z70 !s107 /home/ridenou2/ece411/risingedge/mp3.sv|
+Z71 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/mp3.sv|
 R11
 R12
 !s85 0
@@ -652,14 +652,14 @@ r1
 I?GS7DgG=N>;67[SIIhRi?2
 S1
 R3
-R55
-R66
+R56
 R67
+R68
 L0 1
 R7
-R68
 R69
 R70
+R71
 R11
 R12
 !s85 0
@@ -686,7 +686,7 @@ R12
 !s100 PgE0Anmz[C6MVJl3kLh8Z3
 !s105 mp3_tb_sv_unit
 !s85 0
-!s108 1520722554.590115
+!s108 1520723174.283183
 !s107 /home/ridenou2/ece411/risingedge/mp3_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/mp3_tb.sv|
 !s101 -O0
@@ -696,7 +696,7 @@ I9?PjWSL2>>>C=6N9oThCK0
 V8m]l]_QnJ>bC;o8UdVIPk2
 S1
 R3
-R39
+R40
 8/home/ridenou2/ece411/risingedge/mux2.sv
 F/home/ridenou2/ece411/risingedge/mux2.sv
 L0 1
@@ -709,7 +709,7 @@ R12
 !s100 ighDO_e5eP?ZW;AJh>Q>c0
 !s105 mux2_sv_unit
 !s85 0
-!s108 1520722550.815290
+!s108 1520723170.764534
 !s107 /home/ridenou2/ece411/risingedge/mux2.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/mux2.sv|
 !s101 -O0
@@ -719,7 +719,7 @@ INHb5NASG3cIN8n[2@fgPM0
 VYCkK`QGYSnR6BP^DhRdne0
 S1
 R3
-R39
+R40
 8/home/ridenou2/ece411/risingedge/mux4.sv
 F/home/ridenou2/ece411/risingedge/mux4.sv
 L0 1
@@ -732,7 +732,7 @@ R12
 !s100 5ZVh[L=a71[_L;AhDX=_[2
 !s105 mux4_sv_unit
 !s85 0
-!s108 1520722551.009053
+!s108 1520723171.008862
 !s107 /home/ridenou2/ece411/risingedge/mux4.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/mux4.sv|
 !s101 -O0
@@ -742,7 +742,7 @@ ITKdWKV139=XjkG>BZY`Wk1
 V8Yjd6>kf[QVaNB:l@BLiW1
 S1
 R3
-Z71 w1520714383
+Z72 w1520714383
 8/home/ridenou2/ece411/risingedge/plus2.sv
 F/home/ridenou2/ece411/risingedge/plus2.sv
 L0 1
@@ -755,7 +755,7 @@ R12
 !s100 1l_H3l5i9A4MF8c258Rb?1
 !s105 plus2_sv_unit
 !s85 0
-!s108 1520722550.619978
+!s108 1520723170.568552
 !s107 /home/ridenou2/ece411/risingedge/plus2.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/plus2.sv|
 !s101 -O0
@@ -769,14 +769,14 @@ r1
 IQ7nCA>^E5_3<D`9fMIXG`2
 S1
 R3
-R71
-Z72 8/home/ridenou2/ece411/risingedge/regfile.sv
-Z73 F/home/ridenou2/ece411/risingedge/regfile.sv
+R72
+Z73 8/home/ridenou2/ece411/risingedge/regfile.sv
+Z74 F/home/ridenou2/ece411/risingedge/regfile.sv
 L0 3
 R7
-Z74 !s108 1520722551.834508
-Z75 !s107 /home/ridenou2/ece411/risingedge/regfile.sv|
-Z76 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/regfile.sv|
+Z75 !s108 1520723171.909955
+Z76 !s107 /home/ridenou2/ece411/risingedge/regfile.sv|
+Z77 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/regfile.sv|
 R11
 R12
 !s85 0
@@ -793,14 +793,14 @@ r1
 IVj^W>B]92K5jUJeLG]Ul63
 S1
 R3
-R71
 R72
 R73
+R74
 L0 1
 R7
-R74
 R75
 R76
+R77
 R11
 R12
 !s85 0
@@ -814,7 +814,7 @@ ISL?hBOWXY7m<=>jno^0Fn0
 VVWH2GIcWRQ29K?3;26c491
 S1
 R3
-R71
+R72
 8/home/ridenou2/ece411/risingedge/register.sv
 F/home/ridenou2/ece411/risingedge/register.sv
 L0 1
@@ -827,7 +827,7 @@ R12
 !s100 SF4:0Z6FGZAK<TOHl`Rzk3
 !s105 register_sv_unit
 !s85 0
-!s108 1520722550.712200
+!s108 1520723170.669164
 !s107 /home/ridenou2/ece411/risingedge/register.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/register.sv|
 !s101 -O0
@@ -841,14 +841,14 @@ r1
 IGNB]3@DUhi<eg9UTV=Bd>3
 S1
 R3
-R55
-Z77 8/home/ridenou2/ece411/risingedge/set_sel.sv
-Z78 F/home/ridenou2/ece411/risingedge/set_sel.sv
+R56
+Z78 8/home/ridenou2/ece411/risingedge/set_sel.sv
+Z79 F/home/ridenou2/ece411/risingedge/set_sel.sv
 L0 3
 R7
-Z79 !s108 1520722554.318464
-Z80 !s107 /home/ridenou2/ece411/risingedge/set_sel.sv|
-Z81 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/set_sel.sv|
+Z80 !s108 1520723173.909973
+Z81 !s107 /home/ridenou2/ece411/risingedge/set_sel.sv|
+Z82 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/set_sel.sv|
 R11
 R12
 !s85 0
@@ -865,14 +865,14 @@ r1
 IJc?AITA=L3dAMSEU:6^:B1
 S1
 R3
-R55
-R77
+R56
 R78
+R79
 L0 1
 R7
-R79
 R80
 R81
+R82
 R11
 R12
 !s85 0
@@ -890,14 +890,14 @@ r1
 I@HdLbST>3n@@HMl0E]>UF1
 S1
 R3
-R71
-Z82 8/home/ridenou2/ece411/risingedge/sext5.sv
-Z83 F/home/ridenou2/ece411/risingedge/sext5.sv
+R72
+Z83 8/home/ridenou2/ece411/risingedge/sext5.sv
+Z84 F/home/ridenou2/ece411/risingedge/sext5.sv
 L0 6
 R7
-Z84 !s108 1520722552.445017
-Z85 !s107 /home/ridenou2/ece411/risingedge/sext5.sv|
-Z86 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/sext5.sv|
+Z85 !s108 1520723172.199108
+Z86 !s107 /home/ridenou2/ece411/risingedge/sext5.sv|
+Z87 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/sext5.sv|
 R11
 R12
 !s85 0
@@ -914,14 +914,14 @@ r1
 IY_WHQE^:W[<64Dk3WIBW:0
 S1
 R3
-R71
-R82
+R72
 R83
+R84
 L0 1
 R7
-R84
 R85
 R86
+R87
 R11
 R12
 !s85 0
@@ -946,7 +946,7 @@ R7
 r1
 !s85 0
 31
-!s108 1520722554.993350
+!s108 1520723174.694551
 !s107 /home/ridenou2/ece411/risingedge/wishbone.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/ridenou2/ece411/risingedge|/home/ridenou2/ece411/risingedge/wishbone.sv|
 !s101 -O0

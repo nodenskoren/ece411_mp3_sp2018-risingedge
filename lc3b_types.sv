@@ -17,6 +17,8 @@ typedef logic  [127:0] lc3b_line;
 typedef logic  [127:0] lc3b_c_line;
 typedef logic  [3:0] lc3b_c_offset;
 
+typedef logic [11:0] lc3b_wb_adr;
+
 
 typedef enum bit [3:0] {
     op_add  = 4'b0001,

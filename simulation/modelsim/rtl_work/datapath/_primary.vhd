@@ -9,12 +9,12 @@ entity datapath is
         mem_read        : out    vl_logic;
         mem_write       : out    vl_logic;
         mem_wdata       : out    vl_logic_vector(127 downto 0);
-        mem_address     : out    vl_logic_vector(15 downto 0);
+        mem_address     : out    vl_logic_vector(11 downto 0);
         mem_sel         : out    vl_logic_vector(15 downto 0);
         ifetch_rdata    : in     vl_logic_vector(127 downto 0);
         ifetch_resp     : in     vl_logic;
         ifetch_read     : out    vl_logic;
-        ifetch_address  : out    vl_logic_vector(15 downto 0);
+        ifetch_address  : out    vl_logic_vector(11 downto 0);
         imm_mode        : out    vl_logic;
         opcode          : out    work.lc3b_types.lc3b_opcode;
         ctrl_in         : in     work.lc3b_types.lc3b_control_word;

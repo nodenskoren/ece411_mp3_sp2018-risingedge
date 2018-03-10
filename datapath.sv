@@ -8,12 +8,12 @@ module datapath
 	output logic mem_read,
 	output logic mem_write,
 	output lc3b_c_line mem_wdata,
-	output lc3b_word mem_address,
+	output lc3b_wb_adr mem_address,
 	output lc3b_word mem_sel,
 	input lc3b_line ifetch_rdata,
 	input logic ifetch_resp,
 	output logic ifetch_read,
-	output lc3b_word ifetch_address,
+	output lc3b_wb_adr ifetch_address,
 	
 	output logic imm_mode,
 	output lc3b_opcode opcode,
@@ -215,7 +215,7 @@ assign is_br_out_ID_EX = ctrl_out_ID_EX.is_br;
 // >>>>> EX/MEM PIPELINE <<<<< //
 lc3b_word pc_out_EX_MEM;
 lc3b_word addr_adder_out_out_EX_MEM;
-lc3b_word dest_out_EX_MEM;
+lc3b_reg dest_out_EX_MEM;
 lc3b_word alu_out_out_EX_MEM;
 lc3b_nzp nzp_out_EX_MEM;
 logic is_br_out_EX_MEM;

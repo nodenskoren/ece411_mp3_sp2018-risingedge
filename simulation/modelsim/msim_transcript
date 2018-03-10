@@ -241,14 +241,6 @@
 # Loading work.control_rom_sv_unit
 # Loading work.control_rom
 # Loading work.magic_memory
-# ** Warning: (vsim-3015) /home/ridenou2/ece411/risingedge/mp3.sv(39): [PCDPC] - Port size (16 or 16) does not match connection size (12) for port 'mem_address'. The port definition is at: /home/ridenou2/ece411/risingedge/datapath.sv(11).
-#         Region: /mp3_tb/dut/the_datapath
-# ** Warning: (vsim-3015) /home/ridenou2/ece411/risingedge/mp3.sv(39): [PCDPC] - Port size (16 or 16) does not match connection size (12) for port 'ifetch_address'. The port definition is at: /home/ridenou2/ece411/risingedge/datapath.sv(16).
-#         Region: /mp3_tb/dut/the_datapath
-# ** Warning: (vsim-3015) /home/ridenou2/ece411/risingedge/datapath.sv(256): [PCDPC] - Port size (3 or 3) does not match connection size (16) for port 'dest_out'. The port definition is at: /home/ridenou2/ece411/risingedge/EX_MEM_pipeline.sv(31).
-#         Region: /mp3_tb/dut/the_datapath/EX_MEM_pipeline
-# ** Warning: (vsim-3015) /home/ridenou2/ece411/risingedge/datapath.sv(327): [PCDPC] - Port size (3 or 3) does not match connection size (16) for port 'dest_in'. The port definition is at: /home/ridenou2/ece411/risingedge/MEM_WB_pipeline.sv(6).
-#         Region: /mp3_tb/dut/the_datapath/MEM_WB_pipeline
 # 
 # add wave *
 # view structure
