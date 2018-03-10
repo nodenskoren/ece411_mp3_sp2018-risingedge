@@ -1,4 +1,4 @@
-module mp3_tb;
+module mp3_tb();
 
 timeunit 10ns;			// Time scale for delays. 
 							// #1 -> 10ns
