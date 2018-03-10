@@ -1,43 +1,45 @@
 module mp1_tb;
 
-timeunit 1ns;
-timeprecision 1ns;
+timeunit 10ns;			// Time scale for delays. 
+							// #1 -> 10ns
+							
+timeprecision 1ns;		// Time precision for delays. 
+							// #1.12345 - > 11.2345ns -> 11ns (delays are rounded to the nearest 'timeprecision')
+							
+// Put internal wires and registers here:
+logic Clk;
 
-logic clk;
-logic mem_resp;
-logic mem_read;
-logic mem_write;
-logic [1:0] mem_byte_enable;
-logic [15:0] mem_address;
-logic [15:0] mem_rdata;
-logic [15:0] mem_wdata;
+wishbone memory(Clk);
+wishbone ifetch(Clk);
 
-/* Clock generator */
-initial clk = 0;
-always #5 clk = ~clk;
+
+// Instantiate modules and connect them here:
 
 mp1 dut
 (
-    .clk,
-    .mem_resp,
-    .mem_rdata,
-    .mem_read,
-    .mem_write,
-    .mem_byte_enable,
-    .mem_address,
-    .mem_wdata
+	.ifetch,
+	.memory
 );
 
-memory memory
+magic_memory memory
 (
-    .clk,
-    .read(mem_read),
-    .write(mem_write),
-    .wmask(mem_byte_enable),
-    .address(mem_address),
-    .wdata(mem_wdata),
-    .resp(mem_resp),
-    .rdata(mem_rdata)
+	.ifetch,
+	.memory
 );
+
+// Initialize the clock
+initial begin: CLOCK_INITIALIZATION
+    Clk = 0;
+end 
+// Toggle the clock after every 'timeunit' has passed
+// A timeunit of 5ns gives a 100MHz clock
+always begin : CLOCK_GENERATION
+#1 Clk = ~Clk;
+end
+
+// The unit tests happen here:
+initial begin: TEST_VECTORS
+
+end						
 
 endmodule : mp1_tb
