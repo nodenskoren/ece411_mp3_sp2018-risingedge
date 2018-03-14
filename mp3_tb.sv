@@ -9,23 +9,29 @@ timeprecision 1ns;		// Time precision for delays.
 // Put internal wires and registers here:
 logic Clk;
 
-wishbone memory(Clk);
-wishbone ifetch(Clk);
+wishbone wb_mem(Clk);
 
 
 // Instantiate modules and connect them here:
 
-mp3 dut
+/*mp3 dut
 (
 	.ifetch,
 	.memory
-);
+);*/
 
-magic_memory memory_cp1
+mp3_top dut (wb_mem);
+
+physical_memory memory(wb_mem);
+	
+
+
+
+/*magic_memory memory_cp1
 (
 	.ifetch,
 	.memory
-);
+);*/
 
 // Initialize the clock
 initial begin: CLOCK_INITIALIZATION

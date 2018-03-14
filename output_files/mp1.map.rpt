@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mp1
-Sat Mar 10 17:06:03 2018
+Wed Mar 14 18:27:45 2018
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -41,13 +41,13 @@ Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
  33. altsyncram Parameter Settings by Entity Instance
  34. Port Connectivity Checks: "datapath:the_datapath|mux4:regfilemux"
  35. Port Connectivity Checks: "datapath:the_datapath|set_sel:set_sel"
- 36. Port Connectivity Checks: "datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline"
- 37. Port Connectivity Checks: "datapath:the_datapath|mux4:alumux"
- 38. Port Connectivity Checks: "datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline"
- 39. Port Connectivity Checks: "datapath:the_datapath|sext5:sext6"
- 40. Port Connectivity Checks: "datapath:the_datapath|register:program_counter"
- 41. Elapsed Time Per Partition
- 42. Analysis & Synthesis Messages
+ 36. Port Connectivity Checks: "datapath:the_datapath|mux4:alumux"
+ 37. Port Connectivity Checks: "datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline"
+ 38. Port Connectivity Checks: "datapath:the_datapath|sext5:sext6"
+ 39. Port Connectivity Checks: "datapath:the_datapath|register:program_counter"
+ 40. Elapsed Time Per Partition
+ 41. Analysis & Synthesis Messages
+ 42. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -73,16 +73,16 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Sat Mar 10 17:06:03 2018       ;
+; Analysis & Synthesis Status   ; Successful - Wed Mar 14 18:27:45 2018       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp1                                         ;
 ; Top-level Entity Name         ; mp3                                         ;
 ; Family                        ; Stratix III                                 ;
 ; Logic utilization             ; N/A                                         ;
-;     Combinational ALUTs       ; 313                                         ;
+;     Combinational ALUTs       ; 328                                         ;
 ;     Memory ALUTs              ; 0                                           ;
-;     Dedicated logic registers ; 148                                         ;
-; Total registers               ; 148                                         ;
+;     Dedicated logic registers ; 181                                         ;
+; Total registers               ; 181                                         ;
 ; Total pins                    ; 580                                         ;
 ; Total virtual pins            ; 0                                           ;
 ; Total block memory bits       ; 384                                         ;
@@ -189,11 +189,12 @@ applicable agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.0%      ;
+;     Processor 2            ; < 0.1%      ;
+;     Processors 3-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -242,34 +243,34 @@ applicable agreement for further details.
 +-----------------------------------------------+------------------+
 ; Resource                                      ; Usage            ;
 +-----------------------------------------------+------------------+
-; Estimated ALUTs Used                          ; 313              ;
-;     -- Combinational ALUTs                    ; 313              ;
+; Estimated ALUTs Used                          ; 328              ;
+;     -- Combinational ALUTs                    ; 328              ;
 ;     -- Memory ALUTs                           ; 0                ;
 ;     -- LUT_REGs                               ; 0                ;
-; Dedicated logic registers                     ; 148              ;
+; Dedicated logic registers                     ; 181              ;
 ;                                               ;                  ;
-; Estimated ALUTs Unavailable                   ; 57               ;
-;     -- Due to unpartnered combinational logic ; 57               ;
+; Estimated ALUTs Unavailable                   ; 45               ;
+;     -- Due to unpartnered combinational logic ; 45               ;
 ;     -- Due to Memory ALUTs                    ; 0                ;
 ;                                               ;                  ;
-; Total combinational functions                 ; 313              ;
+; Total combinational functions                 ; 328              ;
 ; Combinational ALUT usage by number of inputs  ;                  ;
 ;     -- 7 input functions                      ; 15               ;
 ;     -- 6 input functions                      ; 82               ;
 ;     -- 5 input functions                      ; 19               ;
 ;     -- 4 input functions                      ; 154              ;
-;     -- <=3 input functions                    ; 43               ;
+;     -- <=3 input functions                    ; 58               ;
 ;                                               ;                  ;
 ; Combinational ALUTs by mode                   ;                  ;
 ;     -- normal mode                            ; 267              ;
 ;     -- extended LUT mode                      ; 15               ;
-;     -- arithmetic mode                        ; 31               ;
+;     -- arithmetic mode                        ; 46               ;
 ;     -- shared arithmetic mode                 ; 0                ;
 ;                                               ;                  ;
-; Estimated ALUT/register pairs used            ; 417              ;
+; Estimated ALUT/register pairs used            ; 434              ;
 ;                                               ;                  ;
-; Total registers                               ; 148              ;
-;     -- Dedicated logic registers              ; 148              ;
+; Total registers                               ; 181              ;
+;     -- Dedicated logic registers              ; 181              ;
 ;     -- I/O registers                          ; 0                ;
 ;     -- LUT_REGs                               ; 0                ;
 ;                                               ;                  ;
@@ -279,9 +280,9 @@ applicable agreement for further details.
 ; Total block memory bits                       ; 384              ;
 ; DSP block 18-bit elements                     ; 0                ;
 ; Maximum fan-out node                          ; memory.CLK~input ;
-; Maximum fan-out                               ; 196              ;
-; Total fan-out                                 ; 2930             ;
-; Average fan-out                               ; 1.76             ;
+; Maximum fan-out                               ; 229              ;
+; Total fan-out                                 ; 3055             ;
+; Average fan-out                               ; 1.78             ;
 +-----------------------------------------------+------------------+
 
 
@@ -290,14 +291,15 @@ applicable agreement for further details.
 +----------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                             ; Library Name ;
 +----------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+--------------+
-; |mp3                                         ; 313 (1)           ; 148 (0)      ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 580  ; 0            ; |mp3                                                                                            ; work         ;
+; |mp3                                         ; 328 (1)           ; 181 (0)      ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 580  ; 0            ; |mp3                                                                                            ; work         ;
 ;    |control_rom:control_rom|                 ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|control_rom:control_rom                                                                    ; work         ;
-;    |datapath:the_datapath|                   ; 304 (2)           ; 148 (0)      ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath                                                                      ; work         ;
-;       |EX_MEM_pipeline:EX_MEM_pipeline|      ; 0 (0)             ; 39 (39)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline                                      ; work         ;
-;       |ID_EX_pipeline:ID_EX_pipeline|        ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline                                        ; work         ;
+;    |datapath:the_datapath|                   ; 319 (2)           ; 181 (0)      ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath                                                                      ; work         ;
+;       |EX_MEM_pipeline:EX_MEM_pipeline|      ; 0 (0)             ; 54 (54)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline                                      ; work         ;
+;       |ID_EX_pipeline:ID_EX_pipeline|        ; 0 (0)             ; 50 (50)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline                                        ; work         ;
 ;       |IF_ID_pipeline:IF_ID_pipeline|        ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|IF_ID_pipeline:IF_ID_pipeline                                        ; work         ;
 ;       |MEM_WB_pipeline:MEM_WB_pipeline|      ; 0 (0)             ; 20 (20)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|MEM_WB_pipeline:MEM_WB_pipeline                                      ; work         ;
 ;       |alu:alu|                              ; 32 (32)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|alu:alu                                                              ; work         ;
+;       |badder:addr_adder|                    ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|badder:addr_adder                                                    ; work         ;
 ;       |gencc:the_gencc|                      ; 5 (5)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|gencc:the_gencc                                                      ; work         ;
 ;       |line_to_word:ifetch_line_to_word|     ; 48 (48)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|line_to_word:ifetch_line_to_word                                     ; work         ;
 ;       |mux2:sr2mux|                          ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|mux2:sr2mux                                                          ; work         ;
@@ -339,44 +341,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.regfilemux_sel[1] ; Stuck at GND due to stuck port data_in                                              ;
 ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.aluop[2,3]        ; Stuck at GND due to stuck port data_in                                              ;
 ; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|regfilemux_sel[1]    ; Stuck at GND due to stuck port data_in                                              ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[1..15]   ; Lost fanout                                                                         ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[0]                ; Lost fanout                                                                         ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[0]                  ; Lost fanout                                                                         ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[1]                ; Lost fanout                                                                         ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[1]                  ; Lost fanout                                                                         ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[2]                ; Lost fanout                                                                         ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[2]                  ; Lost fanout                                                                         ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[3]                ; Lost fanout                                                                         ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[3]                  ; Lost fanout                                                                         ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[4]                ; Lost fanout                                                                         ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[4]                  ; Lost fanout                                                                         ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[5]                ; Lost fanout                                                                         ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[5]                  ; Lost fanout                                                                         ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[6]                ; Lost fanout                                                                         ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[6]                  ; Lost fanout                                                                         ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[7]                ; Lost fanout                                                                         ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[7]                  ; Lost fanout                                                                         ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[8]                ; Lost fanout                                                                         ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[8]                  ; Lost fanout                                                                         ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[9]                ; Lost fanout                                                                         ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[9]                  ; Lost fanout                                                                         ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[10]               ; Lost fanout                                                                         ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[10]                 ; Lost fanout                                                                         ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[11]               ; Lost fanout                                                                         ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[11]                 ; Lost fanout                                                                         ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[12]               ; Lost fanout                                                                         ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[12]                 ; Lost fanout                                                                         ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[13]               ; Lost fanout                                                                         ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[13]                 ; Lost fanout                                                                         ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[14]               ; Lost fanout                                                                         ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[14]                 ; Lost fanout                                                                         ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[15]               ; Lost fanout                                                                         ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[15]                 ; Lost fanout                                                                         ;
-; datapath:the_datapath|register:program_counter|data[0]                     ; Lost fanout                                                                         ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[0..15]            ; Lost fanout                                                                         ;
 ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|nzp[0]                 ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|dest[0]             ;
 ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|nzp[1]                 ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|dest[1]             ;
 ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|nzp[2]                 ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|dest[2]             ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|offset6[7..15]         ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|offset6[6]          ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|offset6[1]             ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[1]    ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|offset6[2]             ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[2]    ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|offset6[3]             ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[3]    ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|offset6[4]             ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[4]    ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|offset6[5]             ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[5]    ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|offset6[6..15]         ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[6]    ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[10..15]  ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[9]    ;
 ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.regfilemux_sel[0] ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.mem_read       ;
 ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.load_cc           ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.load_regfile   ;
 ; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|mem_read             ; Merged with datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|regfilemux_sel[0] ;
@@ -384,7 +359,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|dest[0]              ; Merged with datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|nzp[0]            ;
 ; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|dest[1]              ; Merged with datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|nzp[1]            ;
 ; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|dest[2]              ; Merged with datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|nzp[2]            ;
-; Total Number of Removed Registers = 74                                     ;                                                                                     ;
+; datapath:the_datapath|register:program_counter|data[0]                     ; Stuck at GND due to stuck port data_in                                              ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[0]                  ; Stuck at GND due to stuck port data_in                                              ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|addr_adder_out[0]    ; Stuck at GND due to stuck port data_in                                              ;
+; Total Number of Removed Registers = 57                                     ;                                                                                     ;
 +----------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
 
 
@@ -395,45 +373,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------+---------------------------+--------------------------------------------------------------------------+
 ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.regfilemux_sel[1] ; Stuck at GND              ; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|regfilemux_sel[1], ;
 ;                                                                            ; due to stuck port data_in ; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[0],             ;
-;                                                                            ;                           ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[0],               ;
 ;                                                                            ;                           ; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[1],             ;
-;                                                                            ;                           ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[1],               ;
 ;                                                                            ;                           ; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[2],             ;
-;                                                                            ;                           ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[2],               ;
 ;                                                                            ;                           ; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[3],             ;
-;                                                                            ;                           ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[3],               ;
 ;                                                                            ;                           ; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[4],             ;
-;                                                                            ;                           ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[4],               ;
 ;                                                                            ;                           ; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[5],             ;
-;                                                                            ;                           ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[5],               ;
 ;                                                                            ;                           ; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[6],             ;
-;                                                                            ;                           ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[6],               ;
 ;                                                                            ;                           ; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[7],             ;
-;                                                                            ;                           ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[7],               ;
 ;                                                                            ;                           ; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[13],            ;
-;                                                                            ;                           ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[13],              ;
 ;                                                                            ;                           ; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[14],            ;
-;                                                                            ;                           ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[14],              ;
-;                                                                            ;                           ; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[15],            ;
-;                                                                            ;                           ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[15],              ;
-;                                                                            ;                           ; datapath:the_datapath|register:program_counter|data[0]                   ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.alumux_sel[1]     ; Stuck at GND              ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[1],    ;
-;                                                                            ; due to stuck port data_in ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[2],    ;
-;                                                                            ;                           ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[3],    ;
-;                                                                            ;                           ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[4],    ;
-;                                                                            ;                           ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[5],    ;
-;                                                                            ;                           ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[6],    ;
-;                                                                            ;                           ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[7],    ;
-;                                                                            ;                           ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[8],    ;
-;                                                                            ;                           ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[9],    ;
-;                                                                            ;                           ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[10],   ;
-;                                                                            ;                           ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[11],   ;
-;                                                                            ;                           ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[15]    ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[8]                ; Lost Fanouts              ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[8]                ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[9]                ; Lost Fanouts              ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[9]                ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[10]               ; Lost Fanouts              ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[10]               ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[11]               ; Lost Fanouts              ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[11]               ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[12]               ; Lost Fanouts              ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[12]               ;
+;                                                                            ;                           ; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[15]             ;
+; datapath:the_datapath|register:program_counter|data[0]                     ; Stuck at GND              ; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|pc[0],               ;
+;                                                                            ; due to stuck port data_in ; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|addr_adder_out[0]  ;
 +----------------------------------------------------------------------------+---------------------------+--------------------------------------------------------------------------+
 
 
@@ -442,9 +393,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 148   ;
-; Number of registers using Synchronous Clear  ; 15    ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 181   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 15    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 3     ;
@@ -897,15 +848,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------+-------+----------+------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline"                                            ;
-+--------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port               ; Type   ; Severity ; Details                                                                             ;
-+--------------------+--------+----------+-------------------------------------------------------------------------------------+
-; addr_adder_out_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +---------------------------------------------------------------+
 ; Port Connectivity Checks: "datapath:the_datapath|mux4:alumux" ;
 +------+-------+----------+-------------------------------------+
@@ -957,7 +899,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
-    Info: Processing started: Sat Mar 10 17:05:58 2018
+    Info: Processing started: Wed Mar 14 18:27:40 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp1 -c mp1
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 0 entities, in source file lc3b_types.sv
@@ -968,10 +910,18 @@ Info (12021): Found 1 design units, including 1 entities, in source file datapat
     Info (12023): Found entity 1: datapath
 Info (12021): Found 1 design units, including 1 entities, in source file magic_memory_dual_port.sv
     Info (12023): Found entity 1: magic_memory
+Info (12021): Found 1 design units, including 1 entities, in source file physical_memory.sv
+    Info (12023): Found entity 1: physical_memory
 Info (12021): Found 1 design units, including 1 entities, in source file wishbone.sv
     Info (12023): Found entity 1: wishbone
 Info (12021): Found 1 design units, including 1 entities, in source file mp3_tb.sv
     Info (12023): Found entity 1: mp3_tb
+Info (12021): Found 1 design units, including 1 entities, in source file cache.sv
+    Info (12023): Found entity 1: cache
+Info (12021): Found 1 design units, including 1 entities, in source file cache_datapath.sv
+    Info (12023): Found entity 1: cache_datapath
+Info (12021): Found 1 design units, including 1 entities, in source file cache_control.sv
+    Info (12023): Found entity 1: cache_control
 Info (12021): Found 1 design units, including 1 entities, in source file adj.sv
     Info (12023): Found entity 1: adj
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
@@ -980,6 +930,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file gencc.s
     Info (12023): Found entity 1: gencc
 Info (12021): Found 1 design units, including 1 entities, in source file ir.sv
     Info (12023): Found entity 1: ir
+Info (12021): Found 1 design units, including 1 entities, in source file array.sv
+    Info (12023): Found entity 1: array
 Info (12021): Found 1 design units, including 1 entities, in source file plus2.sv
     Info (12023): Found entity 1: plus2
 Info (12021): Found 1 design units, including 1 entities, in source file regfile.sv
@@ -1024,6 +976,13 @@ Info (12021): Found 1 design units, including 1 entities, in source file line_to
     Info (12023): Found entity 1: line_to_word
 Info (12021): Found 1 design units, including 1 entities, in source file set_sel.sv
     Info (12023): Found entity 1: set_sel
+Info (12021): Found 1 design units, including 1 entities, in source file mp3_top.sv
+    Info (12023): Found entity 1: mp3_top
+Info (12021): Found 1 design units, including 1 entities, in source file wb_interconnect.sv
+    Info (12023): Found entity 1: wb_interconnect
+Info (12021): Found 1 design units, including 1 entities, in source file l1arbiter.sv
+    Info (12023): Found entity 1: l1arbiter
+Critical Warning (10846): Verilog HDL Instantiation warning at mp3_top.sv(14): instance has no name
 Info (12127): Elaborating entity "mp3" for the top level hierarchy
 Info (12128): Elaborating entity "datapath" for hierarchy "datapath:the_datapath"
 Info (12128): Elaborating entity "plus2" for hierarchy "datapath:the_datapath|plus2:pc_plus2"
@@ -1265,7 +1224,8 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "ifetch.DAT_M[126]" is stuck at GND
     Warning (13410): Pin "ifetch.DAT_M[127]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 48 registers lost all their fanouts during netlist optimizations.
+Info (17049): 16 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file /home/ridenou2/ece411/risingedge/output_files/mp1.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 5 input pin(s) that do not drive logic
@@ -1274,15 +1234,21 @@ Warning (21074): Design contains 5 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "ifetch.CLK"
     Warning (15610): No output dependent on input pin "memory.RTY"
     Warning (15610): No output dependent on input pin "memory.ACK"
-Info (21057): Implemented 1022 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1055 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 262 input pins
     Info (21059): Implemented 318 output pins
-    Info (21061): Implemented 394 logic cells
+    Info (21061): Implemented 427 logic cells
     Info (21064): Implemented 48 RAM segments
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 155 warnings
-    Info: Peak virtual memory: 456 megabytes
-    Info: Processing ended: Sat Mar 10 17:06:03 2018
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 156 warnings
+    Info: Peak virtual memory: 460 megabytes
+    Info: Processing ended: Wed Mar 14 18:27:45 2018
     Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/ridenou2/ece411/risingedge/output_files/mp1.map.smsg.
 
 

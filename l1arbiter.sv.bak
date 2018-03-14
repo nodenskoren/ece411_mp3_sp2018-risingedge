@@ -1,0 +1,8 @@
+import lc3b_types::*;
+
+module l1arbiter
+(
+	
+);
+
+endmodule : l1arbiter

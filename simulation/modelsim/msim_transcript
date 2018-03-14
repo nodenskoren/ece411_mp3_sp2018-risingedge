@@ -178,26 +178,26 @@
 # 
 # Top level modules:
 # 	mp3_tb
-# vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/magic_memory_dual_port.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module magic_memory
-# 
-# Top level modules:
-# 	magic_memory
-# vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/mp3.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package mp3_sv_unit
-# -- Importing package lc3b_types
-# -- Compiling module mp3
-# 
-# Top level modules:
-# 	mp3
 # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/wishbone.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling interface wishbone
 # 
 # Top level modules:
 # 	--none--
+# vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/mp3_top.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package mp3_top_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module mp3_top
+# 
+# Top level modules:
+# 	mp3_top
+# vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/physical_memory.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module physical_memory
+# 
+# Top level modules:
+# 	physical_memory
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs="+acc"  mp3_tb
 # vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps mp3_tb 
@@ -205,46 +205,20 @@
 # Loading work.mp3_tb
 # Loading work.wishbone
 # Loading work.lc3b_types
-# Loading work.mp3_sv_unit
-# Loading work.mp3
-# Loading work.datapath_sv_unit
-# Loading work.datapath
-# Loading work.plus2
-# Loading work.mux2
-# Loading work.register
-# Loading work.line_to_word_sv_unit
-# Loading work.line_to_word
-# Loading work.IF_ID_pipeline_sv_unit
-# Loading work.IF_ID_pipeline
-# Loading work.regfile_sv_unit
-# Loading work.regfile
-# Loading work.sext5_sv_unit
-# Loading work.sext5
-# Loading work.adj_sv_unit
-# Loading work.adj
-# Loading work.ID_EX_pipeline_sv_unit
-# Loading work.ID_EX_pipeline
-# Loading work.mux4
-# Loading work.alu_sv_unit
-# Loading work.alu
-# Loading work.badder
-# Loading work.EX_MEM_pipeline_sv_unit
-# Loading work.EX_MEM_pipeline
-# Loading work.set_sel_sv_unit
-# Loading work.set_sel
-# Loading work.gencc_sv_unit
-# Loading work.gencc
-# Loading work.branch_unit_sv_unit
-# Loading work.branch_unit
-# Loading work.MEM_WB_pipeline_sv_unit
-# Loading work.MEM_WB_pipeline
-# Loading work.control_rom_sv_unit
-# Loading work.control_rom
-# Loading work.magic_memory
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run 100 ns
+# Loading work.mp3_top_sv_unit
+# Loading work.mp3_top
+# ** Error: (vsim-3037) /home/ridenou2/ece411/risingedge/mp3_top.sv(14): Missing instance name in instantiation of 'mp3'.
+#         Region: /mp3_tb/dut
+# ** Error: (vsim-3033) /home/ridenou2/ece411/risingedge/mp3_top.sv(23): Instantiation of 'wb_interconnect' failed. The design unit was not found.
+#         Region: /mp3_tb/dut
+#         Searched libraries:
+#             /software/altera/13.1/modelsim_ase/altera/verilog/altera
+#             /software/altera/13.1/modelsim_ase/altera/verilog/220model
+#             /software/altera/13.1/modelsim_ase/altera/verilog/sgate
+#             /software/altera/13.1/modelsim_ase/altera/verilog/altera_mf
+#             /software/altera/13.1/modelsim_ase/altera/verilog/altera_lnsim
+#             /software/altera/13.1/modelsim_ase/altera/verilog/stratixiii
+#             /home/ridenou2/ece411/risingedge/simulation/modelsim/rtl_work
+#             /home/ridenou2/ece411/risingedge/simulation/modelsim/rtl_work
+#             /home/ridenou2/ece411/risingedge/simulation/modelsim/rtl_work
+# Loading work.physical_memory

@@ -46,3 +46,91 @@
 # End of Stack Trace
 
 
+# Current time Wed Mar 14 18:13:54 2018
+# ModelSim Stack Trace
+# Program = vsim
+# Id = "10.1d"
+# Version = "2012.11"
+# Date = "Nov  2 2012"
+# Platform = linuxpe
+# 0    0xf7ecb52f: '_strcmp_sse4_2 + 0x2f' in '/lib/libc.so.6'
+# 1    0xf6c969b8: '/home/ridenou2/ece411/risingedge/physical_memory.sv:31'
+# 2    0x081a7535: '<unknown (@0x81a7535)>'
+# 3    0x081a77fe: '<unknown (@0x81a77fe)>'
+# 4    0x08335145: '<unknown (@0x8335145)>'
+# 5    0x08335cf6: '<unknown (@0x8335cf6)>'
+# 6    0xf6c934f5: '/home/ridenou2/ece411/risingedge/mp3_tb.sv:10'
+# 7    0x081a7535: '<unknown (@0x81a7535)>'
+# 8    0x081a77fe: '<unknown (@0x81a77fe)>'
+# 9    0x0837d79b: '<unknown (@0x837d79b)>'
+# 10   0x0837ea45: '<unknown (@0x837ea45)>'
+# 11   0x0868fd7c: '<unknown (@0x868fd7c)>'
+# 12   0x08a49467: '<unknown (@0x8a49467)>'
+# 13   0x08a4ac19: '<unknown (@0x8a4ac19)>'
+# 14   0x08a7054b: '<unknown (@0x8a7054b)>'
+# 15   0x08a75633: '<unknown (@0x8a75633)>'
+# 16   0x08a4cbac: '<unknown (@0x8a4cbac)>'
+# 17   0x08a4fc5d: '<unknown (@0x8a4fc5d)>'
+# 18   0x08a4ac19: '<unknown (@0x8a4ac19)>'
+# 19   0x08a7054b: '<unknown (@0x8a7054b)>'
+# 20   0x08a75893: '<unknown (@0x8a75893)>'
+# 21   0x08a4b32c: '<unknown (@0x8a4b32c)>'
+# 22   0x08a52a2d: '<unknown (@0x8a52a2d)>'
+# 23   0x08a4ac19: '<unknown (@0x8a4ac19)>'
+# 24   0x08a4c0ad: '<unknown (@0x8a4c0ad)>'
+# 25   0x087cfb03: '<unknown (@0x87cfb03)>'
+# 26   0x08a8324b: '<unknown (@0x8a8324b)>'
+# 27   0x08aaedc2: '<unknown (@0x8aaedc2)>'
+# 28   0x08a910d0: '<unknown (@0x8a910d0)>'
+# 29   0x08a913ce: '<unknown (@0x8a913ce)>'
+# 30   0x089b70f0: '<unknown (@0x89b70f0)>'
+# 31   0x084a0453: '<unknown (@0x84a0453)>'
+# 32   0x083c75f5: '<unknown (@0x83c75f5)>'
+# 33   0x08061dc6: '<unknown (@0x8061dc6)>'
+# End of Stack Trace
+
+
+# Current time Wed Mar 14 18:26:19 2018
+# ModelSim Stack Trace
+# Program = vsim
+# Id = "10.1d"
+# Version = "2012.11"
+# Date = "Nov  2 2012"
+# Platform = linuxpe
+# 0    0xf7ecb52f: '_strcmp_sse4_2 + 0x2f' in '/lib/libc.so.6'
+# 1    0xf6c969b8: '/home/ridenou2/ece411/risingedge/physical_memory.sv:31'
+# 2    0x081a7535: '<unknown (@0x81a7535)>'
+# 3    0x081a77fe: '<unknown (@0x81a77fe)>'
+# 4    0x08335145: '<unknown (@0x8335145)>'
+# 5    0x08335cf6: '<unknown (@0x8335cf6)>'
+# 6    0xf6c934f3: '/home/ridenou2/ece411/risingedge/mp3_tb.sv:10'
+# 7    0x081a7535: '<unknown (@0x81a7535)>'
+# 8    0x081a77fe: '<unknown (@0x81a77fe)>'
+# 9    0x0837d79b: '<unknown (@0x837d79b)>'
+# 10   0x0837ea45: '<unknown (@0x837ea45)>'
+# 11   0x0868fd7c: '<unknown (@0x868fd7c)>'
+# 12   0x08a49467: '<unknown (@0x8a49467)>'
+# 13   0x08a4ac19: '<unknown (@0x8a4ac19)>'
+# 14   0x08a7054b: '<unknown (@0x8a7054b)>'
+# 15   0x08a75633: '<unknown (@0x8a75633)>'
+# 16   0x08a4cbac: '<unknown (@0x8a4cbac)>'
+# 17   0x08a4fc5d: '<unknown (@0x8a4fc5d)>'
+# 18   0x08a4ac19: '<unknown (@0x8a4ac19)>'
+# 19   0x08a7054b: '<unknown (@0x8a7054b)>'
+# 20   0x08a75893: '<unknown (@0x8a75893)>'
+# 21   0x08a4b32c: '<unknown (@0x8a4b32c)>'
+# 22   0x08a52a2d: '<unknown (@0x8a52a2d)>'
+# 23   0x08a4ac19: '<unknown (@0x8a4ac19)>'
+# 24   0x08a4c0ad: '<unknown (@0x8a4c0ad)>'
+# 25   0x087cfb03: '<unknown (@0x87cfb03)>'
+# 26   0x08a8324b: '<unknown (@0x8a8324b)>'
+# 27   0x08aaedc2: '<unknown (@0x8aaedc2)>'
+# 28   0x08a910d0: '<unknown (@0x8a910d0)>'
+# 29   0x08a913ce: '<unknown (@0x8a913ce)>'
+# 30   0x089b70f0: '<unknown (@0x89b70f0)>'
+# 31   0x084a0453: '<unknown (@0x84a0453)>'
+# 32   0x083c75f5: '<unknown (@0x83c75f5)>'
+# 33   0x08061dc6: '<unknown (@0x8061dc6)>'
+# End of Stack Trace
+
+
