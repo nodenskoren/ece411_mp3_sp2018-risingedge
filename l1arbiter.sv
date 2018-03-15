@@ -5,7 +5,7 @@ module l1arbiter
 	input clk,
 	input i_rw, d_rw,
 	input mem_resp,
-	output cache_sel
+	output logic cache_sel
 );
 
 enum int unsigned {
@@ -39,6 +39,7 @@ begin : next_state_logic
 		idle:begin
 			if(d_rw) next_state = service_d;
 			else if (i_rw) next_state = service_i;
+			else next_state = idle;
 		end
 		
 		service_d:begin

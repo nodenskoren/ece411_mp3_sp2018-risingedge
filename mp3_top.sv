@@ -8,7 +8,7 @@ module mp3_top
 wishbone ifetch(wb_mem.CLK);
 wishbone memory (wb_mem.CLK);
 
-mp3(
+mp3 mp3 (
 	.ifetch,
 	.memory
 );
