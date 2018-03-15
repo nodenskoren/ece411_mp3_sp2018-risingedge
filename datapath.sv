@@ -31,6 +31,8 @@ lc3b_word pc_plus2_out;
 lc3b_word addr_adder_out_out;
 logic branch_enable;
 lc3b_word pcmux_out;
+logic load_pc;
+
 plus2 pc_plus2
 (
 	.in(pc),
@@ -50,7 +52,7 @@ mux2 pcmux
 register program_counter
 (
 	.clk,
-	.load(1'b1),
+	.load(load_pc),
 	.in(pcmux_out),
 	.out(pc)
 );
@@ -70,6 +72,8 @@ lc3b_word instruction;
 IF_ID_pipeline IF_ID_pipeline
 (
 	.clk,
+	.ifetch_resp,
+	.load_pc,
 	.instruction_in(ifetch_word_out),
 	.instruction_out(instruction)
 );
@@ -229,6 +233,7 @@ lc3b_word dest_data_out_EX_MEM;
 EX_MEM_pipeline EX_MEM_pipeline
 (
 	.clk,
+	.mem_resp,
 	.alu_out_in(alu_out),
 	.addr_adder_out_in(addr_adder_out),
 	.pc_in(pc_out_ID_EX),
@@ -319,6 +324,7 @@ assign branch_enable = is_br_out_EX_MEM & branch_unit_out;
 MEM_WB_pipeline MEM_WB_pipeline
 (
 	.clk,
+	.mem_resp,
 	.dest_in(dest_out_EX_MEM),
 	.regfilemux_out_in(regfilemux_out),
 	.load_regfile_in(load_regfile_EX_MEM),

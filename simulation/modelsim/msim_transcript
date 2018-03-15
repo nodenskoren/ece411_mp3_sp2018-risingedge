@@ -340,10 +340,151 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 100 ns
+radix -h
+# hexadecimal
 add wave -position insertpoint  \
 sim:/mp3_tb/dut/mp3/the_datapath/regfile/data
-radix h
-# hexadecimal
+restart -f; run 20000ns
+# Loading sv_std.std
+# Loading work.mp3_tb
+# Loading work.wishbone
+# Loading work.lc3b_types
+# Loading work.mp3_top_sv_unit
+# Loading work.mp3_top
+# Loading work.mp3_sv_unit
+# Loading work.mp3
+# Loading work.datapath_sv_unit
+# Loading work.datapath
+# Loading work.plus2
+# Loading work.mux2
+# Loading work.register
+# Loading work.line_to_word_sv_unit
+# Loading work.line_to_word
+# Loading work.IF_ID_pipeline_sv_unit
+# Loading work.IF_ID_pipeline
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.sext5_sv_unit
+# Loading work.sext5
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.ID_EX_pipeline_sv_unit
+# Loading work.ID_EX_pipeline
+# Loading work.mux4
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.badder
+# Loading work.EX_MEM_pipeline_sv_unit
+# Loading work.EX_MEM_pipeline
+# Loading work.set_sel_sv_unit
+# Loading work.set_sel
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.branch_unit_sv_unit
+# Loading work.branch_unit
+# Loading work.MEM_WB_pipeline_sv_unit
+# Loading work.MEM_WB_pipeline
+# Loading work.control_rom_sv_unit
+# Loading work.control_rom
+# Loading work.wb_interconnect_sv_unit
+# Loading work.wb_interconnect
+# Loading work.l1arbiter_sv_unit
+# Loading work.l1arbiter
+# Loading work.cache_sv_unit
+# Loading work.cache
+# Loading work.cache_datapath_sv_unit
+# Loading work.cache_datapath
+# Loading work.cache_writeword_sv_unit
+# Loading work.cache_writeword
+# Loading work.array_sv_unit
+# Loading work.array
+# Loading work.cache_control_sv_unit
+# Loading work.cache_control
+# Loading work.physical_memory
+# ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Too few port connections. Expected 6, found 5.
+#         Region: /mp3_tb/dut/interconnect/Icache/cache_datapath/wb2_mux
+# ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Missing connection for port 'a'.
+# ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Too few port connections. Expected 6, found 5.
+#         Region: /mp3_tb/dut/interconnect/Icache/cache_datapath/adrmux
+# ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Missing connection for port 'd'.
+# ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Too few port connections. Expected 6, found 5.
+#         Region: /mp3_tb/dut/interconnect/Dcache/cache_datapath/wb2_mux
+# ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Missing connection for port 'a'.
+# ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Too few port connections. Expected 6, found 5.
+#         Region: /mp3_tb/dut/interconnect/Dcache/cache_datapath/adrmux
+# ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Missing connection for port 'd'.
+add wave -position insertpoint  \
+sim:/mp3_tb/dut/mp3/the_datapath/program_counter/data
+restart -f; run 20000ns
+# Loading sv_std.std
+# Loading work.mp3_tb
+# Loading work.wishbone
+# Loading work.lc3b_types
+# Loading work.mp3_top_sv_unit
+# Loading work.mp3_top
+# Loading work.mp3_sv_unit
+# Loading work.mp3
+# Loading work.datapath_sv_unit
+# Loading work.datapath
+# Loading work.plus2
+# Loading work.mux2
+# Loading work.register
+# Loading work.line_to_word_sv_unit
+# Loading work.line_to_word
+# Loading work.IF_ID_pipeline_sv_unit
+# Loading work.IF_ID_pipeline
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.sext5_sv_unit
+# Loading work.sext5
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.ID_EX_pipeline_sv_unit
+# Loading work.ID_EX_pipeline
+# Loading work.mux4
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.badder
+# Loading work.EX_MEM_pipeline_sv_unit
+# Loading work.EX_MEM_pipeline
+# Loading work.set_sel_sv_unit
+# Loading work.set_sel
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.branch_unit_sv_unit
+# Loading work.branch_unit
+# Loading work.MEM_WB_pipeline_sv_unit
+# Loading work.MEM_WB_pipeline
+# Loading work.control_rom_sv_unit
+# Loading work.control_rom
+# Loading work.wb_interconnect_sv_unit
+# Loading work.wb_interconnect
+# Loading work.l1arbiter_sv_unit
+# Loading work.l1arbiter
+# Loading work.cache_sv_unit
+# Loading work.cache
+# Loading work.cache_datapath_sv_unit
+# Loading work.cache_datapath
+# Loading work.cache_writeword_sv_unit
+# Loading work.cache_writeword
+# Loading work.array_sv_unit
+# Loading work.array
+# Loading work.cache_control_sv_unit
+# Loading work.cache_control
+# Loading work.physical_memory
+# ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Too few port connections. Expected 6, found 5.
+#         Region: /mp3_tb/dut/interconnect/Icache/cache_datapath/wb2_mux
+# ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Missing connection for port 'a'.
+# ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Too few port connections. Expected 6, found 5.
+#         Region: /mp3_tb/dut/interconnect/Icache/cache_datapath/adrmux
+# ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Missing connection for port 'd'.
+# ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Too few port connections. Expected 6, found 5.
+#         Region: /mp3_tb/dut/interconnect/Dcache/cache_datapath/wb2_mux
+# ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Missing connection for port 'a'.
+# ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Too few port connections. Expected 6, found 5.
+#         Region: /mp3_tb/dut/interconnect/Dcache/cache_datapath/adrmux
+# ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Missing connection for port 'd'.
+add wave -position insertpoint sim:/mp3_tb/dut/memory/*
 restart -f; run 20000ns
 # Loading sv_std.std
 # Loading work.mp3_tb

@@ -3,6 +3,7 @@ use verilog.vl_types.all;
 entity EX_MEM_pipeline is
     port(
         clk             : in     vl_logic;
+        mem_resp        : in     vl_logic;
         alu_out_in      : in     vl_logic_vector(15 downto 0);
         addr_adder_out_in: in     vl_logic_vector(15 downto 0);
         pc_in           : in     vl_logic_vector(15 downto 0);

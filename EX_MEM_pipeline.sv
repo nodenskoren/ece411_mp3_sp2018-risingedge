@@ -4,6 +4,7 @@ import lc3b_types::*;
 module EX_MEM_pipeline
 (
 	input clk,
+	input mem_resp,
 	//input logic is_j_in,
 	//input logic is_br_in,
 	//input logic branch_enable_in,
@@ -57,22 +58,24 @@ lc3b_word dest_data;
 
 always_ff @(posedge clk)
 begin
-	//is_j <= is_j_in;
-	is_br <= is_br_in;
-	//branch_enable <= branch_enable_in;
-	alu_out <= alu_out_in;
-	addr_adder_out <= addr_adder_out_in;
-	//trap_addr <= trap_addr_in;
-	pc <= pc_in;
-	dest <= dest_in;
-	nzp <= nzp_in;
-	is_br <= is_br_in;
-	load_cc <= load_cc_in;
-	load_regfile <= load_regfile_in;
-	mem_read <= mem_read_in;
-	mem_write <= mem_write_in;
-	regfilemux_sel <= regfilemux_sel_in;
-	dest_data <= dest_data_in;
+	if(mem_resp) begin
+		//is_j <= is_j_in;
+		is_br <= is_br_in;
+		//branch_enable <= branch_enable_in;
+		alu_out <= alu_out_in;
+		addr_adder_out <= addr_adder_out_in;
+		//trap_addr <= trap_addr_in;
+		pc <= pc_in;
+		dest <= dest_in;
+		nzp <= nzp_in;
+		is_br <= is_br_in;
+		load_cc <= load_cc_in;
+		load_regfile <= load_regfile_in;
+		mem_read <= mem_read_in;
+		mem_write <= mem_write_in;
+		regfilemux_sel <= regfilemux_sel_in;
+		dest_data <= dest_data_in;
+	end
 end
 
 always_comb

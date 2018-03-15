@@ -3,6 +3,7 @@ import lc3b_types::*;
 module MEM_WB_pipeline
 (
 	input clk,
+	input mem_resp,
 	input lc3b_reg dest_in,
 	input lc3b_word regfilemux_out_in,
 	input logic load_regfile_in,
@@ -27,12 +28,14 @@ logic load_regfile;
 
 always_ff @(posedge clk)
 begin
-	dest <= dest_in;
-	//alu_out <= alu_out_in;
-	//mem_rdata <= mem_rdata_in;
-	//pc <= pc_in;
-	regfilemux_out <= regfilemux_out_in;
-	load_regfile <= load_regfile_in;
+	if(mem_resp) begin
+		dest <= dest_in;
+		//alu_out <= alu_out_in;
+		//mem_rdata <= mem_rdata_in;
+		//pc <= pc_in;
+		regfilemux_out <= regfilemux_out_in;
+		load_regfile <= load_regfile_in;
+	end
 end
 
 always_comb
