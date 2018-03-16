@@ -1,4 +1,12 @@
 
+State Machine - |mp3_top|l2cache:l2cache|cache_control:cache_controller|state
+Name state.load_line state.stall state.write_back state.idle state.update_cache 
+state.idle 0 0 0 0 0 
+state.write_back 0 0 1 1 0 
+state.stall 0 1 0 1 0 
+state.load_line 1 0 0 1 0 
+state.update_cache 0 0 0 1 1 
+
 State Machine - |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_control:cache_controller|state
 Name state.load_line state.stall state.write_back state.idle state.update_cache 
 state.idle 0 0 0 0 0 

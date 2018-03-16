@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mp1
-Fri Mar 16 16:24:08 2018
+Fri Mar 16 17:16:44 2018
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -14,89 +14,105 @@ Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. State Machine - |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_control:cache_controller|state
- 10. State Machine - |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_control:cache_controller|state
- 11. State Machine - |mp3_top|wb_interconnect:interconnect|l1arbiter:arbiter|state
- 12. State Machine - |mp3_top|mp3:mp3|datapath:the_datapath|stall_unit:stall_unit|state
- 13. Registers Removed During Synthesis
- 14. Removed Registers Triggering Further Register Optimizations
- 15. General Register Statistics
- 16. Registers Added for RAM Pass-Through Logic
- 17. Registers Packed Into Inferred Megafunctions
- 18. Multiplexer Restructuring Statistics (Restructuring Performed)
- 19. Source assignments for mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_0|altsyncram_imo1:auto_generated
- 20. Source assignments for mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_1|altsyncram_imo1:auto_generated
- 21. Source assignments for mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2|altsyncram_imo1:auto_generated
- 22. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|plus2:pc_plus2
- 23. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux_decode_sel:pcmux
- 24. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|register:program_counter
- 25. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|sext5:sext5
- 26. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux2:sr2mux
- 27. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux2:destmux
- 28. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|adj:adj6
- 29. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|sext5:sext6
- 30. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux2:offset6mux
- 31. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|adj:adj9
- 32. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|adj:adj11
- 33. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux2:offset
- 34. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|zext:zext8
- 35. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux4:alumux
- 36. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|badder:addr_adder
- 37. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux2:mem_address_mux
- 38. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux8:regfilemux
- 39. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|register:cc
- 40. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|cache_writeword:updateline
- 41. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux
- 42. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:data0
- 43. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:data1
- 44. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:tag0
- 45. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:tag1
- 46. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:valid0
- 47. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:valid1
- 48. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:dirty0
- 49. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:dirty1
- 50. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:LRU
- 51. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux4:wb2_mux
- 52. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:evict_mux
- 53. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux4:adrmux
- 54. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|cache_writeword:updateline
- 55. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux
- 56. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:data0
- 57. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:data1
- 58. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:tag0
- 59. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:tag1
- 60. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:valid0
- 61. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:valid1
- 62. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:dirty0
- 63. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:dirty1
- 64. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:LRU
- 65. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux4:wb2_mux
- 66. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:evict_mux
- 67. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux4:adrmux
- 68. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|mux2:dat_m
- 69. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|mux2:cyc
- 70. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|mux2:stb
- 71. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|mux2:we
- 72. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|mux2:sel
- 73. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|mux2:adr
- 74. Parameter Settings for Inferred Entity Instance: mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_0
- 75. Parameter Settings for Inferred Entity Instance: mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_1
- 76. Parameter Settings for Inferred Entity Instance: mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2
- 77. altsyncram Parameter Settings by Entity Instance
- 78. Port Connectivity Checks: "wb_interconnect:interconnect|cache:Icache|cache_control:cache_controller"
- 79. Port Connectivity Checks: "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux4:adrmux"
- 80. Port Connectivity Checks: "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux4:wb2_mux"
- 81. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|mux8:regfilemux"
- 82. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|stall_unit:stall_unit"
- 83. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline"
- 84. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|mux4:alumux"
- 85. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline"
- 86. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|zext:zext8"
- 87. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|mux2:destmux"
- 88. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|register:program_counter"
- 89. Elapsed Time Per Partition
- 90. Analysis & Synthesis Messages
- 91. Analysis & Synthesis Suppressed Messages
+  9. State Machine - |mp3_top|l2cache:l2cache|cache_control:cache_controller|state
+ 10. State Machine - |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_control:cache_controller|state
+ 11. State Machine - |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_control:cache_controller|state
+ 12. State Machine - |mp3_top|wb_interconnect:interconnect|l1arbiter:arbiter|state
+ 13. State Machine - |mp3_top|mp3:mp3|datapath:the_datapath|stall_unit:stall_unit|state
+ 14. Registers Removed During Synthesis
+ 15. Removed Registers Triggering Further Register Optimizations
+ 16. General Register Statistics
+ 17. Registers Added for RAM Pass-Through Logic
+ 18. Registers Packed Into Inferred Megafunctions
+ 19. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 20. Source assignments for mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_0|altsyncram_imo1:auto_generated
+ 21. Source assignments for mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_1|altsyncram_imo1:auto_generated
+ 22. Source assignments for mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2|altsyncram_imo1:auto_generated
+ 23. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|plus2:pc_plus2
+ 24. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux_decode_sel:pcmux
+ 25. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|register:program_counter
+ 26. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|sext5:sext5
+ 27. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux2:sr2mux
+ 28. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux2:destmux
+ 29. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|adj:adj6
+ 30. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|sext5:sext6
+ 31. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux2:offset6mux
+ 32. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|adj:adj9
+ 33. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|adj:adj11
+ 34. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux2:offset
+ 35. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|zext:zext8
+ 36. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux4:alumux
+ 37. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|badder:addr_adder
+ 38. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux2:mem_address_mux
+ 39. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux8:regfilemux
+ 40. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|register:cc
+ 41. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|cache_writeword:updateline
+ 42. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux
+ 43. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:data0
+ 44. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:data1
+ 45. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:tag0
+ 46. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:tag1
+ 47. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:valid0
+ 48. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:valid1
+ 49. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:dirty0
+ 50. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:dirty1
+ 51. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:LRU
+ 52. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux4:wb2_mux
+ 53. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:evict_mux
+ 54. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux4:adrmux
+ 55. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|cache_writeword:updateline
+ 56. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux
+ 57. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:data0
+ 58. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:data1
+ 59. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:tag0
+ 60. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:tag1
+ 61. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:valid0
+ 62. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:valid1
+ 63. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:dirty0
+ 64. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:dirty1
+ 65. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:LRU
+ 66. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux4:wb2_mux
+ 67. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:evict_mux
+ 68. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux4:adrmux
+ 69. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|mux2:dat_m
+ 70. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|mux2:cyc
+ 71. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|mux2:stb
+ 72. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|mux2:we
+ 73. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|mux2:sel
+ 74. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|mux2:adr
+ 75. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|cache_writeword:updateline
+ 76. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux
+ 77. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:data0
+ 78. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:data1
+ 79. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:tag0
+ 80. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:tag1
+ 81. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:valid0
+ 82. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:valid1
+ 83. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:dirty0
+ 84. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:dirty1
+ 85. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:LRU
+ 86. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|mux4:wb2_mux
+ 87. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|mux2:evict_mux
+ 88. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|mux4:adrmux
+ 89. Parameter Settings for Inferred Entity Instance: mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_0
+ 90. Parameter Settings for Inferred Entity Instance: mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_1
+ 91. Parameter Settings for Inferred Entity Instance: mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2
+ 92. altsyncram Parameter Settings by Entity Instance
+ 93. Port Connectivity Checks: "l2cache:l2cache|cache_control:cache_controller"
+ 94. Port Connectivity Checks: "wb_interconnect:interconnect|cache:Icache|cache_control:cache_controller"
+ 95. Port Connectivity Checks: "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux4:adrmux"
+ 96. Port Connectivity Checks: "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux4:wb2_mux"
+ 97. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|mux8:regfilemux"
+ 98. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|stall_unit:stall_unit"
+ 99. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline"
+100. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|mux4:alumux"
+101. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline"
+102. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|zext:zext8"
+103. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|mux2:destmux"
+104. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|register:program_counter"
+105. Elapsed Time Per Partition
+106. Analysis & Synthesis Messages
+107. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -122,16 +138,16 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Fri Mar 16 16:24:08 2018       ;
+; Analysis & Synthesis Status   ; Successful - Fri Mar 16 17:16:44 2018       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp1                                         ;
 ; Top-level Entity Name         ; mp3_top                                     ;
 ; Family                        ; Stratix III                                 ;
 ; Logic utilization             ; N/A                                         ;
-;     Combinational ALUTs       ; 2,232                                       ;
+;     Combinational ALUTs       ; 3,380                                       ;
 ;     Memory ALUTs              ; 0                                           ;
-;     Dedicated logic registers ; 4,781                                       ;
-; Total registers               ; 4781                                        ;
+;     Dedicated logic registers ; 7,018                                       ;
+; Total registers               ; 7018                                        ;
 ; Total pins                    ; 290                                         ;
 ; Total virtual pins            ; 0                                           ;
 ; Total block memory bits       ; 384                                         ;
@@ -286,6 +302,7 @@ applicable agreement for further details.
 ; mux_decode_sel.sv                ; yes             ; User SystemVerilog HDL File  ; /home/ridenou2/ece411/risingedge/mux_decode_sel.sv                          ;         ;
 ; stall_unit.sv                    ; yes             ; User SystemVerilog HDL File  ; /home/ridenou2/ece411/risingedge/stall_unit.sv                              ;         ;
 ; l1arbiter.sv                     ; yes             ; User SystemVerilog HDL File  ; /home/ridenou2/ece411/risingedge/l1arbiter.sv                               ;         ;
+; l2cache.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/ridenou2/ece411/risingedge/l2cache.sv                                 ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                 ; /software/altera/13.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                 ; /software/altera/13.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                 ; /software/altera/13.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
@@ -304,34 +321,34 @@ applicable agreement for further details.
 +-----------------------------------------------+------------------+
 ; Resource                                      ; Usage            ;
 +-----------------------------------------------+------------------+
-; Estimated ALUTs Used                          ; 2232             ;
-;     -- Combinational ALUTs                    ; 2232             ;
+; Estimated ALUTs Used                          ; 3380             ;
+;     -- Combinational ALUTs                    ; 3380             ;
 ;     -- Memory ALUTs                           ; 0                ;
 ;     -- LUT_REGs                               ; 0                ;
-; Dedicated logic registers                     ; 4781             ;
+; Dedicated logic registers                     ; 7018             ;
 ;                                               ;                  ;
-; Estimated ALUTs Unavailable                   ; 1145             ;
-;     -- Due to unpartnered combinational logic ; 1145             ;
+; Estimated ALUTs Unavailable                   ; 1688             ;
+;     -- Due to unpartnered combinational logic ; 1688             ;
 ;     -- Due to Memory ALUTs                    ; 0                ;
 ;                                               ;                  ;
-; Total combinational functions                 ; 2232             ;
+; Total combinational functions                 ; 3380             ;
 ; Combinational ALUT usage by number of inputs  ;                  ;
-;     -- 7 input functions                      ; 1145             ;
-;     -- 6 input functions                      ; 377              ;
-;     -- 5 input functions                      ; 242              ;
-;     -- 4 input functions                      ; 284              ;
-;     -- <=3 input functions                    ; 184              ;
+;     -- 7 input functions                      ; 1688             ;
+;     -- 6 input functions                      ; 661              ;
+;     -- 5 input functions                      ; 250              ;
+;     -- 4 input functions                      ; 429              ;
+;     -- <=3 input functions                    ; 352              ;
 ;                                               ;                  ;
 ; Combinational ALUTs by mode                   ;                  ;
-;     -- normal mode                            ; 1041             ;
-;     -- extended LUT mode                      ; 1145             ;
+;     -- normal mode                            ; 1646             ;
+;     -- extended LUT mode                      ; 1688             ;
 ;     -- arithmetic mode                        ; 46               ;
 ;     -- shared arithmetic mode                 ; 0                ;
 ;                                               ;                  ;
-; Estimated ALUT/register pairs used            ; 7595             ;
+; Estimated ALUT/register pairs used            ; 11121            ;
 ;                                               ;                  ;
-; Total registers                               ; 4781             ;
-;     -- Dedicated logic registers              ; 4781             ;
+; Total registers                               ; 7018             ;
+;     -- Dedicated logic registers              ; 7018             ;
 ;     -- I/O registers                          ; 0                ;
 ;     -- LUT_REGs                               ; 0                ;
 ;                                               ;                  ;
@@ -341,9 +358,9 @@ applicable agreement for further details.
 ; Total block memory bits                       ; 384              ;
 ; DSP block 18-bit elements                     ; 0                ;
 ; Maximum fan-out node                          ; wb_mem.CLK~input ;
-; Maximum fan-out                               ; 4829             ;
-; Total fan-out                                 ; 28343            ;
-; Average fan-out                               ; 3.71             ;
+; Maximum fan-out                               ; 7066             ;
+; Total fan-out                                 ; 41666            ;
+; Average fan-out                               ; 3.78             ;
 +-----------------------------------------------+------------------+
 
 
@@ -352,15 +369,31 @@ applicable agreement for further details.
 +-------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                         ; Library Name ;
 +-------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
-; |mp3_top                                        ; 2232 (0)          ; 4781 (0)     ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 290  ; 0            ; |mp3_top                                                                                                    ; work         ;
-;    |mp3:mp3|                                    ; 536 (0)           ; 323 (0)      ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3                                                                                            ; work         ;
+; |mp3_top                                        ; 3380 (0)          ; 7018 (0)     ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 290  ; 0            ; |mp3_top                                                                                                    ; work         ;
+;    |l2cache:l2cache|                            ; 1024 (1)          ; 2237 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache                                                                                    ; work         ;
+;       |cache_control:cache_controller|          ; 14 (14)           ; 5 (5)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_control:cache_controller                                                     ; work         ;
+;       |cache_datapath:cache_datapath|           ; 1009 (9)          ; 2232 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath                                                      ; work         ;
+;          |array:LRU|                            ; 18 (18)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|array:LRU                                            ; work         ;
+;          |array:data0|                          ; 264 (264)         ; 1024 (1024)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|array:data0                                          ; work         ;
+;          |array:data1|                          ; 265 (265)         ; 1024 (1024)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|array:data1                                          ; work         ;
+;          |array:dirty0|                         ; 2 (2)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|array:dirty0                                         ; work         ;
+;          |array:dirty1|                         ; 2 (2)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|array:dirty1                                         ; work         ;
+;          |array:tag0|                           ; 26 (26)           ; 72 (72)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|array:tag0                                           ; work         ;
+;          |array:tag1|                           ; 26 (26)           ; 72 (72)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|array:tag1                                           ; work         ;
+;          |array:valid0|                         ; 2 (2)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|array:valid0                                         ; work         ;
+;          |array:valid1|                         ; 2 (2)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|array:valid1                                         ; work         ;
+;          |mux2:evict_mux|                       ; 128 (128)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:evict_mux                                       ; work         ;
+;          |mux2:wbsel_mux|                       ; 128 (128)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux                                       ; work         ;
+;          |mux4:adrmux|                          ; 9 (9)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux4:adrmux                                          ; work         ;
+;          |mux4:wb2_mux|                         ; 128 (128)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux4:wb2_mux                                         ; work         ;
+;    |mp3:mp3|                                    ; 531 (0)           ; 323 (0)      ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3                                                                                            ; work         ;
 ;       |control_rom:control_rom|                 ; 21 (21)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|control_rom:control_rom                                                                    ; work         ;
-;       |datapath:the_datapath|                   ; 515 (1)           ; 323 (0)      ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath                                                                      ; work         ;
+;       |datapath:the_datapath|                   ; 510 (1)           ; 323 (0)      ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath                                                                      ; work         ;
 ;          |EX_MEM_pipeline:EX_MEM_pipeline|      ; 6 (6)             ; 89 (89)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline                                      ; work         ;
 ;          |ID_EX_pipeline:ID_EX_pipeline|        ; 0 (0)             ; 106 (106)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline                                        ; work         ;
 ;          |IF_ID_pipeline:IF_ID_pipeline|        ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|IF_ID_pipeline:IF_ID_pipeline                                        ; work         ;
 ;          |MEM_WB_pipeline:MEM_WB_pipeline|      ; 0 (0)             ; 20 (20)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|MEM_WB_pipeline:MEM_WB_pipeline                                      ; work         ;
-;          |alu:alu|                              ; 168 (168)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|alu:alu                                                              ; work         ;
+;          |alu:alu|                              ; 166 (166)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|alu:alu                                                              ; work         ;
 ;          |badder:addr_adder|                    ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|badder:addr_adder                                                    ; work         ;
 ;          |branch_unit:cccomp|                   ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|branch_unit:cccomp                                                   ; work         ;
 ;          |gencc:the_gencc|                      ; 6 (6)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|gencc:the_gencc                                                      ; work         ;
@@ -383,40 +416,38 @@ applicable agreement for further details.
 ;             |altsyncram:data_rtl_2|             ; 0 (0)             ; 0 (0)        ; 128               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2                                ; work         ;
 ;                |altsyncram_imo1:auto_generated| ; 0 (0)             ; 0 (0)        ; 128               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2|altsyncram_imo1:auto_generated ; work         ;
 ;          |register:cc|                          ; 0 (0)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|register:cc                                                          ; work         ;
-;          |register:program_counter|             ; 9 (9)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|register:program_counter                                             ; work         ;
-;          |set_sel:set_sel|                      ; 11 (11)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|set_sel:set_sel                                                      ; work         ;
+;          |register:program_counter|             ; 10 (10)           ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|register:program_counter                                             ; work         ;
+;          |set_sel:set_sel|                      ; 7 (7)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|set_sel:set_sel                                                      ; work         ;
 ;          |stall_unit:stall_unit|                ; 8 (8)             ; 4 (4)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|stall_unit:stall_unit                                                ; work         ;
-;    |wb_interconnect:interconnect|               ; 1696 (0)          ; 4458 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect                                                                       ; work         ;
-;       |cache:Dcache|                            ; 886 (0)           ; 2237 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache                                                          ; work         ;
-;          |cache_control:cache_controller|       ; 16 (16)           ; 5 (5)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_control:cache_controller                           ; work         ;
-;          |cache_datapath:cache_datapath|        ; 870 (8)           ; 2232 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath                            ; work         ;
+;    |wb_interconnect:interconnect|               ; 1825 (0)          ; 4458 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect                                                                       ; work         ;
+;       |cache:Dcache|                            ; 1015 (0)          ; 2237 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache                                                          ; work         ;
+;          |cache_control:cache_controller|       ; 13 (13)           ; 5 (5)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_control:cache_controller                           ; work         ;
+;          |cache_datapath:cache_datapath|        ; 1002 (8)          ; 2232 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath                            ; work         ;
 ;             |array:LRU|                         ; 18 (18)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:LRU                  ; work         ;
-;             |array:data0|                       ; 264 (264)         ; 1024 (1024)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:data0                ; work         ;
-;             |array:data1|                       ; 264 (264)         ; 1024 (1024)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:data1                ; work         ;
-;             |array:dirty0|                      ; 2 (2)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:dirty0               ; work         ;
-;             |array:dirty1|                      ; 2 (2)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:dirty1               ; work         ;
-;             |array:tag0|                        ; 26 (26)           ; 72 (72)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:tag0                 ; work         ;
+;             |array:data0|                       ; 256 (256)         ; 1024 (1024)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:data0                ; work         ;
+;             |array:data1|                       ; 256 (256)         ; 1024 (1024)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:data1                ; work         ;
+;             |array:dirty0|                      ; 12 (12)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:dirty0               ; work         ;
+;             |array:dirty1|                      ; 11 (11)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:dirty1               ; work         ;
+;             |array:tag0|                        ; 27 (27)           ; 72 (72)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:tag0                 ; work         ;
 ;             |array:tag1|                        ; 26 (26)           ; 72 (72)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:tag1                 ; work         ;
 ;             |array:valid0|                      ; 2 (2)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:valid0               ; work         ;
 ;             |array:valid1|                      ; 2 (2)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:valid1               ; work         ;
-;             |mux2:wbsel_mux|                    ; 128 (128)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux             ; work         ;
+;             |mux2:wbsel_mux|                    ; 256 (256)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux             ; work         ;
 ;             |mux4:wb2_mux|                      ; 128 (128)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux4:wb2_mux               ; work         ;
-;       |cache:Icache|                            ; 665 (0)           ; 2219 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache                                                          ; work         ;
-;          |cache_control:cache_controller|       ; 7 (7)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_control:cache_controller                           ; work         ;
-;          |cache_datapath:cache_datapath|        ; 658 (8)           ; 2216 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath                            ; work         ;
+;       |cache:Icache|                            ; 664 (0)           ; 2219 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache                                                          ; work         ;
+;          |cache_control:cache_controller|       ; 9 (9)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_control:cache_controller                           ; work         ;
+;          |cache_datapath:cache_datapath|        ; 655 (8)           ; 2216 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath                            ; work         ;
 ;             |array:LRU|                         ; 10 (10)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:LRU                  ; work         ;
 ;             |array:data0|                       ; 256 (256)         ; 1024 (1024)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:data0                ; work         ;
 ;             |array:data1|                       ; 256 (256)         ; 1024 (1024)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:data1                ; work         ;
-;             |array:tag0|                        ; 26 (26)           ; 72 (72)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:tag0                 ; work         ;
-;             |array:tag1|                        ; 34 (34)           ; 72 (72)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:tag1                 ; work         ;
+;             |array:tag0|                        ; 27 (27)           ; 72 (72)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:tag0                 ; work         ;
+;             |array:tag1|                        ; 30 (30)           ; 72 (72)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:tag1                 ; work         ;
 ;             |array:valid0|                      ; 2 (2)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:valid0               ; work         ;
 ;             |array:valid1|                      ; 2 (2)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:valid1               ; work         ;
 ;             |mux4:wb2_mux|                      ; 64 (64)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux4:wb2_mux               ; work         ;
-;       |l1arbiter:arbiter|                       ; 2 (2)             ; 2 (2)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|l1arbiter:arbiter                                                     ; work         ;
-;       |mux2:adr|                                ; 12 (12)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|mux2:adr                                                              ; work         ;
+;       |l1arbiter:arbiter|                       ; 4 (4)             ; 2 (2)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|l1arbiter:arbiter                                                     ; work         ;
+;       |mux2:adr|                                ; 13 (13)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|mux2:adr                                                              ; work         ;
 ;       |mux2:dat_m|                              ; 129 (129)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|mux2:dat_m                                                            ; work         ;
-;       |mux2:stb|                                ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|mux2:stb                                                              ; work         ;
-;       |mux2:we|                                 ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|mux2:we                                                               ; work         ;
 +-------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -430,6 +461,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_1|altsyncram_imo1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 8            ; 16           ; 8            ; 16           ; 128  ; None ;
 ; mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2|altsyncram_imo1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 8            ; 16           ; 8            ; 16           ; 128  ; None ;
 +---------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------+
+; State Machine - |mp3_top|l2cache:l2cache|cache_control:cache_controller|state                           ;
++--------------------+-----------------+-------------+------------------+------------+--------------------+
+; Name               ; state.load_line ; state.stall ; state.write_back ; state.idle ; state.update_cache ;
++--------------------+-----------------+-------------+------------------+------------+--------------------+
+; state.idle         ; 0               ; 0           ; 0                ; 0          ; 0                  ;
+; state.write_back   ; 0               ; 0           ; 1                ; 1          ; 0                  ;
+; state.stall        ; 0               ; 1           ; 0                ; 1          ; 0                  ;
+; state.load_line    ; 1               ; 0           ; 0                ; 1          ; 0                  ;
+; state.update_cache ; 0               ; 0           ; 0                ; 1          ; 1                  ;
++--------------------+-----------------+-------------+------------------+------------+--------------------+
 
 
 Encoding Type:  One-Hot
@@ -505,6 +550,37 @@ Encoding Type:  One-Hot
 ; mp3:mp3|datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.aluop[2]                   ; Merged with mp3:mp3|datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.alumux_sel[1] ;
 ; mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|addr_sel[0]                   ; Merged with mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|is_trap          ;
 ; mp3:mp3|datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[12..15]           ; Merged with mp3:mp3|datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[11]  ;
+; l2cache:l2cache|cache_control:cache_controller|state~2                                      ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~3                                      ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~5                                      ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~6                                      ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~7                                      ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~8                                      ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~9                                      ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~10                                     ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~11                                     ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~12                                     ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~13                                     ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~14                                     ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~15                                     ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~16                                     ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~17                                     ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~18                                     ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~19                                     ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~20                                     ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~21                                     ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~22                                     ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~23                                     ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~24                                     ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~25                                     ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~26                                     ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~27                                     ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~28                                     ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~29                                     ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~30                                     ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~31                                     ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~32                                     ; Lost fanout                                                                                ;
+; l2cache:l2cache|cache_control:cache_controller|state~33                                     ; Lost fanout                                                                                ;
 ; wb_interconnect:interconnect|cache:Dcache|cache_control:cache_controller|state~2            ; Lost fanout                                                                                ;
 ; wb_interconnect:interconnect|cache:Dcache|cache_control:cache_controller|state~3            ; Lost fanout                                                                                ;
 ; wb_interconnect:interconnect|cache:Dcache|cache_control:cache_controller|state~5            ; Lost fanout                                                                                ;
@@ -648,7 +724,7 @@ Encoding Type:  One-Hot
 ; wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:dirty1|data~6 ; Stuck at GND due to stuck port data_in                                                     ;
 ; wb_interconnect:interconnect|cache:Icache|cache_control:cache_controller|state.write_back   ; Stuck at GND due to stuck port data_in                                                     ;
 ; wb_interconnect:interconnect|cache:Icache|cache_control:cache_controller|state.stall        ; Stuck at GND due to stuck port data_in                                                     ;
-; Total Number of Removed Registers = 182                                                     ;                                                                                            ;
+; Total Number of Removed Registers = 213                                                     ;                                                                                            ;
 +---------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
 
 
@@ -681,12 +757,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 4781  ;
+; Total registers                              ; 7018  ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 32    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 4690  ;
+; Number of registers using Clock Enable       ; 6914  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -782,62 +858,81 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|sr2[8]                            ;
-; 8:1                ; 7 bits    ; 35 ALUTs      ; 35 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|IF_ID_pipeline:IF_ID_pipeline|instruction[12]                   ;
+; 3:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|sr2[1]                            ;
+; 8:1                ; 7 bits    ; 35 ALUTs      ; 35 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|IF_ID_pipeline:IF_ID_pipeline|instruction[14]                   ;
 ; 6:1                ; 3 bits    ; 12 ALUTs      ; 6 ALUTs              ; 6 ALUTs                ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|register:program_counter|data[1]                                ;
-; 6:1                ; 12 bits   ; 48 ALUTs      ; 24 ALUTs             ; 24 ALUTs               ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|register:program_counter|data[12]                               ;
-; 13:1               ; 2 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|alu_out[9]                      ;
-; 14:1               ; 2 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|alu_out[1]                      ;
-; 15:1               ; 2 bits    ; 20 ALUTs      ; 18 ALUTs             ; 2 ALUTs                ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|alu_out[13]                     ;
-; 16:1               ; 2 bits    ; 20 ALUTs      ; 20 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|alu_out[5]                      ;
-; 4:1                ; 128 bits  ; 256 ALUTs     ; 256 ALUTs            ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux4:wb2_mux|Mux27    ;
-; 4:1                ; 128 bits  ; 256 ALUTs     ; 256 ALUTs            ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux4:wb2_mux|Mux69    ;
+; 6:1                ; 12 bits   ; 48 ALUTs      ; 24 ALUTs             ; 24 ALUTs               ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|register:program_counter|data[6]                                ;
+; 13:1               ; 2 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|alu_out[10]                     ;
+; 14:1               ; 2 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|alu_out[2]                      ;
+; 15:1               ; 2 bits    ; 20 ALUTs      ; 18 ALUTs             ; 2 ALUTs                ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|alu_out[14]                     ;
+; 16:1               ; 2 bits    ; 20 ALUTs      ; 20 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|alu_out[6]                      ;
+; 4:1                ; 9 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux4:adrmux|Mux7                                ;
+; 4:1                ; 128 bits  ; 256 ALUTs     ; 256 ALUTs            ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux4:wb2_mux|Mux28                              ;
+; 4:1                ; 128 bits  ; 256 ALUTs     ; 256 ALUTs            ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux4:wb2_mux|Mux96    ;
+; 4:1                ; 128 bits  ; 256 ALUTs     ; 256 ALUTs            ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux4:wb2_mux|Mux126   ;
 ; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|stall_unit:stall_unit|next_state                                ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[2]   ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[15]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[21]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[29]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[35]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[47]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[51]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[56]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[70]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[76]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[86]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[95]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[103] ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[104] ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[116] ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[121] ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[6]   ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[9]   ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[23]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[27]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[36]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[45]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[50]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[63]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[65]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[76]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[87]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[95]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[100] ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[104] ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[117] ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[125] ;
-; 3:1                ; 10 bits   ; 20 ALUTs      ; 20 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|mux4:alumux|Mux8                                                ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[6]                             ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[9]                             ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[22]                            ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[24]                            ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[36]                            ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[40]                            ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[49]                            ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[56]                            ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[70]                            ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[73]                            ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[82]                            ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[90]                            ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[98]                            ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[109]                           ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[116]                           ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[120]                           ;
+; 3:1                ; 10 bits   ; 20 ALUTs      ; 20 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|mux4:alumux|Mux6                                                ;
 ; 4:1                ; 5 bits    ; 10 ALUTs      ; 10 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|mux4:alumux|Mux14                                               ;
 ; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|alu:alu|ShiftLeft0                                              ;
 ; 3:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|alu:alu|ShiftLeft0                                              ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[4]   ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[15]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[19]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[31]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[38]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[40]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[54]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[62]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[65]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[73]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[87]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[93]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[103] ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[111] ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[119] ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[126] ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[5]   ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[15]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[22]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[31]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[39]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[42]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[52]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[63]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[70]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[72]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[82]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[95]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[96]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[104] ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[119] ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[126] ;
+; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_control:cache_controller|data0_writeline                                ;
 ; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_control:cache_controller|data1_writeline      ;
 ; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_control:cache_controller|data1_writeline      ;
-; 4:1                ; 128 bits  ; 256 ALUTs     ; 256 ALUTs            ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|mux2:dat_m|f[50]                                                 ;
-; 8:1                ; 9 bits    ; 45 ALUTs      ; 45 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|line_to_word:ifetch_line_to_word|Mux15                          ;
-; 8:1                ; 16 bits   ; 80 ALUTs      ; 80 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|line_to_word:memory_line_to_word|Mux0                           ;
-; 4:1                ; 3 bits    ; 6 ALUTs       ; 6 ALUTs              ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|mux2:adr|f[0]                                                    ;
-; 6:1                ; 8 bits    ; 32 ALUTs      ; 24 ALUTs             ; 8 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|mux8:regfilemux|Mux2                                            ;
-; 8:1                ; 9 bits    ; 45 ALUTs      ; 45 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|mux2:adr|f[9]                                                    ;
-; 7:1                ; 7 bits    ; 28 ALUTs      ; 28 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|mux8:regfilemux|Mux12                                           ;
+; 4:1                ; 128 bits  ; 256 ALUTs     ; 256 ALUTs            ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|mux2:dat_m|f[88]                                                 ;
+; 8:1                ; 9 bits    ; 45 ALUTs      ; 45 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|line_to_word:ifetch_line_to_word|Mux9                           ;
+; 8:1                ; 16 bits   ; 80 ALUTs      ; 80 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|line_to_word:memory_line_to_word|Mux4                           ;
+; 4:1                ; 3 bits    ; 6 ALUTs       ; 6 ALUTs              ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|mux2:adr|f[2]                                                    ;
+; 6:1                ; 8 bits    ; 32 ALUTs      ; 24 ALUTs             ; 8 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|mux8:regfilemux|Mux1                                            ;
+; 8:1                ; 9 bits    ; 45 ALUTs      ; 45 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|mux2:adr|f[4]                                                    ;
+; 7:1                ; 7 bits    ; 28 ALUTs      ; 28 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|mux8:regfilemux|Mux9                                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------+
 
 
@@ -1388,6 +1483,146 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|cache_writeword:updateline ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+; width          ; 128   ; Signed Integer                                                                               ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux ;
++----------------+-------+----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                             ;
++----------------+-------+----------------------------------------------------------------------------------+
+; width          ; 128   ; Signed Integer                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:data0 ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; width          ; 128   ; Signed Integer                                                                ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:data1 ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; width          ; 128   ; Signed Integer                                                                ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:tag0 ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; width          ; 9     ; Signed Integer                                                               ;
++----------------+-------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:tag1 ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; width          ; 9     ; Signed Integer                                                               ;
++----------------+-------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:valid0 ;
++----------------+-------+--------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                           ;
++----------------+-------+--------------------------------------------------------------------------------+
+; width          ; 1     ; Signed Integer                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:valid1 ;
++----------------+-------+--------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                           ;
++----------------+-------+--------------------------------------------------------------------------------+
+; width          ; 1     ; Signed Integer                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:dirty0 ;
++----------------+-------+--------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                           ;
++----------------+-------+--------------------------------------------------------------------------------+
+; width          ; 1     ; Signed Integer                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:dirty1 ;
++----------------+-------+--------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                           ;
++----------------+-------+--------------------------------------------------------------------------------+
+; width          ; 1     ; Signed Integer                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:LRU ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; width          ; 1     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|mux4:wb2_mux ;
++----------------+-------+--------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                           ;
++----------------+-------+--------------------------------------------------------------------------------+
+; width          ; 128   ; Signed Integer                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|mux2:evict_mux ;
++----------------+-------+----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                             ;
++----------------+-------+----------------------------------------------------------------------------------+
+; width          ; 128   ; Signed Integer                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|mux4:adrmux ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; width          ; 12    ; Signed Integer                                                                ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +----------------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_0 ;
 +------------------------------------+----------------------+----------------------------------------------------------+
@@ -1614,6 +1849,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "l2cache:l2cache|cache_control:cache_controller"                                                ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; data0_writeword ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data1_writeword ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "wb_interconnect:interconnect|cache:Icache|cache_control:cache_controller"                      ;
 +-----------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port            ; Type   ; Severity ; Details                                                                             ;
@@ -1725,7 +1970,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:10     ;
 +----------------+--------------+
 
 
@@ -1735,7 +1980,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
-    Info: Processing started: Fri Mar 16 16:23:56 2018
+    Info: Processing started: Fri Mar 16 17:16:27 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp1 -c mp1
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 0 entities, in source file lc3b_types.sv
@@ -1824,6 +2069,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file stall_u
     Info (12023): Found entity 1: stall_unit
 Info (12021): Found 1 design units, including 1 entities, in source file l1arbiter.sv
     Info (12023): Found entity 1: l1arbiter
+Info (12021): Found 1 design units, including 1 entities, in source file l2cache.sv
+    Info (12023): Found entity 1: l2cache
 Warning (10236): Verilog HDL Implicit Net warning at datapath.sv(428): created implicit net for "sti_write"
 Info (12127): Elaborating entity "mp3_top" for the top level hierarchy
 Info (12128): Elaborating entity "wishbone" for hierarchy "wishbone:ifetch"
@@ -1870,28 +2117,38 @@ Info (12128): Elaborating entity "mux4" for hierarchy "wb_interconnect:interconn
 Info (12128): Elaborating entity "mux4" for hierarchy "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux4:adrmux"
 Info (12128): Elaborating entity "cache_control" for hierarchy "wb_interconnect:interconnect|cache:Icache|cache_control:cache_controller"
 Info (12128): Elaborating entity "mux2" for hierarchy "wb_interconnect:interconnect|mux2:cyc"
+Info (12128): Elaborating entity "l2cache" for hierarchy "l2cache:l2cache"
 Warning (276020): Inferred RAM node "mp3:mp3|datapath:the_datapath|regfile:regfile|data_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (276020): Inferred RAM node "mp3:mp3|datapath:the_datapath|regfile:regfile|data_rtl_1" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (276020): Inferred RAM node "mp3:mp3|datapath:the_datapath|regfile:regfile|data_rtl_2" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
-Info (276014): Found 18 instances of uninferred RAM logic
-    Info (276004): RAM logic "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:LRU|data" is uninferred due to inappropriate RAM size
+Info (276014): Found 27 instances of uninferred RAM logic
+    Info (276004): RAM logic "l2cache:l2cache|cache_datapath:cache_datapath|array:LRU|data" is uninferred due to inappropriate RAM size
+    Info (276007): RAM logic "l2cache:l2cache|cache_datapath:cache_datapath|array:tag0|data" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "l2cache:l2cache|cache_datapath:cache_datapath|array:tag1|data" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "l2cache:l2cache|cache_datapath:cache_datapath|array:data1|data" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "l2cache:l2cache|cache_datapath:cache_datapath|array:data0|data" is uninferred due to asynchronous read logic
+    Info (276004): RAM logic "l2cache:l2cache|cache_datapath:cache_datapath|array:valid0|data" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "l2cache:l2cache|cache_datapath:cache_datapath|array:valid1|data" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "l2cache:l2cache|cache_datapath:cache_datapath|array:dirty0|data" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "l2cache:l2cache|cache_datapath:cache_datapath|array:dirty1|data" is uninferred due to inappropriate RAM size
+    Info (276007): RAM logic "wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:tag0|data" is uninferred due to asynchronous read logic
+    Info (276004): RAM logic "wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:valid0|data" is uninferred due to inappropriate RAM size
+    Info (276007): RAM logic "wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:tag1|data" is uninferred due to asynchronous read logic
+    Info (276004): RAM logic "wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:valid1|data" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:dirty0|data" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:dirty1|data" is uninferred due to inappropriate RAM size
     Info (276004): RAM logic "wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:LRU|data" is uninferred due to inappropriate RAM size
     Info (276007): RAM logic "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:tag0|data" is uninferred due to asynchronous read logic
+    Info (276004): RAM logic "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:valid0|data" is uninferred due to inappropriate RAM size
     Info (276007): RAM logic "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:tag1|data" is uninferred due to asynchronous read logic
-    Info (276007): RAM logic "wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:tag0|data" is uninferred due to asynchronous read logic
-    Info (276007): RAM logic "wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:tag1|data" is uninferred due to asynchronous read logic
+    Info (276004): RAM logic "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:valid1|data" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:dirty0|data" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:dirty1|data" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:LRU|data" is uninferred due to inappropriate RAM size
     Info (276007): RAM logic "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:data1|data" is uninferred due to asynchronous read logic
     Info (276007): RAM logic "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:data0|data" is uninferred due to asynchronous read logic
     Info (276007): RAM logic "wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:data1|data" is uninferred due to asynchronous read logic
     Info (276007): RAM logic "wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:data0|data" is uninferred due to asynchronous read logic
-    Info (276004): RAM logic "wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:valid0|data" is uninferred due to inappropriate RAM size
-    Info (276004): RAM logic "wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:valid1|data" is uninferred due to inappropriate RAM size
-    Info (276004): RAM logic "wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:dirty0|data" is uninferred due to inappropriate RAM size
-    Info (276004): RAM logic "wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:dirty1|data" is uninferred due to inappropriate RAM size
-    Info (276004): RAM logic "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:valid0|data" is uninferred due to inappropriate RAM size
-    Info (276004): RAM logic "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:valid1|data" is uninferred due to inappropriate RAM size
-    Info (276004): RAM logic "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:dirty0|data" is uninferred due to inappropriate RAM size
-    Info (276004): RAM logic "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:dirty1|data" is uninferred due to inappropriate RAM size
 Info (19000): Inferred 3 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "mp3:mp3|datapath:the_datapath|regfile:regfile|data_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -1979,22 +2236,22 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "wb_mem.SEL[14]" is stuck at VCC
     Warning (13410): Pin "wb_mem.SEL[15]" is stuck at VCC
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 125 registers lost all their fanouts during netlist optimizations.
+Info (17049): 156 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file /home/ridenou2/ece411/risingedge/output_files/mp1.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "wb_mem.RTY"
-Info (21057): Implemented 7215 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 10588 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 131 input pins
     Info (21059): Implemented 159 output pins
-    Info (21061): Implemented 6877 logic cells
+    Info (21061): Implemented 10250 logic cells
     Info (21064): Implemented 48 RAM segments
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 24 warnings
-    Info: Peak virtual memory: 480 megabytes
-    Info: Processing ended: Fri Mar 16 16:24:08 2018
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Peak virtual memory: 498 megabytes
+    Info: Processing ended: Fri Mar 16 17:16:44 2018
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:13
 
 
 +------------------------------------------+

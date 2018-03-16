@@ -245,6 +245,14 @@
 # 
 # Top level modules:
 # 	cache
+# vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/l2cache.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package l2cache_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module l2cache
+# 
+# Top level modules:
+# 	l2cache
 # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/wb_interconnect.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package wb_interconnect_sv_unit
@@ -345,6 +353,8 @@
 # Loading work.array
 # Loading work.cache_control_sv_unit
 # Loading work.cache_control
+# Loading work.l2cache_sv_unit
+# Loading work.l2cache
 # Loading work.physical_memory
 # ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Too few port connections. Expected 6, found 5.
 #         Region: /mp3_tb/dut/interconnect/Icache/cache_datapath/wb2_mux
@@ -357,6 +367,12 @@
 # ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Missing connection for port 'a'.
 # ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Too few port connections. Expected 6, found 5.
 #         Region: /mp3_tb/dut/interconnect/Dcache/cache_datapath/adrmux
+# ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Missing connection for port 'd'.
+# ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Too few port connections. Expected 6, found 5.
+#         Region: /mp3_tb/dut/l2cache/cache_datapath/wb2_mux
+# ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Missing connection for port 'a'.
+# ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Too few port connections. Expected 6, found 5.
+#         Region: /mp3_tb/dut/l2cache/cache_datapath/adrmux
 # ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Missing connection for port 'd'.
 # 
 # add wave *
@@ -429,6 +445,8 @@ restart -f; run 20000ns
 # Loading work.array
 # Loading work.cache_control_sv_unit
 # Loading work.cache_control
+# Loading work.l2cache_sv_unit
+# Loading work.l2cache
 # Loading work.physical_memory
 # ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Too few port connections. Expected 6, found 5.
 #         Region: /mp3_tb/dut/interconnect/Icache/cache_datapath/wb2_mux
@@ -441,4 +459,10 @@ restart -f; run 20000ns
 # ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Missing connection for port 'a'.
 # ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Too few port connections. Expected 6, found 5.
 #         Region: /mp3_tb/dut/interconnect/Dcache/cache_datapath/adrmux
+# ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Missing connection for port 'd'.
+# ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Too few port connections. Expected 6, found 5.
+#         Region: /mp3_tb/dut/l2cache/cache_datapath/wb2_mux
+# ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Missing connection for port 'a'.
+# ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Too few port connections. Expected 6, found 5.
+#         Region: /mp3_tb/dut/l2cache/cache_datapath/adrmux
 # ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Missing connection for port 'd'.

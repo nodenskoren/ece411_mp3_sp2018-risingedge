@@ -4,7 +4,7 @@ module wb_interconnect
 (
 	wishbone.slave ifetch,
 	wishbone.slave memory,
-	wishbone.master wb_mem
+	wishbone.master wb_l2
 );
 
 logic cache_sel;
@@ -17,19 +17,19 @@ logic [11:0] i_adr, d_adr;
 
 l1arbiter arbiter
 (
-	.clk(wb_mem.CLK),
+	.clk(wb_l2.CLK),
 	.i_rw(i_cyc || i_stb),
 	.d_rw(d_cyc || d_stb),
-	.mem_resp(wb_mem.ACK),
+	.mem_resp(wb_l2.ACK),
 	.cache_sel
 );
 
 cache Icache
 (
 	.wb_cpu(ifetch),
-	.mem_dats(wb_mem.DAT_S),
-	.mem_ack(wb_mem.ACK && cache_sel),
-	.mem_rty(wb_mem.RTY),
+	.mem_dats(wb_l2.DAT_S),
+	.mem_ack(wb_l2.ACK && cache_sel),
+	.mem_rty(wb_l2.RTY),
 	
 	.mem_datm(i_datm),
 	.mem_cyc(i_cyc),
@@ -42,9 +42,9 @@ cache Icache
 cache Dcache
 (
 	.wb_cpu(memory),
-	.mem_dats(wb_mem.DAT_S),
-	.mem_ack(wb_mem.ACK && !cache_sel),
-	.mem_rty(wb_mem.RTY),
+	.mem_dats(wb_l2.DAT_S),
+	.mem_ack(wb_l2.ACK && !cache_sel),
+	.mem_rty(wb_l2.RTY),
 	
 	.mem_datm(d_datm),
 	.mem_cyc(d_cyc),
@@ -59,7 +59,7 @@ mux2 #(.width(128)) dat_m
 	.sel(cache_sel),
 	.a(d_datm),
 	.b(i_datm),
-	.f(wb_mem.DAT_M)
+	.f(wb_l2.DAT_M)
 );
 
 mux2 #(.width(1)) cyc
@@ -67,7 +67,7 @@ mux2 #(.width(1)) cyc
 	.sel(cache_sel),
 	.a(d_cyc),
 	.b(i_cyc),
-	.f(wb_mem.CYC)
+	.f(wb_l2.CYC)
 );
 
 mux2 #(.width(1)) stb
@@ -75,7 +75,7 @@ mux2 #(.width(1)) stb
 	.sel(cache_sel),
 	.a(d_stb),
 	.b(i_stb),
-	.f(wb_mem.STB)
+	.f(wb_l2.STB)
 );
 
 mux2 #(.width(1)) we
@@ -83,7 +83,7 @@ mux2 #(.width(1)) we
 	.sel(cache_sel),
 	.a(d_we),
 	.b(i_we),
-	.f(wb_mem.WE)
+	.f(wb_l2.WE)
 );
 
 mux2 sel
@@ -91,7 +91,7 @@ mux2 sel
 	.sel(cache_sel),
 	.a(d_sel),
 	.b(i_sel),
-	.f(wb_mem.SEL)
+	.f(wb_l2.SEL)
 );
 
 mux2 #(.width(12)) adr
@@ -99,7 +99,7 @@ mux2 #(.width(12)) adr
 	.sel(cache_sel),
 	.a(d_adr),
 	.b(i_adr),
-	.f(wb_mem.ADR)
+	.f(wb_l2.ADR)
 );
 
 	

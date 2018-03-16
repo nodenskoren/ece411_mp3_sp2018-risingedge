@@ -37,6 +37,7 @@ vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece
 vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/cache_datapath.sv}
 vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/datapath.sv}
 vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/cache.sv}
+vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/l2cache.sv}
 vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/wb_interconnect.sv}
 vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/mp3_top.sv}
 
