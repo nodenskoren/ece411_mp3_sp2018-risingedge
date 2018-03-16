@@ -1,5 +1,5 @@
 Flow report for mp1
-Sat Mar 10 15:28:34 2018
+Thu Mar 15 19:57:29 2018
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -40,24 +40,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Flow Summary                                                                ;
 +-------------------------------+---------------------------------------------+
-; Flow Status                   ; Flow Failed - Sat Mar 10 15:28:34 2018      ;
+; Flow Status                   ; Successful - Thu Mar 15 19:57:29 2018       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp1                                         ;
 ; Top-level Entity Name         ; mp3                                         ;
 ; Family                        ; Stratix III                                 ;
 ; Device                        ; EP3SE50F780C2                               ;
 ; Timing Models                 ; Final                                       ;
-; Logic utilization             ; < 1 %                                       ;
-;     Combinational ALUTs       ; 100 / 38,000 ( < 1 % )                      ;
-;     Memory ALUTs              ; 0 / 19,000 ( 0 % )                          ;
-;     Dedicated logic registers ; 132 / 38,000 ( < 1 % )                      ;
-; Total registers               ; 132                                         ;
-; Total pins                    ; 588 / 488 ( 120 % )                         ;
+; Logic utilization             ; N/A                                         ;
+;     Combinational ALUTs       ; 594                                         ;
+;     Memory ALUTs              ; 0                                           ;
+;     Dedicated logic registers ; 237                                         ;
+; Total registers               ; 237                                         ;
+; Total pins                    ; 580                                         ;
 ; Total virtual pins            ; 0                                           ;
-; Total block memory bits       ; 384 / 5,455,872 ( < 1 % )                   ;
-; DSP block 18-bit elements     ; 0 / 384 ( 0 % )                             ;
-; Total PLLs                    ; 0 / 4 ( 0 % )                               ;
-; Total DLLs                    ; 0 / 4 ( 0 % )                               ;
+; Total block memory bits       ; 384                                         ;
+; DSP block 18-bit elements     ; 0                                           ;
+; Total PLLs                    ; 0                                           ;
+; Total DLLs                    ; 0                                           ;
 +-------------------------------+---------------------------------------------+
 
 
@@ -66,7 +66,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/10/2018 15:28:13 ;
+; Start date & time ; 03/15/2018 19:57:22 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mp1                 ;
 +-------------------+---------------------+
@@ -77,16 +77,17 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 233845176314560.152071729227551       ; --            ; --          ; --             ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; mp1_tb         ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; mp1_tb                                ; --            ; --          ; eda_simulation ;
+; COMPILER_SIGNATURE_ID                ; 176231578741337.152116184261360       ; --            ; --          ; --             ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; mp3_tb         ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; mp3_tb                                ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                     ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (SystemVerilog)       ; <None>        ; --          ; --             ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation ;
-; EDA_TEST_BENCH_FILE                  ; magic_memory_dual_port.sv             ; --            ; --          ; mp1_tb         ;
-; EDA_TEST_BENCH_MODULE_NAME           ; mp1_tb                                ; --            ; --          ; mp1_tb         ;
-; EDA_TEST_BENCH_NAME                  ; mp1_tb                                ; --            ; --          ; eda_simulation ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 200 ns                                ; --            ; --          ; mp1_tb         ;
+; EDA_TEST_BENCH_FILE                  ; mp3_tb.sv                             ; --            ; --          ; mp3_tb         ;
+; EDA_TEST_BENCH_FILE                  ; magic_memory_dual_port.sv             ; --            ; --          ; mp3_tb         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; mp3_tb                                ; --            ; --          ; mp3_tb         ;
+; EDA_TEST_BENCH_NAME                  ; mp3_tb                                ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 100 ns                                ; --            ; --          ; mp3_tb         ;
 ; EDA_TIME_SCALE                       ; 1 ps                                  ; --            ; --          ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --             ;
@@ -106,27 +107,24 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 483 MB              ; 00:00:04                           ;
-; Fitter               ; 00:00:13     ; 1.0                     ; 600 MB              ; 00:00:12                           ;
-; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:16                           ;
+; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 456 MB              ; 00:00:04                           ;
+; Total                ; 00:00:07     ; --                      ; --                  ; 00:00:04                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                                 ;
-+----------------------+---------------------------+--------------+--------------+----------------+
-; Module Name          ; Machine Hostname          ; OS Name      ; OS Version   ; Processor type ;
-+----------------------+---------------------------+--------------+--------------+----------------+
-; Analysis & Synthesis ; linux-a1.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
-; Fitter               ; linux-a1.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
-+----------------------+---------------------------+--------------+--------------+----------------+
++----------------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                                    ;
++----------------------+------------------------------+--------------+--------------+----------------+
+; Module Name          ; Machine Hostname             ; OS Name      ; OS Version   ; Processor type ;
++----------------------+------------------------------+--------------+--------------+----------------+
+; Analysis & Synthesis ; dcl-l440-27.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
++----------------------+------------------------------+--------------+--------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off mp1 -c mp1
-quartus_fit --read_settings_files=off --write_settings_files=off mp1 -c mp1
 
 
 

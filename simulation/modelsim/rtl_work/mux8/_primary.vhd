@@ -11,6 +11,9 @@ entity mux8 is
         c               : in     vl_logic_vector;
         d               : in     vl_logic_vector;
         e               : in     vl_logic_vector;
+        f               : in     vl_logic_vector;
+        g               : in     vl_logic_vector;
+        h               : in     vl_logic_vector;
         \out\           : out    vl_logic_vector
     );
     attribute mti_svvh_generic_type : integer;

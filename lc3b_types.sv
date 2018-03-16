@@ -14,6 +14,11 @@ typedef logic	[4:0] lc3b_imm5;
 typedef logic  [10:0] lc3b_imm11;
 typedef logic	[7:0] lc3b_trapvect8;
 typedef logic  [127:0] lc3b_line;
+typedef logic  [127:0] lc3b_c_line;
+typedef logic  [3:0] lc3b_c_offset;
+
+typedef logic [11:0] lc3b_wb_adr;
+
 
 typedef enum bit [3:0] {
     op_add  = 4'b0001,
@@ -48,13 +53,19 @@ typedef struct packed {
 	lc3b_opcode opcode;
 	logic load_cc;
 	logic is_br;
-	//is_j = 1'b0;
+	logic is_j;
+	logic is_trap;
 	lc3b_aluop aluop;
-	logic [1:0] regfilemux_sel;
+	logic [2:0] regfilemux_sel;
 	logic [1:0] alumux_sel;
 	logic load_regfile;
 	logic mem_read;
 	logic mem_write;
+	logic is_jsr;
+	logic [1:0] addr_sel;
+	logic [1:0] mem_byte_enable;
+	logic is_ldi;
+	logic is_sti;
 } lc3b_control_word;
 
 endpackage : lc3b_types

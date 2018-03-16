@@ -1,3 +1,5 @@
+import lc3b_types::*;
+
 module MEM_WB_pipeline
 (
 	input clk,
@@ -10,10 +12,11 @@ module MEM_WB_pipeline
 	
 	output lc3b_reg dest_out,
 	output lc3b_word regfilemux_out_out,
-	output logic load_regfile_out
+	output logic load_regfile_out,
 	//output lc3b_word alu_out_out,
 	//output lc3b_word mem_rdata_out,
 	//output lc3b_word pc_out
+	input logic stall_pipeline
 );
 
 lc3b_reg dest;
@@ -25,12 +28,14 @@ logic load_regfile;
 
 always_ff @(posedge clk)
 begin
-	dest <= dest_in;
-	//alu_out <= alu_out_in;
-	//mem_rdata <= mem_rdata_in;
-	//pc <= pc_in;
-	regfilemux_out <= regfilemux_out_in;
-	load_regfile <= load_regfile_in;
+	if(stall_pipeline == 0) begin
+		dest <= dest_in;
+		//alu_out <= alu_out_in;
+		//mem_rdata <= mem_rdata_in;
+		//pc <= pc_in;
+		regfilemux_out <= regfilemux_out_in;
+		load_regfile <= load_regfile_in;
+	end
 end
 
 always_comb

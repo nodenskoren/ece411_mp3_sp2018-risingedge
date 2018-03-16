@@ -5,6 +5,7 @@ entity plus2 is
         width           : integer := 16
     );
     port(
+        stall_pipeline  : in     vl_logic;
         \in\            : in     vl_logic_vector;
         \out\           : out    vl_logic_vector
     );

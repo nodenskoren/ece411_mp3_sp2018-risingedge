@@ -9,43 +9,69 @@
 # ** Warning: Copied /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/lc3b_types.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/lc3b_types.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package lc3b_types
 # 
 # Top level modules:
 # 	--none--
-# vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/plus2.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/wishbone.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling interface wishbone
+# 
+# Top level modules:
+# 	--none--
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/plus2.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module plus2
 # 
 # Top level modules:
 # 	plus2
-# vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/register.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/register.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module register
 # 
 # Top level modules:
 # 	register
-# vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/mux2.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/mux2.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mux2
 # 
 # Top level modules:
 # 	mux2
-# vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/mux4.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/badder.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module badder
+# 
+# Top level modules:
+# 	badder
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/mux4.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mux4
 # 
 # Top level modules:
 # 	mux4
-# vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/mux8.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/mux8.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mux8
 # 
 # Top level modules:
 # 	mux8
-# vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/adj.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/mux_decode_sel.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux_decode_sel
+# 
+# Top level modules:
+# 	mux_decode_sel
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/mp3.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package mp3_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module mp3
+# 
+# Top level modules:
+# 	mp3
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/adj.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package adj_sv_unit
 # -- Importing package lc3b_types
@@ -53,7 +79,7 @@
 # 
 # Top level modules:
 # 	adj
-# vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/alu.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/alu.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package alu_sv_unit
 # -- Importing package lc3b_types
@@ -61,23 +87,7 @@
 # 
 # Top level modules:
 # 	alu
-# vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/control.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# ** Warning: /home/koren3/ece411/mp1/control.sv(92): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
-# ** Warning: /home/koren3/ece411/mp1/control.sv(111): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
-# ** Warning: /home/koren3/ece411/mp1/control.sv(192): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
-# ** Warning: /home/koren3/ece411/mp1/control.sv(199): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
-# -- Compiling package control_sv_unit
-# -- Importing package lc3b_types
-# -- Compiling module control
-# ** Warning: /home/koren3/ece411/mp1/control.sv(92): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
-# ** Warning: /home/koren3/ece411/mp1/control.sv(111): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
-# ** Warning: /home/koren3/ece411/mp1/control.sv(192): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
-# ** Warning: /home/koren3/ece411/mp1/control.sv(199): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
-# 
-# Top level modules:
-# 	control
-# vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/gencc.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/gencc.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package gencc_sv_unit
 # -- Importing package lc3b_types
@@ -85,15 +95,7 @@
 # 
 # Top level modules:
 # 	gencc
-# vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/ir.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package ir_sv_unit
-# -- Importing package lc3b_types
-# -- Compiling module ir
-# 
-# Top level modules:
-# 	ir
-# vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/regfile.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/regfile.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package regfile_sv_unit
 # -- Importing package lc3b_types
@@ -101,15 +103,7 @@
 # 
 # Top level modules:
 # 	regfile
-# vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/adder.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package adder_sv_unit
-# -- Importing package lc3b_types
-# -- Compiling module adder
-# 
-# Top level modules:
-# 	adder
-# vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/branch_unit.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/branch_unit.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package branch_unit_sv_unit
 # -- Importing package lc3b_types
@@ -117,7 +111,7 @@
 # 
 # Top level modules:
 # 	branch_unit
-# vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/sext5.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/sext5.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package sext5_sv_unit
 # -- Importing package lc3b_types
@@ -125,7 +119,7 @@
 # 
 # Top level modules:
 # 	sext5
-# vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/zext.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/zext.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package zext_sv_unit
 # -- Importing package lc3b_types
@@ -133,23 +127,63 @@
 # 
 # Top level modules:
 # 	zext
-# vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/zext4.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/IF_ID_pipeline.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package zext4_sv_unit
+# -- Compiling package IF_ID_pipeline_sv_unit
 # -- Importing package lc3b_types
-# -- Compiling module zext4
+# -- Compiling module IF_ID_pipeline
 # 
 # Top level modules:
-# 	zext4
-# vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/zextadj.sv}
+# 	IF_ID_pipeline
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/ID_EX_pipeline.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package zextadj_sv_unit
+# -- Compiling package ID_EX_pipeline_sv_unit
 # -- Importing package lc3b_types
-# -- Compiling module zextadj
+# -- Compiling module ID_EX_pipeline
 # 
 # Top level modules:
-# 	zextadj
-# vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/datapath.sv}
+# 	ID_EX_pipeline
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/EX_MEM_pipeline.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package EX_MEM_pipeline_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module EX_MEM_pipeline
+# 
+# Top level modules:
+# 	EX_MEM_pipeline
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/MEM_WB_pipeline.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package MEM_WB_pipeline_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module MEM_WB_pipeline
+# 
+# Top level modules:
+# 	MEM_WB_pipeline
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/control_rom.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package control_rom_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module control_rom
+# 
+# Top level modules:
+# 	control_rom
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/line_to_word.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package line_to_word_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module line_to_word
+# 
+# Top level modules:
+# 	line_to_word
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/set_sel.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package set_sel_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module set_sel
+# 
+# Top level modules:
+# 	set_sel
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/datapath.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package datapath_sv_unit
 # -- Importing package lc3b_types
@@ -157,157 +191,118 @@
 # 
 # Top level modules:
 # 	datapath
-# vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/mp1.sv}
+# 
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/mp3_tb.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package mp1_sv_unit
-# -- Importing package lc3b_types
-# -- Compiling module mp1
+# -- Compiling module mp3_tb
 # 
 # Top level modules:
-# 	mp1
-# 
-# vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/mp1_tb.sv}
+# 	mp3_tb
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/magic_memory_dual_port.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module mp1_tb
+# -- Compiling module magic_memory
 # 
 # Top level modules:
-# 	mp1_tb
-# vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/memory.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module memory
+# 	magic_memory
 # 
-# Top level modules:
-# 	memory
-# 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs="+acc"  mp1_tb
-# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps mp1_tb 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs="+acc"  mp3_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps mp3_tb 
 # Loading sv_std.std
-# Loading work.mp1_tb
+# Loading work.mp3_tb
+# Loading work.wishbone
 # Loading work.lc3b_types
-# Loading work.mp1_sv_unit
-# Loading work.mp1
+# Loading work.mp3_sv_unit
+# Loading work.mp3
 # Loading work.datapath_sv_unit
 # Loading work.datapath
-# Loading work.ir_sv_unit
-# Loading work.ir
-# Loading work.adj_sv_unit
-# Loading work.adj
-# Loading work.adder_sv_unit
-# Loading work.adder
 # Loading work.plus2
-# Loading work.mux8
+# Loading work.mux_decode_sel
 # Loading work.register
-# Loading work.mux4
-# Loading work.mux2
+# Loading work.line_to_word_sv_unit
+# Loading work.line_to_word
+# Loading work.IF_ID_pipeline_sv_unit
+# Loading work.IF_ID_pipeline
 # Loading work.regfile_sv_unit
 # Loading work.regfile
 # Loading work.sext5_sv_unit
 # Loading work.sext5
-# Loading work.zext4_sv_unit
-# Loading work.zext4
+# Loading work.mux2
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.zext_sv_unit
+# Loading work.zext
+# Loading work.ID_EX_pipeline_sv_unit
+# Loading work.ID_EX_pipeline
+# Loading work.mux4
 # Loading work.alu_sv_unit
 # Loading work.alu
+# Loading work.badder
+# Loading work.EX_MEM_pipeline_sv_unit
+# Loading work.EX_MEM_pipeline
+# Loading work.set_sel_sv_unit
+# Loading work.set_sel
+# Loading work.mux8
 # Loading work.gencc_sv_unit
 # Loading work.gencc
 # Loading work.branch_unit_sv_unit
 # Loading work.branch_unit
-# Loading work.zext_sv_unit
-# Loading work.zext
-# Loading work.zextadj_sv_unit
-# Loading work.zextadj
-# Loading work.control_sv_unit
-# Loading work.control
-# Loading work.memory
-# ** Warning: (vsim-3015) /home/koren3/ece411/mp1/datapath.sv(216): [PCDPC] - Port size (3 or 3) does not match connection size (16) for port 'dest'. The port definition is at: /home/koren3/ece411/mp1/regfile.sv(8).
-#         Region: /mp1_tb/dut/the_datapath/the_regfile
+# Loading work.MEM_WB_pipeline_sv_unit
+# Loading work.MEM_WB_pipeline
+# Loading work.control_rom_sv_unit
+# Loading work.control_rom
+# Loading work.magic_memory
 # 
 # add wave *
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run 200 ns
-add wave -position end  sim:/mp1_tb/dut/the_datapath/the_regfile/data
-add wave -position end  sim:/mp1_tb/dut/the_datapath/mdr/data
+# run 100 ns
+do /home/koren3/ece411/mp3/simulation/modelsim/wave.do
 restart -f
 # Loading sv_std.std
-# Loading work.mp1_tb
+# Loading work.mp3_tb
+# Loading work.wishbone
 # Loading work.lc3b_types
-# Loading work.mp1_sv_unit
-# Loading work.mp1
+# Loading work.mp3_sv_unit
+# Loading work.mp3
 # Loading work.datapath_sv_unit
 # Loading work.datapath
-# Loading work.ir_sv_unit
-# Loading work.ir
-# Loading work.adj_sv_unit
-# Loading work.adj
-# Loading work.adder_sv_unit
-# Loading work.adder
 # Loading work.plus2
-# Loading work.mux8
+# Loading work.mux_decode_sel
 # Loading work.register
-# Loading work.mux4
-# Loading work.mux2
+# Loading work.line_to_word_sv_unit
+# Loading work.line_to_word
+# Loading work.IF_ID_pipeline_sv_unit
+# Loading work.IF_ID_pipeline
 # Loading work.regfile_sv_unit
 # Loading work.regfile
 # Loading work.sext5_sv_unit
 # Loading work.sext5
-# Loading work.zext4_sv_unit
-# Loading work.zext4
-# Loading work.alu_sv_unit
-# Loading work.alu
-# Loading work.gencc_sv_unit
-# Loading work.gencc
-# Loading work.branch_unit_sv_unit
-# Loading work.branch_unit
-# Loading work.zext_sv_unit
-# Loading work.zext
-# Loading work.zextadj_sv_unit
-# Loading work.zextadj
-# Loading work.control_sv_unit
-# Loading work.control
-# Loading work.memory
-# ** Warning: (vsim-3015) /home/koren3/ece411/mp1/datapath.sv(216): [PCDPC] - Port size (3 or 3) does not match connection size (16) for port 'dest'. The port definition is at: /home/koren3/ece411/mp1/regfile.sv(8).
-#         Region: /mp1_tb/dut/the_datapath/the_regfile
-run 5000ns
-restart -f
-# Loading sv_std.std
-# Loading work.mp1_tb
-# Loading work.lc3b_types
-# Loading work.mp1_sv_unit
-# Loading work.mp1
-# Loading work.datapath_sv_unit
-# Loading work.datapath
-# Loading work.ir_sv_unit
-# Loading work.ir
+# Loading work.mux2
 # Loading work.adj_sv_unit
 # Loading work.adj
-# Loading work.adder_sv_unit
-# Loading work.adder
-# Loading work.plus2
-# Loading work.mux8
-# Loading work.register
+# Loading work.zext_sv_unit
+# Loading work.zext
+# Loading work.ID_EX_pipeline_sv_unit
+# Loading work.ID_EX_pipeline
 # Loading work.mux4
-# Loading work.mux2
-# Loading work.regfile_sv_unit
-# Loading work.regfile
-# Loading work.sext5_sv_unit
-# Loading work.sext5
-# Loading work.zext4_sv_unit
-# Loading work.zext4
 # Loading work.alu_sv_unit
 # Loading work.alu
+# Loading work.badder
+# Loading work.EX_MEM_pipeline_sv_unit
+# Loading work.EX_MEM_pipeline
+# Loading work.set_sel_sv_unit
+# Loading work.set_sel
+# Loading work.mux8
 # Loading work.gencc_sv_unit
 # Loading work.gencc
 # Loading work.branch_unit_sv_unit
 # Loading work.branch_unit
-# Loading work.zext_sv_unit
-# Loading work.zext
-# Loading work.zextadj_sv_unit
-# Loading work.zextadj
-# Loading work.control_sv_unit
-# Loading work.control
-# Loading work.memory
-# ** Warning: (vsim-3015) /home/koren3/ece411/mp1/datapath.sv(216): [PCDPC] - Port size (3 or 3) does not match connection size (16) for port 'dest'. The port definition is at: /home/koren3/ece411/mp1/regfile.sv(8).
-#         Region: /mp1_tb/dut/the_datapath/the_regfile
+# Loading work.MEM_WB_pipeline_sv_unit
+# Loading work.MEM_WB_pipeline
+# Loading work.control_rom_sv_unit
+# Loading work.control_rom
+# Loading work.magic_memory
+run 2000ns
 run 2000ns
