@@ -1,5 +1,5 @@
 Flow report for mp1
-Thu Mar 15 19:57:29 2018
+Fri Mar 16 15:56:25 2018
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -40,19 +40,19 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Flow Summary                                                                ;
 +-------------------------------+---------------------------------------------+
-; Flow Status                   ; Successful - Thu Mar 15 19:57:29 2018       ;
+; Flow Status                   ; Successful - Fri Mar 16 15:56:24 2018       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp1                                         ;
-; Top-level Entity Name         ; mp3                                         ;
+; Top-level Entity Name         ; mp3_top                                     ;
 ; Family                        ; Stratix III                                 ;
 ; Device                        ; EP3SE50F780C2                               ;
 ; Timing Models                 ; Final                                       ;
 ; Logic utilization             ; N/A                                         ;
-;     Combinational ALUTs       ; 594                                         ;
+;     Combinational ALUTs       ; 2,232                                       ;
 ;     Memory ALUTs              ; 0                                           ;
-;     Dedicated logic registers ; 237                                         ;
-; Total registers               ; 237                                         ;
-; Total pins                    ; 580                                         ;
+;     Dedicated logic registers ; 4,781                                       ;
+; Total registers               ; 4781                                        ;
+; Total pins                    ; 290                                         ;
 ; Total virtual pins            ; 0                                           ;
 ; Total block memory bits       ; 384                                         ;
 ; DSP block 18-bit elements     ; 0                                           ;
@@ -66,7 +66,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/15/2018 19:57:22 ;
+; Start date & time ; 03/16/2018 15:56:12 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mp1                 ;
 +-------------------+---------------------+
@@ -77,14 +77,15 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 176231578741337.152116184261360       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 176831337281371.152123377260963       ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; mp3_tb         ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; mp3_tb                                ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                     ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (SystemVerilog)       ; <None>        ; --          ; --             ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_FILE                  ; mp3_tb.sv                             ; --            ; --          ; mp3_tb         ;
-; EDA_TEST_BENCH_FILE                  ; magic_memory_dual_port.sv             ; --            ; --          ; mp3_tb         ;
+; EDA_TEST_BENCH_FILE                  ; mp3_top.sv                            ; --            ; --          ; mp3_tb         ;
+; EDA_TEST_BENCH_FILE                  ; physical_memory.sv                    ; --            ; --          ; mp3_tb         ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; mp3_tb                                ; --            ; --          ; mp3_tb         ;
 ; EDA_TEST_BENCH_NAME                  ; mp3_tb                                ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 100 ns                                ; --            ; --          ; mp3_tb         ;
@@ -92,13 +93,13 @@ applicable agreement for further details.
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --             ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.1V                                  ; --            ; --          ; --             ;
-; PARTITION_COLOR                      ; 16764057                              ; --            ; mp3         ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; mp3         ; Top            ;
-; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; mp3         ; Top            ;
+; PARTITION_COLOR                      ; 16764057                              ; --            ; mp3_top     ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; mp3_top     ; Top            ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; mp3_top     ; Top            ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                     ; mp3                                   ; mp1           ; --          ; --             ;
+; TOP_LEVEL_ENTITY                     ; mp3_top                               ; mp1           ; --          ; --             ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 
 
@@ -107,8 +108,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 456 MB              ; 00:00:04                           ;
-; Total                ; 00:00:07     ; --                      ; --                  ; 00:00:04                           ;
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 479 MB              ; 00:00:09                           ;
+; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:09                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -117,7 +118,7 @@ applicable agreement for further details.
 +----------------------+------------------------------+--------------+--------------+----------------+
 ; Module Name          ; Machine Hostname             ; OS Name      ; OS Version   ; Processor type ;
 +----------------------+------------------------------+--------------+--------------+----------------+
-; Analysis & Synthesis ; dcl-l440-27.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
+; Analysis & Synthesis ; dcl-l440-24.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
 +----------------------+------------------------------+--------------+--------------+----------------+
 
 

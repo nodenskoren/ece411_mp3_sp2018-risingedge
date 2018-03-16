@@ -29,7 +29,7 @@ module datapath
 );
 
 logic stall_pipeline;
-assign stall_pipeline = 1'b0;
+//assign stall_pipeline = 1'b0;
 lc3b_word memory_word_out;
 lc3b_word alu_out_out_EX_MEM;
 
@@ -309,6 +309,7 @@ assign is_ldi_ID_EX = ctrl_out_ID_EX.is_ldi;
 assign is_sti_ID_EX = ctrl_out_ID_EX.is_sti;
 
 // >>>>> EX/MEM PIPELINE <<<<< //
+lc3b_control_word ctrl_out_EX_MEM;
 lc3b_word pc_out_EX_MEM;
 lc3b_reg dest_out_EX_MEM;
 lc3b_nzp nzp_out_EX_MEM;
@@ -350,6 +351,7 @@ EX_MEM_pipeline EX_MEM_pipeline
 	.mem_byte_enable_in(mem_byte_enable_ID_EX),
 	.is_ldi_in(is_ldi_ID_EX),
 	.is_sti_in(is_sti_ID_EX),
+	.ctrl_in(ctrl_out_ID_EX),
 	
 	.alu_out_out(alu_out_out_EX_MEM),
 	.addr_adder_out_out(addr_adder_out_out_EX_MEM),
@@ -371,7 +373,8 @@ EX_MEM_pipeline EX_MEM_pipeline
 	.mem_byte_enable_out(mem_byte_enable_EX_MEM),
 	.stall_pipeline(stall_pipeline),
 	.is_ldi_out(is_ldi_EX_MEM),
-	.is_sti_out(is_sti_EX_MEM)
+	.is_sti_out(is_sti_EX_MEM),
+	.ctrl_out(ctrl_out_EX_MEM)
 );
 // >>>>> EX/MEM PIPELINE <<<<< //
 lc3b_wb_adr mem_address_mux_out;
@@ -412,18 +415,19 @@ set_sel set_sel
 	.mem_sel(mem_sel)
 );
 
-/*
+
 stall_unit stall_unit
 (
 	.clk,
 	.mem_read(mem_read),
 	.mem_write(mem_write),
 	.mem_resp(mem_resp),
+	.ifetch_resp(ifetch_resp),
 	.is_sti(is_sti_EX_MEM),
 	.is_ldi(is_ldi_EX_MEM),
 	.sti_write(sti_write),
 	.stall_pipeline(stall_pipeline)
-);*/
+);
 
 lc3b_word regfilemux_out;
 mux8 regfilemux

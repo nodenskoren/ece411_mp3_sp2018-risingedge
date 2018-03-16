@@ -4,6 +4,7 @@ module stall_unit
 	input logic mem_read,
 	input logic mem_write,
 	input logic mem_resp,
+	input logic ifetch_resp,
 	input logic is_ldi,
 	input logic is_sti,
 	output logic stall_pipeline,
@@ -24,7 +25,7 @@ begin: state_actions
 	sti_write = 1'b0;
 	case(state)
 		s_read_write: begin
-			if((mem_read == 1 || mem_write == 1) && mem_resp == 0)
+			if (((mem_read == 1 || mem_write == 1) && mem_resp == 0) || ifetch_resp == 0)
 				stall_pipeline = 1'b1;
 		end
 		
@@ -57,7 +58,7 @@ begin: next_state_logic
 					if(mem_resp == 0)
 						next_state = s_read_write;
 					else
-						next_state = s_ack_wait;
+						next_state = s_read_write;
 				end
 			end
 			else begin

@@ -27,6 +27,7 @@ module EX_MEM_pipeline
 	input logic [1:0] mem_byte_enable_in,
 	input logic is_ldi_in,
 	input logic is_sti_in,
+	input lc3b_control_word ctrl_in,
 	
 	output logic is_j_out,
 	//output logic is_br_in,
@@ -51,10 +52,12 @@ module EX_MEM_pipeline
 	output logic [1:0] mem_byte_enable_out,
 	output logic is_ldi_out,
 	output logic is_sti_out,
+	output lc3b_control_word ctrl_out,
 	
 	input logic stall_pipeline
 );
 
+lc3b_control_word ctrl;
 logic is_j;
 logic is_br;
 //logic branch_enable;
@@ -77,6 +80,7 @@ logic [1:0] mem_byte_enable;
 logic is_ldi;
 logic is_sti;
 logic is_trap;
+
 
 always_ff @(posedge clk)
 begin
@@ -104,6 +108,7 @@ begin
 		is_ldi <= is_ldi_in;
 		is_sti <= is_sti_in;
 		is_trap <= is_trap_in;
+		ctrl <= ctrl_in;
 	end
 end
 
@@ -132,5 +137,6 @@ begin
 	is_ldi_out = is_ldi;
 	is_sti_out = is_sti;
 	is_trap_out = is_trap;
+	ctrl_out = ctrl;
 end
 endmodule : EX_MEM_pipeline

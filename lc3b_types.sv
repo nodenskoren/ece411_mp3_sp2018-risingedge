@@ -16,6 +16,7 @@ typedef logic	[7:0] lc3b_trapvect8;
 typedef logic  [127:0] lc3b_line;
 typedef logic  [127:0] lc3b_c_line;
 typedef logic  [3:0] lc3b_c_offset;
+typedef logic [2:0] lc3b_c_index;
 
 typedef logic [11:0] lc3b_wb_adr;
 

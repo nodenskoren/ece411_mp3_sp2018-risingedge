@@ -1,5 +1,6 @@
 library verilog;
 use verilog.vl_types.all;
+library work;
 entity EX_MEM_pipeline is
     port(
         clk             : in     vl_logic;
@@ -23,6 +24,7 @@ entity EX_MEM_pipeline is
         mem_byte_enable_in: in     vl_logic_vector(1 downto 0);
         is_ldi_in       : in     vl_logic;
         is_sti_in       : in     vl_logic;
+        ctrl_in         : in     work.lc3b_types.lc3b_control_word;
         is_j_out        : out    vl_logic;
         alu_out_out     : out    vl_logic_vector(15 downto 0);
         addr_adder_out_out: out    vl_logic_vector(15 downto 0);
@@ -43,6 +45,7 @@ entity EX_MEM_pipeline is
         mem_byte_enable_out: out    vl_logic_vector(1 downto 0);
         is_ldi_out      : out    vl_logic;
         is_sti_out      : out    vl_logic;
+        ctrl_out        : out    work.lc3b_types.lc3b_control_word;
         stall_pipeline  : in     vl_logic
     );
 end EX_MEM_pipeline;
