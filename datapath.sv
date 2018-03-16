@@ -433,7 +433,7 @@ mux8 regfilemux
 	 .b(memory_word_out),
 	 .c(pc_out_EX_MEM),
 	 .d(addr_adder_out_out_EX_MEM),
-	 .e(memory_word_out & 16'h0011),
+	 .e(memory_word_out & 16'h00FF),
 	 .f(memory_word_out >> 8),
 	 .g(16'b0),
 	 .h(16'b0),
