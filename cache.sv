@@ -114,7 +114,8 @@ cache_control cache_controller
 	.pmem_read,
 	.cpu_resp,
 	.wb_sel,
-	.adrmux_sel
+	.adrmux_sel,
+	.req(wb_cpu.STB & wb_cpu.CYC)
 );
 
 

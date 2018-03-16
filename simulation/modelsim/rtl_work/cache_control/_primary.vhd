@@ -12,6 +12,7 @@ entity cache_control is
         hit1            : in     vl_logic;
         LRU_out         : in     vl_logic;
         pmem_resp       : in     vl_logic;
+        req             : in     vl_logic;
         data0_writeword : out    vl_logic;
         data1_writeword : out    vl_logic;
         data0_writeline : out    vl_logic;

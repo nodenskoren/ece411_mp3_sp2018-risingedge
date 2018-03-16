@@ -12,6 +12,7 @@ module cache_control
 	input hit1,
 	input LRU_out,
 	input pmem_resp,
+	input req,
 	
 	output logic data0_writeword,
 	output logic data1_writeword,
@@ -165,13 +166,18 @@ begin : next_state_logic
 		default: next_state = idle;
 		
 		idle:begin
-			if(!hit0 && !hit1) begin //miss
-				if((LRU_out && dirty1_out) || (!LRU_out && dirty0_out)) begin //miss & dirty
-					next_state = write_back;
-				end
+			if(req) begin
+				if(!hit0 && !hit1) begin //miss
+					if((LRU_out && dirty1_out) || (!LRU_out && dirty0_out)) begin //miss & dirty
+						next_state = write_back;
+					end
 				
+					else begin
+						next_state = load_line;	//miss & not dirty
+					end
+				end
 				else begin
-					next_state = load_line;	//miss & not dirty
+					next_state = idle;
 				end
 			end
 			
