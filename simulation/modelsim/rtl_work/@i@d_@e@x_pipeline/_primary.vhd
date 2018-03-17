@@ -14,7 +14,8 @@ entity ID_EX_pipeline is
         pc_in           : in     vl_logic_vector(15 downto 0);
         dest_data_in    : in     vl_logic_vector(15 downto 0);
         trapvector_in   : in     vl_logic_vector(15 downto 0);
-        shfval_in       : in     vl_logic_vector(3 downto 0);
+        shift_in        : in     vl_logic_vector(3 downto 0);
+        is_ldb_stb_in   : in     vl_logic;
         ctrl_out        : out    work.lc3b_types.lc3b_control_word;
         sr1_out         : out    vl_logic_vector(15 downto 0);
         sr2_out         : out    vl_logic_vector(15 downto 0);
@@ -25,7 +26,8 @@ entity ID_EX_pipeline is
         pc_out          : out    vl_logic_vector(15 downto 0);
         dest_data_out   : out    vl_logic_vector(15 downto 0);
         trapvector_out  : out    vl_logic_vector(15 downto 0);
-        shfval_out      : out    vl_logic_vector(3 downto 0);
+        shift_out       : out    vl_logic_vector(3 downto 0);
+        is_ldb_stb_out  : out    vl_logic;
         stall_pipeline  : in     vl_logic
     );
 end ID_EX_pipeline;

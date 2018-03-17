@@ -30,6 +30,7 @@ state.service_d 1 0 1
 state.service_i 1 1 0 
 
 State Machine - |mp3_top|mp3:mp3|datapath:the_datapath|stall_unit:stall_unit|state
-Name state.s_read_write_twice 
-state.s_read_write 0 
-state.s_read_write_twice 1 
+Name state.s_read_write state.s_sti state.s_ldi 
+state.s_read_write 0 0 0 
+state.s_ldi 1 0 1 
+state.s_sti 1 1 0 

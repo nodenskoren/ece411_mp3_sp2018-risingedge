@@ -6,8 +6,6 @@ module control_rom
 	input logic imm_mode,
 	input logic jsr_mode,
 	input logic [1:0] shf_mode,
-	input logic stb_byte,
-	output logic [1:0] stbregmux_sel,
 	output lc3b_control_word ctrl,
 	output logic offset_sel,
 	output logic sr2mux_sel,
@@ -24,7 +22,6 @@ begin
 	sr2mux_sel = 1'b0;
 	offset_sel = 1'b0;
 	destmux_sel = 1'b0;
-	stbregmux_sel = 2'b00;
 	ctrl.aluop = alu_add;
 	ctrl.regfilemux_sel = 3'b000;
 	ctrl.alumux_sel = 2'b00;
@@ -124,24 +121,14 @@ begin
 			ctrl.alumux_sel = 2'b01;
 			ctrl.load_regfile = 1'b1;
 			ctrl.mem_read = 1'b1;			
-			if(stb_byte == 0)
-				ctrl.regfilemux_sel = 3'b100;
-			else if(stb_byte == 1)
-				ctrl.regfilemux_sel = 3'b101;
+			ctrl.regfilemux_sel = 3'b100;
 		end
 		op_stb: begin
 			is_ldb_stb = 1'b1;
 			ctrl.aluop = alu_add;
 			ctrl.alumux_sel = 2'b01;
 			ctrl.mem_write = 1'b1;
-			if(stb_byte == 1)begin
-				ctrl.mem_byte_enable = 2'b01;
-				stbregmux_sel = 2'b01;
-			end
-			else if(stb_byte == 0) begin
-				ctrl.mem_byte_enable = 2'b10;
-				stbregmux_sel = 2'b10;
-			end
+			//ctrl.mem_byte_enable = 2'b11;
 		end
 		op_ldi: begin	
 			ctrl.is_ldi = 1'b1;
@@ -158,7 +145,6 @@ begin
 			ctrl.aluop = alu_add;
 			ctrl.alumux_sel = 2'b01;
 			ctrl.mem_read = 1'b1;
-			//ctrl.regfilemux_sel = 3'b001;
 		end	
 	
 		default: begin
