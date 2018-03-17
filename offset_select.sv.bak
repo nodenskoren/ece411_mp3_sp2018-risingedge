@@ -1,0 +1,25 @@
+module offset_select
+(
+	input logic is_second_access,
+	input logic addr_sel_bit0,
+	input [3:0] a, b, c,
+	output logic [width-1:0] f
+);
+
+
+always_comb
+begin
+	case(sel)
+		2'b00:
+			f = a;
+		2'b01:
+			f = b;
+		2'b10:
+			f = c;
+		2'b11:
+			f = d;
+		default: /* nothing */;
+	endcase
+end
+	
+endmodule : mux4

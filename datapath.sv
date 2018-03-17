@@ -386,25 +386,64 @@ mux2 #(.width (12)) mem_address_mux
 	.f(mem_address_mux_out)
 );
 
-assign mem_read = mem_read_EX_MEM;
-assign mem_write = mem_write_EX_MEM;
-assign mem_address = mem_address_mux_out;
 
-/*
+//assign mem_read = mem_read_EX_MEM;
+//assign mem_write = mem_write_EX_MEM;
+//assign mem_address = mem_address_mux_out;
+
+
 logic sti_write;
+logic is_second_access;
+lc3b_c_offset mem_offset_out;
+lc3b_word memory_word_ldi_sti;
+
+mux2 #(.width (12)) mem_address_mux_ldi_sti
+(
+	.sel(is_second_access),
+	.a(mem_address_mux_out),
+	.b(memory_word_ldi_sti[15:4]),
+	.f(mem_address)
+);
+
 mux2 #(.width (1)) memwritemux
 (
 	.sel(sti_write),
 	.a(mem_write_EX_MEM),
 	.b(1'b1),
 	.f(mem_write)
-);*/
+);
+
+mux2 #(.width (1)) memreadmux
+(
+	.sel(sti_write),
+	.a(mem_read_EX_MEM),
+	.b(1'b0),
+	.f(mem_read)
+);
+
+offset_select mem_offset_select
+(
+	.is_second_access,
+	.addr_sel_bit0(addr_sel_EX_MEM[0]),
+	.alu_out(alu_out_out_EX_MEM[3:0]), 
+	.trap_out(trapvector_out_EX_MEM[3:0]), 
+	.ldi_sti_out(memory_word_ldi_sti[3:0]),
+	.mem_offset(mem_offset_out)
+);
 
 line_to_word memory_line_to_word
 (
 	.in(mem_rdata),
-	.offset(alu_out_out_EX_MEM[3:0]),
+	.offset(mem_offset_out),
 	.out(memory_word_out)
+);
+
+register memory_rdata_ldi_sti
+(
+	.clk,
+	.load(mem_resp),
+	.in(memory_word_out),
+	.out(memory_word_ldi_sti)
 );
 set_sel set_sel
 (
@@ -426,6 +465,7 @@ stall_unit stall_unit
 	.is_sti(is_sti_EX_MEM),
 	.is_ldi(is_ldi_EX_MEM),
 	.sti_write(sti_write),
+	.is_second_access(is_second_access),
 	.stall_pipeline(stall_pipeline)
 );
 
