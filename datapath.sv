@@ -45,7 +45,7 @@ logic trap_enable;
 lc3b_word pcmux_out;
 plus2 pc_plus2
 (
-	.stall_pipeline(stall_pipeline),
+	.stall_pipeline(0),
 	.in(pc),
 	.out(pc_plus2_out)
 );
@@ -73,7 +73,7 @@ mux_decode_sel pcmux
 register program_counter
 (
 	.clk,
-	.load(1'b1),
+	.load(!stall_pipeline),
 	.in(pcmux_out),
 	.out(pc)
 );
@@ -499,15 +499,19 @@ assign jump_enable = is_j_out_EX_MEM;
 assign jsr_enable = is_jsr_out_EX_MEM;
 assign trap_enable = is_trap_out_EX_MEM;
 // >>>>> MEM/WB PIPELINE <<<<< //
+lc3b_control_word ctrl_out_MEM_WB;
+
 MEM_WB_pipeline MEM_WB_pipeline
 (
 	.clk,
 	.dest_in(dest_out_EX_MEM),
 	.regfilemux_out_in(regfilemux_out),
 	.load_regfile_in(load_regfile_EX_MEM),
+	.ctrl_in(ctrl_out_EX_MEM),
 	.dest_out(mem_wb_dest),
 	.regfilemux_out_out(regfilemux_out_MEM_WB),
 	.load_regfile_out(load_regfile),
+	.ctrl_out(ctrl_out_MEM_WB),
 	.stall_pipeline(stall_pipeline)	
 );
 // >>>>> MEM/WB PIPELINE <<<<< //

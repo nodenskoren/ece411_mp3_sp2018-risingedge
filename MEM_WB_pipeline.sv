@@ -6,6 +6,7 @@ module MEM_WB_pipeline
 	input lc3b_reg dest_in,
 	input lc3b_word regfilemux_out_in,
 	input logic load_regfile_in,
+	input lc3b_control_word ctrl_in,
 	//input lc3b_word alu_out_in,
 	//input lc3b_word mem_rdata_in,
 	//input lc3b_word pc_in,
@@ -13,6 +14,7 @@ module MEM_WB_pipeline
 	output lc3b_reg dest_out,
 	output lc3b_word regfilemux_out_out,
 	output logic load_regfile_out,
+	output lc3b_control_word ctrl_out,
 	//output lc3b_word alu_out_out,
 	//output lc3b_word mem_rdata_out,
 	//output lc3b_word pc_out
@@ -24,6 +26,7 @@ lc3b_word alu_out;
 lc3b_word mem_rdata;
 lc3b_word pc;
 lc3b_word regfilemux_out;
+lc3b_control_word ctrl;
 logic load_regfile;
 
 always_ff @(posedge clk)
@@ -35,6 +38,7 @@ begin
 		//pc <= pc_in;
 		regfilemux_out <= regfilemux_out_in;
 		load_regfile <= load_regfile_in;
+		ctrl <= ctrl_in;
 	end
 end
 
@@ -46,5 +50,6 @@ begin
 	//pc_out = pc;
 	regfilemux_out_out = regfilemux_out;	
 	load_regfile_out = load_regfile;
+	ctrl_out = ctrl;
 end
 endmodule : MEM_WB_pipeline

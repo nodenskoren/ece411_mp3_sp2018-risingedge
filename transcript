@@ -1,4 +1,4 @@
-# do /tmp/tmp.UudwRND4AD/do.do 
+# do /tmp/tmp.vuKNRPR5Om/do.do 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
@@ -363,6 +363,8 @@
 # Loading work.l2cache_sv_unit
 # Loading work.l2cache
 # Loading work.physical_memory
+# ** Warning: (vsim-3015) /home/jtlew2/ece411/risingedge/datapath.sv(51): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'stall_pipeline'. The port definition is at: /home/jtlew2/ece411/risingedge/plus2.sv(3).
+#         Region: /mp3_tb/dut/mp3/the_datapath/pc_plus2
 # ** Warning: (vsim-3017) /home/jtlew2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Too few port connections. Expected 6, found 5.
 #         Region: /mp3_tb/dut/interconnect/Icache/cache_datapath/wb2_mux
 # ** Warning: (vsim-3722) /home/jtlew2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Missing connection for port 'a'.
@@ -386,6 +388,6 @@
 #view structure
 #view signals
 # add list -radix hexadecimal [concat [string range [find instances -r regfile] 0 [expr [string first " " [find instances -r regfile]] - 1]] "/data}"]
-# run 10000000ns
-# write list /tmp/tmp.UudwRND4AD/test_list.lst
+# run 20000000ns
+# write list /tmp/tmp.vuKNRPR5Om/test_list.lst
 # exit

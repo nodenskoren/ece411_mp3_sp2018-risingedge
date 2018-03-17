@@ -1,5 +1,6 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
+add wave -noupdate -height 15 /mp3_tb/Clk
 add wave -noupdate -height 15 /mp3_tb/dut/interconnect/arbiter/state
 add wave -noupdate -height 15 /mp3_tb/dut/interconnect/arbiter/i_rw
 add wave -noupdate -height 15 /mp3_tb/dut/interconnect/arbiter/d_rw
@@ -37,12 +38,13 @@ add wave -noupdate -height 15 /mp3_tb/dut/memory/RTY
 add wave -noupdate -height 15 /mp3_tb/dut/memory/WE
 add wave -noupdate -height 15 /mp3_tb/dut/memory/ADR
 add wave -noupdate -height 15 /mp3_tb/dut/memory/SEL
+add wave -noupdate -height 15 /mp3_tb/dut/mp3/the_datapath/regfilemux_out_MEM_WB
 add wave -noupdate -height 15 /mp3_tb/dut/mp3/the_datapath/ID_EX_pipeline/ctrl_out
-add wave -noupdate -height 15 /mp3_tb/dut/mp3/the_datapath/EX_MEM_pipeline/ctrl_out
+add wave -noupdate -height 15 -subitemconfig {/mp3_tb/dut/mp3/the_datapath/EX_MEM_pipeline/ctrl_out.opcode {-height 15} /mp3_tb/dut/mp3/the_datapath/EX_MEM_pipeline/ctrl_out.load_cc {-height 15} /mp3_tb/dut/mp3/the_datapath/EX_MEM_pipeline/ctrl_out.is_br {-height 15} /mp3_tb/dut/mp3/the_datapath/EX_MEM_pipeline/ctrl_out.is_j {-height 15} /mp3_tb/dut/mp3/the_datapath/EX_MEM_pipeline/ctrl_out.is_trap {-height 15} /mp3_tb/dut/mp3/the_datapath/EX_MEM_pipeline/ctrl_out.aluop {-height 15} /mp3_tb/dut/mp3/the_datapath/EX_MEM_pipeline/ctrl_out.regfilemux_sel {-height 15} /mp3_tb/dut/mp3/the_datapath/EX_MEM_pipeline/ctrl_out.alumux_sel {-height 15} /mp3_tb/dut/mp3/the_datapath/EX_MEM_pipeline/ctrl_out.load_regfile {-height 15} /mp3_tb/dut/mp3/the_datapath/EX_MEM_pipeline/ctrl_out.mem_read {-height 15} /mp3_tb/dut/mp3/the_datapath/EX_MEM_pipeline/ctrl_out.mem_write {-height 15} /mp3_tb/dut/mp3/the_datapath/EX_MEM_pipeline/ctrl_out.is_jsr {-height 15} /mp3_tb/dut/mp3/the_datapath/EX_MEM_pipeline/ctrl_out.addr_sel {-height 15} /mp3_tb/dut/mp3/the_datapath/EX_MEM_pipeline/ctrl_out.mem_byte_enable {-height 15} /mp3_tb/dut/mp3/the_datapath/EX_MEM_pipeline/ctrl_out.is_ldi {-height 15} /mp3_tb/dut/mp3/the_datapath/EX_MEM_pipeline/ctrl_out.is_sti {-height 15}} /mp3_tb/dut/mp3/the_datapath/EX_MEM_pipeline/ctrl_out
 add wave -noupdate -height 15 /mp3_tb/dut/mp3/the_datapath/stall_unit/stall_pipeline
 add wave -noupdate -height 15 /mp3_tb/dut/mp3/the_datapath/stall_unit/state
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {781163 ps} 0}
+WaveRestoreCursors {{Cursor 1} {53310000 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 412
 configure wave -valuecolwidth 100
@@ -58,4 +60,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {592592 ps} {852240 ps}
+WaveRestoreZoom {53201306 ps} {53420362 ps}
