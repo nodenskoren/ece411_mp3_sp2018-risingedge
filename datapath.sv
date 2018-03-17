@@ -19,7 +19,6 @@ module datapath
 	output logic jsr_mode,
 	output logic [1:0] shf_mode,
 	output lc3b_opcode opcode,
-	output logic stb_byte,
 	
 	input lc3b_control_word ctrl_in,
 	input logic offset_sel,
@@ -29,7 +28,7 @@ module datapath
 );
 
 logic stall_pipeline;
-assign stall_pipeline = 1'b0;
+//assign stall_pipeline = 1'b0;
 lc3b_word memory_word_out;
 lc3b_word alu_out_out_EX_MEM;
 
@@ -102,7 +101,6 @@ IF_ID_pipeline IF_ID_pipeline
 assign imm_mode = instruction[5];
 assign jsr_mode = instruction[11];
 assign shf_mode = instruction[5:4];
-assign stb_byte = instruction[0];
 assign opcode = lc3b_opcode'(instruction[15:12]);
 lc3b_reg mem_wb_dest;
 lc3b_word sr1;
@@ -223,6 +221,8 @@ lc3b_reg dest_out_ID_EX;
 lc3b_word pc_out_ID_EX;
 lc3b_word dest_data_out_ID_EX;
 lc3b_word trapvector_out_ID_EX;
+lc3b_imm4 shift_out;
+logic is_ldb_stb_ID_EX;
 ID_EX_pipeline ID_EX_pipeline
 (
 	.clk,
@@ -236,6 +236,8 @@ ID_EX_pipeline ID_EX_pipeline
 	.pc_in(pc),
 	.dest_data_in(sr_out),
 	.trapvector_in(shifted_trapvector_in),
+	.shift_in(instruction[3:0]),
+	.is_ldb_stb_in(is_ldb_stb),
 	
 	.ctrl_out(ctrl_out_ID_EX),
 	.sr1_out(sr1_out),
@@ -247,7 +249,8 @@ ID_EX_pipeline ID_EX_pipeline
 	.pc_out(pc_out_ID_EX),
 	.dest_data_out(dest_data_out_ID_EX),
 	.trapvector_out(trapvector_out_ID_EX),
-	
+	.shift_out(shift_out),
+	.is_ldb_stb_out(is_ldb_stb_ID_EX),
 	
 	.stall_pipeline(stall_pipeline)
 );
@@ -260,7 +263,7 @@ mux4 alumux
 	.a(sr2_out),
 	.b(offset6_out),
 	.c(branch_offset_out),
-	.d(16'h0004),
+	.d({12'h000, shift_out}),
 	.f(alumux_out)	 
 );
 
@@ -327,6 +330,7 @@ logic [1:0] addr_sel_EX_MEM;
 logic [1:0] mem_byte_enable_EX_MEM;
 logic is_ldi_EX_MEM;
 logic is_sti_EX_MEM;
+logic is_ldb_stb_EX_MEM;
 EX_MEM_pipeline EX_MEM_pipeline
 (
 	.clk,
@@ -350,6 +354,7 @@ EX_MEM_pipeline EX_MEM_pipeline
 	.mem_byte_enable_in(mem_byte_enable_ID_EX),
 	.is_ldi_in(is_ldi_ID_EX),
 	.is_sti_in(is_sti_ID_EX),
+	.is_ldb_stb_in(is_ldb_stb_ID_EX),
 	
 	.alu_out_out(alu_out_out_EX_MEM),
 	.addr_adder_out_out(addr_adder_out_out_EX_MEM),
@@ -371,7 +376,8 @@ EX_MEM_pipeline EX_MEM_pipeline
 	.mem_byte_enable_out(mem_byte_enable_EX_MEM),
 	.stall_pipeline(stall_pipeline),
 	.is_ldi_out(is_ldi_EX_MEM),
-	.is_sti_out(is_sti_EX_MEM)
+	.is_sti_out(is_sti_EX_MEM),
+	.is_ldb_stb_out(is_ldb_stb_EX_MEM)
 );
 // >>>>> EX/MEM PIPELINE <<<<< //
 lc3b_wb_adr mem_address_mux_out;
@@ -383,57 +389,76 @@ mux2 #(.width (12)) mem_address_mux
 	.f(mem_address_mux_out)
 );
 
-assign mem_read = mem_read_EX_MEM;
-assign mem_write = mem_write_EX_MEM;
-assign mem_address = mem_address_mux_out;
+//assign mem_read = mem_read_EX_MEM;
+//assign mem_write = mem_write_EX_MEM;
+//assign mem_address = mem_address_mux_out;
 
-/*
-logic sti_write;
-mux2 #(.width (1)) memwritemux
+logic [2:0] regfilesel_out;
+logic [1:0] mem_byte_enable;
+ldbstblogic ldbstblogic
 (
-	.sel(sti_write),
-	.a(mem_write_EX_MEM),
-	.b(1'b1),
-	.f(mem_write)
-);*/
+	.is_ldb_stb_in(is_ldb_stb_EX_MEM),
+	.regfilesel_in(regfilemux_sel_EX_MEM),
+	.mem_byte_enable_in(mem_byte_enable_EX_MEM),
+	.store_byte(alu_out_out_EX_MEM[0]),
+	.regfilesel_out(regfilesel_out),
+	.mem_byte_enable_out(mem_byte_enable)
+);
+
+logic [3:0] line_offset_mux_out;
+mux2 #(.width (4)) line_offset_mux
+(
+	.sel(addr_sel_EX_MEM[0]),
+	.a(alu_out_out_EX_MEM[3:0]),
+	.b(trapvector_out_EX_MEM[3:0]),
+	.f(line_offset_mux_out)
+);
+
+logic [3:0] line_offset;
+stall_unit stall_unit
+(
+	.clk,
+	.mem_read_in(mem_read_EX_MEM),
+	.mem_write_in(mem_write_EX_MEM),
+	.mem_resp(mem_resp),
+	.is_sti(is_sti_EX_MEM),
+	.is_ldi(is_ldi_EX_MEM),
+	.mem_address_in(mem_address_mux_out),
+	.mem_rdata(memory_word_out),
+	.line_offset_in(line_offset_mux_out),
+	//.sti_write(sti_write),
+	.mem_read(mem_read),
+	.mem_write(mem_write),
+	.mem_address(mem_address),
+	.stall_pipeline(stall_pipeline),
+	.line_offset_out(line_offset)
+);
 
 line_to_word memory_line_to_word
 (
 	.in(mem_rdata),
-	.offset(alu_out_out_EX_MEM[3:0]),
+	.offset(line_offset),
 	.out(memory_word_out)
 );
+
 set_sel set_sel
 (
 	.mem_wdata_word(dest_data_out_EX_MEM),
-	.offset(alu_out_out_EX_MEM[3:0]),
-	.mem_byte_enable(mem_byte_enable_EX_MEM),
+	.offset(line_offset),
+	.mem_byte_enable(mem_byte_enable),
 	.out(mem_wdata),
 	.mem_sel(mem_sel)
 );
 
-/*
-stall_unit stall_unit
-(
-	.clk,
-	.mem_read(mem_read),
-	.mem_write(mem_write),
-	.mem_resp(mem_resp),
-	.is_sti(is_sti_EX_MEM),
-	.is_ldi(is_ldi_EX_MEM),
-	.sti_write(sti_write),
-	.stall_pipeline(stall_pipeline)
-);*/
-
 lc3b_word regfilemux_out;
 mux8 regfilemux
 (
-    .sel(regfilemux_sel_EX_MEM),
+    .sel(regfilesel_out),
     .a(alu_out_out_EX_MEM),
 	 .b(memory_word_out),
 	 .c(pc_out_EX_MEM),
 	 .d(addr_adder_out_out_EX_MEM),
-	 .e(memory_word_out & 16'h0011),
+	 .e(memory_word_out & 16'h00FF),
 	 .f(memory_word_out >> 8),
 	 .g(16'b0),
 	 .h(16'b0),

@@ -27,6 +27,7 @@ module EX_MEM_pipeline
 	input logic [1:0] mem_byte_enable_in,
 	input logic is_ldi_in,
 	input logic is_sti_in,
+	input logic is_ldb_stb_in,
 	
 	output logic is_j_out,
 	//output logic is_br_in,
@@ -51,6 +52,7 @@ module EX_MEM_pipeline
 	output logic [1:0] mem_byte_enable_out,
 	output logic is_ldi_out,
 	output logic is_sti_out,
+	output logic is_ldb_stb_out,
 	
 	input logic stall_pipeline
 );
@@ -77,6 +79,7 @@ logic [1:0] mem_byte_enable;
 logic is_ldi;
 logic is_sti;
 logic is_trap;
+logic is_ldb_stb;
 
 always_ff @(posedge clk)
 begin
@@ -104,6 +107,7 @@ begin
 		is_ldi <= is_ldi_in;
 		is_sti <= is_sti_in;
 		is_trap <= is_trap_in;
+		is_ldb_stb <= is_ldb_stb_in;
 	end
 end
 
@@ -132,5 +136,6 @@ begin
 	is_ldi_out = is_ldi;
 	is_sti_out = is_sti;
 	is_trap_out = is_trap;
+	is_ldb_stb_out = is_ldb_stb;
 end
 endmodule : EX_MEM_pipeline

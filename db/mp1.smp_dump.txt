@@ -1,7 +1,6 @@
 
 State Machine - |mp3|datapath:the_datapath|stall_unit:stall_unit|state
-Name state.s_ack_wait_int state.s_ack_wait state.s_read_write_twice state.s_read_write 
-state.s_read_write 0 0 0 0 
-state.s_read_write_twice 0 0 1 1 
-state.s_ack_wait 0 1 0 1 
-state.s_ack_wait_int 1 0 0 1 
+Name state.s_read_write state.s_sti state.s_ldi 
+state.s_read_write 0 0 0 
+state.s_ldi 1 0 1 
+state.s_sti 1 1 0 

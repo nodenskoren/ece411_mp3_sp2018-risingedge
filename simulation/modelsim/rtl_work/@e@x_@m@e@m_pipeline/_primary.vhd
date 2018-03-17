@@ -23,6 +23,7 @@ entity EX_MEM_pipeline is
         mem_byte_enable_in: in     vl_logic_vector(1 downto 0);
         is_ldi_in       : in     vl_logic;
         is_sti_in       : in     vl_logic;
+        is_ldb_stb_in   : in     vl_logic;
         is_j_out        : out    vl_logic;
         alu_out_out     : out    vl_logic_vector(15 downto 0);
         addr_adder_out_out: out    vl_logic_vector(15 downto 0);
@@ -43,6 +44,7 @@ entity EX_MEM_pipeline is
         mem_byte_enable_out: out    vl_logic_vector(1 downto 0);
         is_ldi_out      : out    vl_logic;
         is_sti_out      : out    vl_logic;
+        is_ldb_stb_out  : out    vl_logic;
         stall_pipeline  : in     vl_logic
     );
 end EX_MEM_pipeline;

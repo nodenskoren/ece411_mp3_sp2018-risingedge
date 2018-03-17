@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mp1
-Thu Mar 15 19:57:29 2018
+Sat Mar 17 03:28:08 2018
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -14,47 +14,48 @@ Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Registers Added for RAM Pass-Through Logic
- 13. Registers Packed Into Inferred Megafunctions
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_0|altsyncram_b7n1:auto_generated
- 16. Source assignments for datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_1|altsyncram_b7n1:auto_generated
- 17. Source assignments for datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2|altsyncram_b7n1:auto_generated
- 18. Parameter Settings for User Entity Instance: datapath:the_datapath|plus2:pc_plus2
- 19. Parameter Settings for User Entity Instance: datapath:the_datapath|mux_decode_sel:pcmux
- 20. Parameter Settings for User Entity Instance: datapath:the_datapath|register:program_counter
- 21. Parameter Settings for User Entity Instance: datapath:the_datapath|sext5:sext5
- 22. Parameter Settings for User Entity Instance: datapath:the_datapath|mux2:sr2mux
- 23. Parameter Settings for User Entity Instance: datapath:the_datapath|mux2:destmux
- 24. Parameter Settings for User Entity Instance: datapath:the_datapath|adj:adj6
- 25. Parameter Settings for User Entity Instance: datapath:the_datapath|sext5:sext6
- 26. Parameter Settings for User Entity Instance: datapath:the_datapath|mux2:offset6mux
- 27. Parameter Settings for User Entity Instance: datapath:the_datapath|adj:adj9
- 28. Parameter Settings for User Entity Instance: datapath:the_datapath|adj:adj11
- 29. Parameter Settings for User Entity Instance: datapath:the_datapath|mux2:offset
- 30. Parameter Settings for User Entity Instance: datapath:the_datapath|zext:zext8
- 31. Parameter Settings for User Entity Instance: datapath:the_datapath|mux4:alumux
- 32. Parameter Settings for User Entity Instance: datapath:the_datapath|badder:addr_adder
- 33. Parameter Settings for User Entity Instance: datapath:the_datapath|mux2:mem_address_mux
- 34. Parameter Settings for User Entity Instance: datapath:the_datapath|mux8:regfilemux
- 35. Parameter Settings for User Entity Instance: datapath:the_datapath|register:cc
- 36. Parameter Settings for Inferred Entity Instance: datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_0
- 37. Parameter Settings for Inferred Entity Instance: datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_1
- 38. Parameter Settings for Inferred Entity Instance: datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2
- 39. altsyncram Parameter Settings by Entity Instance
- 40. Port Connectivity Checks: "datapath:the_datapath|mux8:regfilemux"
- 41. Port Connectivity Checks: "datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline"
- 42. Port Connectivity Checks: "datapath:the_datapath|mux4:alumux"
- 43. Port Connectivity Checks: "datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline"
- 44. Port Connectivity Checks: "datapath:the_datapath|zext:zext8"
- 45. Port Connectivity Checks: "datapath:the_datapath|mux2:destmux"
- 46. Port Connectivity Checks: "datapath:the_datapath|register:program_counter"
- 47. Port Connectivity Checks: "datapath:the_datapath|plus2:pc_plus2"
- 48. Elapsed Time Per Partition
- 49. Analysis & Synthesis Messages
+  9. State Machine - |mp3|datapath:the_datapath|stall_unit:stall_unit|state
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Registers Added for RAM Pass-Through Logic
+ 14. Registers Packed Into Inferred Megafunctions
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_0|altsyncram_imo1:auto_generated
+ 17. Source assignments for datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_1|altsyncram_imo1:auto_generated
+ 18. Source assignments for datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2|altsyncram_imo1:auto_generated
+ 19. Parameter Settings for User Entity Instance: datapath:the_datapath|plus2:pc_plus2
+ 20. Parameter Settings for User Entity Instance: datapath:the_datapath|mux_decode_sel:pcmux
+ 21. Parameter Settings for User Entity Instance: datapath:the_datapath|register:program_counter
+ 22. Parameter Settings for User Entity Instance: datapath:the_datapath|sext5:sext5
+ 23. Parameter Settings for User Entity Instance: datapath:the_datapath|mux2:sr2mux
+ 24. Parameter Settings for User Entity Instance: datapath:the_datapath|mux2:destmux
+ 25. Parameter Settings for User Entity Instance: datapath:the_datapath|adj:adj6
+ 26. Parameter Settings for User Entity Instance: datapath:the_datapath|sext5:sext6
+ 27. Parameter Settings for User Entity Instance: datapath:the_datapath|mux2:offset6mux
+ 28. Parameter Settings for User Entity Instance: datapath:the_datapath|adj:adj9
+ 29. Parameter Settings for User Entity Instance: datapath:the_datapath|adj:adj11
+ 30. Parameter Settings for User Entity Instance: datapath:the_datapath|mux2:offset
+ 31. Parameter Settings for User Entity Instance: datapath:the_datapath|zext:zext8
+ 32. Parameter Settings for User Entity Instance: datapath:the_datapath|mux4:alumux
+ 33. Parameter Settings for User Entity Instance: datapath:the_datapath|badder:addr_adder
+ 34. Parameter Settings for User Entity Instance: datapath:the_datapath|mux2:mem_address_mux
+ 35. Parameter Settings for User Entity Instance: datapath:the_datapath|mux2:line_offset_mux
+ 36. Parameter Settings for User Entity Instance: datapath:the_datapath|mux8:regfilemux
+ 37. Parameter Settings for User Entity Instance: datapath:the_datapath|register:cc
+ 38. Parameter Settings for Inferred Entity Instance: datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_0
+ 39. Parameter Settings for Inferred Entity Instance: datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_1
+ 40. Parameter Settings for Inferred Entity Instance: datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2
+ 41. altsyncram Parameter Settings by Entity Instance
+ 42. Port Connectivity Checks: "datapath:the_datapath|mux8:regfilemux"
+ 43. Port Connectivity Checks: "datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline"
+ 44. Port Connectivity Checks: "datapath:the_datapath|mux4:alumux"
+ 45. Port Connectivity Checks: "datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline"
+ 46. Port Connectivity Checks: "datapath:the_datapath|zext:zext8"
+ 47. Port Connectivity Checks: "datapath:the_datapath|mux2:destmux"
+ 48. Port Connectivity Checks: "datapath:the_datapath|register:program_counter"
+ 49. Elapsed Time Per Partition
+ 50. Analysis & Synthesis Messages
 
 
 
@@ -80,16 +81,16 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Thu Mar 15 19:57:29 2018       ;
+; Analysis & Synthesis Status   ; Successful - Sat Mar 17 03:28:08 2018       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp1                                         ;
 ; Top-level Entity Name         ; mp3                                         ;
 ; Family                        ; Stratix III                                 ;
 ; Logic utilization             ; N/A                                         ;
-;     Combinational ALUTs       ; 594                                         ;
+;     Combinational ALUTs       ; 625                                         ;
 ;     Memory ALUTs              ; 0                                           ;
-;     Dedicated logic registers ; 237                                         ;
-; Total registers               ; 237                                         ;
+;     Dedicated logic registers ; 340                                         ;
+; Total registers               ; 340                                         ;
 ; Total pins                    ; 580                                         ;
 ; Total virtual pins            ; 0                                           ;
 ; Total block memory bits       ; 384                                         ;
@@ -192,16 +193,16 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 7           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ; < 0.1%      ;
-;     Processors 3-8         ;   0.0%      ;
+;     Processors 2-7         ; < 0.1%      ;
+;     Processors 8-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -235,6 +236,8 @@ applicable agreement for further details.
 ; line_to_word.sv                  ; yes             ; User SystemVerilog HDL File  ; /home/koren3/ece411/mp3/line_to_word.sv                                     ;         ;
 ; set_sel.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/koren3/ece411/mp3/set_sel.sv                                          ;         ;
 ; mux_decode_sel.sv                ; yes             ; User SystemVerilog HDL File  ; /home/koren3/ece411/mp3/mux_decode_sel.sv                                   ;         ;
+; stall_unit.sv                    ; yes             ; User SystemVerilog HDL File  ; /home/koren3/ece411/mp3/stall_unit.sv                                       ;         ;
+; ldbstblogic.sv                   ; yes             ; User SystemVerilog HDL File  ; /home/koren3/ece411/mp3/ldbstblogic.sv                                      ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                 ; /software/altera/13.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                 ; /software/altera/13.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                 ; /software/altera/13.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
@@ -244,7 +247,7 @@ applicable agreement for further details.
 ; altrom.inc                       ; yes             ; Megafunction                 ; /software/altera/13.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
 ; altram.inc                       ; yes             ; Megafunction                 ; /software/altera/13.1/quartus/libraries/megafunctions/altram.inc            ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                 ; /software/altera/13.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_b7n1.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/koren3/ece411/mp3/db/altsyncram_b7n1.tdf                              ;         ;
+; db/altsyncram_imo1.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/koren3/ece411/mp3/db/altsyncram_imo1.tdf                              ;         ;
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
 
 
@@ -253,34 +256,34 @@ applicable agreement for further details.
 +-----------------------------------------------+------------------+
 ; Resource                                      ; Usage            ;
 +-----------------------------------------------+------------------+
-; Estimated ALUTs Used                          ; 594              ;
-;     -- Combinational ALUTs                    ; 594              ;
+; Estimated ALUTs Used                          ; 625              ;
+;     -- Combinational ALUTs                    ; 625              ;
 ;     -- Memory ALUTs                           ; 0                ;
 ;     -- LUT_REGs                               ; 0                ;
-; Dedicated logic registers                     ; 237              ;
+; Dedicated logic registers                     ; 340              ;
 ;                                               ;                  ;
-; Estimated ALUTs Unavailable                   ; 92               ;
-;     -- Due to unpartnered combinational logic ; 92               ;
+; Estimated ALUTs Unavailable                   ; 43               ;
+;     -- Due to unpartnered combinational logic ; 43               ;
 ;     -- Due to Memory ALUTs                    ; 0                ;
 ;                                               ;                  ;
-; Total combinational functions                 ; 594              ;
+; Total combinational functions                 ; 625              ;
 ; Combinational ALUT usage by number of inputs  ;                  ;
-;     -- 7 input functions                      ; 4                ;
-;     -- 6 input functions                      ; 162              ;
-;     -- 5 input functions                      ; 95               ;
-;     -- 4 input functions                      ; 189              ;
-;     -- <=3 input functions                    ; 144              ;
+;     -- 7 input functions                      ; 5                ;
+;     -- 6 input functions                      ; 146              ;
+;     -- 5 input functions                      ; 176              ;
+;     -- 4 input functions                      ; 145              ;
+;     -- <=3 input functions                    ; 153              ;
 ;                                               ;                  ;
 ; Combinational ALUTs by mode                   ;                  ;
-;     -- normal mode                            ; 544              ;
-;     -- extended LUT mode                      ; 4                ;
+;     -- normal mode                            ; 574              ;
+;     -- extended LUT mode                      ; 5                ;
 ;     -- arithmetic mode                        ; 46               ;
 ;     -- shared arithmetic mode                 ; 0                ;
 ;                                               ;                  ;
-; Estimated ALUT/register pairs used            ; 773              ;
+; Estimated ALUT/register pairs used            ; 827              ;
 ;                                               ;                  ;
-; Total registers                               ; 237              ;
-;     -- Dedicated logic registers              ; 237              ;
+; Total registers                               ; 340              ;
+;     -- Dedicated logic registers              ; 340              ;
 ;     -- I/O registers                          ; 0                ;
 ;     -- LUT_REGs                               ; 0                ;
 ;                                               ;                  ;
@@ -290,9 +293,9 @@ applicable agreement for further details.
 ; Total block memory bits                       ; 384              ;
 ; DSP block 18-bit elements                     ; 0                ;
 ; Maximum fan-out node                          ; memory.CLK~input ;
-; Maximum fan-out                               ; 285              ;
-; Total fan-out                                 ; 4280             ;
-; Average fan-out                               ; 2.10             ;
+; Maximum fan-out                               ; 388              ;
+; Total fan-out                                 ; 5026             ;
+; Average fan-out                               ; 2.31             ;
 +-----------------------------------------------+------------------+
 
 
@@ -301,37 +304,38 @@ applicable agreement for further details.
 +----------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                             ; Library Name ;
 +----------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+--------------+
-; |mp3                                         ; 594 (1)           ; 237 (0)      ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 580  ; 0            ; |mp3                                                                                            ; work         ;
-;    |control_rom:control_rom|                 ; 19 (19)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|control_rom:control_rom                                                                    ; work         ;
-;    |datapath:the_datapath|                   ; 574 (2)           ; 237 (0)      ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath                                                                      ; work         ;
-;       |EX_MEM_pipeline:EX_MEM_pipeline|      ; 3 (3)             ; 87 (87)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline                                      ; work         ;
-;       |ID_EX_pipeline:ID_EX_pipeline|        ; 0 (0)             ; 72 (72)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline                                        ; work         ;
+; |mp3                                         ; 625 (1)           ; 340 (0)      ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 580  ; 0            ; |mp3                                                                                            ; work         ;
+;    |control_rom:control_rom|                 ; 21 (21)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|control_rom:control_rom                                                                    ; work         ;
+;    |datapath:the_datapath|                   ; 603 (2)           ; 340 (0)      ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath                                                                      ; work         ;
+;       |EX_MEM_pipeline:EX_MEM_pipeline|      ; 5 (5)             ; 92 (92)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline                                      ; work         ;
+;       |ID_EX_pipeline:ID_EX_pipeline|        ; 0 (0)             ; 106 (106)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline                                        ; work         ;
 ;       |IF_ID_pipeline:IF_ID_pipeline|        ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|IF_ID_pipeline:IF_ID_pipeline                                        ; work         ;
 ;       |MEM_WB_pipeline:MEM_WB_pipeline|      ; 0 (0)             ; 20 (20)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|MEM_WB_pipeline:MEM_WB_pipeline                                      ; work         ;
-;       |alu:alu|                              ; 168 (168)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|alu:alu                                                              ; work         ;
+;       |alu:alu|                              ; 166 (166)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|alu:alu                                                              ; work         ;
 ;       |badder:addr_adder|                    ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|badder:addr_adder                                                    ; work         ;
 ;       |gencc:the_gencc|                      ; 6 (6)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|gencc:the_gencc                                                      ; work         ;
+;       |ldbstblogic:ldbstblogic|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|ldbstblogic:ldbstblogic                                              ; work         ;
 ;       |line_to_word:ifetch_line_to_word|     ; 48 (48)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|line_to_word:ifetch_line_to_word                                     ; work         ;
 ;       |line_to_word:memory_line_to_word|     ; 47 (47)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|line_to_word:memory_line_to_word                                     ; work         ;
 ;       |mux2:destmux|                         ; 3 (3)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|mux2:destmux                                                         ; work         ;
-;       |mux2:mem_address_mux|                 ; 12 (12)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|mux2:mem_address_mux                                                 ; work         ;
 ;       |mux2:offset6mux|                      ; 6 (6)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|mux2:offset6mux                                                      ; work         ;
 ;       |mux2:offset|                          ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|mux2:offset                                                          ; work         ;
 ;       |mux2:sr2mux|                          ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|mux2:sr2mux                                                          ; work         ;
 ;       |mux4:alumux|                          ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|mux4:alumux                                                          ; work         ;
-;       |mux8:regfilemux|                      ; 48 (48)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|mux8:regfilemux                                                      ; work         ;
+;       |mux8:regfilemux|                      ; 53 (53)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|mux8:regfilemux                                                      ; work         ;
 ;       |mux_decode_sel:pcmux|                 ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|mux_decode_sel:pcmux                                                 ; work         ;
 ;       |plus2:pc_plus2|                       ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|plus2:pc_plus2                                                       ; work         ;
-;       |regfile:regfile|                      ; 2 (2)             ; 23 (23)      ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|regfile:regfile                                                      ; work         ;
+;       |regfile:regfile|                      ; 6 (6)             ; 69 (69)      ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|regfile:regfile                                                      ; work         ;
 ;          |altsyncram:data_rtl_0|             ; 0 (0)             ; 0 (0)        ; 128               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_0                                ; work         ;
-;             |altsyncram_b7n1:auto_generated| ; 0 (0)             ; 0 (0)        ; 128               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_0|altsyncram_b7n1:auto_generated ; work         ;
+;             |altsyncram_imo1:auto_generated| ; 0 (0)             ; 0 (0)        ; 128               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_0|altsyncram_imo1:auto_generated ; work         ;
 ;          |altsyncram:data_rtl_1|             ; 0 (0)             ; 0 (0)        ; 128               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_1                                ; work         ;
-;             |altsyncram_b7n1:auto_generated| ; 0 (0)             ; 0 (0)        ; 128               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_1|altsyncram_b7n1:auto_generated ; work         ;
+;             |altsyncram_imo1:auto_generated| ; 0 (0)             ; 0 (0)        ; 128               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_1|altsyncram_imo1:auto_generated ; work         ;
 ;          |altsyncram:data_rtl_2|             ; 0 (0)             ; 0 (0)        ; 128               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2                                ; work         ;
-;             |altsyncram_b7n1:auto_generated| ; 0 (0)             ; 0 (0)        ; 128               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2|altsyncram_b7n1:auto_generated ; work         ;
+;             |altsyncram_imo1:auto_generated| ; 0 (0)             ; 0 (0)        ; 128               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2|altsyncram_imo1:auto_generated ; work         ;
 ;       |register:cc|                          ; 0 (0)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|register:cc                                                          ; work         ;
-;       |register:program_counter|             ; 6 (6)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|register:program_counter                                             ; work         ;
-;       |set_sel:set_sel|                      ; 144 (144)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|set_sel:set_sel                                                      ; work         ;
+;       |register:program_counter|             ; 8 (8)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|register:program_counter                                             ; work         ;
+;       |set_sel:set_sel|                      ; 153 (153)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|set_sel:set_sel                                                      ; work         ;
+;       |stall_unit:stall_unit|                ; 19 (19)           ; 18 (18)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|datapath:the_datapath|stall_unit:stall_unit                                                ; work         ;
 +----------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -341,34 +345,85 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 ; Name                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
 +-------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
-; datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_0|altsyncram_b7n1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 8            ; 16           ; 8            ; 16           ; 128  ; None ;
-; datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_1|altsyncram_b7n1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 8            ; 16           ; 8            ; 16           ; 128  ; None ;
-; datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2|altsyncram_b7n1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 8            ; 16           ; 8            ; 16           ; 128  ; None ;
+; datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_0|altsyncram_imo1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 8            ; 16           ; 8            ; 16           ; 128  ; None ;
+; datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_1|altsyncram_imo1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 8            ; 16           ; 8            ; 16           ; 128  ; None ;
+; datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2|altsyncram_imo1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 8            ; 16           ; 8            ; 16           ; 128  ; None ;
 +-------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                             ;
-+---------------------------------------------------------------------------+------------------------------------------------------------------------------------+
-; Register name                                                             ; Reason for Removal                                                                 ;
-+---------------------------------------------------------------------------+------------------------------------------------------------------------------------+
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|trapvector[9..15]     ; Stuck at GND due to stuck port data_in                                             ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.aluop[3]         ; Stuck at GND due to stuck port data_in                                             ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|trapvector[9..15]   ; Stuck at GND due to stuck port data_in                                             ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[0]      ; Stuck at GND due to stuck port data_in                                             ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|addr_adder_out[0]   ; Merged with datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[0]            ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[4]      ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|trapvector[4]      ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[5]      ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|trapvector[5]      ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[6]      ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|trapvector[6]      ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|offset6[6..15]        ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|trapvector[6]      ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[7]      ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|trapvector[7]      ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[8]      ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|trapvector[8]      ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.is_trap          ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.addr_sel[0]   ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.aluop[2]         ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.alumux_sel[1] ;
-; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|addr_sel[0]         ; Merged with datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|is_trap          ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[12..15] ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[11]  ;
-; Total Number of Removed Registers = 39                                    ;                                                                                    ;
-+---------------------------------------------------------------------------+------------------------------------------------------------------------------------+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------+
+; State Machine - |mp3|datapath:the_datapath|stall_unit:stall_unit|state ;
++--------------------+--------------------+-------------+----------------+
+; Name               ; state.s_read_write ; state.s_sti ; state.s_ldi    ;
++--------------------+--------------------+-------------+----------------+
+; state.s_read_write ; 0                  ; 0           ; 0              ;
+; state.s_ldi        ; 1                  ; 0           ; 1              ;
+; state.s_sti        ; 1                  ; 1           ; 0              ;
++--------------------+--------------------+-------------+----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                    ;
++-----------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
+; Register name                                                               ; Reason for Removal                                                                      ;
++-----------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|trapvector[9..15]       ; Stuck at GND due to stuck port data_in                                                  ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.aluop[3]           ; Stuck at GND due to stuck port data_in                                                  ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|trapvector[9..15]     ; Stuck at GND due to stuck port data_in                                                  ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[0]        ; Stuck at GND due to stuck port data_in                                                  ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|addr_adder_out[0]     ; Merged with datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|pc[0]                 ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|trapvector[1]           ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|shift[0]                ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[1]        ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|shift[0]                ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|trapvector[2]           ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|shift[1]                ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[2]        ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|shift[1]                ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|trapvector[3]           ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|shift[2]                ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[3]        ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|shift[2]                ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|trapvector[4]           ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|shift[3]                ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[4]        ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|shift[3]                ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[5]        ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|trapvector[5]           ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[6]        ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|trapvector[6]           ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|offset6[6..15]          ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|trapvector[6]           ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[7]        ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|trapvector[7]           ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[8]        ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|trapvector[8]           ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.mem_byte_enable[1] ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.mem_byte_enable[0] ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.is_trap            ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.addr_sel[0]        ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.aluop[2]           ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|ctrl.alumux_sel[1]      ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|addr_sel[0]           ; Merged with datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|is_trap               ;
+; datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|mem_byte_enable[1]    ; Merged with datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|mem_byte_enable[0]    ;
+; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[12..15]   ; Merged with datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[11]       ;
+; datapath:the_datapath|stall_unit:stall_unit|state~4                         ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~5                         ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~6                         ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~7                         ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~8                         ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~9                         ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~10                        ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~11                        ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~12                        ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~13                        ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~14                        ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~15                        ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~16                        ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~17                        ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~18                        ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~19                        ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~20                        ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~21                        ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~22                        ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~23                        ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~24                        ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~25                        ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~26                        ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~27                        ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~28                        ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~29                        ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~30                        ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~31                        ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~32                        ; Lost fanout                                                                             ;
+; datapath:the_datapath|stall_unit:stall_unit|state~33                        ; Lost fanout                                                                             ;
+; Total Number of Removed Registers = 78                                      ;                                                                                         ;
++-----------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -398,12 +453,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 237   ;
+; Total registers                              ; 340   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Load   ; 32    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 3     ;
+; Number of registers using Clock Enable       ; 261   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -436,18 +491,62 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; datapath:the_datapath|regfile:regfile|data_rtl_0_bypass[20] ; datapath:the_datapath|regfile:regfile|data_rtl_0 ;
 ; datapath:the_datapath|regfile:regfile|data_rtl_0_bypass[21] ; datapath:the_datapath|regfile:regfile|data_rtl_0 ;
 ; datapath:the_datapath|regfile:regfile|data_rtl_0_bypass[22] ; datapath:the_datapath|regfile:regfile|data_rtl_0 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_1_bypass[0]  ; datapath:the_datapath|regfile:regfile|data_rtl_1 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_1_bypass[1]  ; datapath:the_datapath|regfile:regfile|data_rtl_1 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_1_bypass[2]  ; datapath:the_datapath|regfile:regfile|data_rtl_1 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_1_bypass[3]  ; datapath:the_datapath|regfile:regfile|data_rtl_1 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_1_bypass[4]  ; datapath:the_datapath|regfile:regfile|data_rtl_1 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_1_bypass[5]  ; datapath:the_datapath|regfile:regfile|data_rtl_1 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_1_bypass[6]  ; datapath:the_datapath|regfile:regfile|data_rtl_1 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_1_bypass[7]  ; datapath:the_datapath|regfile:regfile|data_rtl_1 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_1_bypass[8]  ; datapath:the_datapath|regfile:regfile|data_rtl_1 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_1_bypass[9]  ; datapath:the_datapath|regfile:regfile|data_rtl_1 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_1_bypass[10] ; datapath:the_datapath|regfile:regfile|data_rtl_1 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_1_bypass[11] ; datapath:the_datapath|regfile:regfile|data_rtl_1 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_1_bypass[12] ; datapath:the_datapath|regfile:regfile|data_rtl_1 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_1_bypass[13] ; datapath:the_datapath|regfile:regfile|data_rtl_1 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_1_bypass[14] ; datapath:the_datapath|regfile:regfile|data_rtl_1 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_1_bypass[15] ; datapath:the_datapath|regfile:regfile|data_rtl_1 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_1_bypass[16] ; datapath:the_datapath|regfile:regfile|data_rtl_1 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_1_bypass[17] ; datapath:the_datapath|regfile:regfile|data_rtl_1 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_1_bypass[18] ; datapath:the_datapath|regfile:regfile|data_rtl_1 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_1_bypass[19] ; datapath:the_datapath|regfile:regfile|data_rtl_1 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_1_bypass[20] ; datapath:the_datapath|regfile:regfile|data_rtl_1 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_1_bypass[21] ; datapath:the_datapath|regfile:regfile|data_rtl_1 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_1_bypass[22] ; datapath:the_datapath|regfile:regfile|data_rtl_1 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_2_bypass[0]  ; datapath:the_datapath|regfile:regfile|data_rtl_2 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_2_bypass[1]  ; datapath:the_datapath|regfile:regfile|data_rtl_2 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_2_bypass[2]  ; datapath:the_datapath|regfile:regfile|data_rtl_2 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_2_bypass[3]  ; datapath:the_datapath|regfile:regfile|data_rtl_2 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_2_bypass[4]  ; datapath:the_datapath|regfile:regfile|data_rtl_2 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_2_bypass[5]  ; datapath:the_datapath|regfile:regfile|data_rtl_2 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_2_bypass[6]  ; datapath:the_datapath|regfile:regfile|data_rtl_2 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_2_bypass[7]  ; datapath:the_datapath|regfile:regfile|data_rtl_2 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_2_bypass[8]  ; datapath:the_datapath|regfile:regfile|data_rtl_2 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_2_bypass[9]  ; datapath:the_datapath|regfile:regfile|data_rtl_2 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_2_bypass[10] ; datapath:the_datapath|regfile:regfile|data_rtl_2 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_2_bypass[11] ; datapath:the_datapath|regfile:regfile|data_rtl_2 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_2_bypass[12] ; datapath:the_datapath|regfile:regfile|data_rtl_2 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_2_bypass[13] ; datapath:the_datapath|regfile:regfile|data_rtl_2 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_2_bypass[14] ; datapath:the_datapath|regfile:regfile|data_rtl_2 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_2_bypass[15] ; datapath:the_datapath|regfile:regfile|data_rtl_2 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_2_bypass[16] ; datapath:the_datapath|regfile:regfile|data_rtl_2 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_2_bypass[17] ; datapath:the_datapath|regfile:regfile|data_rtl_2 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_2_bypass[18] ; datapath:the_datapath|regfile:regfile|data_rtl_2 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_2_bypass[19] ; datapath:the_datapath|regfile:regfile|data_rtl_2 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_2_bypass[20] ; datapath:the_datapath|regfile:regfile|data_rtl_2 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_2_bypass[21] ; datapath:the_datapath|regfile:regfile|data_rtl_2 ;
+; datapath:the_datapath|regfile:regfile|data_rtl_2_bypass[22] ; datapath:the_datapath|regfile:regfile|data_rtl_2 ;
 +-------------------------------------------------------------+--------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Registers Packed Into Inferred Megafunctions                                                                                   ;
-+----------------------------------------------------------------------+--------------------------------------------------+------+
-; Register Name                                                        ; Megafunction                                     ; Type ;
-+----------------------------------------------------------------------+--------------------------------------------------+------+
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|sr1[0..15]       ; datapath:the_datapath|regfile:regfile|data_rtl_1 ; RAM  ;
-; datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|dest_data[0..15] ; datapath:the_datapath|regfile:regfile|data_rtl_2 ; RAM  ;
-; datapath:the_datapath|regfile:regfile|data[0..7][0..15]              ; datapath:the_datapath|regfile:regfile|data_rtl_2 ; RAM  ;
-+----------------------------------------------------------------------+--------------------------------------------------+------+
++-------------------------------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                                                      ;
++---------------------------------------------------------+--------------------------------------------------+------+
+; Register Name                                           ; Megafunction                                     ; Type ;
++---------------------------------------------------------+--------------------------------------------------+------+
+; datapath:the_datapath|regfile:regfile|data[0..7][0..15] ; datapath:the_datapath|regfile:regfile|data_rtl_2 ; RAM  ;
++---------------------------------------------------------+--------------------------------------------------+------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -455,27 +554,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3|datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|sr2[5]          ;
-; 8:1                ; 13 bits   ; 65 ALUTs      ; 65 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3|datapath:the_datapath|IF_ID_pipeline:IF_ID_pipeline|instruction[11] ;
-; 16:1               ; 3 bits    ; 30 ALUTs      ; 6 ALUTs              ; 24 ALUTs               ; Yes        ; |mp3|datapath:the_datapath|register:program_counter|data[2]              ;
-; 11:1               ; 12 bits   ; 84 ALUTs      ; 24 ALUTs             ; 60 ALUTs               ; Yes        ; |mp3|datapath:the_datapath|register:program_counter|data[6]              ;
+; 3:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3|datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|sr2[1]          ;
+; 8:1                ; 7 bits    ; 35 ALUTs      ; 35 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3|datapath:the_datapath|IF_ID_pipeline:IF_ID_pipeline|instruction[12] ;
+; 6:1                ; 15 bits   ; 60 ALUTs      ; 30 ALUTs             ; 30 ALUTs               ; Yes        ; |mp3|datapath:the_datapath|register:program_counter|data[11]             ;
 ; 13:1               ; 2 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|alu_out[10]   ;
 ; 14:1               ; 2 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|alu_out[2]    ;
-; 15:1               ; 2 bits    ; 20 ALUTs      ; 18 ALUTs             ; 2 ALUTs                ; Yes        ; |mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|alu_out[13]   ;
-; 16:1               ; 2 bits    ; 20 ALUTs      ; 20 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|alu_out[5]    ;
-; 3:1                ; 10 bits   ; 20 ALUTs      ; 20 ALUTs             ; 0 ALUTs                ; No         ; |mp3|datapath:the_datapath|mux4:alumux|Mux6                              ;
-; 4:1                ; 5 bits    ; 10 ALUTs      ; 10 ALUTs             ; 0 ALUTs                ; No         ; |mp3|datapath:the_datapath|mux4:alumux|Mux12                             ;
+; 15:1               ; 2 bits    ; 20 ALUTs      ; 18 ALUTs             ; 2 ALUTs                ; Yes        ; |mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|alu_out[14]   ;
+; 16:1               ; 2 bits    ; 20 ALUTs      ; 20 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|alu_out[6]    ;
+; 3:1                ; 10 bits   ; 20 ALUTs      ; 20 ALUTs             ; 0 ALUTs                ; No         ; |mp3|datapath:the_datapath|mux4:alumux|Mux7                              ;
+; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp3|datapath:the_datapath|mux4:alumux|Mux11                             ;
+; 4:1                ; 3 bits    ; 6 ALUTs       ; 6 ALUTs              ; 0 ALUTs                ; No         ; |mp3|datapath:the_datapath|mux4:alumux|Mux14                             ;
 ; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp3|datapath:the_datapath|alu:alu|ShiftRight0                           ;
 ; 3:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp3|datapath:the_datapath|alu:alu|ShiftLeft0                            ;
-; 8:1                ; 16 bits   ; 80 ALUTs      ; 80 ALUTs             ; 0 ALUTs                ; No         ; |mp3|datapath:the_datapath|line_to_word:memory_line_to_word|Mux11        ;
-; 8:1                ; 3 bits    ; 15 ALUTs      ; 15 ALUTs             ; 0 ALUTs                ; No         ; |mp3|datapath:the_datapath|line_to_word:ifetch_line_to_word|Mux13        ;
+; 3:1                ; 7 bits    ; 14 ALUTs      ; 14 ALUTs             ; 0 ALUTs                ; No         ; |mp3|datapath:the_datapath|stall_unit:stall_unit|mem_address[5]          ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3|datapath:the_datapath|stall_unit:stall_unit|line_offset_out[1]      ;
+; 8:1                ; 16 bits   ; 80 ALUTs      ; 80 ALUTs             ; 0 ALUTs                ; No         ; |mp3|datapath:the_datapath|line_to_word:memory_line_to_word|Mux10        ;
+; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp3|datapath:the_datapath|stall_unit:stall_unit|next_state              ;
+; 8:1                ; 9 bits    ; 45 ALUTs      ; 45 ALUTs             ; 0 ALUTs                ; No         ; |mp3|datapath:the_datapath|line_to_word:ifetch_line_to_word|Mux13        ;
 ; 6:1                ; 8 bits    ; 32 ALUTs      ; 24 ALUTs             ; 8 ALUTs                ; No         ; |mp3|datapath:the_datapath|mux8:regfilemux|Mux3                          ;
-; 7:1                ; 6 bits    ; 24 ALUTs      ; 24 ALUTs             ; 0 ALUTs                ; No         ; |mp3|datapath:the_datapath|mux8:regfilemux|Mux10                         ;
+; 7:1                ; 7 bits    ; 28 ALUTs      ; 28 ALUTs             ; 0 ALUTs                ; No         ; |mp3|datapath:the_datapath|mux8:regfilemux|Mux10                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------+
-; Source assignments for datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_0|altsyncram_b7n1:auto_generated ;
+; Source assignments for datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_0|altsyncram_imo1:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                  ;
 +---------------------------------+--------------------+------+-----------------------------------------------------+
@@ -484,7 +586,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-------------------------------------------------------------------------------------------------------------------+
-; Source assignments for datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_1|altsyncram_b7n1:auto_generated ;
+; Source assignments for datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_1|altsyncram_imo1:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                  ;
 +---------------------------------+--------------------+------+-----------------------------------------------------+
@@ -493,7 +595,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-------------------------------------------------------------------------------------------------------------------+
-; Source assignments for datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2|altsyncram_b7n1:auto_generated ;
+; Source assignments for datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2|altsyncram_imo1:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                  ;
 +---------------------------------+--------------------+------+-----------------------------------------------------+
@@ -661,6 +763,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:the_datapath|mux2:line_offset_mux ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; width          ; 4     ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: datapath:the_datapath|mux8:regfilemux ;
 +----------------+-------+-----------------------------------------------------------+
@@ -737,7 +849,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                          ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                          ;
 ; DEVICE_FAMILY                      ; Stratix III          ; Untyped                                          ;
-; CBXI_PARAMETER                     ; altsyncram_b7n1      ; Untyped                                          ;
+; CBXI_PARAMETER                     ; altsyncram_imo1      ; Untyped                                          ;
 +------------------------------------+----------------------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -798,7 +910,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                          ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                          ;
 ; DEVICE_FAMILY                      ; Stratix III          ; Untyped                                          ;
-; CBXI_PARAMETER                     ; altsyncram_b7n1      ; Untyped                                          ;
+; CBXI_PARAMETER                     ; altsyncram_imo1      ; Untyped                                          ;
 +------------------------------------+----------------------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -859,7 +971,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                          ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                          ;
 ; DEVICE_FAMILY                      ; Stratix III          ; Untyped                                          ;
-; CBXI_PARAMETER                     ; altsyncram_b7n1      ; Untyped                                          ;
+; CBXI_PARAMETER                     ; altsyncram_imo1      ; Untyped                                          ;
 +------------------------------------+----------------------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -911,24 +1023,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+-------------------------------------+
 ; Port     ; Type  ; Severity ; Details                             ;
 +----------+-------+----------+-------------------------------------+
-; e[15..5] ; Input ; Info     ; Stuck at GND                        ;
-; e[3..1]  ; Input ; Info     ; Stuck at GND                        ;
+; e[15..8] ; Input ; Info     ; Stuck at GND                        ;
 ; f[15..8] ; Input ; Info     ; Stuck at GND                        ;
 ; g        ; Input ; Info     ; Stuck at GND                        ;
 ; h        ; Input ; Info     ; Stuck at GND                        ;
 +----------+-------+----------+-------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline"                                              ;
-+----------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                 ; Type   ; Severity ; Details                                                                             ;
-+----------------------+--------+----------+-------------------------------------------------------------------------------------+
-; trapvector_out[3..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; addr_sel_out[1]      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; is_ldi_out           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; is_sti_out           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------------------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline"                                         ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; addr_sel_out[1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------+
@@ -936,9 +1044,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+---------------------------------+
 ; Port     ; Type  ; Severity ; Details                         ;
 +----------+-------+----------+---------------------------------+
-; d[15..3] ; Input ; Info     ; Stuck at GND                    ;
-; d[1..0]  ; Input ; Info     ; Stuck at GND                    ;
-; d[2]     ; Input ; Info     ; Stuck at VCC                    ;
+; d[15..4] ; Input ; Info     ; Stuck at GND                    ;
 +----------+-------+----------+---------------------------------+
 
 
@@ -979,21 +1085,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+--------------------------------------------------+
 
 
-+------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:the_datapath|plus2:pc_plus2" ;
-+----------------+-------+----------+------------------------------+
-; Port           ; Type  ; Severity ; Details                      ;
-+----------------+-------+----------+------------------------------+
-; stall_pipeline ; Input ; Info     ; Stuck at GND                 ;
-+----------------+-------+----------+------------------------------+
-
-
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -1003,9 +1100,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
-    Info: Processing started: Thu Mar 15 19:57:21 2018
+    Info: Processing started: Sat Mar 17 03:27:55 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp1 -c mp1
-Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 0 entities, in source file lc3b_types.sv
     Info (12022): Found design unit 1: lc3b_types (SystemVerilog)
 Info (12021): Found 1 design units, including 1 entities, in source file mp3.sv
@@ -1074,6 +1171,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file mux_dec
     Info (12023): Found entity 1: mux_decode_sel
 Info (12021): Found 1 design units, including 1 entities, in source file stall_unit.sv
     Info (12023): Found entity 1: stall_unit
+Info (12021): Found 1 design units, including 1 entities, in source file ldbstblogic.sv
+    Info (12023): Found entity 1: ldbstblogic
 Info (12127): Elaborating entity "mp3" for the top level hierarchy
 Info (12128): Elaborating entity "datapath" for hierarchy "datapath:the_datapath"
 Info (12128): Elaborating entity "plus2" for hierarchy "datapath:the_datapath|plus2:pc_plus2"
@@ -1096,6 +1195,9 @@ Info (12128): Elaborating entity "alu" for hierarchy "datapath:the_datapath|alu:
 Info (12128): Elaborating entity "badder" for hierarchy "datapath:the_datapath|badder:addr_adder"
 Info (12128): Elaborating entity "EX_MEM_pipeline" for hierarchy "datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline"
 Info (12128): Elaborating entity "mux2" for hierarchy "datapath:the_datapath|mux2:mem_address_mux"
+Info (12128): Elaborating entity "ldbstblogic" for hierarchy "datapath:the_datapath|ldbstblogic:ldbstblogic"
+Info (12128): Elaborating entity "mux2" for hierarchy "datapath:the_datapath|mux2:line_offset_mux"
+Info (12128): Elaborating entity "stall_unit" for hierarchy "datapath:the_datapath|stall_unit:stall_unit"
 Info (12128): Elaborating entity "set_sel" for hierarchy "datapath:the_datapath|set_sel:set_sel"
 Info (12128): Elaborating entity "mux8" for hierarchy "datapath:the_datapath|mux8:regfilemux"
 Info (12128): Elaborating entity "gencc" for hierarchy "datapath:the_datapath|gencc:the_gencc"
@@ -1104,6 +1206,8 @@ Info (12128): Elaborating entity "branch_unit" for hierarchy "datapath:the_datap
 Info (12128): Elaborating entity "MEM_WB_pipeline" for hierarchy "datapath:the_datapath|MEM_WB_pipeline:MEM_WB_pipeline"
 Info (12128): Elaborating entity "control_rom" for hierarchy "control_rom:control_rom"
 Warning (276020): Inferred RAM node "datapath:the_datapath|regfile:regfile|data_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Warning (276020): Inferred RAM node "datapath:the_datapath|regfile:regfile|data_rtl_1" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Warning (276020): Inferred RAM node "datapath:the_datapath|regfile:regfile|data_rtl_2" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Info (19000): Inferred 3 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "datapath:the_datapath|regfile:regfile|data_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -1170,8 +1274,8 @@ Info (12133): Instantiated megafunction "datapath:the_datapath|regfile:regfile|a
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_b7n1.tdf
-    Info (12023): Found entity 1: altsyncram_b7n1
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_imo1.tdf
+    Info (12023): Found entity 1: altsyncram_imo1
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "ifetch.SEL[0]" is stuck at GND
     Warning (13410): Pin "ifetch.SEL[1]" is stuck at GND
@@ -1321,23 +1425,23 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "ifetch.DAT_M[126]" is stuck at GND
     Warning (13410): Pin "ifetch.DAT_M[127]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 30 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 5 input pin(s) that do not drive logic
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "ifetch.RTY"
     Warning (15610): No output dependent on input pin "ifetch.ACK"
     Warning (15610): No output dependent on input pin "ifetch.CLK"
     Warning (15610): No output dependent on input pin "memory.RTY"
-    Warning (15610): No output dependent on input pin "memory.ACK"
-Info (21057): Implemented 1347 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1483 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 262 input pins
     Info (21059): Implemented 318 output pins
-    Info (21061): Implemented 719 logic cells
+    Info (21061): Implemented 855 logic cells
     Info (21064): Implemented 48 RAM segments
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 155 warnings
-    Info: Peak virtual memory: 461 megabytes
-    Info: Processing ended: Thu Mar 15 19:57:29 2018
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:04
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 156 warnings
+    Info: Peak virtual memory: 487 megabytes
+    Info: Processing ended: Sat Mar 17 03:28:08 2018
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:10
 
 

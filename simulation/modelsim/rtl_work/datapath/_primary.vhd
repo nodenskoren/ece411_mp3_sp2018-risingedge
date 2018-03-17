@@ -19,7 +19,6 @@ entity datapath is
         jsr_mode        : out    vl_logic;
         shf_mode        : out    vl_logic_vector(1 downto 0);
         opcode          : out    work.lc3b_types.lc3b_opcode;
-        stb_byte        : out    vl_logic;
         ctrl_in         : in     work.lc3b_types.lc3b_control_word;
         offset_sel      : in     vl_logic;
         sr2mux_sel      : in     vl_logic;
