@@ -10,8 +10,12 @@ module mp3
 lc3b_opcode dp_opcode;
 lc3b_control_word c_ctrl;
 logic dp_imm_mode;
+logic dp_jsr_mode;
+logic [1:0] dp_shf_mode;
 logic c_offset_sel;
 logic c_sr2mux_sel;
+logic c_destmux_sel;
+logic c_is_ldb_stb;
 
 logic dp_mem_read;
 logic dp_ifetch_read;
@@ -32,19 +36,27 @@ datapath the_datapath
 	.ifetch_address(ifetch.ADR),
 	
 	.imm_mode(dp_imm_mode),
+	.jsr_mode(dp_jsr_mode),
+	.shf_mode(dp_shf_mode),
 	.opcode(dp_opcode),
 	.ctrl_in(c_ctrl),
 	.offset_sel(c_offset_sel),
-	.sr2mux_sel(c_sr2mux_sel)
+	.sr2mux_sel(c_sr2mux_sel),
+	.destmux_sel(c_destmux_sel),
+	.is_ldb_stb(c_is_ldb_stb)
 );
 
 control_rom control_rom
 (
 	.opcode(dp_opcode),
 	.imm_mode(dp_imm_mode),
+	.jsr_mode(dp_jsr_mode),
 	.ctrl(c_ctrl),
 	.offset_sel(c_offset_sel),
-	.sr2mux_sel(c_sr2mux_sel)
+	.sr2mux_sel(c_sr2mux_sel),
+	.destmux_sel(c_destmux_sel),
+	.shf_mode(dp_shf_mode),
+	.is_ldb_stb(c_is_ldb_stb)
 );
 
 assign memory.CYC = memory.WE | dp_mem_read;

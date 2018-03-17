@@ -1,0 +1,1562 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/jtlew2/ece411/risingedge
+vadj
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+Z2 DXx4 work 10 lc3b_types 0 22 >OD=mGj<5SA0SO?NhPLVK2
+DXx4 work 11 adj_sv_unit 0 22 _a`_jDgVHcGj4V?BJ5n?Z2
+VE;zLPZ?c`8[LaP1M[Ui<V1
+r1
+31
+IiY<5A=QADb`n`>TM:1o`U0
+S1
+Z3 d/home/jtlew2/ece411/risingedge
+Z4 w1520724673
+Z5 8/home/jtlew2/ece411/risingedge/adj.sv
+Z6 F/home/jtlew2/ece411/risingedge/adj.sv
+L0 6
+Z7 OV;L;10.1d;51
+Z8 !s108 1521330057.642226
+Z9 !s107 /home/jtlew2/ece411/risingedge/adj.sv|
+Z10 !s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/adj.sv|
+Z11 o-sv -work work -O0
+Z12 !s92 -sv -work work +incdir+/home/jtlew2/ece411/risingedge -O0
+!s85 0
+!i10b 1
+!s100 >[2>lZd0?AU5_b<Q5YJ=f3
+!s105 adj_sv_unit
+!s101 -O0
+Xadj_sv_unit
+R1
+R2
+V_a`_jDgVHcGj4V?BJ5n?Z2
+r1
+31
+I_a`_jDgVHcGj4V?BJ5n?Z2
+S1
+R3
+R4
+R5
+R6
+L0 1
+R7
+R8
+R9
+R10
+R11
+R12
+!s85 0
+!i10b 1
+!s100 KQ558cNReo=ZijESa_VhF3
+!i103 1
+!s101 -O0
+valu
+R1
+R2
+DXx4 work 11 alu_sv_unit 0 22 UDk_37?<]zoTz>[aXfX8c3
+V=ZN?TEUMd1Ge?6dcD7B5a3
+r1
+31
+IEe=^AaIHLSUVNO88QHH=^3
+S1
+R3
+R4
+Z13 8/home/jtlew2/ece411/risingedge/alu.sv
+Z14 F/home/jtlew2/ece411/risingedge/alu.sv
+L0 3
+R7
+Z15 !s108 1521330057.746211
+Z16 !s107 /home/jtlew2/ece411/risingedge/alu.sv|
+Z17 !s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/alu.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 D8QM>RU56cZi1e6SgFZWz3
+!s105 alu_sv_unit
+!s101 -O0
+Xalu_sv_unit
+R1
+R2
+VUDk_37?<]zoTz>[aXfX8c3
+r1
+31
+IUDk_37?<]zoTz>[aXfX8c3
+S1
+R3
+R4
+R13
+R14
+L0 1
+R7
+R15
+R16
+R17
+R11
+R12
+!s85 0
+!i10b 1
+!s100 @@aSh[lH1YObQ<?][n>2b0
+!i103 1
+!s101 -O0
+varray
+R1
+R2
+DXx4 work 13 array_sv_unit 0 22 a9Z:f4M`o>?[QXdD_ce@T1
+VH?g:S45jQmNf9^X76`SPU1
+r1
+31
+InO:CYaFlV:zfMS^ZEgMIF0
+S1
+R3
+Z18 w1521328057
+Z19 8/home/jtlew2/ece411/risingedge/array.sv
+Z20 F/home/jtlew2/ece411/risingedge/array.sv
+L0 3
+R7
+Z21 !s108 1521330057.358953
+Z22 !s107 /home/jtlew2/ece411/risingedge/array.sv|
+Z23 !s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/array.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 _>ZSfB=A=S2>0_EdPNIY^1
+!s105 array_sv_unit
+!s101 -O0
+Xarray_sv_unit
+R1
+R2
+Va9Z:f4M`o>?[QXdD_ce@T1
+r1
+31
+Ia9Z:f4M`o>?[QXdD_ce@T1
+S1
+R3
+R18
+R19
+R20
+L0 1
+R7
+R21
+R22
+R23
+R11
+R12
+!s85 0
+!i10b 1
+!s100 V__2G:gm;o7I`]hJPEXbS2
+!i103 1
+!s101 -O0
+vbadder
+R1
+IXn2MgRbOUXz2H<AQFbH>50
+VRC]2CcIYM1j5aW95>VMM62
+S1
+R3
+R4
+8/home/jtlew2/ece411/risingedge/badder.sv
+F/home/jtlew2/ece411/risingedge/badder.sv
+L0 1
+R7
+r1
+31
+R11
+R12
+!i10b 1
+!s100 UZYn>]L23a^zfMDW1V7eo1
+!s105 badder_sv_unit
+!s85 0
+!s108 1521330057.021113
+!s107 /home/jtlew2/ece411/risingedge/badder.sv|
+!s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/badder.sv|
+!s101 -O0
+vbranch_unit
+R1
+R2
+DXx4 work 19 branch_unit_sv_unit 0 22 `3PPA_Dl0W[dzMQ@:6oIi2
+V1S^j_i4zRHd5j0I1T_3fH0
+r1
+31
+ITn^OLkKnZohcU3H2G<_K32
+S1
+R3
+R4
+Z24 8/home/jtlew2/ece411/risingedge/branch_unit.sv
+Z25 F/home/jtlew2/ece411/risingedge/branch_unit.sv
+L0 3
+R7
+Z26 !s108 1521330058.070834
+Z27 !s107 /home/jtlew2/ece411/risingedge/branch_unit.sv|
+Z28 !s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/branch_unit.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 WC9[m_Y85ki<f_fUh`D`U3
+!s105 branch_unit_sv_unit
+!s101 -O0
+Xbranch_unit_sv_unit
+R1
+R2
+V`3PPA_Dl0W[dzMQ@:6oIi2
+r1
+31
+I`3PPA_Dl0W[dzMQ@:6oIi2
+S1
+R3
+R4
+R24
+R25
+L0 1
+R7
+R26
+R27
+R28
+R11
+R12
+!s85 0
+!i10b 1
+!s100 jJLcGNjUnMUzVIc4TnCeR2
+!i103 1
+!s101 -O0
+vcache
+R1
+R2
+DXx4 work 13 cache_sv_unit 0 22 HBI6VTI=;A:n>B^=De=lV1
+V?[2P;;:0jk7hd<6:HAHJh0
+r1
+31
+Id=`j<WXF>^^L:Z<`?GfH41
+S1
+R3
+R18
+Z29 8/home/jtlew2/ece411/risingedge/cache.sv
+Z30 F/home/jtlew2/ece411/risingedge/cache.sv
+L0 3
+R7
+Z31 !s108 1521330059.549747
+Z32 !s107 /home/jtlew2/ece411/risingedge/cache.sv|
+Z33 !s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/cache.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 `AhT;]KLTZOgHgzhiX2l_3
+!s105 cache_sv_unit
+!s101 -O0
+vcache_control
+R1
+R2
+DXx4 work 21 cache_control_sv_unit 0 22 1=K87b>76Ob09okj0J;@_3
+Vh>3^S4mMOUT=^7VC]TNMG3
+r1
+31
+Ien]E6KNkDzUgG874cAD?f3
+S1
+R3
+R18
+Z34 8/home/jtlew2/ece411/risingedge/cache_control.sv
+Z35 F/home/jtlew2/ece411/risingedge/cache_control.sv
+L0 3
+R7
+Z36 !s108 1521330056.642043
+Z37 !s107 /home/jtlew2/ece411/risingedge/cache_control.sv|
+Z38 !s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/cache_control.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 N;5dCUC79e1bl9KJLTfRS1
+!s105 cache_control_sv_unit
+!s101 -O0
+Xcache_control_sv_unit
+R1
+R2
+V1=K87b>76Ob09okj0J;@_3
+r1
+31
+I1=K87b>76Ob09okj0J;@_3
+S1
+R3
+R18
+R34
+R35
+L0 1
+R7
+R36
+R37
+R38
+R11
+R12
+!s85 0
+!i10b 1
+!s100 Hj^GL5E[E]h6UG4[zbKCA3
+!i103 1
+!s101 -O0
+vcache_datapath
+R1
+R2
+DXx4 work 22 cache_datapath_sv_unit 0 22 VIIFg:z=cQhPNJk0c[5e70
+VYU7NF<[YzVCYTFU8`VM^f1
+r1
+31
+IVP;f5c6UcVEZ3_ecUJRhJ3
+S1
+R3
+R18
+Z39 8/home/jtlew2/ece411/risingedge/cache_datapath.sv
+Z40 F/home/jtlew2/ece411/risingedge/cache_datapath.sv
+L0 3
+R7
+Z41 !s108 1521330059.312708
+Z42 !s107 /home/jtlew2/ece411/risingedge/cache_datapath.sv|
+Z43 !s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/cache_datapath.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 IeoMaQ?E5zOC6UX=@6XeI0
+!s105 cache_datapath_sv_unit
+!s101 -O0
+Xcache_datapath_sv_unit
+R1
+R2
+VVIIFg:z=cQhPNJk0c[5e70
+r1
+31
+IVIIFg:z=cQhPNJk0c[5e70
+S1
+R3
+R18
+R39
+R40
+L0 1
+R7
+R41
+R42
+R43
+R11
+R12
+!s85 0
+!i10b 1
+!s100 Oijl1eGU_eVR_G[`412^M1
+!i103 1
+!s101 -O0
+Xcache_sv_unit
+R1
+R2
+VHBI6VTI=;A:n>B^=De=lV1
+r1
+31
+IHBI6VTI=;A:n>B^=De=lV1
+S1
+R3
+R18
+R29
+R30
+L0 1
+R7
+R31
+R32
+R33
+R11
+R12
+!s85 0
+!i10b 1
+!s100 PKBFLb:KNYFSBYDYm9I>43
+!i103 1
+!s101 -O0
+vcache_writeword
+R1
+R2
+DXx4 work 23 cache_writeword_sv_unit 0 22 bF5ee]ze3Aj[eYIVY:]@I0
+VTJOP]F?eMGzT>gLYgZoIo2
+r1
+31
+IIkSSHf4a=KK62`zR0<l_;1
+S1
+R3
+R18
+Z44 8/home/jtlew2/ece411/risingedge/cache_writeword.sv
+Z45 F/home/jtlew2/ece411/risingedge/cache_writeword.sv
+L0 4
+R7
+Z46 !s108 1521330057.453166
+Z47 !s107 /home/jtlew2/ece411/risingedge/cache_writeword.sv|
+Z48 !s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/cache_writeword.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 z;>il27G[6`[TbT3E4]am0
+!s105 cache_writeword_sv_unit
+!s101 -O0
+Xcache_writeword_sv_unit
+R1
+R2
+VbF5ee]ze3Aj[eYIVY:]@I0
+r1
+31
+IbF5ee]ze3Aj[eYIVY:]@I0
+S1
+R3
+R18
+R44
+R45
+L0 1
+R7
+R46
+R47
+R48
+R11
+R12
+!s85 0
+!i10b 1
+!s100 YB^4QWI2na@VllI[gYLU=3
+!i103 1
+!s101 -O0
+vcontrol_rom
+R1
+R2
+DXx4 work 19 control_rom_sv_unit 0 22 0N_DeV>I^Y344c5kA]NiQ0
+VKQH`TVl1dzQDnfLclG^IF0
+r1
+31
+II7iWmGJKbATFoSm3_iDRA2
+S1
+R3
+Z49 w1521325093
+Z50 8/home/jtlew2/ece411/risingedge/control_rom.sv
+Z51 F/home/jtlew2/ece411/risingedge/control_rom.sv
+L0 3
+R7
+Z52 !s108 1521330058.857213
+Z53 !s107 /home/jtlew2/ece411/risingedge/control_rom.sv|
+Z54 !s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/control_rom.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 Z_WB[>EDRg];[ULzo6oFA3
+!s105 control_rom_sv_unit
+!s101 -O0
+Xcontrol_rom_sv_unit
+R1
+R2
+V0N_DeV>I^Y344c5kA]NiQ0
+r1
+31
+I0N_DeV>I^Y344c5kA]NiQ0
+S1
+R3
+R49
+R50
+R51
+L0 1
+R7
+R52
+R53
+R54
+R11
+R12
+!s85 0
+!i10b 1
+!s100 ONTK]WGF;9YZl6;j;a3Da3
+!i103 1
+!s101 -O0
+vdatapath
+R1
+R2
+DXx4 work 16 datapath_sv_unit 0 22 f1leKil`]znQ[]UcMdULR1
+VY[mM]7DZh:5S7Mb03Sge<1
+r1
+31
+IPcjmE4JVTZzomCgmS`_Ma0
+S1
+R3
+Z55 w1521329768
+Z56 8/home/jtlew2/ece411/risingedge/datapath.sv
+Z57 F/home/jtlew2/ece411/risingedge/datapath.sv
+L0 3
+R7
+Z58 !s108 1521330059.428198
+Z59 !s107 /home/jtlew2/ece411/risingedge/datapath.sv|
+Z60 !s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/datapath.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 [H[P1LUmhd1:]?7fI?eP=2
+!s105 datapath_sv_unit
+!s101 -O0
+Xdatapath_sv_unit
+R1
+R2
+Vf1leKil`]znQ[]UcMdULR1
+r1
+31
+If1leKil`]znQ[]UcMdULR1
+S1
+R3
+R55
+R56
+R57
+L0 1
+R7
+R58
+R59
+R60
+R11
+R12
+!s85 0
+!i10b 1
+!s100 CR6=ZZ]foZOSIaj0Q7^>d3
+!i103 1
+!s101 -O0
+vEX_MEM_pipeline
+R1
+R2
+DXx4 work 23 EX_MEM_pipeline_sv_unit 0 22 IzVGKBSHbjOm24B=JDb880
+Vce@gXemHG[hZKl8RGl@V_3
+r1
+31
+I;2[>Zj^R0[nSXmQd;26IF3
+S1
+R3
+R18
+Z61 8/home/jtlew2/ece411/risingedge/EX_MEM_pipeline.sv
+Z62 F/home/jtlew2/ece411/risingedge/EX_MEM_pipeline.sv
+L0 4
+R7
+Z63 !s108 1521330058.619746
+Z64 !s107 /home/jtlew2/ece411/risingedge/EX_MEM_pipeline.sv|
+Z65 !s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/EX_MEM_pipeline.sv|
+R11
+R12
+n@e@x_@m@e@m_pipeline
+!s85 0
+!i10b 1
+!s100 IP4hf8I=9;<fP];CTD[Mj3
+!s105 EX_MEM_pipeline_sv_unit
+!s101 -O0
+XEX_MEM_pipeline_sv_unit
+R1
+R2
+VIzVGKBSHbjOm24B=JDb880
+r1
+31
+IIzVGKBSHbjOm24B=JDb880
+S1
+R3
+R18
+R61
+R62
+L0 1
+R7
+R63
+R64
+R65
+R11
+R12
+n@e@x_@m@e@m_pipeline_sv_unit
+!s85 0
+!i10b 1
+!s100 U4D_zdlhEQdJZUFK_Ajl<1
+!i103 1
+!s101 -O0
+vgencc
+R1
+R2
+DXx4 work 13 gencc_sv_unit 0 22 O^UA_24FTaB<<WLSf:jVa2
+VWC`9gVLYW_h075<FQmcHc2
+r1
+31
+IiagIS<Ven;?UfUZ^lBLb]0
+S1
+R3
+Z66 w1520724676
+Z67 8/home/jtlew2/ece411/risingedge/gencc.sv
+Z68 F/home/jtlew2/ece411/risingedge/gencc.sv
+L0 3
+R7
+Z69 !s108 1521330057.861083
+Z70 !s107 /home/jtlew2/ece411/risingedge/gencc.sv|
+Z71 !s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/gencc.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 A=2Bl=aZI78XIYZV8MS[;1
+!s105 gencc_sv_unit
+!s101 -O0
+Xgencc_sv_unit
+R1
+R2
+VO^UA_24FTaB<<WLSf:jVa2
+r1
+31
+IO^UA_24FTaB<<WLSf:jVa2
+S1
+R3
+R66
+R67
+R68
+L0 1
+R7
+R69
+R70
+R71
+R11
+R12
+!s85 0
+!i10b 1
+!s100 3m3_CMnS@S1D;A<32[]W71
+!i103 1
+!s101 -O0
+vID_EX_pipeline
+R1
+R2
+DXx4 work 22 ID_EX_pipeline_sv_unit 0 22 b?GgFm8jN30A:Ej1TfB3Y1
+Vz>zOO05P5QMMV4;kiVA2M2
+r1
+31
+I2FdI4[:I]hX897B`^o;V52
+S1
+R3
+R49
+Z72 8/home/jtlew2/ece411/risingedge/ID_EX_pipeline.sv
+Z73 F/home/jtlew2/ece411/risingedge/ID_EX_pipeline.sv
+L0 3
+R7
+Z74 !s108 1521330058.504591
+Z75 !s107 /home/jtlew2/ece411/risingedge/ID_EX_pipeline.sv|
+Z76 !s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/ID_EX_pipeline.sv|
+R11
+R12
+n@i@d_@e@x_pipeline
+!s85 0
+!i10b 1
+!s100 PkVbC86f>3hkcVn55UNaR3
+!s105 ID_EX_pipeline_sv_unit
+!s101 -O0
+XID_EX_pipeline_sv_unit
+R1
+R2
+Vb?GgFm8jN30A:Ej1TfB3Y1
+r1
+31
+Ib?GgFm8jN30A:Ej1TfB3Y1
+S1
+R3
+R49
+R72
+R73
+L0 1
+R7
+R74
+R75
+R76
+R11
+R12
+n@i@d_@e@x_pipeline_sv_unit
+!s85 0
+!i10b 1
+!s100 IkX]zQj1WMG:^Z_Y2Kl;A1
+!i103 1
+!s101 -O0
+vIF_ID_pipeline
+R1
+R2
+DXx4 work 22 IF_ID_pipeline_sv_unit 0 22 WJS7WkkdYW4nP5M2lhBF[3
+V^DBZQjd4@4NOLk0<08ZR93
+r1
+31
+IP?<]KCmT6>C_zC_AojiVS0
+S1
+R3
+Z77 w1521219348
+Z78 8/home/jtlew2/ece411/risingedge/IF_ID_pipeline.sv
+Z79 F/home/jtlew2/ece411/risingedge/IF_ID_pipeline.sv
+L0 3
+R7
+Z80 !s108 1521330058.395608
+Z81 !s107 /home/jtlew2/ece411/risingedge/IF_ID_pipeline.sv|
+Z82 !s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/IF_ID_pipeline.sv|
+R11
+R12
+n@i@f_@i@d_pipeline
+!s85 0
+!i10b 1
+!s100 L_M:68NFHz@<hNKj4S]VY1
+!s105 IF_ID_pipeline_sv_unit
+!s101 -O0
+XIF_ID_pipeline_sv_unit
+R1
+R2
+VWJS7WkkdYW4nP5M2lhBF[3
+r1
+31
+IWJS7WkkdYW4nP5M2lhBF[3
+S1
+R3
+R77
+R78
+R79
+L0 1
+R7
+R80
+R81
+R82
+R11
+R12
+n@i@f_@i@d_pipeline_sv_unit
+!s85 0
+!i10b 1
+!s100 6]RNITDfJWAj_4nc3man10
+!i103 1
+!s101 -O0
+vl1arbiter
+R1
+R2
+DXx4 work 17 l1arbiter_sv_unit 0 22 G9`0ggP287zZ1O?A4GYQ@2
+VI^KhWSQA5[4Wh<04[I0k;2
+r1
+31
+IgKReR6cIA5g1OHg1UUfJz3
+S1
+R3
+Z83 w1521328059
+Z84 8/home/jtlew2/ece411/risingedge/l1arbiter.sv
+Z85 F/home/jtlew2/ece411/risingedge/l1arbiter.sv
+L0 3
+R7
+Z86 !s108 1521330057.259624
+Z87 !s107 /home/jtlew2/ece411/risingedge/l1arbiter.sv|
+Z88 !s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/l1arbiter.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 J[Kcae5ag?]<:O?nLLaEj1
+!s105 l1arbiter_sv_unit
+!s101 -O0
+Xl1arbiter_sv_unit
+R1
+R2
+VG9`0ggP287zZ1O?A4GYQ@2
+r1
+31
+IG9`0ggP287zZ1O?A4GYQ@2
+S1
+R3
+R83
+R84
+R85
+L0 1
+R7
+R86
+R87
+R88
+R11
+R12
+!s85 0
+!i10b 1
+!s100 :YI?FUFXdTBU:O64E:R133
+!i103 1
+!s101 -O0
+vl2cache
+R1
+R2
+DXx4 work 15 l2cache_sv_unit 0 22 lildWd;D3>eA4PgCKOZUS3
+V2KmZ4=HecIJ?O[jKPQILS3
+r1
+31
+IR>LbW5n1828Z_MzoRJIU63
+S1
+R3
+R83
+Z89 8/home/jtlew2/ece411/risingedge/l2cache.sv
+Z90 F/home/jtlew2/ece411/risingedge/l2cache.sv
+L0 3
+R7
+Z91 !s108 1521330059.652555
+Z92 !s107 /home/jtlew2/ece411/risingedge/l2cache.sv|
+Z93 !s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/l2cache.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 =DHV759Q2h;IS<Z`z4GFd0
+!s105 l2cache_sv_unit
+!s101 -O0
+Xl2cache_sv_unit
+R1
+R2
+VlildWd;D3>eA4PgCKOZUS3
+r1
+31
+IlildWd;D3>eA4PgCKOZUS3
+S1
+R3
+R83
+R89
+R90
+L0 1
+R7
+R91
+R92
+R93
+R11
+R12
+!s85 0
+!i10b 1
+!s100 zEeVOzm<N?<0kM1XSV_<Y1
+!i103 1
+!s101 -O0
+Xlc3b_types
+R1
+I>OD=mGj<5SA0SO?NhPLVK2
+V>OD=mGj<5SA0SO?NhPLVK2
+S1
+R3
+R83
+8/home/jtlew2/ece411/risingedge/lc3b_types.sv
+F/home/jtlew2/ece411/risingedge/lc3b_types.sv
+L0 1
+R7
+r1
+31
+R11
+R12
+!i10b 1
+!s100 4AGAE:NkS@SP_T;6f;fWX3
+!s85 0
+!s108 1521330056.580801
+!s107 /home/jtlew2/ece411/risingedge/lc3b_types.sv|
+!s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/lc3b_types.sv|
+!s101 -O0
+vldbstblogic
+R1
+IeVURk;^i;lYXE=IDRjP5A0
+VMCZZoS8K92;768Da9O6GK1
+S1
+R3
+Z94 w1521325095
+8/home/jtlew2/ece411/risingedge/ldbstblogic.sv
+F/home/jtlew2/ece411/risingedge/ldbstblogic.sv
+L0 1
+R7
+r1
+31
+R11
+R12
+!i10b 1
+!s100 Z5?Nz0[6L:ZJ04MGm1LRQ2
+!s105 ldbstblogic_sv_unit
+!s85 0
+!s108 1521330056.515720
+!s107 /home/jtlew2/ece411/risingedge/ldbstblogic.sv|
+!s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/ldbstblogic.sv|
+!s101 -O0
+vline_to_word
+R1
+R2
+DXx4 work 20 line_to_word_sv_unit 0 22 kSUQN^>J2PRmJ8o=A7=Pz2
+VH]iCcZXg=@g@b;RoQEkaG3
+r1
+31
+IU71D2YljhYXbimcfn29KW3
+S1
+R3
+Z95 w1520724677
+Z96 8/home/jtlew2/ece411/risingedge/line_to_word.sv
+Z97 F/home/jtlew2/ece411/risingedge/line_to_word.sv
+L0 3
+R7
+Z98 !s108 1521330058.973426
+Z99 !s107 /home/jtlew2/ece411/risingedge/line_to_word.sv|
+Z100 !s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/line_to_word.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 ABI;Q7VMME;mgSQ[0PWmX0
+!s105 line_to_word_sv_unit
+!s101 -O0
+Xline_to_word_sv_unit
+R1
+R2
+VkSUQN^>J2PRmJ8o=A7=Pz2
+r1
+31
+IkSUQN^>J2PRmJ8o=A7=Pz2
+S1
+R3
+R95
+R96
+R97
+L0 1
+R7
+R98
+R99
+R100
+R11
+R12
+!s85 0
+!i10b 1
+!s100 ;>@:@L?ZMO_[2A]Ko6<RB1
+!i103 1
+!s101 -O0
+vMEM_WB_pipeline
+R1
+R2
+DXx4 work 23 MEM_WB_pipeline_sv_unit 0 22 TCRzAK^:^T1Vh1TJd[2c51
+V>gZ7fTWAK4`NK5P9ci<KE0
+r1
+31
+Iel[NcUG@b8ISPgO9Sd6KT3
+S1
+R3
+Z101 w1521328997
+Z102 8/home/jtlew2/ece411/risingedge/MEM_WB_pipeline.sv
+Z103 F/home/jtlew2/ece411/risingedge/MEM_WB_pipeline.sv
+L0 3
+R7
+Z104 !s108 1521330058.738844
+Z105 !s107 /home/jtlew2/ece411/risingedge/MEM_WB_pipeline.sv|
+Z106 !s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/MEM_WB_pipeline.sv|
+R11
+R12
+n@m@e@m_@w@b_pipeline
+!s85 0
+!i10b 1
+!s100 f9O@]Qk5oo?og?e^kQV`m1
+!s105 MEM_WB_pipeline_sv_unit
+!s101 -O0
+XMEM_WB_pipeline_sv_unit
+R1
+R2
+VTCRzAK^:^T1Vh1TJd[2c51
+r1
+31
+ITCRzAK^:^T1Vh1TJd[2c51
+S1
+R3
+R101
+R102
+R103
+L0 1
+R7
+R104
+R105
+R106
+R11
+R12
+n@m@e@m_@w@b_pipeline_sv_unit
+!s85 0
+!i10b 1
+!s100 1A>5[Jk9ij2O71MNcX;am3
+!i103 1
+!s101 -O0
+vmp3
+R1
+R2
+DXx4 work 11 mp3_sv_unit 0 22 C8mJn[bYZ>Y?SNk8o[Y=71
+Vf@cPPaQ1>@j<NzVJ3FoKn0
+r1
+31
+IP@e]:ch[KUb?AR;Vh5lB40
+S1
+R3
+R94
+Z107 8/home/jtlew2/ece411/risingedge/mp3.sv
+Z108 F/home/jtlew2/ece411/risingedge/mp3.sv
+L0 3
+R7
+Z109 !s108 1521330057.545623
+Z110 !s107 /home/jtlew2/ece411/risingedge/mp3.sv|
+Z111 !s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/mp3.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 iCnXW70`SozY[:AK>9`1A1
+!s105 mp3_sv_unit
+!s101 -O0
+Xmp3_sv_unit
+R1
+R2
+VC8mJn[bYZ>Y?SNk8o[Y=71
+r1
+31
+IC8mJn[bYZ>Y?SNk8o[Y=71
+S1
+R3
+R94
+R107
+R108
+L0 1
+R7
+R109
+R110
+R111
+R11
+R12
+!s85 0
+!i10b 1
+!s100 Mhzg@HbNCdi5]V1cY6BS?3
+!i103 1
+!s101 -O0
+vmp3_tb
+R1
+Ia<5Dg0JdLczMZ33H<fHU`2
+VGRaNXc@:Z3jVCaTT0F9jW2
+S1
+R3
+R83
+8/home/jtlew2/ece411/risingedge/mp3_tb.sv
+F/home/jtlew2/ece411/risingedge/mp3_tb.sv
+L0 1
+R7
+r1
+31
+R11
+R12
+!i10b 1
+!s100 g7LVBX7]PdjQY4Bib4jC53
+!s105 mp3_tb_sv_unit
+!s85 0
+!s108 1521330059.974474
+!s107 /home/jtlew2/ece411/risingedge/mp3_tb.sv|
+!s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/mp3_tb.sv|
+!s101 -O0
+vmp3_top
+R1
+R2
+DXx4 work 15 mp3_top_sv_unit 0 22 GBFXX[a>ilX21aiQGlXg>0
+Ve:a2jPSEl1>Qg]6nSG_f[2
+r1
+31
+IUfWl^hG8b`1P]T3`;oXW73
+S1
+R3
+R83
+Z112 8/home/jtlew2/ece411/risingedge/mp3_top.sv
+Z113 F/home/jtlew2/ece411/risingedge/mp3_top.sv
+L0 3
+R7
+Z114 !s108 1521330060.032962
+Z115 !s107 /home/jtlew2/ece411/risingedge/mp3_top.sv|
+Z116 !s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/mp3_top.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 ofnVGFkE@37W^fFdY5WPV2
+!s105 mp3_top_sv_unit
+!s101 -O0
+Xmp3_top_sv_unit
+R1
+R2
+VGBFXX[a>ilX21aiQGlXg>0
+r1
+31
+IGBFXX[a>ilX21aiQGlXg>0
+S1
+R3
+R83
+R112
+R113
+L0 1
+R7
+R114
+R115
+R116
+R11
+R12
+!s85 0
+!i10b 1
+!s100 HDCREbP:4oFE^3Df?8hgG2
+!i103 1
+!s101 -O0
+vmux2
+R1
+IEQ230PULRVC0dz>GPL3Zn1
+V8m]l]_QnJ>bC;o8UdVIPk2
+S1
+R3
+R95
+8/home/jtlew2/ece411/risingedge/mux2.sv
+F/home/jtlew2/ece411/risingedge/mux2.sv
+L0 1
+R7
+r1
+31
+R11
+R12
+!i10b 1
+!s100 dm<[8<I8fAacIOI15GYm]1
+!s105 mux2_sv_unit
+!s85 0
+!s108 1521330056.960054
+!s107 /home/jtlew2/ece411/risingedge/mux2.sv|
+!s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/mux2.sv|
+!s101 -O0
+vmux4
+R1
+IKSQRjLdY4fZBYZWKoDfBY2
+VYCkK`QGYSnR6BP^DhRdne0
+S1
+R3
+R95
+8/home/jtlew2/ece411/risingedge/mux4.sv
+F/home/jtlew2/ece411/risingedge/mux4.sv
+L0 1
+R7
+r1
+31
+R11
+R12
+!i10b 1
+!s100 gJ:?mkTXhzhCJ5Y0cLT8]2
+!s105 mux4_sv_unit
+!s85 0
+!s108 1521330057.082927
+!s107 /home/jtlew2/ece411/risingedge/mux4.sv|
+!s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/mux4.sv|
+!s101 -O0
+vmux8
+R1
+I5W:W8LIQ1`O;J0EGOOQDF3
+VAamg^Wo0Jm38oaD4=IFB30
+S1
+R3
+Z117 w1521219351
+8/home/jtlew2/ece411/risingedge/mux8.sv
+F/home/jtlew2/ece411/risingedge/mux8.sv
+L0 1
+R7
+r1
+31
+R11
+R12
+!i10b 1
+!s100 QHFKZG3JE@j`z^jY;4Tj51
+!s105 mux8_sv_unit
+!s85 0
+!s108 1521330057.141165
+!s107 /home/jtlew2/ece411/risingedge/mux8.sv|
+!s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/mux8.sv|
+!s101 -O0
+vmux_decode_sel
+R1
+IKnLIUB<Rc5z`4_;PYN4;H1
+Vm]mcj`3ij=7IZD:?ZhjDe1
+S1
+R3
+R117
+8/home/jtlew2/ece411/risingedge/mux_decode_sel.sv
+F/home/jtlew2/ece411/risingedge/mux_decode_sel.sv
+L0 1
+R7
+r1
+31
+R11
+R12
+!i10b 1
+!s100 5iI?U6>PzBf]ioA53I<cN0
+!s105 mux_decode_sel_sv_unit
+!s85 0
+!s108 1521330057.202176
+!s107 /home/jtlew2/ece411/risingedge/mux_decode_sel.sv|
+!s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/mux_decode_sel.sv|
+!s101 -O0
+vphysical_memory
+R1
+!i10b 1
+!s100 1hWBDL4I4a1G`=64A^eQ=1
+Id`Job2^7H6TLT<69X^;C?0
+Vb6PGT=m5H:B?37KfbU`bO3
+!s105 physical_memory_sv_unit
+S1
+R3
+R83
+8/home/jtlew2/ece411/risingedge/physical_memory.sv
+F/home/jtlew2/ece411/risingedge/physical_memory.sv
+L0 1
+R7
+r1
+!s85 0
+31
+!s108 1521330060.136940
+!s107 /home/jtlew2/ece411/risingedge/physical_memory.sv|
+!s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/physical_memory.sv|
+!s101 -O0
+R11
+R12
+vplus2
+R1
+IzamZ5`YcWVYIm_mO<[Cfh0
+VhFgVO<fl=J:bjFY24`ji;3
+S1
+R3
+R117
+8/home/jtlew2/ece411/risingedge/plus2.sv
+F/home/jtlew2/ece411/risingedge/plus2.sv
+L0 1
+R7
+r1
+31
+R11
+R12
+!i10b 1
+!s100 BnhW;XKfkf=Moc1FXY>d62
+!s105 plus2_sv_unit
+!s85 0
+!s108 1521330056.807373
+!s107 /home/jtlew2/ece411/risingedge/plus2.sv|
+!s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/plus2.sv|
+!s101 -O0
+vregfile
+R1
+R2
+DXx4 work 15 regfile_sv_unit 0 22 ]4K;f2hDmg91ZzDF2LH;b1
+VLk^;BRFkbhU<g[CXz4@AX0
+r1
+31
+IimV<Hn47OWVlI61Y@kRSe1
+S1
+R3
+Z118 w1520724678
+Z119 8/home/jtlew2/ece411/risingedge/regfile.sv
+Z120 F/home/jtlew2/ece411/risingedge/regfile.sv
+L0 3
+R7
+Z121 !s108 1521330057.960975
+Z122 !s107 /home/jtlew2/ece411/risingedge/regfile.sv|
+Z123 !s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/regfile.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 YD5=XiJo[_o`WNF;Nn2EN1
+!s105 regfile_sv_unit
+!s101 -O0
+Xregfile_sv_unit
+R1
+R2
+V]4K;f2hDmg91ZzDF2LH;b1
+r1
+31
+I]4K;f2hDmg91ZzDF2LH;b1
+S1
+R3
+R118
+R119
+R120
+L0 1
+R7
+R121
+R122
+R123
+R11
+R12
+!s85 0
+!i10b 1
+!s100 TEkf2X?=QiJ[1WJOWXBam2
+!i103 1
+!s101 -O0
+vregister
+R1
+IWTn5?kdjGkgETQ`I:2djd2
+VVWH2GIcWRQ29K?3;26c491
+S1
+R3
+R118
+8/home/jtlew2/ece411/risingedge/register.sv
+F/home/jtlew2/ece411/risingedge/register.sv
+L0 1
+R7
+r1
+31
+R11
+R12
+!i10b 1
+!s100 gY[NLhD?Eo8[I7KBEb8?i2
+!s105 register_sv_unit
+!s85 0
+!s108 1521330056.898400
+!s107 /home/jtlew2/ece411/risingedge/register.sv|
+!s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/register.sv|
+!s101 -O0
+vset_sel
+R1
+R2
+DXx4 work 15 set_sel_sv_unit 0 22 5iFjM=BZ2S^8h]OUh1RCH1
+VgdS:5[FbfmkacW9NQomho3
+r1
+31
+Inf6VCTZV1:@CWl54:^>D70
+S1
+R3
+R94
+Z124 8/home/jtlew2/ece411/risingedge/set_sel.sv
+Z125 F/home/jtlew2/ece411/risingedge/set_sel.sv
+L0 3
+R7
+Z126 !s108 1521330059.088895
+Z127 !s107 /home/jtlew2/ece411/risingedge/set_sel.sv|
+Z128 !s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/set_sel.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 gQb<hDR4NJfTl:Dkzh`lH0
+!s105 set_sel_sv_unit
+!s101 -O0
+Xset_sel_sv_unit
+R1
+R2
+V5iFjM=BZ2S^8h]OUh1RCH1
+r1
+31
+I5iFjM=BZ2S^8h]OUh1RCH1
+S1
+R3
+R94
+R124
+R125
+L0 1
+R7
+R126
+R127
+R128
+R11
+R12
+!s85 0
+!i10b 1
+!s100 `DYa:`XMf9BYDD0;ok`7d3
+!i103 1
+!s101 -O0
+vsext5
+R1
+R2
+DXx4 work 13 sext5_sv_unit 0 22 Gd56Hd;VKd?XI6>0@@IzR0
+V@>`[L8dBf0We`DcgFLZ7J3
+r1
+31
+I<cBhFHhh<F70P[k?3hROS3
+S1
+R3
+R118
+Z129 8/home/jtlew2/ece411/risingedge/sext5.sv
+Z130 F/home/jtlew2/ece411/risingedge/sext5.sv
+L0 6
+R7
+Z131 !s108 1521330058.186585
+Z132 !s107 /home/jtlew2/ece411/risingedge/sext5.sv|
+Z133 !s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/sext5.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 diSb2o3@BG1O<E8DYdV7?2
+!s105 sext5_sv_unit
+!s101 -O0
+Xsext5_sv_unit
+R1
+R2
+VGd56Hd;VKd?XI6>0@@IzR0
+r1
+31
+IGd56Hd;VKd?XI6>0@@IzR0
+S1
+R3
+R118
+R129
+R130
+L0 1
+R7
+R131
+R132
+R133
+R11
+R12
+!s85 0
+!i10b 1
+!s100 bCjeN5>VI7ejn<TC=:_Y32
+!i103 1
+!s101 -O0
+vstall_unit
+R1
+R2
+DXx4 work 18 stall_unit_sv_unit 0 22 70PL4dU0mJ@m7Xb3LaWQV0
+V;i9H=dK0j?z;3?HVI[_Aj3
+r1
+31
+I<;UHad2[<5=58g^^dL=F^1
+S1
+R3
+Z134 w1521328065
+Z135 8/home/jtlew2/ece411/risingedge/stall_unit.sv
+Z136 F/home/jtlew2/ece411/risingedge/stall_unit.sv
+L0 3
+R7
+Z137 !s108 1521330059.201460
+Z138 !s107 /home/jtlew2/ece411/risingedge/stall_unit.sv|
+Z139 !s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/stall_unit.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 =eLnUcRHQF3[F455BmmHo0
+!s105 stall_unit_sv_unit
+!s101 -O0
+Xstall_unit_sv_unit
+R1
+R2
+V70PL4dU0mJ@m7Xb3LaWQV0
+r1
+31
+I70PL4dU0mJ@m7Xb3LaWQV0
+S1
+R3
+R134
+R135
+R136
+L0 1
+R7
+R137
+R138
+R139
+R11
+R12
+!s85 0
+!i10b 1
+!s100 WQXY@DO7Z2@d_4j`Xe0MH2
+!i103 1
+!s101 -O0
+vwb_interconnect
+R1
+R2
+DXx4 work 23 wb_interconnect_sv_unit 0 22 gLXm^3Gj?060BKaYRT3fJ2
+VBXHThz]dYajeSGR^@3_cM3
+r1
+31
+I29iVzYET_D5J=T`SGX?V[3
+S1
+R3
+R134
+Z140 8/home/jtlew2/ece411/risingedge/wb_interconnect.sv
+Z141 F/home/jtlew2/ece411/risingedge/wb_interconnect.sv
+L0 3
+R7
+Z142 !s108 1521330059.761225
+Z143 !s107 /home/jtlew2/ece411/risingedge/wb_interconnect.sv|
+Z144 !s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/wb_interconnect.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 =3jGHY1<BkAjRdoM@SOU^1
+!s105 wb_interconnect_sv_unit
+!s101 -O0
+Xwb_interconnect_sv_unit
+R1
+R2
+VgLXm^3Gj?060BKaYRT3fJ2
+r1
+31
+IgLXm^3Gj?060BKaYRT3fJ2
+S1
+R3
+R134
+R140
+R141
+L0 1
+R7
+R142
+R143
+R144
+R11
+R12
+!s85 0
+!i10b 1
+!s100 <d0b6lzWX455CgOQOlUAl0
+!i103 1
+!s101 -O0
+Ywishbone
+R1
+ICeFoe]P[;`5W9a6X0jKL<2
+VPb?@ZGYY13KOKQz0;6;n91
+S1
+R3
+Z145 w1520724686
+8/home/jtlew2/ece411/risingedge/wishbone.sv
+F/home/jtlew2/ece411/risingedge/wishbone.sv
+L0 1
+R7
+r1
+31
+R11
+R12
+!i10b 1
+!s100 Hm8TK^GSM8BHA4gdfYnCN3
+!s105 wishbone_sv_unit
+!s85 0
+!s108 1521330056.747071
+!s107 /home/jtlew2/ece411/risingedge/wishbone.sv|
+!s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/wishbone.sv|
+!s101 -O0
+vzext
+R1
+R2
+DXx4 work 12 zext_sv_unit 0 22 l;Kkb<^FW>:[f[c]zO=fJ2
+VBN63hg]7XG]MT<oJ=W;L92
+r1
+31
+I8nDlflWO4i[0GjE_TX1QN0
+S1
+R3
+R145
+Z146 8/home/jtlew2/ece411/risingedge/zext.sv
+Z147 F/home/jtlew2/ece411/risingedge/zext.sv
+L0 6
+R7
+Z148 !s108 1521330058.293709
+Z149 !s107 /home/jtlew2/ece411/risingedge/zext.sv|
+Z150 !s90 -sv|-work|work|+incdir+/home/jtlew2/ece411/risingedge|/home/jtlew2/ece411/risingedge/zext.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 7f1lKPZz4mY3eIFFDbBIU2
+!s105 zext_sv_unit
+!s101 -O0
+Xzext_sv_unit
+R1
+R2
+Vl;Kkb<^FW>:[f[c]zO=fJ2
+r1
+31
+Il;Kkb<^FW>:[f[c]zO=fJ2
+S1
+R3
+R145
+R146
+R147
+L0 1
+R7
+R148
+R149
+R150
+R11
+R12
+!s85 0
+!i10b 1
+!s100 2RUZbIG;1jkPEg<DJ^@J81
+!i103 1
+!s101 -O0

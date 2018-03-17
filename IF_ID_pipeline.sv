@@ -4,14 +4,16 @@ module IF_ID_pipeline
 (
 	input clk,
 	input lc3b_word instruction_in,
-	output lc3b_word instruction_out
+	output lc3b_word instruction_out,
+	input logic stall_pipeline
 );
 
 lc3b_word instruction;
 
 always_ff @(posedge clk)
 begin
-	instruction <= instruction_in;
+	if(stall_pipeline == 0)
+		instruction <= instruction_in;
 end
 
 always_comb

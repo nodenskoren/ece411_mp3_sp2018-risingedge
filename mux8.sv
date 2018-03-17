@@ -1,7 +1,7 @@
 module mux8 #(parameter width = 16)
 (
 	input logic [2:0] sel,
-	input [width-1:0] a, b, c, d, e,
+	input [width-1:0] a, b, c, d, e, f, g, h,
 	output logic [width-1:0] out
 );
 
@@ -20,11 +20,11 @@ begin
 		3'b100:
 			out = e;
 		3'b101:
-			out = 16'h0000;
+			out = f;
 		3'b110:
-			out = 16'h0000;
+			out = g;
 		3'b111:
-			out = 16'h0000;	
+			out = h;	
 		default: /* nothing */;
 	endcase
 end

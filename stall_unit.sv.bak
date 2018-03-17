@@ -1,0 +1,18 @@
+module stall_unit
+(
+	input logic mem_read,
+	input logic mem_write,
+	input logic mem_resp,
+	input logic is_ldr_ldi,
+	output logic stall_pipeline
+);
+
+always_comb
+begin
+	if((mem_read == 1 || mem_write == 1) && mem_resp == 0)
+		stall_pipeline == 1;
+	else
+		stall_pipeline == 0;
+end
+	
+endmodule : stall_unit

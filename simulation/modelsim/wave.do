@@ -1,26 +1,38 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate /mp1_tb/clk
-add wave -noupdate /mp1_tb/mem_resp
-add wave -noupdate /mp1_tb/mem_read
-add wave -noupdate /mp1_tb/mem_write
-add wave -noupdate /mp1_tb/mem_byte_enable
-add wave -noupdate /mp1_tb/mem_address
-add wave -noupdate /mp1_tb/mem_rdata
-add wave -noupdate /mp1_tb/mem_wdata
-add wave -noupdate /mp1_tb/dut/the_datapath/the_regfile/clk
-add wave -noupdate /mp1_tb/dut/the_datapath/the_regfile/load
-add wave -noupdate /mp1_tb/dut/the_datapath/the_regfile/in
-add wave -noupdate /mp1_tb/dut/the_datapath/the_regfile/src_a
-add wave -noupdate /mp1_tb/dut/the_datapath/the_regfile/src_b
-add wave -noupdate /mp1_tb/dut/the_datapath/the_regfile/dest
-add wave -noupdate /mp1_tb/dut/the_datapath/the_regfile/reg_a
-add wave -noupdate /mp1_tb/dut/the_datapath/the_regfile/reg_b
+add wave -noupdate /mp3_tb/dut/mp3/the_datapath/opcode
+add wave -noupdate /mp3_tb/dut/mp3/the_datapath/program_counter/out
+add wave -noupdate -expand /mp3_tb/dut/mp3/the_datapath/regfile/data
+add wave -noupdate /mp3_tb/dut/interconnect/arbiter/cache_sel
+add wave -noupdate -expand /mp3_tb/dut/interconnect/Dcache/cache_datapath/data0/data
+add wave -noupdate -expand /mp3_tb/dut/interconnect/Dcache/cache_datapath/data1/data
+add wave -noupdate /mp3_tb/dut/mp3/the_datapath/memory_rdata_ldi_sti/data
+add wave -noupdate /mp3_tb/dut/mp3/the_datapath/regfilemux/sel
+add wave -noupdate /mp3_tb/dut/mp3/the_datapath/regfilemux/a
+add wave -noupdate /mp3_tb/dut/mp3/the_datapath/regfilemux/b
+add wave -noupdate /mp3_tb/dut/mp3/the_datapath/regfilemux/c
+add wave -noupdate /mp3_tb/dut/mp3/the_datapath/regfilemux/d
+add wave -noupdate /mp3_tb/dut/mp3/the_datapath/regfilemux/e
+add wave -noupdate /mp3_tb/dut/mp3/the_datapath/regfilemux/f
+add wave -noupdate /mp3_tb/dut/mp3/the_datapath/regfilemux/g
+add wave -noupdate /mp3_tb/dut/mp3/the_datapath/regfilemux/h
+add wave -noupdate /mp3_tb/dut/mp3/the_datapath/regfilemux/out
+add wave -noupdate /mp3_tb/dut/mp3/the_datapath/set_sel/out
+add wave -noupdate /mp3_tb/dut/memory/CLK
+add wave -noupdate /mp3_tb/dut/memory/DAT_M
+add wave -noupdate /mp3_tb/dut/memory/DAT_S
+add wave -noupdate /mp3_tb/dut/memory/ACK
+add wave -noupdate /mp3_tb/dut/memory/CYC
+add wave -noupdate /mp3_tb/dut/memory/STB
+add wave -noupdate /mp3_tb/dut/memory/RTY
+add wave -noupdate /mp3_tb/dut/memory/WE
+add wave -noupdate /mp3_tb/dut/memory/ADR
+add wave -noupdate /mp3_tb/dut/memory/SEL
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {19998774 ps} 0}
+WaveRestoreCursors {{Cursor 1} {39422992 ps} 0}
 quietly wave cursor active 1
-configure wave -namecolwidth 150
-configure wave -valuecolwidth 100
+configure wave -namecolwidth 263
+configure wave -valuecolwidth 364
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
 configure wave -snapdistance 10
@@ -33,4 +45,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {19998434 ps} {20000083 ps}
+WaveRestoreZoom {39036993 ps} {39683889 ps}

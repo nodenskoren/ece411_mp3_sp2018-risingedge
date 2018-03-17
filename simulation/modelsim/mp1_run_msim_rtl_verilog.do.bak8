@@ -5,33 +5,38 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/lc3b_types.sv}
-vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/plus2.sv}
-vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/register.sv}
-vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/mux2.sv}
-vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/mux4.sv}
-vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/mux8.sv}
-vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/adj.sv}
-vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/alu.sv}
-vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/control.sv}
-vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/gencc.sv}
-vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/ir.sv}
-vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/regfile.sv}
-vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/adder.sv}
-vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/branch_unit.sv}
-vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/sext5.sv}
-vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/zext.sv}
-vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/zext4.sv}
-vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/zextadj.sv}
-vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/datapath.sv}
-vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/mp1.sv}
+vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/lc3b_types.sv}
+vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/wishbone.sv}
+vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/plus2.sv}
+vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/register.sv}
+vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/mux2.sv}
+vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/badder.sv}
+vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/mux4.sv}
+vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/mux8.sv}
+vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/mux_decode_sel.sv}
+vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/mp3.sv}
+vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/adj.sv}
+vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/alu.sv}
+vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/gencc.sv}
+vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/regfile.sv}
+vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/branch_unit.sv}
+vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/sext5.sv}
+vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/zext.sv}
+vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/IF_ID_pipeline.sv}
+vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/ID_EX_pipeline.sv}
+vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/EX_MEM_pipeline.sv}
+vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/MEM_WB_pipeline.sv}
+vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/control_rom.sv}
+vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/line_to_word.sv}
+vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/set_sel.sv}
+vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/datapath.sv}
 
-vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/mp1_tb.sv}
-vlog -sv -work work +incdir+/home/koren3/ece411/mp1 {/home/koren3/ece411/mp1/memory.sv}
+vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/mp3_tb.sv}
+vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/magic_memory_dual_port.sv}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs="+acc"  mp1_tb
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs="+acc"  mp3_tb
 
 add wave *
 view structure
 view signals
-run 200 ns
+run 100 ns
