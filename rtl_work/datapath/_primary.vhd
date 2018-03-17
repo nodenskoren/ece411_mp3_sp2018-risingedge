@@ -24,6 +24,7 @@ entity datapath is
         offset_sel      : in     vl_logic;
         sr2mux_sel      : in     vl_logic;
         destmux_sel     : in     vl_logic;
-        is_ldb_stb      : in     vl_logic
+        is_ldb_stb      : in     vl_logic;
+        stbregmux_sel   : in     vl_logic_vector(1 downto 0)
     );
 end datapath;

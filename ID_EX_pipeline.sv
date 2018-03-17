@@ -13,6 +13,7 @@ module ID_EX_pipeline
 	input lc3b_word pc_in,
 	input lc3b_word dest_data_in,
 	input lc3b_word trapvector_in,
+	input logic [3:0] shfval_in,
 	
 	output lc3b_control_word ctrl_out,
 	output lc3b_word sr1_out,
@@ -24,6 +25,7 @@ module ID_EX_pipeline
 	output lc3b_word pc_out,
 	output lc3b_word dest_data_out,
 	output lc3b_word trapvector_out,
+	output logic [3:0] shfval_out,
 	
 	input logic stall_pipeline
 );
@@ -38,6 +40,7 @@ lc3b_reg dest;
 lc3b_word pc;
 lc3b_word dest_data;
 lc3b_word trapvector;
+logic [3:0] shfval;
 
 always_ff @(posedge clk)
 begin
@@ -52,6 +55,7 @@ begin
 		pc <= pc_in;
 		dest_data <= dest_data_in;
 		trapvector <= trapvector_in;
+		shfval <= shfval_in;
 	end	
 end
 
@@ -67,5 +71,6 @@ begin
 	pc_out = pc;
 	dest_data_out = dest_data;
 	trapvector_out = trapvector;
+	shfval_out = shfval;
 end
 endmodule : ID_EX_pipeline

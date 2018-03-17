@@ -25,7 +25,8 @@ module datapath
 	input logic offset_sel,
 	input logic sr2mux_sel,
 	input logic destmux_sel,
-	input logic is_ldb_stb
+	input logic is_ldb_stb,
+	input logic [1:0] stbregmux_sel
 );
 
 logic stall_pipeline;
@@ -102,7 +103,7 @@ IF_ID_pipeline IF_ID_pipeline
 assign imm_mode = instruction[5];
 assign jsr_mode = instruction[11];
 assign shf_mode = instruction[5:4];
-assign stb_byte = instruction[0];
+assign stb_byte = instruction[0] ^ instruction[6];
 assign opcode = lc3b_opcode'(instruction[15:12]);
 lc3b_reg mem_wb_dest;
 lc3b_word sr1;
@@ -122,6 +123,17 @@ regfile regfile
     .reg_a(sr1),
 	 .reg_b(sr2_r),
 	 .sr_out(sr_out)
+);
+
+lc3b_word sr_out_new;
+/* for stb */
+mux4 stbregmux
+(
+	.sel(stbregmux_sel),
+	.a(sr_out),
+	.b({8'h00, sr_out[7:0]}),
+	.c({sr_out[7:0], 8'h00}),
+	.f(sr_out_new)
 );
 
 lc3b_word sext5_out;
@@ -223,6 +235,7 @@ lc3b_reg dest_out_ID_EX;
 lc3b_word pc_out_ID_EX;
 lc3b_word dest_data_out_ID_EX;
 lc3b_word trapvector_out_ID_EX;
+logic [3:0] shfval_out;
 ID_EX_pipeline ID_EX_pipeline
 (
 	.clk,
@@ -234,8 +247,9 @@ ID_EX_pipeline ID_EX_pipeline
 	.nzp_in(instruction[11:9]),
 	.dest_in(destmux_out),
 	.pc_in(pc),
-	.dest_data_in(sr_out),
+	.dest_data_in(sr_out_new),
 	.trapvector_in(shifted_trapvector_in),
+	.shfval_in(instruction[3:0]),
 	
 	.ctrl_out(ctrl_out_ID_EX),
 	.sr1_out(sr1_out),
@@ -247,6 +261,7 @@ ID_EX_pipeline ID_EX_pipeline
 	.pc_out(pc_out_ID_EX),
 	.dest_data_out(dest_data_out_ID_EX),
 	.trapvector_out(trapvector_out_ID_EX),
+	.shfval_out,
 	
 	
 	.stall_pipeline(stall_pipeline)
@@ -260,7 +275,8 @@ mux4 alumux
 	.a(sr2_out),
 	.b(offset6_out),
 	.c(branch_offset_out),
-	.d(16'h0004),
+	//.d(16'h0004),
+	.d({12'h000, shfval_out}),
 	.f(alumux_out)	 
 );
 
@@ -274,6 +290,8 @@ alu alu
 );
 
 lc3b_word addr_adder_out;
+
+
 badder addr_adder
 (
 	.a(pc_out_ID_EX),
@@ -469,10 +487,18 @@ stall_unit stall_unit
 	.stall_pipeline(stall_pipeline)
 );
 
+logic [2:0] regfilemux_sel_new;
+always_comb
+begin
+	if(regfilemux_sel_EX_MEM == 3'b100 && alu_out_out_EX_MEM[0] == 1)
+		regfilemux_sel_new = 3'b101;
+	else regfilemux_sel_new = regfilemux_sel_EX_MEM;
+end
+
 lc3b_word regfilemux_out;
 mux8 regfilemux
 (
-    .sel(regfilemux_sel_EX_MEM),
+    .sel(regfilemux_sel_new),
     .a(alu_out_out_EX_MEM),
 	 .b(memory_word_out),
 	 .c(pc_out_EX_MEM),

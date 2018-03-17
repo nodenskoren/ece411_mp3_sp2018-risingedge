@@ -20,6 +20,7 @@ logic c_is_ldb_stb;
 
 logic dp_mem_read;
 logic dp_ifetch_read;
+logic [1:0] stbregmux_sel;
 
 datapath the_datapath
 (
@@ -45,7 +46,8 @@ datapath the_datapath
 	.offset_sel(c_offset_sel),
 	.sr2mux_sel(c_sr2mux_sel),
 	.destmux_sel(c_destmux_sel),
-	.is_ldb_stb(c_is_ldb_stb)
+	.is_ldb_stb(c_is_ldb_stb),
+	.stbregmux_sel
 );
 
 control_rom control_rom
@@ -59,7 +61,8 @@ control_rom control_rom
 	.destmux_sel(c_destmux_sel),
 	.shf_mode(dp_shf_mode),
 	.is_ldb_stb(c_is_ldb_stb),
-	.stb_byte(dp_stb_byte)	
+	.stb_byte(dp_stb_byte),
+	.stbregmux_sel
 );
 
 assign memory.CYC = memory.WE | dp_mem_read;

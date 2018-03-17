@@ -8,6 +8,7 @@ entity control_rom is
         jsr_mode        : in     vl_logic;
         shf_mode        : in     vl_logic_vector(1 downto 0);
         stb_byte        : in     vl_logic;
+        stbregmux_sel   : out    vl_logic_vector(1 downto 0);
         ctrl            : out    work.lc3b_types.lc3b_control_word;
         offset_sel      : out    vl_logic;
         sr2mux_sel      : out    vl_logic;
