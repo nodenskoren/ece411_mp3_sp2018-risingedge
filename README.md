@@ -7,6 +7,9 @@ Roadmap for CP3
 In CP3, we will deal with all the possible hazards including the data hazard and the branch hazard. We would be implementing the forwarding mechanism for the next checkpoint, and this could be done with the addition of several muxes along with a forwarding unit which checks forwarding logic from the lecture slides based on the memory read and write signals. After this the pipelined CPU should be able to handle any LC3b code without the need of NOP instructions.
 In addition to that, we would be adding an additional layer of cache, L2, between the 2 separated L1 caches and the physical memory. L2 should be able to contain all the data that are in L1. The wishbone interconnect added in the CP2 would be modified so that the L1 cache first communicate with the L2 cache, and the L2 cache will communicate with the physical memory and propagate any missed data into L1. The interconnect will involve a series of muxes that will decide which master signals to send to the Wishbone. The slave signals will be connected to both masters directly, except for ACK which will go through a decoder so only one master will receive the slave data. The control signals for these muxes and decoder will be handled by an arbiter in the form of a state machine besides that all the physical memory usages in the CP2 would be replaced by the L2 cache. An additional layer of logic like that done in the MP2 would be added between the L1 cache and the physical memory. The L2 cache would establish another wishbone interconnect as the master with the physical memory.
 
+Nodens and Josh will be responsible for handling all the possible hazards.
+Alex will be responsible for adding the L2 cache including modifying the interconnect and the state machine.  
+
 
 
 MP3 Progress Report Checkpoint 1
