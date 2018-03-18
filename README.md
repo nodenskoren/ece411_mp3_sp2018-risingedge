@@ -1,3 +1,8 @@
+MP3 Progress Report Checkpoint 2
+This checkpoint, we implemented all remaining LC3b instructions. We also added the two split L1 caches, and L2 cache, and the Wishbone interconnect logic to handle the connection betweeen L1 and L2. All the instructions how function correctly. Both cache levels work correctly and the L2 cache interfaces with physical memory correctly. The design uses multi-cycle L2 accesses. Nodens and Josh implemented the instructions. Alex implemented the caches and Wishbone interconnect. 
+
+
+
 MP3 Progress Report Checkpoint 1
 This is the first checkpoint of the MP3 and we built a basic pipelined CPU with two main components – a pipelined datapath and a ROM controller. The datapath now does not need a large control unit like the previous non-pipelined CPU design besides the rather simple ROM controller. It fetches and decodes different instructions every single cycle. The generates ROM controller generates the necessary control signals for each instruction such as aluop, mux selections, and is_branch signals, and store them in the pipeline (flip-flops) in the next stage along with the computational results from other units. There are 4 main pipelines in our design which allows us to have a maximum of 5 stages, and the signals stored from the previous stage can be retrieved from the pipeline output in the instruction’s current stage.
 We have tested and verified the correctness of the ADD, ADDi, AND, ANDi, NOT, LDR, STR, and BR instructions, providing there are enough NOP signals before the BR instruction determine whether to branch.
