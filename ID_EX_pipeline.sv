@@ -15,6 +15,8 @@ module ID_EX_pipeline
 	input lc3b_word trapvector_in,
 	input lc3b_imm4 shift_in,
 	input logic is_ldb_stb_in,
+	input lc3b_reg sr1_reg_in,
+	input lc3b_reg sr2_reg_in,
 	
 	output lc3b_control_word ctrl_out,
 	output lc3b_word sr1_out,
@@ -28,6 +30,8 @@ module ID_EX_pipeline
 	output lc3b_word trapvector_out,
 	output lc3b_imm4 shift_out,
 	output logic is_ldb_stb_out,
+	output lc3b_reg sr1_reg_out,
+	output lc3b_reg sr2_reg_out,
 	
 	input logic stall_pipeline
 );
@@ -44,6 +48,8 @@ lc3b_word dest_data;
 lc3b_word trapvector;
 lc3b_imm4 shift;
 logic is_ldb_stb;
+lc3b_reg sr1_reg;
+lc3b_reg sr2_reg;
 
 always_ff @(posedge clk)
 begin
@@ -60,6 +66,8 @@ begin
 		trapvector <= trapvector_in;
 		shift <= shift_in;
 		is_ldb_stb <= is_ldb_stb_in;
+		sr1_reg <= sr1_reg_in;
+		sr2_reg <= sr2_reg_in;
 	end	
 end
 
@@ -77,5 +85,7 @@ begin
 	trapvector_out = trapvector;
 	shift_out = shift;
 	is_ldb_stb_out = is_ldb_stb;
+	sr1_reg_out = sr1_reg;
+	sr2_reg_out = sr2_reg;
 end
 endmodule : ID_EX_pipeline

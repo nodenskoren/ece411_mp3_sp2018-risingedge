@@ -222,6 +222,8 @@ lc3b_word pc_out_ID_EX;
 lc3b_word dest_data_out_ID_EX;
 lc3b_word trapvector_out_ID_EX;
 lc3b_imm4 shift_out;
+lc3b_reg sr1_reg_ID_EX;
+lc3b_reg sr2_reg_ID_EX;
 logic is_ldb_stb_ID_EX;
 ID_EX_pipeline ID_EX_pipeline
 (
@@ -238,6 +240,8 @@ ID_EX_pipeline ID_EX_pipeline
 	.trapvector_in(shifted_trapvector_in),
 	.shift_in(instruction[3:0]),
 	.is_ldb_stb_in(is_ldb_stb),
+	.sr1_reg_in(instruction[8:6]),
+	.sr2_reg_in(instruction[2:0]),
 	
 	.ctrl_out(ctrl_out_ID_EX),
 	.sr1_out(sr1_out),
@@ -251,6 +255,8 @@ ID_EX_pipeline ID_EX_pipeline
 	.trapvector_out(trapvector_out_ID_EX),
 	.shift_out(shift_out),
 	.is_ldb_stb_out(is_ldb_stb_ID_EX),
+	.sr1_reg_out(sr1_reg_ID_EX),
+	.sr2_reg_out(sr2_reg_ID_EX),	
 	
 	.stall_pipeline(stall_pipeline)
 );
@@ -267,12 +273,56 @@ mux4 alumux
 	.f(alumux_out)	 
 );
 
+logic [1:0] forwarding_unit_1_out;
+forwarding_unit forwarding_unit_1
+(
+	.regwrite_EX(load_regfile_EX_MEM),
+	.regwrite_MEM(load_regfile),
+	.register(sr1_reg_ID_EX),
+	.destreg_EX(dest_out_EX_MEM),
+	.destreg_MEM(mem_wb_dest),
+	.forwarding_unit_out(forwarding_unit_1_out)
+);
+
+logic [1:0] forwarding_unit_2_out;
+forwarding_unit forwarding_unit_2
+(
+	.regwrite_EX(load_regfile_EX_MEM),	
+	.regwrite_MEM(load_regfile),	
+	.register(sr2_reg_ID_EX),
+	.destreg_EX(dest_out_EX_MEM),
+	.destreg_MEM(mem_wb_dest),	
+	.forwarding_unit_out(forwarding_unit_2_out)	
+);
+
+lc3b_word sr1mux_out;
+lc3b_word sr2_mux_out;
+mux4 sr1mux
+(
+	.sel(forwarding_unit_1_out),
+	.a(sr1_out),
+	.b(regfilemux_out_MEM_WB),	
+	.c(alu_out_out_EX_MEM),
+	.d(sr1_out),
+	.f(sr1mux_out)
+);
+
+mux4 sr2_mux
+(
+	.sel(forwarding_unit_2_out),
+	.a(alumux_out),
+	.b(regfilemux_out_MEM_WB),
+	.c(alu_out_out_EX_MEM),
+	.d(alumux_out),
+	.f(sr2_mux_out)
+);
+
 lc3b_word alu_out;
 alu alu
 (
 	.aluop(ctrl_out_ID_EX.aluop),
-	.a(sr1_out),
-	.b(alumux_out),
+	.a(sr1mux_out),
+	.b(sr2_mux_out),
 	.f(alu_out)
 );
 

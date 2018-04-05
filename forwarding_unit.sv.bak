@@ -1,0 +1,20 @@
+module forwarding_unit
+(
+
+	input logic regwrite_EX,
+	input logic regwrite_MEM,
+	input lc3b_reg register,
+	input lc3b_reg destreg_EX,
+	input lc3b_reg destreg_MEM,
+	output logic [1:0] forwarding_unit_out
+);
+
+
+always_comb
+begin
+	if (regwrite_EX & (destreg_EX != 0) & (register == destreg))
+		forwarding_unit_out = 2'b10;
+	else if (regwrite_MEM & (destreg_MEM != 0) & !(regwrite_EX & (destreg_EX != 0) & (destreg_EX != register))
+end
+	
+endmodule : forwarding_unit
