@@ -45,7 +45,7 @@ logic trap_enable;
 lc3b_word pcmux_out;
 plus2 pc_plus2
 (
-	.stall_pipeline(0),
+	.stall_pipeline(1'b0),
 	.in(pc),
 	.out(pc_plus2_out)
 );
@@ -73,7 +73,7 @@ mux_decode_sel pcmux
 register program_counter
 (
 	.clk,
-	.load(!stall_pipeline),
+	.load(!stall_pipeline && !stall_pipeline_load),
 	.in(pcmux_out),
 	.out(pc)
 );
@@ -95,7 +95,7 @@ IF_ID_pipeline IF_ID_pipeline
 	.clk,
 	.instruction_in(ifetch_word_out),
 	.instruction_out(instruction),
-	.stall_pipeline(stall_pipeline)
+	.stall_pipeline(stall_pipeline || stall_pipeline_load)
 );
 // >>>>> IF/ID PIPELINE <<<<< //
 assign imm_mode = instruction[5];
@@ -108,6 +108,16 @@ lc3b_word sr2_r;
 lc3b_word sr_out;
 lc3b_word regfilemux_out_MEM_WB;
 logic load_regfile;
+logic stall_pipeline_load;
+
+stall_unit_2
+(
+	.clk,
+	.operation(opcode),
+	.stall_pipeline_load(stall_pipeline_load)
+	//output logic sti_write
+);
+
 regfile regfile
 (
     .clk,
@@ -468,6 +478,7 @@ mux2 #(.width (4)) line_offset_mux
 );
 
 logic [3:0] line_offset;
+logic mem_write_out;
 stall_unit stall_unit
 (
 	.clk,
@@ -482,7 +493,7 @@ stall_unit stall_unit
 	.line_offset_in(line_offset_mux_out),
 	//.sti_write(sti_write),
 	.mem_read(mem_read),
-	.mem_write(mem_write),
+	.mem_write(mem_write_out),
 	.mem_address(mem_address),
 	.stall_pipeline(stall_pipeline),
 	.line_offset_out(line_offset)
@@ -548,6 +559,18 @@ assign branch_enable = is_br_out_EX_MEM & branch_unit_out;
 assign jump_enable = is_j_out_EX_MEM;
 assign jsr_enable = is_jsr_out_EX_MEM;
 assign trap_enable = is_trap_out_EX_MEM;
+
+logic static_branch_enable_out;
+static_branch_prediction flush
+(
+	.clk,
+	.branch_enable(branch_enable),
+	.load_regfile(load_regfile_EX_MEM),
+	.mem_write_in(mem_write_out),
+	.load_regfile_out(static_branch_prediction_out),
+	.mem_write_out(mem_write)
+);
+
 // >>>>> MEM/WB PIPELINE <<<<< //
 lc3b_control_word ctrl_out_MEM_WB;
 
@@ -556,7 +579,7 @@ MEM_WB_pipeline MEM_WB_pipeline
 	.clk,
 	.dest_in(dest_out_EX_MEM),
 	.regfilemux_out_in(regfilemux_out),
-	.load_regfile_in(load_regfile_EX_MEM),
+	.load_regfile_in(static_branch_prediction_out),
 	.ctrl_in(ctrl_out_EX_MEM),
 	.dest_out(mem_wb_dest),
 	.regfilemux_out_out(regfilemux_out_MEM_WB),
