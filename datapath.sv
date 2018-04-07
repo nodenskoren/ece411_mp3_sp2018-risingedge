@@ -297,6 +297,7 @@ forwarding_unit forwarding_unit_1
 	.regwrite_EX(load_regfile_EX_MEM),
 	.regwrite_MEM(load_regfile),
 	.register_num(sr1_reg_ID_EX),
+	.operation(operation_out_ID_EX),	
 	.destreg_EX(dest_out_EX_MEM),
 	.destreg_MEM(mem_wb_dest),
 	.forwarding_unit_out(forwarding_unit_1_out)
@@ -308,6 +309,7 @@ forwarding_unit_2 forwarding_unit_2
 	.regwrite_EX(load_regfile_EX_MEM),	
 	.regwrite_MEM(load_regfile),	
 	.register_num(sr2_reg_ID_EX),
+	.operation(operation_out_ID_EX),
 	.destreg_EX(dest_out_EX_MEM),
 	.destreg_MEM(mem_wb_dest),
 	.imm_mode(imm_mode_out),
