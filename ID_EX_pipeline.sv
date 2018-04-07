@@ -17,6 +17,8 @@ module ID_EX_pipeline
 	input logic is_ldb_stb_in,
 	input lc3b_reg sr1_reg_in,
 	input lc3b_reg sr2_reg_in,
+	input lc3b_opcode operation_in,
+	input logic imm_mode_in,
 	
 	output lc3b_control_word ctrl_out,
 	output lc3b_word sr1_out,
@@ -32,8 +34,9 @@ module ID_EX_pipeline
 	output logic is_ldb_stb_out,
 	output lc3b_reg sr1_reg_out,
 	output lc3b_reg sr2_reg_out,
-	
-	input logic stall_pipeline
+	output lc3b_opcode operation_out,
+	input logic stall_pipeline,
+	output logic imm_mode_out
 );
 
 lc3b_control_word ctrl;
@@ -50,6 +53,8 @@ lc3b_imm4 shift;
 logic is_ldb_stb;
 lc3b_reg sr1_reg;
 lc3b_reg sr2_reg;
+lc3b_opcode operation;
+logic imm_mode;
 
 always_ff @(posedge clk)
 begin
@@ -68,6 +73,8 @@ begin
 		is_ldb_stb <= is_ldb_stb_in;
 		sr1_reg <= sr1_reg_in;
 		sr2_reg <= sr2_reg_in;
+		operation <= operation_in;
+		imm_mode <= imm_mode_in;
 	end	
 end
 
@@ -87,5 +94,7 @@ begin
 	is_ldb_stb_out = is_ldb_stb;
 	sr1_reg_out = sr1_reg;
 	sr2_reg_out = sr2_reg;
+	operation_out = operation;
+	imm_mode_out = imm_mode;
 end
 endmodule : ID_EX_pipeline

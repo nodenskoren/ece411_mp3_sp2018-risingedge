@@ -18,7 +18,7 @@
 #
 # Quartus II 32-bit
 # Version 13.1.4 Build 182 03/12/2014 SJ Full Version
-# Date created = 15:33:27  April 05, 2018
+# Date created = 12:39:31  April 05, 2018
 #
 # -------------------------------------------------------------------------- #
 #
@@ -40,5 +40,5 @@ set_global_assignment -name FAMILY "Cyclone IV GX"
 set_global_assignment -name DEVICE AUTO
 set_global_assignment -name TOP_LEVEL_ENTITY mp3_top
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:33:27  APRIL 05, 2018"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:39:31  APRIL 05, 2018"
 set_global_assignment -name LAST_QUARTUS_VERSION 13.1

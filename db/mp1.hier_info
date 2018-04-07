@@ -1762,7 +1762,7 @@ memory.DAT_S[127] => datapath:the_datapath.mem_rdata[127]
 |mp3_top|mp3:mp3|datapath:the_datapath
 clk => register:program_counter.clk
 clk => IF_ID_pipeline:IF_ID_pipeline.clk
-clk => stall_unit_2:comb_32.clk
+clk => stall_unit_2:stall_unit_2x.clk
 clk => regfile:regfile.clk
 clk => ID_EX_pipeline:ID_EX_pipeline.clk
 clk => EX_MEM_pipeline:EX_MEM_pipeline.clk
@@ -2974,7 +2974,7 @@ stall_pipeline => instruction[14].ENA
 stall_pipeline => instruction[15].ENA
 
 
-|mp3_top|mp3:mp3|datapath:the_datapath|stall_unit_2:comb_32
+|mp3_top|mp3:mp3|datapath:the_datapath|stall_unit_2:stall_unit_2x
 clk => state~1.DATAIN
 operation[0] => Equal0.IN3
 operation[0] => Equal1.IN3
@@ -3989,6 +3989,11 @@ out[15] <= <GND>
 
 
 |mp3_top|mp3:mp3|datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline
+clk => imm_mode.CLK
+clk => operation[0].CLK
+clk => operation[1].CLK
+clk => operation[2].CLK
+clk => operation[3].CLK
 clk => sr2_reg[0].CLK
 clk => sr2_reg[1].CLK
 clk => sr2_reg[2].CLK
@@ -4301,6 +4306,11 @@ sr1_reg_in[2] => sr1_reg[2].DATAIN
 sr2_reg_in[0] => sr2_reg[0].DATAIN
 sr2_reg_in[1] => sr2_reg[1].DATAIN
 sr2_reg_in[2] => sr2_reg[2].DATAIN
+operation_in[0] => operation[0].DATAIN
+operation_in[1] => operation[1].DATAIN
+operation_in[2] => operation[2].DATAIN
+operation_in[3] => operation[3].DATAIN
+imm_mode_in => imm_mode.DATAIN
 ctrl_out.is_sti <= ctrl.is_sti.DB_MAX_OUTPUT_PORT_TYPE
 ctrl_out.is_ldi <= ctrl.is_ldi.DB_MAX_OUTPUT_PORT_TYPE
 ctrl_out.mem_byte_enable[0] <= ctrl.mem_byte_enable[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -4457,6 +4467,15 @@ sr1_reg_out[2] <= sr1_reg[2].DB_MAX_OUTPUT_PORT_TYPE
 sr2_reg_out[0] <= sr2_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 sr2_reg_out[1] <= sr2_reg[1].DB_MAX_OUTPUT_PORT_TYPE
 sr2_reg_out[2] <= sr2_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+operation_out[0] <= operation[0].DB_MAX_OUTPUT_PORT_TYPE
+operation_out[1] <= operation[1].DB_MAX_OUTPUT_PORT_TYPE
+operation_out[2] <= operation[2].DB_MAX_OUTPUT_PORT_TYPE
+operation_out[3] <= operation[3].DB_MAX_OUTPUT_PORT_TYPE
+stall_pipeline => imm_mode.ENA
+stall_pipeline => operation[0].ENA
+stall_pipeline => operation[1].ENA
+stall_pipeline => operation[2].ENA
+stall_pipeline => operation[3].ENA
 stall_pipeline => sr2_reg[0].ENA
 stall_pipeline => sr2_reg[1].ENA
 stall_pipeline => sr2_reg[2].ENA
@@ -4613,6 +4632,7 @@ stall_pipeline => ctrl.opcode[0].ENA
 stall_pipeline => ctrl.opcode[1].ENA
 stall_pipeline => ctrl.opcode[2].ENA
 stall_pipeline => ctrl.opcode[3].ENA
+imm_mode_out <= imm_mode.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |mp3_top|mp3:mp3|datapath:the_datapath|mux4:alumux
@@ -4733,51 +4753,53 @@ f[15] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 |mp3_top|mp3:mp3|datapath:the_datapath|forwarding_unit:forwarding_unit_1
 regwrite_EX => always0.IN1
 regwrite_MEM => always0.IN1
-register[0] => Equal1.IN2
-register[0] => Equal3.IN2
-register[1] => Equal1.IN1
-register[1] => Equal3.IN1
-register[2] => Equal1.IN0
-register[2] => Equal3.IN0
-destreg_EX[0] => Equal1.IN5
-destreg_EX[0] => Equal0.IN31
-destreg_EX[1] => Equal1.IN4
-destreg_EX[1] => Equal0.IN30
-destreg_EX[2] => Equal1.IN3
-destreg_EX[2] => Equal0.IN29
-destreg_MEM[0] => Equal3.IN5
-destreg_MEM[0] => Equal2.IN31
-destreg_MEM[1] => Equal3.IN4
-destreg_MEM[1] => Equal2.IN30
-destreg_MEM[2] => Equal3.IN3
-destreg_MEM[2] => Equal2.IN29
-forwarding_unit_out[0] <= forwarding_unit_out.DB_MAX_OUTPUT_PORT_TYPE
-forwarding_unit_out[1] <= always0.DB_MAX_OUTPUT_PORT_TYPE
+register_num[0] => Equal1.IN2
+register_num[0] => Equal3.IN2
+register_num[1] => Equal1.IN1
+register_num[1] => Equal3.IN1
+register_num[2] => Equal1.IN0
+register_num[2] => Equal3.IN0
+destreg_EX[0] => Equal3.IN5
+destreg_EX[0] => Equal2.IN31
+destreg_EX[1] => Equal3.IN4
+destreg_EX[1] => Equal2.IN30
+destreg_EX[2] => Equal3.IN3
+destreg_EX[2] => Equal2.IN29
+destreg_MEM[0] => Equal1.IN5
+destreg_MEM[0] => Equal0.IN31
+destreg_MEM[1] => Equal1.IN4
+destreg_MEM[1] => Equal0.IN30
+destreg_MEM[2] => Equal1.IN3
+destreg_MEM[2] => Equal0.IN29
+forwarding_unit_out[0] <= always0.DB_MAX_OUTPUT_PORT_TYPE
+forwarding_unit_out[1] <= forwarding_unit_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mp3_top|mp3:mp3|datapath:the_datapath|forwarding_unit:forwarding_unit_2
+|mp3_top|mp3:mp3|datapath:the_datapath|forwarding_unit_2:forwarding_unit_2
 regwrite_EX => always0.IN1
 regwrite_MEM => always0.IN1
-register[0] => Equal1.IN2
-register[0] => Equal3.IN2
-register[1] => Equal1.IN1
-register[1] => Equal3.IN1
-register[2] => Equal1.IN0
-register[2] => Equal3.IN0
-destreg_EX[0] => Equal1.IN5
-destreg_EX[0] => Equal0.IN31
-destreg_EX[1] => Equal1.IN4
-destreg_EX[1] => Equal0.IN30
-destreg_EX[2] => Equal1.IN3
-destreg_EX[2] => Equal0.IN29
-destreg_MEM[0] => Equal3.IN5
-destreg_MEM[0] => Equal2.IN31
-destreg_MEM[1] => Equal3.IN4
-destreg_MEM[1] => Equal2.IN30
-destreg_MEM[2] => Equal3.IN3
-destreg_MEM[2] => Equal2.IN29
+register_num[0] => Equal1.IN2
+register_num[0] => Equal3.IN2
+register_num[1] => Equal1.IN1
+register_num[1] => Equal3.IN1
+register_num[2] => Equal1.IN0
+register_num[2] => Equal3.IN0
+destreg_EX[0] => Equal3.IN5
+destreg_EX[0] => Equal2.IN31
+destreg_EX[1] => Equal3.IN4
+destreg_EX[1] => Equal2.IN30
+destreg_EX[2] => Equal3.IN3
+destreg_EX[2] => Equal2.IN29
+destreg_MEM[0] => Equal1.IN5
+destreg_MEM[0] => Equal0.IN31
+destreg_MEM[1] => Equal1.IN4
+destreg_MEM[1] => Equal0.IN30
+destreg_MEM[2] => Equal1.IN3
+destreg_MEM[2] => Equal0.IN29
+imm_mode => forwarding_unit_out.OUTPUTSELECT
+imm_mode => forwarding_unit_out.OUTPUTSELECT
 forwarding_unit_out[0] <= forwarding_unit_out.DB_MAX_OUTPUT_PORT_TYPE
-forwarding_unit_out[1] <= always0.DB_MAX_OUTPUT_PORT_TYPE
+forwarding_unit_out[1] <= forwarding_unit_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |mp3_top|mp3:mp3|datapath:the_datapath|mux4:sr1mux
@@ -5302,6 +5324,10 @@ f[15] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |mp3_top|mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline
+clk => operation[0].CLK
+clk => operation[1].CLK
+clk => operation[2].CLK
+clk => operation[3].CLK
 clk => is_ldb_stb.CLK
 clk => ctrl.is_sti.CLK
 clk => ctrl.is_ldi.CLK
@@ -5695,6 +5721,18 @@ ctrl_out.opcode[1] <= ctrl.opcode[1].DB_MAX_OUTPUT_PORT_TYPE
 ctrl_out.opcode[2] <= ctrl.opcode[2].DB_MAX_OUTPUT_PORT_TYPE
 ctrl_out.opcode[3] <= ctrl.opcode[3].DB_MAX_OUTPUT_PORT_TYPE
 is_ldb_stb_out <= is_ldb_stb.DB_MAX_OUTPUT_PORT_TYPE
+operation_in[0] => operation[0].DATAIN
+operation_in[1] => operation[1].DATAIN
+operation_in[2] => operation[2].DATAIN
+operation_in[3] => operation[3].DATAIN
+operation_out[0] <= operation[0].DB_MAX_OUTPUT_PORT_TYPE
+operation_out[1] <= operation[1].DB_MAX_OUTPUT_PORT_TYPE
+operation_out[2] <= operation[2].DB_MAX_OUTPUT_PORT_TYPE
+operation_out[3] <= operation[3].DB_MAX_OUTPUT_PORT_TYPE
+stall_pipeline => operation[0].ENA
+stall_pipeline => operation[1].ENA
+stall_pipeline => operation[2].ENA
+stall_pipeline => operation[3].ENA
 stall_pipeline => is_ldb_stb.ENA
 stall_pipeline => ctrl.is_sti.ENA
 stall_pipeline => ctrl.is_ldi.ENA
@@ -6647,15 +6685,28 @@ branch <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 |mp3_top|mp3:mp3|datapath:the_datapath|static_branch_prediction:flush
 clk => state~1.DATAIN
-branch_enable => Selector0.IN3
-branch_enable => next_state.s_flush_1.DATAB
+branch_enable => branch_enable_out.DATAB
+branch_enable => always1.IN0
 load_regfile => load_regfile_out.DATAB
+unconditional_branch => always1.IN1
+stall => Selector1.IN3
+stall => Selector2.IN3
+stall => Selector3.IN3
+stall => always1.IN1
+stall => Selector0.IN1
+stall => Selector2.IN1
+stall => Selector3.IN1
 mem_write_in => mem_write_out.DATAB
 load_regfile_out <= load_regfile_out.DB_MAX_OUTPUT_PORT_TYPE
 mem_write_out <= mem_write_out.DB_MAX_OUTPUT_PORT_TYPE
+branch_enable_out <= branch_enable_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |mp3_top|mp3:mp3|datapath:the_datapath|MEM_WB_pipeline:MEM_WB_pipeline
+clk => operation[0].CLK
+clk => operation[1].CLK
+clk => operation[2].CLK
+clk => operation[3].CLK
 clk => ctrl.is_sti.CLK
 clk => ctrl.is_ldi.CLK
 clk => ctrl.mem_byte_enable[0].CLK
@@ -6750,6 +6801,10 @@ ctrl_in.opcode[0] => ctrl.opcode[0].DATAIN
 ctrl_in.opcode[1] => ctrl.opcode[1].DATAIN
 ctrl_in.opcode[2] => ctrl.opcode[2].DATAIN
 ctrl_in.opcode[3] => ctrl.opcode[3].DATAIN
+operation_in[0] => operation[0].DATAIN
+operation_in[1] => operation[1].DATAIN
+operation_in[2] => operation[2].DATAIN
+operation_in[3] => operation[3].DATAIN
 dest_out[0] <= dest[0].DB_MAX_OUTPUT_PORT_TYPE
 dest_out[1] <= dest[1].DB_MAX_OUTPUT_PORT_TYPE
 dest_out[2] <= dest[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -6797,6 +6852,14 @@ ctrl_out.opcode[0] <= ctrl.opcode[0].DB_MAX_OUTPUT_PORT_TYPE
 ctrl_out.opcode[1] <= ctrl.opcode[1].DB_MAX_OUTPUT_PORT_TYPE
 ctrl_out.opcode[2] <= ctrl.opcode[2].DB_MAX_OUTPUT_PORT_TYPE
 ctrl_out.opcode[3] <= ctrl.opcode[3].DB_MAX_OUTPUT_PORT_TYPE
+operation_out[0] <= operation[0].DB_MAX_OUTPUT_PORT_TYPE
+operation_out[1] <= operation[1].DB_MAX_OUTPUT_PORT_TYPE
+operation_out[2] <= operation[2].DB_MAX_OUTPUT_PORT_TYPE
+operation_out[3] <= operation[3].DB_MAX_OUTPUT_PORT_TYPE
+stall_pipeline => operation[0].ENA
+stall_pipeline => operation[1].ENA
+stall_pipeline => operation[2].ENA
+stall_pipeline => operation[3].ENA
 stall_pipeline => ctrl.is_sti.ENA
 stall_pipeline => ctrl.is_ldi.ENA
 stall_pipeline => ctrl.mem_byte_enable[0].ENA

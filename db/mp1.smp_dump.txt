@@ -42,7 +42,7 @@ state.s_read_write 0 0 0
 state.s_ldi 1 0 1 
 state.s_sti 1 1 0 
 
-State Machine - |mp3_top|mp3:mp3|datapath:the_datapath|stall_unit_2:comb_32|state
+State Machine - |mp3_top|mp3:mp3|datapath:the_datapath|stall_unit_2:stall_unit_2x|state
 Name state.s_load_wait 
 state.s_check 0 
 state.s_load_wait 1 

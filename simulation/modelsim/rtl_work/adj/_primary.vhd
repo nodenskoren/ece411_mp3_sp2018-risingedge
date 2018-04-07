@@ -2,7 +2,7 @@ library verilog;
 use verilog.vl_types.all;
 entity adj is
     generic(
-        width           : integer := 8
+        width           : integer := 9
     );
     port(
         \in\            : in     vl_logic_vector;
