@@ -1,3 +1,12 @@
+MP3 Progress Report Checkpoint 3
+
+This checkpoint, we implemented data forwarding and full hazard detection including control, data, and structural hazards. The L2 cache is complete and integrated. We also started working on static branch prediction, and modifying the L2 cache to be 4-way set associative. Josh designed the forwarding unit, Nodens implemented the forwarding unit and worked on branch prediction, and Alex completed the L2 cache and started modifying the cache to be 4-way. Everyone participated in debugging.
+
+Roadmap for CP4
+Next checkpoint we will finish static branch prediction as well as implement an eviction write buffer and software visible performance counters. We will also be planning for CP5, deciding which features we want to implement and may take steps in CP4 so that CP5 can be completed more smoothly. Nodens will implement static branch prediction, Alex will implement the eviction write buffer, Josh will implement the software visible performance counters.
+
+
+
 MP3 Progress Report Checkpoint 2
 This checkpoint, we implemented all remaining LC3b instructions. We also added the two split L1 caches, and L2 cache, and the Wishbone interconnect logic to handle the connection betweeen L1 and L2. All the instructions how function correctly. Both cache levels work correctly and the L2 cache interfaces with physical memory correctly. The design uses multi-cycle L2 accesses. Nodens and Josh implemented the instructions. Alex implemented the caches and Wishbone interconnect. 
 
