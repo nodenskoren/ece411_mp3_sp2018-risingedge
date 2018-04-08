@@ -19,6 +19,10 @@ entity ID_EX_pipeline is
         sr1_reg_in      : in     vl_logic_vector(2 downto 0);
         sr2_reg_in      : in     vl_logic_vector(2 downto 0);
         operation_in    : in     work.lc3b_types.lc3b_opcode;
+        instruction_in  : in     vl_logic_vector(15 downto 0);
+        instruction_out : out    vl_logic_vector(15 downto 0);
+        sr2mux_sel_in   : in     vl_logic;
+        sext5_out_in    : in     vl_logic_vector(15 downto 0);
         imm_mode_in     : in     vl_logic;
         ctrl_out        : out    work.lc3b_types.lc3b_control_word;
         sr1_out         : out    vl_logic_vector(15 downto 0);
@@ -36,6 +40,8 @@ entity ID_EX_pipeline is
         sr2_reg_out     : out    vl_logic_vector(2 downto 0);
         operation_out   : out    work.lc3b_types.lc3b_opcode;
         stall_pipeline  : in     vl_logic;
-        imm_mode_out    : out    vl_logic
+        imm_mode_out    : out    vl_logic;
+        sr2mux_sel_out  : out    vl_logic;
+        sext5_out_out   : out    vl_logic_vector(15 downto 0)
     );
 end ID_EX_pipeline;

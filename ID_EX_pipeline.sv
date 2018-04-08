@@ -18,6 +18,11 @@ module ID_EX_pipeline
 	input lc3b_reg sr1_reg_in,
 	input lc3b_reg sr2_reg_in,
 	input lc3b_opcode operation_in,
+	input lc3b_word instruction_in,
+	output lc3b_word instruction_out,
+	input logic sr2mux_sel_in,
+	input lc3b_word sext5_out_in,	
+	
 	input logic imm_mode_in,
 	
 	output lc3b_control_word ctrl_out,
@@ -36,7 +41,9 @@ module ID_EX_pipeline
 	output lc3b_reg sr2_reg_out,
 	output lc3b_opcode operation_out,
 	input logic stall_pipeline,
-	output logic imm_mode_out
+	output logic imm_mode_out,
+	output logic sr2mux_sel_out,
+	output lc3b_word sext5_out_out		
 );
 
 lc3b_control_word ctrl;
@@ -55,6 +62,9 @@ lc3b_reg sr1_reg;
 lc3b_reg sr2_reg;
 lc3b_opcode operation;
 logic imm_mode;
+lc3b_word instruction;
+logic sr2mux_sel;
+lc3b_word sext5_;
 
 always_ff @(posedge clk)
 begin
@@ -75,6 +85,9 @@ begin
 		sr2_reg <= sr2_reg_in;
 		operation <= operation_in;
 		imm_mode <= imm_mode_in;
+		instruction <= instruction_in;
+		sr2mux_sel <= sr2mux_sel_in;
+		sext5_ <= sext5_out_in;
 	end	
 end
 
@@ -96,5 +109,8 @@ begin
 	sr2_reg_out = sr2_reg;
 	operation_out = operation;
 	imm_mode_out = imm_mode;
+	instruction_out = instruction;
+	sr2mux_sel_out = sr2mux_sel;
+	sext5_out_out = sext5_;
 end
 endmodule : ID_EX_pipeline

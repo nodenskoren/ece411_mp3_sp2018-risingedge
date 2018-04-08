@@ -1,10 +1,10 @@
 library verilog;
 use verilog.vl_types.all;
-library work;
 entity stall_unit_2 is
     port(
         clk             : in     vl_logic;
-        operation       : in     work.lc3b_types.lc3b_opcode;
+        instruction_curr: in     vl_logic_vector(15 downto 0);
+        instruction_last: in     vl_logic_vector(15 downto 0);
         stall_pipeline_load: out    vl_logic
     );
 end stall_unit_2;

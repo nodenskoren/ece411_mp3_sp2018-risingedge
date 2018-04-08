@@ -56,7 +56,8 @@ module EX_MEM_pipeline
 	output logic is_ldb_stb_out,
 	input lc3b_opcode operation_in,
 	output lc3b_opcode operation_out,
-	
+	input lc3b_word instruction_in,
+	output lc3b_word instruction_out,	
 	
 	input logic stall_pipeline
 );
@@ -86,6 +87,7 @@ logic is_sti;
 logic is_trap;
 logic is_ldb_stb;
 lc3b_opcode operation;
+lc3b_word instruction;
 
 always_ff @(posedge clk)
 begin
@@ -116,6 +118,7 @@ begin
 		ctrl <= ctrl_in;
 		is_ldb_stb <= is_ldb_stb_in;
 		operation <= operation_in;		
+		instruction <= instruction_in;
 	end
 end
 
@@ -146,6 +149,7 @@ begin
 	is_trap_out = is_trap;
 	ctrl_out = ctrl;
 	is_ldb_stb_out = is_ldb_stb;
-	operation_out = operation;	
+	operation_out = operation;
+	instruction_out = instruction;
 end
 endmodule : EX_MEM_pipeline

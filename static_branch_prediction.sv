@@ -10,7 +10,8 @@ module static_branch_prediction
 	input logic mem_write_in,
 	output logic load_regfile_out,
 	output logic mem_write_out,
-	output logic branch_enable_out
+	output logic branch_enable_out,
+	input logic mem_read_in
 	//output logic sti_write
 );
 

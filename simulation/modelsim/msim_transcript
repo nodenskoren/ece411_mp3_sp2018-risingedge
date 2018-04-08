@@ -432,4 +432,4 @@
 # .main_pane.objects.interior.cs.body.tree
 # run 100 ns
 do /home/koren3/ece411/RisingEdge/RisingEdge/simulation/modelsim/wave.do
-run 4000ns
+run 100000ns

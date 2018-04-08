@@ -16,10 +16,10 @@ module forwarding_unit
 always_comb
 begin
 	if ((operation != op_jmp) && (operation != op_jsr) && (operation != op_lea) && (operation != op_trap) && (operation != op_br)) begin
-		if (regwrite_MEM & (destreg_MEM != 0) & !(regwrite_EX & (destreg_EX != 0) & (destreg_EX != register_num)) & (destreg_MEM == register_num))
-			forwarding_unit_out = 2'b01;
-		else if (regwrite_EX & (destreg_EX != 0) & (destreg_EX == register_num))
-			forwarding_unit_out = 2'b10;
+		if (regwrite_EX && (destreg_EX == register_num))
+			forwarding_unit_out = 2'b10;		
+		else if (regwrite_MEM  && !(regwrite_EX && (destreg_EX == register_num)) && (destreg_MEM == register_num))
+			forwarding_unit_out = 2'b01;	
 		else
 			forwarding_unit_out = 2'b00;
 	end

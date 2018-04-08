@@ -10,6 +10,7 @@ entity static_branch_prediction is
         mem_write_in    : in     vl_logic;
         load_regfile_out: out    vl_logic;
         mem_write_out   : out    vl_logic;
-        branch_enable_out: out    vl_logic
+        branch_enable_out: out    vl_logic;
+        mem_read_in     : in     vl_logic
     );
 end static_branch_prediction;

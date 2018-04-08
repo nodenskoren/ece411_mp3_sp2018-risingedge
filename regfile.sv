@@ -9,7 +9,11 @@ module regfile
     output lc3b_word reg_a, reg_b,
 	 
 	 input lc3b_reg sr,
-	 output lc3b_word sr_out
+	 output lc3b_word sr_out,
+	 input lc3b_reg src_a_ID_EX,
+	 input lc3b_reg src_b_ID_EX,
+	 output lc3b_word reg_a_ID_EX,
+	 output lc3b_word reg_b_ID_EX	 
 );
 
 lc3b_word data [7:0] /* synthesis ramstyle = "logic" */;
@@ -38,6 +42,8 @@ begin
     reg_a = data[src_a];
     reg_b = data[src_b];
 	 sr_out = data[sr];
+	 reg_a_ID_EX = data[src_a_ID_EX];
+	 reg_b_ID_EX = data[src_b_ID_EX];	 
 end
 
 endmodule : regfile

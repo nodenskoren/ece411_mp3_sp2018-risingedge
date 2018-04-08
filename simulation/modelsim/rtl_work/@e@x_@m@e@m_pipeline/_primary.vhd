@@ -50,6 +50,8 @@ entity EX_MEM_pipeline is
         is_ldb_stb_out  : out    vl_logic;
         operation_in    : in     work.lc3b_types.lc3b_opcode;
         operation_out   : out    work.lc3b_types.lc3b_opcode;
+        instruction_in  : in     vl_logic_vector(15 downto 0);
+        instruction_out : out    vl_logic_vector(15 downto 0);
         stall_pipeline  : in     vl_logic
     );
 end EX_MEM_pipeline;
