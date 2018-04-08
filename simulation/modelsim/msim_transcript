@@ -9,19 +9,19 @@
 # ** Warning: Copied /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/ldbstblogic.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/ldbstblogic.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module ldbstblogic
 # 
 # Top level modules:
 # 	ldbstblogic
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/lc3b_types.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/lc3b_types.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package lc3b_types
 # 
 # Top level modules:
 # 	--none--
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/cache_control.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/cache_control.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cache_control_sv_unit
 # -- Importing package lc3b_types
@@ -29,57 +29,55 @@
 # 
 # Top level modules:
 # 	cache_control
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/wishbone.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/wishbone.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling interface wishbone
 # 
 # Top level modules:
 # 	--none--
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/plus2.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/plus2.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module plus2
 # 
 # Top level modules:
 # 	plus2
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/register.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/register.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module register
 # 
 # Top level modules:
 # 	register
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/mux2.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/mux2.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mux2
 # 
 # Top level modules:
 # 	mux2
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/badder.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/badder.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module badder
 # 
 # Top level modules:
 # 	badder
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/mux4.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/mux4.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mux4
 # 
 # Top level modules:
 # 	mux4
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/mux8.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/mux8.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package mp3_sv_unit
-# -- Importing package lc3b_types
-# -- Compiling module mp3
+# -- Compiling module mux8
 # 
 # Top level modules:
 # 	mux8
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/mux_decode_sel.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/mux_decode_sel.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mux_decode_sel
 # 
 # Top level modules:
 # 	mux_decode_sel
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/l1arbiter.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/l1arbiter.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package l1arbiter_sv_unit
 # -- Importing package lc3b_types
@@ -87,7 +85,15 @@
 # 
 # Top level modules:
 # 	l1arbiter
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/array.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/static_branch_prediction.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package static_branch_prediction_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module static_branch_prediction
+# 
+# Top level modules:
+# 	static_branch_prediction
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/array.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package array_sv_unit
 # -- Importing package lc3b_types
@@ -95,7 +101,7 @@
 # 
 # Top level modules:
 # 	array
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/cache_writeword.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/cache_writeword.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cache_writeword_sv_unit
 # -- Importing package lc3b_types
@@ -103,7 +109,7 @@
 # 
 # Top level modules:
 # 	cache_writeword
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/mp3.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/mp3.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package mp3_sv_unit
 # -- Importing package lc3b_types
@@ -111,7 +117,7 @@
 # 
 # Top level modules:
 # 	mp3
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/adj.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/adj.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package adj_sv_unit
 # -- Importing package lc3b_types
@@ -119,7 +125,7 @@
 # 
 # Top level modules:
 # 	adj
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/alu.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/alu.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package alu_sv_unit
 # -- Importing package lc3b_types
@@ -127,7 +133,7 @@
 # 
 # Top level modules:
 # 	alu
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/gencc.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/gencc.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package gencc_sv_unit
 # -- Importing package lc3b_types
@@ -135,7 +141,7 @@
 # 
 # Top level modules:
 # 	gencc
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/regfile.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/regfile.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package regfile_sv_unit
 # -- Importing package lc3b_types
@@ -143,7 +149,7 @@
 # 
 # Top level modules:
 # 	regfile
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/branch_unit.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/branch_unit.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package branch_unit_sv_unit
 # -- Importing package lc3b_types
@@ -151,7 +157,7 @@
 # 
 # Top level modules:
 # 	branch_unit
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/sext5.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/sext5.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package sext5_sv_unit
 # -- Importing package lc3b_types
@@ -159,15 +165,15 @@
 # 
 # Top level modules:
 # 	sext5
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/zext.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/zext.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package IF_ID_pipeline_sv_unit
+# -- Compiling package zext_sv_unit
 # -- Importing package lc3b_types
-# -- Compiling module IF_ID_pipeline
+# -- Compiling module zext
 # 
 # Top level modules:
 # 	zext
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/IF_ID_pipeline.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/IF_ID_pipeline.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package IF_ID_pipeline_sv_unit
 # -- Importing package lc3b_types
@@ -175,7 +181,7 @@
 # 
 # Top level modules:
 # 	IF_ID_pipeline
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/ID_EX_pipeline.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/ID_EX_pipeline.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package ID_EX_pipeline_sv_unit
 # -- Importing package lc3b_types
@@ -183,7 +189,7 @@
 # 
 # Top level modules:
 # 	ID_EX_pipeline
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/EX_MEM_pipeline.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/EX_MEM_pipeline.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package EX_MEM_pipeline_sv_unit
 # -- Importing package lc3b_types
@@ -191,7 +197,7 @@
 # 
 # Top level modules:
 # 	EX_MEM_pipeline
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/MEM_WB_pipeline.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/MEM_WB_pipeline.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package MEM_WB_pipeline_sv_unit
 # -- Importing package lc3b_types
@@ -199,7 +205,7 @@
 # 
 # Top level modules:
 # 	MEM_WB_pipeline
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/control_rom.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/control_rom.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package control_rom_sv_unit
 # -- Importing package lc3b_types
@@ -207,7 +213,7 @@
 # 
 # Top level modules:
 # 	control_rom
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/line_to_word.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/line_to_word.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package line_to_word_sv_unit
 # -- Importing package lc3b_types
@@ -215,7 +221,7 @@
 # 
 # Top level modules:
 # 	line_to_word
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/set_sel.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/set_sel.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package set_sel_sv_unit
 # -- Importing package lc3b_types
@@ -223,7 +229,7 @@
 # 
 # Top level modules:
 # 	set_sel
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/stall_unit.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/stall_unit.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package stall_unit_sv_unit
 # -- Importing package lc3b_types
@@ -231,7 +237,31 @@
 # 
 # Top level modules:
 # 	stall_unit
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/cache_datapath.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/forwarding_unit.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package forwarding_unit_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module forwarding_unit
+# 
+# Top level modules:
+# 	forwarding_unit
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/stall_unit_2.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package stall_unit_2_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module stall_unit_2
+# 
+# Top level modules:
+# 	stall_unit_2
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/forwarding_unit_2.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package forwarding_unit_2_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module forwarding_unit_2
+# 
+# Top level modules:
+# 	forwarding_unit_2
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/cache_datapath.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cache_datapath_sv_unit
 # -- Importing package lc3b_types
@@ -239,7 +269,7 @@
 # 
 # Top level modules:
 # 	cache_datapath
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/datapath.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/datapath.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package datapath_sv_unit
 # -- Importing package lc3b_types
@@ -247,7 +277,7 @@
 # 
 # Top level modules:
 # 	datapath
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/cache.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/cache.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cache_sv_unit
 # -- Importing package lc3b_types
@@ -255,7 +285,7 @@
 # 
 # Top level modules:
 # 	cache
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/l2cache.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/l2cache.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package l2cache_sv_unit
 # -- Importing package lc3b_types
@@ -263,7 +293,7 @@
 # 
 # Top level modules:
 # 	l2cache
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/wb_interconnect.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/wb_interconnect.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package wb_interconnect_sv_unit
 # -- Importing package lc3b_types
@@ -271,7 +301,7 @@
 # 
 # Top level modules:
 # 	wb_interconnect
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/mp3_top.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/mp3_top.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package mp3_top_sv_unit
 # -- Importing package lc3b_types
@@ -280,13 +310,13 @@
 # Top level modules:
 # 	mp3_top
 # 
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/mp3_tb.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/mp3_tb.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mp3_tb
 # 
 # Top level modules:
 # 	mp3_tb
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/mp3_top.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/mp3_top.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package mp3_top_sv_unit
 # -- Importing package lc3b_types
@@ -294,7 +324,7 @@
 # 
 # Top level modules:
 # 	mp3_top
-# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/physical_memory.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/RisingEdge/RisingEdge {/home/koren3/ece411/RisingEdge/RisingEdge/physical_memory.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module physical_memory
 # 
@@ -320,6 +350,8 @@
 # Loading work.line_to_word
 # Loading work.IF_ID_pipeline_sv_unit
 # Loading work.IF_ID_pipeline
+# Loading work.stall_unit_2_sv_unit
+# Loading work.stall_unit_2
 # Loading work.regfile_sv_unit
 # Loading work.regfile
 # Loading work.sext5_sv_unit
@@ -332,6 +364,10 @@
 # Loading work.ID_EX_pipeline_sv_unit
 # Loading work.ID_EX_pipeline
 # Loading work.mux4
+# Loading work.forwarding_unit_sv_unit
+# Loading work.forwarding_unit
+# Loading work.forwarding_unit_2_sv_unit
+# Loading work.forwarding_unit_2
 # Loading work.alu_sv_unit
 # Loading work.alu
 # Loading work.badder
@@ -347,6 +383,8 @@
 # Loading work.gencc
 # Loading work.branch_unit_sv_unit
 # Loading work.branch_unit
+# Loading work.static_branch_prediction_sv_unit
+# Loading work.static_branch_prediction
 # Loading work.MEM_WB_pipeline_sv_unit
 # Loading work.MEM_WB_pipeline
 # Loading work.control_rom_sv_unit
@@ -368,29 +406,30 @@
 # Loading work.l2cache_sv_unit
 # Loading work.l2cache
 # Loading work.physical_memory
-# ** Warning: (vsim-3015) /home/jtlew2/ece411/risingedge/datapath.sv(51): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'stall_pipeline'. The port definition is at: /home/jtlew2/ece411/risingedge/plus2.sv(3).
-#         Region: /mp3_tb/dut/mp3/the_datapath/pc_plus2
-# ** Warning: (vsim-3017) /home/jtlew2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Too few port connections. Expected 6, found 5.
+# ** Warning: (vsim-3017) /home/koren3/ece411/RisingEdge/RisingEdge/cache_datapath.sv(177): [TFMPC] - Too few port connections. Expected 6, found 5.
 #         Region: /mp3_tb/dut/interconnect/Icache/cache_datapath/wb2_mux
-# ** Warning: (vsim-3722) /home/jtlew2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Missing connection for port 'a'.
-# ** Warning: (vsim-3017) /home/jtlew2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Too few port connections. Expected 6, found 5.
+# ** Warning: (vsim-3722) /home/koren3/ece411/RisingEdge/RisingEdge/cache_datapath.sv(177): [TFMPC] - Missing connection for port 'a'.
+# ** Warning: (vsim-3017) /home/koren3/ece411/RisingEdge/RisingEdge/cache_datapath.sv(194): [TFMPC] - Too few port connections. Expected 6, found 5.
 #         Region: /mp3_tb/dut/interconnect/Icache/cache_datapath/adrmux
-# ** Warning: (vsim-3722) /home/jtlew2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Missing connection for port 'd'.
-# ** Warning: (vsim-3017) /home/jtlew2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Too few port connections. Expected 6, found 5.
+# ** Warning: (vsim-3722) /home/koren3/ece411/RisingEdge/RisingEdge/cache_datapath.sv(194): [TFMPC] - Missing connection for port 'd'.
+# ** Warning: (vsim-3017) /home/koren3/ece411/RisingEdge/RisingEdge/cache_datapath.sv(177): [TFMPC] - Too few port connections. Expected 6, found 5.
 #         Region: /mp3_tb/dut/interconnect/Dcache/cache_datapath/wb2_mux
-# ** Warning: (vsim-3722) /home/jtlew2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Missing connection for port 'a'.
-# ** Warning: (vsim-3017) /home/jtlew2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Too few port connections. Expected 6, found 5.
+# ** Warning: (vsim-3722) /home/koren3/ece411/RisingEdge/RisingEdge/cache_datapath.sv(177): [TFMPC] - Missing connection for port 'a'.
+# ** Warning: (vsim-3017) /home/koren3/ece411/RisingEdge/RisingEdge/cache_datapath.sv(194): [TFMPC] - Too few port connections. Expected 6, found 5.
 #         Region: /mp3_tb/dut/interconnect/Dcache/cache_datapath/adrmux
-# ** Warning: (vsim-3722) /home/jtlew2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Missing connection for port 'd'.
-# ** Warning: (vsim-3017) /home/jtlew2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Too few port connections. Expected 6, found 5.
+# ** Warning: (vsim-3722) /home/koren3/ece411/RisingEdge/RisingEdge/cache_datapath.sv(194): [TFMPC] - Missing connection for port 'd'.
+# ** Warning: (vsim-3017) /home/koren3/ece411/RisingEdge/RisingEdge/cache_datapath.sv(177): [TFMPC] - Too few port connections. Expected 6, found 5.
 #         Region: /mp3_tb/dut/l2cache/cache_datapath/wb2_mux
-# ** Warning: (vsim-3722) /home/jtlew2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Missing connection for port 'a'.
-# ** Warning: (vsim-3017) /home/jtlew2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Too few port connections. Expected 6, found 5.
+# ** Warning: (vsim-3722) /home/koren3/ece411/RisingEdge/RisingEdge/cache_datapath.sv(177): [TFMPC] - Missing connection for port 'a'.
+# ** Warning: (vsim-3017) /home/koren3/ece411/RisingEdge/RisingEdge/cache_datapath.sv(194): [TFMPC] - Too few port connections. Expected 6, found 5.
 #         Region: /mp3_tb/dut/l2cache/cache_datapath/adrmux
-# ** Warning: (vsim-3722) /home/jtlew2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Missing connection for port 'd'.
+# ** Warning: (vsim-3722) /home/koren3/ece411/RisingEdge/RisingEdge/cache_datapath.sv(194): [TFMPC] - Missing connection for port 'd'.
 # 
-#add wave *
-#view structure
-#view signals
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
 # run 100 ns
-# quit -f
+do /home/koren3/ece411/RisingEdge/RisingEdge/simulation/modelsim/wave.do
+run 100000ns

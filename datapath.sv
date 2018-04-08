@@ -28,10 +28,12 @@ module datapath
 );
 
 logic stall_pipeline;
+logic stall_pipeline_load;
 //assign stall_pipeline = 1'b0;
 lc3b_word memory_word_out;
 lc3b_word alu_out_out_EX_MEM;
-
+lc3b_word instruction_out_ID_EX;
+lc3b_word instruction_out_EX_MEM;
 
 
 /* PC */
@@ -39,13 +41,14 @@ lc3b_word pc;
 lc3b_word pc_plus2_out;
 lc3b_word addr_adder_out_out;
 logic branch_enable;
+logic branch_enable_out;
 logic jump_enable;
 logic jsr_enable;
 logic trap_enable;
 lc3b_word pcmux_out;
 plus2 pc_plus2
 (
-	.stall_pipeline(0),
+	.stall_pipeline(1'b0),
 	.in(pc),
 	.out(pc_plus2_out)
 );
@@ -59,7 +62,7 @@ lc3b_word addr_adder_out_out_EX_MEM;
 // br = jsr = addr_adder_out_out_EX_MEM
 // jmp = jsrr = alu_out_out_EX_MEM
 logic [3:0] pcmux_sel;
-assign pcmux_sel = {jsr_enable, jump_enable, branch_enable, trap_enable};
+assign pcmux_sel = {jsr_enable, jump_enable, branch_enable_out, trap_enable};
 mux_decode_sel pcmux
 (
 	.sel(pcmux_sel),
@@ -73,7 +76,7 @@ mux_decode_sel pcmux
 register program_counter
 (
 	.clk,
-	.load(!stall_pipeline),
+	.load(!stall_pipeline && !stall_pipeline_load),
 	.in(pcmux_out),
 	.out(pc)
 );
@@ -95,7 +98,7 @@ IF_ID_pipeline IF_ID_pipeline
 	.clk,
 	.instruction_in(ifetch_word_out),
 	.instruction_out(instruction),
-	.stall_pipeline(stall_pipeline)
+	.stall_pipeline(stall_pipeline || stall_pipeline_load)
 );
 // >>>>> IF/ID PIPELINE <<<<< //
 assign imm_mode = instruction[5];
@@ -105,9 +108,21 @@ assign opcode = lc3b_opcode'(instruction[15:12]);
 lc3b_reg mem_wb_dest;
 lc3b_word sr1;
 lc3b_word sr2_r;
+lc3b_word sr1_ID_EX;
+lc3b_word sr2_r_ID_EX;
 lc3b_word sr_out;
 lc3b_word regfilemux_out_MEM_WB;
 logic load_regfile;
+lc3b_opcode operation_out_EX_MEM;
+stall_unit_2 stall_unit_2
+(
+	.clk,
+	.instruction_curr(instruction_out_ID_EX),
+	.instruction_last(instruction_out_EX_MEM),
+	.stall_pipeline_load(stall_pipeline_load)
+	//output logic sti_write
+);
+
 regfile regfile
 (
     .clk,
@@ -119,7 +134,11 @@ regfile regfile
 	 .dest(mem_wb_dest),
     .reg_a(sr1),
 	 .reg_b(sr2_r),
-	 .sr_out(sr_out)
+	 .sr_out(sr_out),
+	 .src_a_ID_EX(instruction_out_ID_EX[8:6]),
+	 .src_b_ID_EX(instruction_out_ID_EX[2:0]),
+	 .reg_a_ID_EX(sr1_ID_EX),
+	 .reg_b_ID_EX(sr2_r_ID_EX)
 );
 
 lc3b_word sext5_out;
@@ -222,7 +241,13 @@ lc3b_word pc_out_ID_EX;
 lc3b_word dest_data_out_ID_EX;
 lc3b_word trapvector_out_ID_EX;
 lc3b_imm4 shift_out;
+lc3b_reg sr1_reg_ID_EX;
+lc3b_reg sr2_reg_ID_EX;
 logic is_ldb_stb_ID_EX;
+lc3b_opcode operation_out_ID_EX;
+logic imm_mode_out;
+logic sr2mux_sel_out;
+lc3b_word sext5_out_out;
 ID_EX_pipeline ID_EX_pipeline
 (
 	.clk,
@@ -238,6 +263,13 @@ ID_EX_pipeline ID_EX_pipeline
 	.trapvector_in(shifted_trapvector_in),
 	.shift_in(instruction[3:0]),
 	.is_ldb_stb_in(is_ldb_stb),
+	.sr1_reg_in(instruction[8:6]),
+	.sr2_reg_in(instruction[2:0]),
+	.operation_in(lc3b_opcode'(instruction[15:12])),
+	.instruction_in(instruction),
+	.imm_mode_in(imm_mode),
+	.sr2mux_sel_in(sr2mux_sel),
+	.sext5_out_in(sext5_out),
 	
 	.ctrl_out(ctrl_out_ID_EX),
 	.sr1_out(sr1_out),
@@ -251,28 +283,117 @@ ID_EX_pipeline ID_EX_pipeline
 	.trapvector_out(trapvector_out_ID_EX),
 	.shift_out(shift_out),
 	.is_ldb_stb_out(is_ldb_stb_ID_EX),
-	
-	.stall_pipeline(stall_pipeline)
+	.sr1_reg_out(sr1_reg_ID_EX),
+	.sr2_reg_out(sr2_reg_ID_EX),	
+	.operation_out(operation_out_ID_EX),
+	.instruction_out(instruction_out_ID_EX),
+	.stall_pipeline(stall_pipeline || stall_pipeline_load),
+	.imm_mode_out(imm_mode_out),
+	.sr2mux_sel_out(sr2mux_sel_out),
+	.sext5_out_out(sext5_out_out)
 );
 // >>>>> ID/EX PIPELINE <<<<< //
+
+lc3b_word sr2_ID_EX_out;
+mux2 immmux
+(
+	.sel(sr2mux_sel_out),
+	.a(sr2_r_ID_EX),
+	.b(sext5_out_out),
+	.f(sr2_ID_EX_out)
+);
 
 lc3b_word alumux_out;
 mux4 alumux
 (
 	.sel(ctrl_out_ID_EX.alumux_sel),
-	.a(sr2_out),
+	.a(sr2_ID_EX_out),
 	.b(offset6_out),
 	.c(branch_offset_out),
 	.d({12'h000, shift_out}),
 	.f(alumux_out)	 
 );
 
+logic [1:0] forwarding_unit_1_out;
+logic load_regfile_EX_MEM;
+lc3b_reg dest_out_EX_MEM;
+forwarding_unit forwarding_unit_1
+(
+	.regwrite_EX(load_regfile_EX_MEM),
+	.regwrite_MEM(load_regfile),
+	.register_num(sr1_reg_ID_EX),
+	.operation(operation_out_ID_EX),	
+	.destreg_EX(dest_out_EX_MEM),
+	.destreg_MEM(mem_wb_dest),
+	.forwarding_unit_out(forwarding_unit_1_out)
+);
+
+logic [1:0] forwarding_unit_2_out;
+logic [3:0] testvalue;
+forwarding_unit_2 forwarding_unit_2
+(
+	.regwrite_EX(load_regfile_EX_MEM),	
+	.regwrite_MEM(load_regfile),	
+	.register_num(sr2_reg_ID_EX),
+	.operation(operation_out_ID_EX),
+	.destreg_EX(dest_out_EX_MEM),
+	.destreg_MEM(mem_wb_dest),
+	.imm_mode(imm_mode_out),
+	.forwarding_unit_out(forwarding_unit_2_out),
+	.test(testvalue)
+);
+logic [1:0] forwarding_unit_3_out;
+forwarding_unit forwarding_unit_3
+(
+	.regwrite_EX(load_regfile_EX_MEM),
+	.regwrite_MEM(load_regfile),
+	.register_num(dest_out_ID_EX),
+	.operation(operation_out_ID_EX),	
+	.destreg_EX(dest_out_EX_MEM),
+	.destreg_MEM(mem_wb_dest),
+	.forwarding_unit_out(forwarding_unit_3_out)
+);
+
+lc3b_word sr1mux_out;
+lc3b_word sr2_mux_out;
+lc3b_word regfilemux_out;
+lc3b_word storemux_out;
+
+mux4 sr1mux
+(
+	.sel(forwarding_unit_1_out),
+	.a(sr1_ID_EX),
+	.b(regfilemux_out_MEM_WB),	
+	.c(regfilemux_out),
+	.d(sr1_out),
+	.f(sr1mux_out)
+);
+mux4 sr2_mux
+(
+	.sel(forwarding_unit_2_out),
+	.a(alumux_out),
+	.b(regfilemux_out_MEM_WB),
+	.c(regfilemux_out),
+	.d(alumux_out),
+	.f(sr2_mux_out)
+);
+
+mux4 storemux
+(
+	.sel(forwarding_unit_3_out),
+	.a(dest_data_out_ID_EX),
+	.b(regfilemux_out_MEM_WB),	
+	.c(regfilemux_out),
+	.d(dest_data_out_ID_EX),
+	.f(storemux_out)
+);
+
 lc3b_word alu_out;
 alu alu
 (
 	.aluop(ctrl_out_ID_EX.aluop),
-	.a(sr1_out),
-	.b(alumux_out),
+	.a(sr1mux_out),
+	.b(sr2_mux_out),
 	.f(alu_out)
 );
 
@@ -313,11 +434,9 @@ assign is_sti_ID_EX = ctrl_out_ID_EX.is_sti;
 
 // >>>>> EX/MEM PIPELINE <<<<< //
 lc3b_word pc_out_EX_MEM;
-lc3b_reg dest_out_EX_MEM;
 lc3b_nzp nzp_out_EX_MEM;
 logic is_br_out_EX_MEM;
 logic load_cc_EX_MEM;
-logic load_regfile_EX_MEM;
 logic mem_read_EX_MEM;
 logic mem_write_EX_MEM;
 logic [2:0] regfilemux_sel_EX_MEM;
@@ -332,6 +451,7 @@ logic is_ldi_EX_MEM;
 logic is_sti_EX_MEM;
 logic is_ldb_stb_EX_MEM;
 lc3b_control_word ctrl_out_EX_MEM;
+
 EX_MEM_pipeline EX_MEM_pipeline
 (
 	.clk,
@@ -349,7 +469,7 @@ EX_MEM_pipeline EX_MEM_pipeline
 	.mem_read_in(mem_read_ID_EX),
 	.mem_write_in(mem_write_ID_EX),
 	.regfilemux_sel_in(regfilemux_sel_ID_EX),
-	.dest_data_in(dest_data_out_ID_EX),
+	.dest_data_in(storemux_out),
 	.trapvector_in(trapvector_out_ID_EX),
 	.addr_sel_in(addr_sel_ID_EX),
 	.mem_byte_enable_in(mem_byte_enable_ID_EX),
@@ -357,7 +477,9 @@ EX_MEM_pipeline EX_MEM_pipeline
 	.is_sti_in(is_sti_ID_EX),
 	.is_ldb_stb_in(is_ldb_stb_ID_EX),
 	.ctrl_in(ctrl_out_ID_EX),
-	
+	.operation_in(operation_out_ID_EX),
+	.instruction_in(instruction_out_ID_EX),
+	.instruction_out(instruction_out_EX_MEM),
 	.alu_out_out(alu_out_out_EX_MEM),
 	.addr_adder_out_out(addr_adder_out_out_EX_MEM),
 	.pc_out(pc_out_EX_MEM),
@@ -376,11 +498,12 @@ EX_MEM_pipeline EX_MEM_pipeline
 	.trapvector_out(trapvector_out_EX_MEM),
 	.addr_sel_out(addr_sel_EX_MEM),
 	.mem_byte_enable_out(mem_byte_enable_EX_MEM),
-	.stall_pipeline(stall_pipeline),
+	.stall_pipeline(stall_pipeline || stall_pipeline_load),
 	.is_ldi_out(is_ldi_EX_MEM),
 	.is_sti_out(is_sti_EX_MEM),
 	.is_ldb_stb_out(is_ldb_stb_EX_MEM),
-	.ctrl_out(ctrl_out_EX_MEM)
+	.ctrl_out(ctrl_out_EX_MEM),
+	.operation_out(operation_out_EX_MEM)
 );
 // >>>>> EX/MEM PIPELINE <<<<< //
 lc3b_wb_adr mem_address_mux_out;
@@ -418,6 +541,7 @@ mux2 #(.width (4)) line_offset_mux
 );
 
 logic [3:0] line_offset;
+logic mem_write_out;
 stall_unit stall_unit
 (
 	.clk,
@@ -432,7 +556,7 @@ stall_unit stall_unit
 	.line_offset_in(line_offset_mux_out),
 	//.sti_write(sti_write),
 	.mem_read(mem_read),
-	.mem_write(mem_write),
+	.mem_write(mem_write_out),
 	.mem_address(mem_address),
 	.stall_pipeline(stall_pipeline),
 	.line_offset_out(line_offset)
@@ -454,7 +578,6 @@ set_sel set_sel
 	.mem_sel(mem_sel)
 );
 
-lc3b_word regfilemux_out;
 mux8 regfilemux
 (
     .sel(regfilesel_out),
@@ -498,21 +621,42 @@ assign branch_enable = is_br_out_EX_MEM & branch_unit_out;
 assign jump_enable = is_j_out_EX_MEM;
 assign jsr_enable = is_jsr_out_EX_MEM;
 assign trap_enable = is_trap_out_EX_MEM;
+
+logic load_regfile_out;
+static_branch_prediction flush
+(
+	.clk,
+	.branch_enable(branch_enable),
+	.unconditional_branch(jump_enable || jsr_enable || trap_enable),
+	.load_regfile(load_regfile_EX_MEM),
+	.stall(stall_pipeline),
+	.mem_write_in(mem_write_out),
+	.load_regfile_out(load_regfile_out),
+	.mem_write_out(mem_write),
+	.mem_read_in(mem_read),
+	.branch_enable_out(branch_enable_out)
+);
+
 // >>>>> MEM/WB PIPELINE <<<<< //
 lc3b_control_word ctrl_out_MEM_WB;
-
+lc3b_opcode operation_out_MEM_WB;
+lc3b_word instruction_out_MEM_WB;
 MEM_WB_pipeline MEM_WB_pipeline
 (
 	.clk,
 	.dest_in(dest_out_EX_MEM),
 	.regfilemux_out_in(regfilemux_out),
-	.load_regfile_in(load_regfile_EX_MEM),
+	.load_regfile_in(load_regfile_out),
 	.ctrl_in(ctrl_out_EX_MEM),
 	.dest_out(mem_wb_dest),
 	.regfilemux_out_out(regfilemux_out_MEM_WB),
 	.load_regfile_out(load_regfile),
 	.ctrl_out(ctrl_out_MEM_WB),
-	.stall_pipeline(stall_pipeline)	
+	.stall_pipeline(stall_pipeline),
+	.operation_in(operation_out_EX_MEM),
+	.operation_out(operation_out_MEM_WB),
+	.instruction_in(instruction_out_EX_MEM),
+	.instruction_out(instruction_out_MEM_WB)
 );
 // >>>>> MEM/WB PIPELINE <<<<< //
 
