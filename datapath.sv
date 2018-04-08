@@ -400,6 +400,7 @@ logic [1:0] mem_byte_enable_EX_MEM;
 logic is_ldi_EX_MEM;
 logic is_sti_EX_MEM;
 logic is_ldb_stb_EX_MEM;
+lc3b_word dest_data_in_EX_MEM;
 lc3b_control_word ctrl_out_EX_MEM;
 lc3b_opcode operation_out_EX_MEM;
 EX_MEM_pipeline EX_MEM_pipeline
@@ -419,7 +420,7 @@ EX_MEM_pipeline EX_MEM_pipeline
 	.mem_read_in(mem_read_ID_EX),
 	.mem_write_in(mem_write_ID_EX),
 	.regfilemux_sel_in(regfilemux_sel_ID_EX),
-	.dest_data_in(dest_data_out_ID_EX),
+	.dest_data_in(dest_data_in_EX_MEM),
 	.trapvector_in(trapvector_out_ID_EX),
 	.addr_sel_in(addr_sel_ID_EX),
 	.mem_byte_enable_in(mem_byte_enable_ID_EX),
@@ -535,16 +536,16 @@ forwarding_unit_store forwarding_unit_store
 mux4 store_value_mux
 (
 	.sel(forwarding_unit_store_out),
-	.a(dest_data_out_EX_MEM),
+	.a(dest_data_out_ID_EX),
 	.b(regfilemux_out_MEM_WB),	
 	.c(regfilemux_out),
 	.d(),
-	.f(store_value_final)	 
+	.f(dest_data_in_EX_MEM)	 
 );
 
 set_sel set_sel
 (
-	.mem_wdata_word(store_value_final),
+	.mem_wdata_word(dest_data_out_EX_MEM),
 	.offset(line_offset),
 	.mem_byte_enable(mem_byte_enable),
 	.out(mem_wdata),
