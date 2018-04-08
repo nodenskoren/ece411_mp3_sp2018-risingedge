@@ -17,9 +17,9 @@ module forwarding_unit_2
 always_comb
 begin
 	if (imm_mode == 0 && (operation == op_add || operation == op_and)) begin
-		if (regwrite_MEM & (destreg_MEM != 0) & !(regwrite_EX & (destreg_EX != 0) & (destreg_EX != register_num)) & (destreg_MEM == register_num))
+		if (regwrite_MEM && !(regwrite_EX &&(destreg_EX == register_num)) && (destreg_MEM == register_num))
 			forwarding_unit_out = 2'b01;	
-		else if (regwrite_EX & (destreg_EX != 0) & (destreg_EX == register_num))
+		else if (regwrite_EX && (destreg_EX == register_num))
 			forwarding_unit_out = 2'b10;
 		else
 			forwarding_unit_out = 2'b00;

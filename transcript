@@ -1,4 +1,4 @@
-# do /tmp/tmp.vuKNRPR5Om/do.do 
+# do /tmp/tmp.m0XLUYV0hf/do.do 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
@@ -82,6 +82,14 @@
 # 
 # Top level modules:
 # 	l1arbiter
+# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/static_branch_prediction.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package static_branch_prediction_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module static_branch_prediction
+# 
+# Top level modules:
+# 	static_branch_prediction
 # vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/array.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package array_sv_unit
@@ -226,6 +234,30 @@
 # 
 # Top level modules:
 # 	stall_unit
+# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/forwarding_unit.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package forwarding_unit_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module forwarding_unit
+# 
+# Top level modules:
+# 	forwarding_unit
+# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/stall_unit_2.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package stall_unit_2_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module stall_unit_2
+# 
+# Top level modules:
+# 	stall_unit_2
+# vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/forwarding_unit_2.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package forwarding_unit_2_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module forwarding_unit_2
+# 
+# Top level modules:
+# 	forwarding_unit_2
 # vlog -sv -work work +incdir+/home/jtlew2/ece411/risingedge {/home/jtlew2/ece411/risingedge/cache_datapath.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cache_datapath_sv_unit
@@ -315,6 +347,8 @@
 # Loading work.line_to_word
 # Loading work.IF_ID_pipeline_sv_unit
 # Loading work.IF_ID_pipeline
+# Loading work.stall_unit_2_sv_unit
+# Loading work.stall_unit_2
 # Loading work.regfile_sv_unit
 # Loading work.regfile
 # Loading work.sext5_sv_unit
@@ -327,6 +361,10 @@
 # Loading work.ID_EX_pipeline_sv_unit
 # Loading work.ID_EX_pipeline
 # Loading work.mux4
+# Loading work.forwarding_unit_sv_unit
+# Loading work.forwarding_unit
+# Loading work.forwarding_unit_2_sv_unit
+# Loading work.forwarding_unit_2
 # Loading work.alu_sv_unit
 # Loading work.alu
 # Loading work.badder
@@ -342,6 +380,8 @@
 # Loading work.gencc
 # Loading work.branch_unit_sv_unit
 # Loading work.branch_unit
+# Loading work.static_branch_prediction_sv_unit
+# Loading work.static_branch_prediction
 # Loading work.MEM_WB_pipeline_sv_unit
 # Loading work.MEM_WB_pipeline
 # Loading work.control_rom_sv_unit
@@ -363,8 +403,6 @@
 # Loading work.l2cache_sv_unit
 # Loading work.l2cache
 # Loading work.physical_memory
-# ** Warning: (vsim-3015) /home/jtlew2/ece411/risingedge/datapath.sv(51): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'stall_pipeline'. The port definition is at: /home/jtlew2/ece411/risingedge/plus2.sv(3).
-#         Region: /mp3_tb/dut/mp3/the_datapath/pc_plus2
 # ** Warning: (vsim-3017) /home/jtlew2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Too few port connections. Expected 6, found 5.
 #         Region: /mp3_tb/dut/interconnect/Icache/cache_datapath/wb2_mux
 # ** Warning: (vsim-3722) /home/jtlew2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Missing connection for port 'a'.
@@ -389,5 +427,5 @@
 #view signals
 # add list -radix hexadecimal [concat [string range [find instances -r regfile] 0 [expr [string first " " [find instances -r regfile]] - 1]] "/data}"]
 # run 20000000ns
-# write list /tmp/tmp.vuKNRPR5Om/test_list.lst
+# write list /tmp/tmp.m0XLUYV0hf/test_list.lst
 # exit

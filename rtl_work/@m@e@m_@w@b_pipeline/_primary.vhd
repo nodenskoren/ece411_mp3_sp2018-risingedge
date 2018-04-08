@@ -8,10 +8,12 @@ entity MEM_WB_pipeline is
         regfilemux_out_in: in     vl_logic_vector(15 downto 0);
         load_regfile_in : in     vl_logic;
         ctrl_in         : in     work.lc3b_types.lc3b_control_word;
+        operation_in    : in     work.lc3b_types.lc3b_opcode;
         dest_out        : out    vl_logic_vector(2 downto 0);
         regfilemux_out_out: out    vl_logic_vector(15 downto 0);
         load_regfile_out: out    vl_logic;
         ctrl_out        : out    work.lc3b_types.lc3b_control_word;
+        operation_out   : out    work.lc3b_types.lc3b_opcode;
         stall_pipeline  : in     vl_logic
     );
 end MEM_WB_pipeline;

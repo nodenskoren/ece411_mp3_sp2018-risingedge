@@ -48,6 +48,8 @@ entity EX_MEM_pipeline is
         is_sti_out      : out    vl_logic;
         ctrl_out        : out    work.lc3b_types.lc3b_control_word;
         is_ldb_stb_out  : out    vl_logic;
+        operation_in    : in     work.lc3b_types.lc3b_opcode;
+        operation_out   : out    work.lc3b_types.lc3b_opcode;
         stall_pipeline  : in     vl_logic
     );
 end EX_MEM_pipeline;

@@ -315,7 +315,7 @@ forwarding_unit_2 forwarding_unit_2
 	.imm_mode(imm_mode_out),
 	.forwarding_unit_out(forwarding_unit_2_out)	
 );
-
+lc3b_word regfilemux_out;
 lc3b_word sr1mux_out;
 lc3b_word sr2_mux_out;
 mux4 sr1mux
@@ -323,7 +323,7 @@ mux4 sr1mux
 	.sel(forwarding_unit_1_out),
 	.a(sr1_out),
 	.b(regfilemux_out_MEM_WB),	
-	.c(alu_out_out_EX_MEM),
+	.c(regfilemux_out),
 	.d(sr1_out),
 	.f(sr1mux_out)
 );
@@ -333,7 +333,7 @@ mux4 sr2_mux
 	.sel(forwarding_unit_2_out),
 	.a(alumux_out),
 	.b(regfilemux_out_MEM_WB),
-	.c(alu_out_out_EX_MEM),
+	.c(regfilemux_out),
 	.d(alumux_out),
 	.f(sr2_mux_out)
 );
@@ -518,21 +518,46 @@ line_to_word memory_line_to_word
 	.out(memory_word_out)
 );
 
+logic [1:0] forwarding_unit_store_out;
+lc3b_word store_value_final;
+
+forwarding_unit_store forwarding_unit_store
+(
+	.regwrite_EX(load_regfile_EX_MEM),	
+	.regwrite_MEM(load_regfile),	
+	.register_num(nzp_out_ID_EX),
+	.operation(operation_out_ID_EX),
+	.destreg_EX(dest_out_EX_MEM),
+	.destreg_MEM(mem_wb_dest),
+	.forwarding_unit_out(forwarding_unit_store_out)	
+);
+
+mux4 store_value_mux
+(
+	.sel(forwarding_unit_store_out),
+	.a(dest_data_out_EX_MEM),
+	.b(regfilemux_out_MEM_WB),	
+	.c(regfilemux_out),
+	.d(),
+	.f(store_value_final)	 
+);
+
 set_sel set_sel
 (
-	.mem_wdata_word(dest_data_out_EX_MEM),
+	.mem_wdata_word(store_value_final),
 	.offset(line_offset),
 	.mem_byte_enable(mem_byte_enable),
 	.out(mem_wdata),
 	.mem_sel(mem_sel)
 );
 
-lc3b_word regfilemux_out;
+
 mux8 regfilemux
 (
     .sel(regfilesel_out),
     .a(alu_out_out_EX_MEM),
 	 .b(memory_word_out),
+	 
 	 .c(pc_out_EX_MEM),
 	 .d(addr_adder_out_out_EX_MEM),
 	 .e(memory_word_out & 16'h00FF),
