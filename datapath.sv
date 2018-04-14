@@ -356,6 +356,7 @@ forwarding_unit forwarding_unit_3
 
 lc3b_word sr1mux_out;
 lc3b_word sr2_mux_out;
+lc3b_word regfilemux_out_pre_counter;
 lc3b_word regfilemux_out;
 lc3b_word storemux_out;
 
@@ -542,12 +543,14 @@ mux2 #(.width (4)) line_offset_mux
 
 logic [3:0] line_offset;
 logic mem_write_out;
+logic mem_read_out;
+logic accessing_counter;
 stall_unit stall_unit
 (
 	.clk,
 	.mem_read_in(mem_read_EX_MEM),
 	.mem_write_in(mem_write_EX_MEM),
-	.mem_resp(mem_resp),
+	.mem_resp(mem_resp || accessing_counter),
 	.ifetch_resp(ifetch_resp),
 	.is_sti(is_sti_EX_MEM),
 	.is_ldi(is_ldi_EX_MEM),
@@ -555,7 +558,7 @@ stall_unit stall_unit
 	.mem_rdata(memory_word_out),
 	.line_offset_in(line_offset_mux_out),
 	//.sti_write(sti_write),
-	.mem_read(mem_read),
+	.mem_read(mem_read_out),
 	.mem_write(mem_write_out),
 	.mem_address(mem_address),
 	.stall_pipeline(stall_pipeline),
@@ -577,6 +580,12 @@ set_sel set_sel
 	.out(mem_wdata),
 	.mem_sel(mem_sel)
 );
+logic clear_counter_out;
+logic [15:0] counter_mux_out;
+logic memory_counter_sel;
+//Counter wires
+logic c0_clear;
+logic [15:0] c0_out;
 
 mux8 regfilemux
 (
@@ -589,7 +598,15 @@ mux8 regfilemux
 	 .f(memory_word_out >> 8),
 	 .g(16'b0),
 	 .h(16'b0),
-    .out(regfilemux_out)
+    .out(regfilemux_out_pre_counter)
+);
+mux2 memory_counter_mux
+(
+	.sel(memory_counter_sel),
+	.a(regfilemux_out_pre_counter),
+	.b(counter_mux_out),
+	.f(regfilemux_out)
+
 );
 
 /* CC... Either here or after MEM/WB */
@@ -623,6 +640,7 @@ assign jsr_enable = is_jsr_out_EX_MEM;
 assign trap_enable = is_trap_out_EX_MEM;
 
 logic load_regfile_out;
+logic mem_write_bp;
 static_branch_prediction flush
 (
 	.clk,
@@ -632,10 +650,41 @@ static_branch_prediction flush
 	.stall(stall_pipeline),
 	.mem_write_in(mem_write_out),
 	.load_regfile_out(load_regfile_out),
-	.mem_write_out(mem_write),
-	.mem_read_in(mem_read),
+	.mem_write_out(mem_write_bp),
 	.branch_enable_out(branch_enable_out)
 );
+
+assign mem_read = mem_read_out && !accessing_counter;
+assign mem_write = mem_write_bp && !accessing_counter;
+
+
+counter_control counter_control
+(
+	.is_read(mem_read_out),
+	.is_write(mem_write_bp),
+	.addr(mem_address),
+	.clear_counter(clear_counter_out),
+	.counter_out_sel(memory_counter_sel),
+	.accessing_counter(accessing_counter)
+);
+
+counter_decoder counter_decoder
+(
+	.clear_counter(clear_counter_out),
+	.offset(line_offset),
+	.c0(c0_clear),
+	.c1(),
+	.c2(),
+	.c3(), .c4(), .c5(),.c6(),.c7(),.c8(),.c9(),.c10(),.c11(),.c12(),.c13(),.c14(),.c15()
+);
+
+mux16 counter_value_mux
+(
+	.sel(line_offset),
+	.a(c0_out),
+	.out(counter_mux_out)
+);
+
 
 // >>>>> MEM/WB PIPELINE <<<<< //
 lc3b_control_word ctrl_out_MEM_WB;
@@ -660,5 +709,21 @@ MEM_WB_pipeline MEM_WB_pipeline
 );
 // >>>>> MEM/WB PIPELINE <<<<< //
 
+// >>>>> COUNTERS <<<<< //
 
+
+
+counter_rising_edge counter_stalls_memory
+(
+	.increment_count(stall_pipeline),
+	.clear(c0_clear),
+	.count_out(c0_out)
+);
+
+counter_rising_edge counter_stalls_hazard
+(
+	.increment_count(stall_pipeline_load),
+	.clear(0),
+	.count_out()
+);
 endmodule : datapath
