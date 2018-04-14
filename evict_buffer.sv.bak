@@ -1,0 +1,19 @@
+import lc3b_types::*;
+
+module evict_buffer
+(
+	
+);
+
+register program_counter
+(
+	.clk,
+	.load(!stall_pipeline && !stall_pipeline_load),
+	.in(pcmux_out),
+	.out(pc)
+);
+
+
+	
+
+endmodule : evict_buffer

@@ -4,14 +4,15 @@ module l2cache
 (
 	//input clk,
 	wishbone.slave wb2,
-	wishbone.master wb
+	wishbone.master wb,
+	output logic pmem_read, pmem_write
 	//wishbone.slave wb2
 
 );
 
 logic cpu_resp;
 logic [127:0] cpu_data, pmem_wdata;
-logic pmem_write, pmem_read;
+//logic pmem_write, pmem_read;
 logic [15:0] pmem_sel;
 
 logic [11:0] pmem_adr;
