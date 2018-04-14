@@ -618,9 +618,9 @@ branch_unit cccomp
 );
 
 assign branch_enable = is_br_out_EX_MEM & branch_unit_out;
-assign jump_enable = is_j_out_EX_MEM;
-assign jsr_enable = is_jsr_out_EX_MEM;
-assign trap_enable = is_trap_out_EX_MEM;
+//assign jump_enable = is_j_out_EX_MEM;
+//assign jsr_enable = is_jsr_out_EX_MEM;
+//assign trap_enable = is_trap_out_EX_MEM;
 
 logic load_regfile_out;
 static_branch_prediction flush
@@ -634,7 +634,14 @@ static_branch_prediction flush
 	.load_regfile_out(load_regfile_out),
 	.mem_write_out(mem_write),
 	.mem_read_in(mem_read),
-	.branch_enable_out(branch_enable_out)
+	.branch_enable_out(branch_enable_out),
+	.is_load(operation_out_EX_MEM),
+	.is_j_in(is_j_out_EX_MEM),
+	.is_j_out(jump_enable),
+	.is_jsr_in(is_jsr_out_EX_MEM),
+	.is_jsr_out(jsr_enable),
+	.is_trap_in(is_trap_out_EX_MEM),
+	.is_trap_out(trap_enable)
 );
 
 // >>>>> MEM/WB PIPELINE <<<<< //

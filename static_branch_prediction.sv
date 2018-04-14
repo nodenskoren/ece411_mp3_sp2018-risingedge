@@ -11,7 +11,14 @@ module static_branch_prediction
 	output logic load_regfile_out,
 	output logic mem_write_out,
 	output logic branch_enable_out,
-	input logic mem_read_in
+	input logic mem_read_in,
+	input lc3b_opcode is_load,
+	input logic is_j_in,
+	output logic is_j_out,
+	input logic is_jsr_in,
+	output logic is_jsr_out,
+	input logic is_trap_in,
+	output logic is_trap_out	
 	//output logic sti_write
 );
 
@@ -19,8 +26,11 @@ enum int unsigned {
     /* List of states */
 	s_branch_detection,
 	s_flush_1,
+	s_flush_1_wait,
 	s_flush_2,
-	s_flush_3
+	s_flush_2_wait,
+	s_flush_3,
+	s_flush_3_wait
 } state, next_state;
 
 always_comb
@@ -28,22 +38,58 @@ begin: state_actions
 	load_regfile_out = load_regfile;
 	mem_write_out = mem_write_in;
 	branch_enable_out = branch_enable;
+	is_j_out = is_j_in;
+	is_jsr_out = is_jsr_in;
+	is_trap_out = is_trap_in;
 	case(state)
 		s_branch_detection: /* do nothing */;
 		s_flush_1: begin
 			mem_write_out = 1'b0;
 			load_regfile_out = 1'b0;
 			branch_enable_out = 1'b0;
+			is_j_out = 1'b0;
+			is_jsr_out = 1'b0;
+			is_trap_out = 1'b0;
+		end
+		s_flush_1_wait: begin
+			mem_write_out = 1'b0;
+			load_regfile_out = 1'b0;
+			branch_enable_out = 1'b0;
+			is_j_out = 1'b0;
+			is_jsr_out = 1'b0;
+			is_trap_out = 1'b0;			
 		end
 		s_flush_2: begin
 			mem_write_out = 1'b0;
 			load_regfile_out = 1'b0;
 			branch_enable_out = 1'b0;
+			is_j_out = 1'b0;
+			is_jsr_out = 1'b0;
+			is_trap_out = 1'b0;			
 		end
+		s_flush_2_wait: begin
+			mem_write_out = 1'b0;
+			load_regfile_out = 1'b0;
+			branch_enable_out = 1'b0;
+			is_j_out = 1'b0;
+			is_jsr_out = 1'b0;
+			is_trap_out = 1'b0;			
+		end		
 		s_flush_3: begin
 			mem_write_out = 1'b0;
 			load_regfile_out = 1'b0;
 			branch_enable_out = 1'b0;
+			is_j_out = 1'b0;
+			is_jsr_out = 1'b0;
+			is_trap_out = 1'b0;			
+		end
+		s_flush_3_wait: begin
+			mem_write_out = 1'b0;
+			load_regfile_out = 1'b0;
+			branch_enable_out = 1'b0;
+			is_j_out = 1'b0;
+			is_jsr_out = 1'b0;
+			is_trap_out = 1'b0;			
 		end		
 		default: ;
 	endcase
@@ -54,7 +100,7 @@ begin: next_state_logic
 	next_state = state;
 	case(state)
 		s_branch_detection: begin
-			if((branch_enable == 1 || unconditional_branch == 1) && stall == 0) begin
+			if((branch_enable == 1 || is_j_in == 1 || is_jsr_in == 1 || is_trap_in == 1) && stall == 0) begin
 				next_state = s_flush_1;
 			end
 			else begin
@@ -63,28 +109,63 @@ begin: next_state_logic
 		end
 		s_flush_1: begin
 			if(stall == 0) begin
-				next_state = s_flush_2;
+				if(is_load == op_ldr || is_load == op_ldb || is_load == op_ldi) begin
+					next_state = s_flush_1_wait;
+				end
+				else begin
+					next_state = s_flush_2;
+				end
 			end
 			else begin
 				next_state = s_flush_1;
 			end
 		end
+		
+		s_flush_1_wait: begin
+			if(stall == 0) begin
+				next_state = s_flush_2;
+			end
+		end
+		
 		s_flush_2: begin
 			if(stall == 0) begin		
-				next_state = s_flush_3;
+				if(is_load == op_ldr || is_load == op_ldb || is_load == op_ldi) begin
+					next_state = s_flush_2_wait;
+				end
+				else begin
+					next_state = s_flush_3;
+				end
 			end
 			else begin
 				next_state = s_flush_2;
 			end			
 		end
+
+		s_flush_2_wait: begin
+			if(stall == 0) begin
+				next_state = s_flush_3;
+			end
+		end
+		
 		s_flush_3: begin
 			if(stall == 0) begin			
-				next_state = s_branch_detection;
+				if(is_load == op_ldr || is_load == op_ldb || is_load == op_ldi) begin
+					next_state = s_flush_3_wait;
+				end
+				else begin
+					next_state = s_branch_detection;
+				end
 			end
 			else begin
 				next_state = s_flush_3;
 			end
 		end
+
+		s_flush_3_wait: begin
+			if(stall == 0) begin
+				next_state = s_branch_detection;
+			end
+		end		
 	endcase	
 end
 
