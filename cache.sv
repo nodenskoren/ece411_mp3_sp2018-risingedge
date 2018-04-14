@@ -14,7 +14,9 @@ module cache
 	output logic mem_stb,
 	output logic mem_we,
 	output logic [15:0] mem_sel,
-	output logic [11:0] mem_adr
+	output logic [11:0] mem_adr,
+	
+	output logic [15:0] cache_hit_cnt, cache_miss_cnt
 
 );
 
@@ -49,6 +51,7 @@ logic dirty0_write, dirty1_write, dirty_in;
 logic updateLRU;
 logic wb_sel;
 logic [1:0] adrmux_sel;
+logic cache_hit_inc, cache_miss_inc;
 
 
 
@@ -115,7 +118,25 @@ cache_control cache_controller
 	.cpu_resp,
 	.wb_sel,
 	.adrmux_sel,
-	.req(wb_cpu.STB & wb_cpu.CYC)
+	.req(wb_cpu.STB & wb_cpu.CYC),
+	.cache_hit_inc,
+	.cache_miss_inc
+);
+
+counter cache_hits
+(
+	.clk(wb_cpu.CLK),
+	.increment_count(cache_hit_inc),
+	.clear(1'b0),
+	.count_out(cache_hit_cnt)
+);
+
+counter cache_misses
+(
+	.clk(wb_cpu.CLK),
+	.increment_count(cache_miss_inc),
+	.clear(1'b0),
+	.count_out(cache_miss_cnt)
 );
 
 

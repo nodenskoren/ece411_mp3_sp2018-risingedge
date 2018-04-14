@@ -39,6 +39,8 @@ cache Icache
 	.mem_adr(i_adr)
 );
 
+
+
 cache Dcache
 (
 	.wb_cpu(memory),
@@ -53,6 +55,7 @@ cache Dcache
 	.mem_sel(d_sel),
 	.mem_adr(d_adr)
 );
+
 
 mux2 #(.width(128)) dat_m
 (

@@ -19,12 +19,13 @@ begin
     begin
         count = count + 1;
     end
+	if(clear) count <= 0;
 end
 
-always_ff @ (posedge clear)
+/*always_ff @ (posedge clear)
 begin
 	count<=0;
-end
+end*/
 
 always_comb
 begin
