@@ -715,6 +715,7 @@ MEM_WB_pipeline MEM_WB_pipeline
 
 counter_rising_edge counter_stalls_memory
 (
+	.clk,
 	.increment_count(stall_pipeline),
 	.clear(c0_clear),
 	.count_out(c0_out)
@@ -722,6 +723,7 @@ counter_rising_edge counter_stalls_memory
 
 counter_rising_edge counter_stalls_hazard
 (
+	.clk,
 	.increment_count(stall_pipeline_load),
 	.clear(0),
 	.count_out()
