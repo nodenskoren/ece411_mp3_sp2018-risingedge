@@ -4,7 +4,12 @@ module wb_interconnect
 (
 	wishbone.slave ifetch,
 	wishbone.slave memory,
-	wishbone.master wb_l2
+	wishbone.master wb_l2,
+	
+	input logic dcache_hit_clear, dcache_miss_clear,
+	input logic icache_hit_clear, icache_miss_clear,
+	output logic [15:0] dcache_hits, dcache_misses,
+	output logic [15:0] icache_hits, icache_misses
 );
 
 logic cache_sel;
@@ -36,7 +41,12 @@ cache Icache
 	.mem_stb(i_stb),
 	.mem_we(i_we),
 	.mem_sel(i_sel),
-	.mem_adr(i_adr)
+	.mem_adr(i_adr),
+	
+	.cache_hit_cnt(icache_hits),
+	.cache_miss_cnt(icache_misses),
+	.hit_clear(icache_hit_clear),
+	.miss_clear(icache_miss_clear)
 );
 
 
@@ -53,7 +63,12 @@ cache Dcache
 	.mem_stb(d_stb),
 	.mem_we(d_we),
 	.mem_sel(d_sel),
-	.mem_adr(d_adr)
+	.mem_adr(d_adr),
+	
+	.cache_hit_cnt(dcache_hits),
+	.cache_miss_cnt(dcache_misses),
+	.hit_clear(dcache_hit_clear),
+	.miss_clear(dcache_miss_clear)
 );
 
 

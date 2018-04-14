@@ -24,7 +24,10 @@ module datapath
 	input logic offset_sel,
 	input logic sr2mux_sel,
 	input logic destmux_sel,
-	input logic is_ldb_stb
+	input logic is_ldb_stb,
+	
+	input logic [15:0] c10_out, c11_out, c12_out, c13_out, c14_out, c15_out,
+	output logic c10_clear, c11_clear, c12_clear, c13_clear, c14_clear, c15_clear
 );
 
 logic stall_pipeline;
@@ -668,6 +671,12 @@ counter_control counter_control
 	.accessing_counter(accessing_counter)
 );
 
+/* c10 = dcache hit
+	c11 = dcache miss
+	c12 = icache hit
+	c13 = icache miss
+	c4 = l2 hit
+	c5 = l2 miss */
 counter_decoder counter_decoder
 (
 	.clear_counter(clear_counter_out),
@@ -675,13 +684,20 @@ counter_decoder counter_decoder
 	.c0(c0_clear),
 	.c1(),
 	.c2(),
-	.c3(), .c4(), .c5(),.c6(),.c7(),.c8(),.c9(),.c10(),.c11(),.c12(),.c13(),.c14(),.c15()
+	.c3(), .c4(), .c5(),.c6(),.c7(),.c8(),.c9(),.c10(c10_clear),.c11(c11_clear),.c12(c12_clear),.c13(c13_clear),.c14(c14_clear),.c15(c15_clear)
 );
 
 mux16 counter_value_mux
 (
 	.sel(line_offset),
 	.a(c0_out),
+	
+	.k(c10_out),
+	.l(c11_out),
+	.m(c12_out),
+	.n(c13_out),
+	.o(c14_out),
+	.p(c15_out),
 	.out(counter_mux_out)
 );
 

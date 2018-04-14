@@ -4,7 +4,14 @@ module mp3
 (
     /* Memory signals */
 	 wishbone.master ifetch,
-	 wishbone.master memory
+	 wishbone.master memory,
+	 
+	 input logic [15:0] dcache_hits, dcache_misses,
+	 input logic [15:0] icache_hits, icache_misses,
+	 input logic [15:0] l2_hits, l2_misses,
+	 output logic dcache_hit_clear, dcache_miss_clear,
+	 output logic icache_hit_clear, icache_miss_clear,
+	 output logic l2_hit_clear, l2_miss_clear
 );
 
 lc3b_opcode dp_opcode;
@@ -43,7 +50,21 @@ datapath the_datapath
 	.offset_sel(c_offset_sel),
 	.sr2mux_sel(c_sr2mux_sel),
 	.destmux_sel(c_destmux_sel),
-	.is_ldb_stb(c_is_ldb_stb)
+	.is_ldb_stb(c_is_ldb_stb),
+	
+	.c10_out(dcache_hits),
+	.c11_out(dcache_misses),
+	.c12_out(icache_hits),
+	.c13_out(icache_misses),
+	.c14_out(l2_hits),
+	.c15_out(l2_misses),
+	
+	.c10_clear(dcache_hit_clear),
+	.c11_clear(dcache_miss_clear),
+	.c12_clear(icache_hit_clear),
+	.c13_clear(icache_miss_clear),
+	.c14_clear(l2_hit_clear),
+	.c15_clear(l2_miss_clear)
 );
 
 control_rom control_rom

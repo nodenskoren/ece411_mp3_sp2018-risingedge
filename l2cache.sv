@@ -7,13 +7,16 @@ module l2cache
 	wishbone.master wb,
 	//wishbone.slave wb2
 	
-	output logic [15:0] cache_hit_cnt, cache_miss_cnt
+	input logic l2_hit_clear, l2_miss_clear,
+	output logic [15:0] cache_hit_cnt, cache_miss_cnt,
+	
+	output logic pmem_read, pmem_write
 
 );
 
 logic cpu_resp;
 logic [127:0] cpu_data, pmem_wdata;
-logic pmem_write, pmem_read;
+//logic pmem_write, pmem_read;
 logic [15:0] pmem_sel;
 
 logic [11:0] pmem_adr;
@@ -120,7 +123,7 @@ counter cache_hits
 	.clk(wb.CLK),
 	.increment_count(cache_hit_inc),
 	//.clear(clear_cache_hits),
-	.clear(1'b0),
+	.clear(l2_hit_clear),
 	.count_out(cache_hit_cnt)
 );
 
@@ -129,7 +132,7 @@ counter cache_misses
 	.clk(wb.CLK),
 	.increment_count(cache_miss_inc),
 	//.clear(clear_cache_miss),
-	.clear(1'b0),
+	.clear(l2_miss_clear),
 	.count_out(cache_miss_cnt)
 );
 

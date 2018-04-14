@@ -16,7 +16,8 @@ module cache
 	output logic [15:0] mem_sel,
 	output logic [11:0] mem_adr,
 	
-	output logic [15:0] cache_hit_cnt, cache_miss_cnt
+	output logic [15:0] cache_hit_cnt, cache_miss_cnt,
+	input logic hit_clear, miss_clear
 
 );
 
@@ -127,7 +128,7 @@ counter cache_hits
 (
 	.clk(wb_cpu.CLK),
 	.increment_count(cache_hit_inc),
-	.clear(1'b0),
+	.clear(hit_clear),
 	.count_out(cache_hit_cnt)
 );
 
@@ -135,7 +136,7 @@ counter cache_misses
 (
 	.clk(wb_cpu.CLK),
 	.increment_count(cache_miss_inc),
-	.clear(1'b0),
+	.clear(miss_clear),
 	.count_out(cache_miss_cnt)
 );
 
