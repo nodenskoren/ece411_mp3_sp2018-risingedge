@@ -4,6 +4,8 @@ This checkpoint, we implemented software performance counters, the eviction writ
 Roadmap for CP5:
 For the final checkpoint, we will add a 4-way cache, dynamic branch prediction, and hardware prefetching. Josh will focus on the hardware prefetching, Alex will handle handle the 4-way cache, and Nodens will handle the dynamic branch predition. Additionally, we will examine performance and clock speeds in more detail to see other tweaks to improve performance for the competition.
 
+We plan to implement the GShare predictor, as it gives the highest accuracy on the benchmark tests. We would be tracking the branch history in an 8-bit branch history register, and XOR it with the lowest 8 bits of the PC, then used the mapped result as pointer to the private history table of 2-bit counters. Branch direction prediction would be done at the IF/ID stage, and the output of the branch target prediction would be added as an input to the PCMUX with the branch prediction being the select. BHR, the 2-bit counter of the corresponding entry, and the BTB would be updated in the EX_MEM state when branch direction and address are fully resolved.
+
 MP3 Progress Report Checkpoint 3
 
 This checkpoint, we implemented data forwarding and full hazard detection including control, data, and structural hazards. The L2 cache is complete and integrated. We also started working on static branch prediction, and modifying the L2 cache to be 4-way set associative. Josh designed the forwarding unit, Nodens implemented the forwarding unit and worked on branch prediction, and Alex completed the L2 cache and started modifying the cache to be 4-way. Everyone participated in debugging.
