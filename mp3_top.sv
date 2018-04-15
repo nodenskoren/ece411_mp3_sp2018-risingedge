@@ -54,7 +54,7 @@ wb_interconnect interconnect
 l2cache l2cache
 (
 	.wb2(wb_l2),
-	.wb(wb_evict),
+	.wb(wb_mem),
 	
 	.l2_hit_clear,
 	.l2_miss_clear,
@@ -66,13 +66,13 @@ l2cache l2cache
 	
 );
 
-evict_buffer evict_buffer
+/*evict_buffer evict_buffer
 (
 	.wb_l2(wb_evict),
 	.wb_mem,
 	.mem_write(l2_write),
 	.mem_read(l2_read)
-);
+);*/
 
 
 endmodule : mp3_top

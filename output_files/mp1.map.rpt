@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mp1
-Sun Apr 15 15:05:42 2018
+Sun Apr 15 16:42:07 2018
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -14,121 +14,120 @@ Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. State Machine - |mp3_top|evict_buffer:evict_buffer|state
- 10. State Machine - |mp3_top|l2cache:l2cache|cache_control:cache_controller|state
- 11. State Machine - |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_control:cache_controller|state
- 12. State Machine - |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_control:cache_controller|state
- 13. State Machine - |mp3_top|wb_interconnect:interconnect|l1arbiter:arbiter|state
- 14. State Machine - |mp3_top|mp3:mp3|datapath:the_datapath|static_branch_prediction:flush|state
- 15. State Machine - |mp3_top|mp3:mp3|datapath:the_datapath|stall_unit:stall_unit|state
- 16. State Machine - |mp3_top|mp3:mp3|datapath:the_datapath|stall_unit_2:stall_unit_2|state
- 17. Registers Removed During Synthesis
- 18. Removed Registers Triggering Further Register Optimizations
- 19. General Register Statistics
- 20. Registers Packed Into Inferred Megafunctions
- 21. Multiplexer Restructuring Statistics (Restructuring Performed)
- 22. Source assignments for mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2|altsyncram_6fk1:auto_generated
- 23. Source assignments for mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_0|altsyncram_opk1:auto_generated
- 24. Source assignments for mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_1|altsyncram_opk1:auto_generated
- 25. Source assignments for mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_3|altsyncram_opk1:auto_generated
- 26. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|plus2:pc_plus2
- 27. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux_decode_sel:pcmux
- 28. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|register:program_counter
- 29. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|sext5:sext5
- 30. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux2:sr2mux
- 31. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux2:destmux
- 32. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|adj:adj6
- 33. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|sext5:sext6
- 34. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux2:offset6mux
- 35. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|adj:adj9
- 36. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|adj:adj11
- 37. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux2:offset
- 38. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|zext:zext8
- 39. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux2:immmux
- 40. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux4:alumux
- 41. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux4:sr1mux
- 42. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux4:sr2_mux
- 43. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux4:storemux
- 44. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|badder:addr_adder
- 45. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux2:mem_address_mux
- 46. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux2:line_offset_mux
- 47. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux8:regfilemux
- 48. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux2:memory_counter_mux
- 49. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|register:cc
- 50. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux16:counter_value_mux
- 51. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|cache_writeword:updateline
- 52. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux
- 53. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:data0
- 54. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:data1
- 55. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:tag0
- 56. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:tag1
- 57. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:valid0
- 58. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:valid1
- 59. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:dirty0
- 60. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:dirty1
- 61. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:LRU
- 62. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux4:wb2_mux
- 63. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:evict_mux
- 64. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux4:adrmux
- 65. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|cache_writeword:updateline
- 66. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux
- 67. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:data0
- 68. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:data1
- 69. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:tag0
- 70. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:tag1
- 71. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:valid0
- 72. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:valid1
- 73. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:dirty0
- 74. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:dirty1
- 75. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:LRU
- 76. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux4:wb2_mux
- 77. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:evict_mux
- 78. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux4:adrmux
- 79. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|mux2:dat_m
- 80. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|mux2:cyc
- 81. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|mux2:stb
- 82. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|mux2:we
- 83. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|mux2:sel
- 84. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|mux2:adr
- 85. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|cache_writeword:updateline
- 86. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux
- 87. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:data0
- 88. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:data1
- 89. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:tag0
- 90. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:tag1
- 91. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:valid0
- 92. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:valid1
- 93. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:dirty0
- 94. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:dirty1
- 95. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:LRU
- 96. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|mux4:wb2_mux
- 97. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|mux2:evict_mux
- 98. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|mux4:adrmux
- 99. Parameter Settings for User Entity Instance: evict_buffer:evict_buffer|register:eviction
-100. Parameter Settings for Inferred Entity Instance: mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2
-101. Parameter Settings for Inferred Entity Instance: mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_0
-102. Parameter Settings for Inferred Entity Instance: mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_1
-103. Parameter Settings for Inferred Entity Instance: mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_3
-104. altsyncram Parameter Settings by Entity Instance
-105. Port Connectivity Checks: "l2cache:l2cache|cache_control:cache_controller"
-106. Port Connectivity Checks: "wb_interconnect:interconnect|cache:Icache|cache_control:cache_controller"
-107. Port Connectivity Checks: "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux4:adrmux"
-108. Port Connectivity Checks: "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux4:wb2_mux"
-109. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|counter_rising_edge:counter_stalls_hazard"
-110. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|MEM_WB_pipeline:MEM_WB_pipeline"
-111. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|mux16:counter_value_mux"
-112. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|counter_decoder:counter_decoder"
-113. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|mux8:regfilemux"
-114. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline"
-115. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|forwarding_unit_2:forwarding_unit_2"
-116. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|mux4:alumux"
-117. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline"
-118. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|zext:zext8"
-119. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|mux2:destmux"
-120. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|plus2:pc_plus2"
-121. Elapsed Time Per Partition
-122. Analysis & Synthesis Messages
-123. Analysis & Synthesis Suppressed Messages
+  9. State Machine - |mp3_top|l2cache:l2cache|cache_control:cache_controller|state
+ 10. State Machine - |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_control:cache_controller|state
+ 11. State Machine - |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_control:cache_controller|state
+ 12. State Machine - |mp3_top|wb_interconnect:interconnect|l1arbiter:arbiter|state
+ 13. State Machine - |mp3_top|mp3:mp3|datapath:the_datapath|static_branch_prediction:flush|state
+ 14. State Machine - |mp3_top|mp3:mp3|datapath:the_datapath|stall_unit:stall_unit|state
+ 15. State Machine - |mp3_top|mp3:mp3|datapath:the_datapath|stall_unit_2:stall_unit_2|state
+ 16. Registers Removed During Synthesis
+ 17. Removed Registers Triggering Further Register Optimizations
+ 18. General Register Statistics
+ 19. Registers Packed Into Inferred Megafunctions
+ 20. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 21. Source assignments for mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2|altsyncram_6fk1:auto_generated
+ 22. Source assignments for mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_0|altsyncram_opk1:auto_generated
+ 23. Source assignments for mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_1|altsyncram_opk1:auto_generated
+ 24. Source assignments for mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_3|altsyncram_opk1:auto_generated
+ 25. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|plus2:pc_plus2
+ 26. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux_decode_sel:pcmux
+ 27. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|register:program_counter
+ 28. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|sext5:sext5
+ 29. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux2:sr2mux
+ 30. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux2:destmux
+ 31. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|adj:adj6
+ 32. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|sext5:sext6
+ 33. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux2:offset6mux
+ 34. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|adj:adj9
+ 35. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|adj:adj11
+ 36. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux2:offset
+ 37. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|zext:zext8
+ 38. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux2:immmux
+ 39. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux4:alumux
+ 40. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux4:sr1mux
+ 41. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux4:sr2_mux
+ 42. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux4:storemux
+ 43. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|badder:addr_adder
+ 44. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux2:mem_address_mux
+ 45. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux2:line_offset_mux
+ 46. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux8:regfilemux
+ 47. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux2:memory_counter_mux
+ 48. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|register:cc
+ 49. Parameter Settings for User Entity Instance: mp3:mp3|datapath:the_datapath|mux16:counter_value_mux
+ 50. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|cache_writeword:updateline
+ 51. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux
+ 52. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:data0
+ 53. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:data1
+ 54. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:tag0
+ 55. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:tag1
+ 56. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:valid0
+ 57. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:valid1
+ 58. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:dirty0
+ 59. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:dirty1
+ 60. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:LRU
+ 61. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux4:wb2_mux
+ 62. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:evict_mux
+ 63. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux4:adrmux
+ 64. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|cache_writeword:updateline
+ 65. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux
+ 66. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:data0
+ 67. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:data1
+ 68. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:tag0
+ 69. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:tag1
+ 70. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:valid0
+ 71. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:valid1
+ 72. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:dirty0
+ 73. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:dirty1
+ 74. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:LRU
+ 75. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux4:wb2_mux
+ 76. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:evict_mux
+ 77. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux4:adrmux
+ 78. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|mux2:dat_m
+ 79. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|mux2:cyc
+ 80. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|mux2:stb
+ 81. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|mux2:we
+ 82. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|mux2:sel
+ 83. Parameter Settings for User Entity Instance: wb_interconnect:interconnect|mux2:adr
+ 84. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|cache_writeword:updateline
+ 85. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux
+ 86. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:data0
+ 87. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:data1
+ 88. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:tag0
+ 89. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:tag1
+ 90. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:valid0
+ 91. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:valid1
+ 92. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:dirty0
+ 93. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:dirty1
+ 94. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|array:LRU
+ 95. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|mux4:wb2_mux
+ 96. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|mux2:evict_mux
+ 97. Parameter Settings for User Entity Instance: l2cache:l2cache|cache_datapath:cache_datapath|mux4:adrmux
+ 98. Parameter Settings for Inferred Entity Instance: mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2
+ 99. Parameter Settings for Inferred Entity Instance: mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_0
+100. Parameter Settings for Inferred Entity Instance: mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_1
+101. Parameter Settings for Inferred Entity Instance: mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_3
+102. altsyncram Parameter Settings by Entity Instance
+103. Port Connectivity Checks: "l2cache:l2cache|cache_control:cache_controller"
+104. Port Connectivity Checks: "l2cache:l2cache"
+105. Port Connectivity Checks: "wb_interconnect:interconnect|cache:Icache|cache_control:cache_controller"
+106. Port Connectivity Checks: "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux4:adrmux"
+107. Port Connectivity Checks: "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux4:wb2_mux"
+108. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|counter_rising_edge:counter_stalls_hazard"
+109. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|MEM_WB_pipeline:MEM_WB_pipeline"
+110. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|mux16:counter_value_mux"
+111. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|counter_decoder:counter_decoder"
+112. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|mux8:regfilemux"
+113. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline"
+114. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|forwarding_unit_2:forwarding_unit_2"
+115. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|mux4:alumux"
+116. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline"
+117. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|zext:zext8"
+118. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|mux2:destmux"
+119. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|plus2:pc_plus2"
+120. Elapsed Time Per Partition
+121. Analysis & Synthesis Messages
+122. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -154,16 +153,16 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Sun Apr 15 15:05:42 2018       ;
+; Analysis & Synthesis Status   ; Successful - Sun Apr 15 16:42:06 2018       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp1                                         ;
 ; Top-level Entity Name         ; mp3_top                                     ;
 ; Family                        ; Stratix III                                 ;
 ; Logic utilization             ; N/A                                         ;
-;     Combinational ALUTs       ; 3,573                                       ;
+;     Combinational ALUTs       ; 3,584                                       ;
 ;     Memory ALUTs              ; 0                                           ;
-;     Dedicated logic registers ; 7,197                                       ;
-; Total registers               ; 7197                                        ;
+;     Dedicated logic registers ; 7,066                                       ;
+; Total registers               ; 7066                                        ;
 ; Total pins                    ; 290                                         ;
 ; Total virtual pins            ; 0                                           ;
 ; Total block memory bits       ; 384                                         ;
@@ -269,12 +268,13 @@ applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 1.07        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ; < 0.1%      ;
+;     Processor 2            ;   7.1%      ;
+;     Processors 3-4         ; < 0.1%      ;
 ;     Processors 5-8         ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -329,7 +329,6 @@ applicable agreement for further details.
 ; forwarding_unit_2.sv             ; yes             ; User SystemVerilog HDL File  ; /home/ridenou2/ece411/risingedge/forwarding_unit_2.sv                       ;         ;
 ; mux16.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/ridenou2/ece411/risingedge/mux16.sv                                   ;         ;
 ; counter_decoder.sv               ; yes             ; User SystemVerilog HDL File  ; /home/ridenou2/ece411/risingedge/counter_decoder.sv                         ;         ;
-; evict_buffer.sv                  ; yes             ; User SystemVerilog HDL File  ; /home/ridenou2/ece411/risingedge/evict_buffer.sv                            ;         ;
 ; forwarding_unit_3.sv             ; yes             ; User SystemVerilog HDL File  ; /home/ridenou2/ece411/risingedge/forwarding_unit_3.sv                       ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                 ; /software/altera/13.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                 ; /software/altera/13.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
@@ -350,34 +349,34 @@ applicable agreement for further details.
 +-----------------------------------------------+------------------+
 ; Resource                                      ; Usage            ;
 +-----------------------------------------------+------------------+
-; Estimated ALUTs Used                          ; 3573             ;
-;     -- Combinational ALUTs                    ; 3573             ;
+; Estimated ALUTs Used                          ; 3584             ;
+;     -- Combinational ALUTs                    ; 3584             ;
 ;     -- Memory ALUTs                           ; 0                ;
 ;     -- LUT_REGs                               ; 0                ;
-; Dedicated logic registers                     ; 7197             ;
+; Dedicated logic registers                     ; 7066             ;
 ;                                               ;                  ;
 ; Estimated ALUTs Unavailable                   ; 1691             ;
 ;     -- Due to unpartnered combinational logic ; 1691             ;
 ;     -- Due to Memory ALUTs                    ; 0                ;
 ;                                               ;                  ;
-; Total combinational functions                 ; 3573             ;
+; Total combinational functions                 ; 3584             ;
 ; Combinational ALUT usage by number of inputs  ;                  ;
 ;     -- 7 input functions                      ; 1691             ;
-;     -- 6 input functions                      ; 577              ;
-;     -- 5 input functions                      ; 358              ;
-;     -- 4 input functions                      ; 445              ;
-;     -- <=3 input functions                    ; 502              ;
+;     -- 6 input functions                      ; 617              ;
+;     -- 5 input functions                      ; 363              ;
+;     -- 4 input functions                      ; 429              ;
+;     -- <=3 input functions                    ; 484              ;
 ;                                               ;                  ;
 ; Combinational ALUTs by mode                   ;                  ;
-;     -- normal mode                            ; 1724             ;
+;     -- normal mode                            ; 1735             ;
 ;     -- extended LUT mode                      ; 1691             ;
 ;     -- arithmetic mode                        ; 158              ;
 ;     -- shared arithmetic mode                 ; 0                ;
 ;                                               ;                  ;
-; Estimated ALUT/register pairs used            ; 11309            ;
+; Estimated ALUT/register pairs used            ; 11252            ;
 ;                                               ;                  ;
-; Total registers                               ; 7197             ;
-;     -- Dedicated logic registers              ; 7197             ;
+; Total registers                               ; 7066             ;
+;     -- Dedicated logic registers              ; 7066             ;
 ;     -- I/O registers                          ; 0                ;
 ;     -- LUT_REGs                               ; 0                ;
 ;                                               ;                  ;
@@ -387,9 +386,9 @@ applicable agreement for further details.
 ; Total block memory bits                       ; 384              ;
 ; DSP block 18-bit elements                     ; 0                ;
 ; Maximum fan-out node                          ; wb_mem.CLK~input ;
-; Maximum fan-out                               ; 7245             ;
-; Total fan-out                                 ; 42732            ;
-; Average fan-out                               ; 3.75             ;
+; Maximum fan-out                               ; 7114             ;
+; Total fan-out                                 ; 42487            ;
+; Average fan-out                               ; 3.77             ;
 +-----------------------------------------------+------------------+
 
 
@@ -398,17 +397,15 @@ applicable agreement for further details.
 +------------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                           ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                         ; Library Name ;
 +------------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
-; |mp3_top                                             ; 3573 (0)          ; 7197 (0)     ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 290  ; 0            ; |mp3_top                                                                                                    ; work         ;
-;    |evict_buffer:evict_buffer|                       ; 4 (4)             ; 131 (3)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|evict_buffer:evict_buffer                                                                          ; work         ;
-;       |register:eviction|                            ; 0 (0)             ; 128 (128)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|evict_buffer:evict_buffer|register:eviction                                                        ; work         ;
-;    |l2cache:l2cache|                                 ; 1058 (0)          ; 2270 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache                                                                                    ; work         ;
-;       |cache_control:cache_controller|               ; 17 (17)           ; 6 (6)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_control:cache_controller                                                     ; work         ;
+; |mp3_top                                             ; 3584 (0)          ; 7066 (0)     ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 290  ; 0            ; |mp3_top                                                                                                    ; work         ;
+;    |l2cache:l2cache|                                 ; 1057 (1)          ; 2270 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache                                                                                    ; work         ;
+;       |cache_control:cache_controller|               ; 15 (15)           ; 6 (6)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_control:cache_controller                                                     ; work         ;
 ;       |cache_datapath:cache_datapath|                ; 1007 (8)          ; 2232 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath                                                      ; work         ;
-;          |array:LRU|                                 ; 10 (10)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|array:LRU                                            ; work         ;
-;          |array:data0|                               ; 256 (256)         ; 1024 (1024)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|array:data0                                          ; work         ;
-;          |array:data1|                               ; 256 (256)         ; 1024 (1024)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|array:data1                                          ; work         ;
-;          |array:dirty0|                              ; 18 (18)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|array:dirty0                                         ; work         ;
-;          |array:dirty1|                              ; 10 (10)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|array:dirty1                                         ; work         ;
+;          |array:LRU|                                 ; 18 (18)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|array:LRU                                            ; work         ;
+;          |array:data0|                               ; 264 (264)         ; 1024 (1024)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|array:data0                                          ; work         ;
+;          |array:data1|                               ; 264 (264)         ; 1024 (1024)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|array:data1                                          ; work         ;
+;          |array:dirty0|                              ; 2 (2)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|array:dirty0                                         ; work         ;
+;          |array:dirty1|                              ; 2 (2)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|array:dirty1                                         ; work         ;
 ;          |array:tag0|                                ; 26 (26)           ; 72 (72)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|array:tag0                                           ; work         ;
 ;          |array:tag1|                                ; 26 (26)           ; 72 (72)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|array:tag1                                           ; work         ;
 ;          |array:valid0|                              ; 2 (2)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|array:valid0                                         ; work         ;
@@ -419,14 +416,14 @@ applicable agreement for further details.
 ;          |mux4:wb2_mux|                              ; 128 (128)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux4:wb2_mux                                         ; work         ;
 ;       |counter:cache_hits|                           ; 17 (17)           ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|counter:cache_hits                                                                 ; work         ;
 ;       |counter:cache_misses|                         ; 17 (17)           ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|l2cache:l2cache|counter:cache_misses                                                               ; work         ;
-;    |mp3:mp3|                                         ; 741 (0)           ; 272 (0)      ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3                                                                                            ; work         ;
+;    |mp3:mp3|                                         ; 763 (0)           ; 272 (0)      ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3                                                                                            ; work         ;
 ;       |control_rom:control_rom|                      ; 21 (21)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|control_rom:control_rom                                                                    ; work         ;
-;       |datapath:the_datapath|                        ; 720 (12)          ; 272 (0)      ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath                                                                      ; work         ;
-;          |EX_MEM_pipeline:EX_MEM_pipeline|           ; 6 (6)             ; 96 (96)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline                                      ; work         ;
+;       |datapath:the_datapath|                        ; 742 (12)          ; 272 (0)      ; 384               ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath                                                                      ; work         ;
+;          |EX_MEM_pipeline:EX_MEM_pipeline|           ; 5 (5)             ; 96 (96)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline                                      ; work         ;
 ;          |ID_EX_pipeline:ID_EX_pipeline|             ; 0 (0)             ; 79 (79)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline                                        ; work         ;
 ;          |IF_ID_pipeline:IF_ID_pipeline|             ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|IF_ID_pipeline:IF_ID_pipeline                                        ; work         ;
 ;          |MEM_WB_pipeline:MEM_WB_pipeline|           ; 0 (0)             ; 20 (20)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|MEM_WB_pipeline:MEM_WB_pipeline                                      ; work         ;
-;          |alu:alu|                                   ; 204 (204)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|alu:alu                                                              ; work         ;
+;          |alu:alu|                                   ; 206 (206)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|alu:alu                                                              ; work         ;
 ;          |badder:addr_adder|                         ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|badder:addr_adder                                                    ; work         ;
 ;          |counter_control:counter_control|           ; 6 (6)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|counter_control:counter_control                                      ; work         ;
 ;          |counter_decoder:counter_decoder|           ; 10 (10)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|counter_decoder:counter_decoder                                      ; work         ;
@@ -444,8 +441,8 @@ applicable agreement for further details.
 ;          |mux2:offset6mux|                           ; 6 (6)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|mux2:offset6mux                                                      ; work         ;
 ;          |mux2:offset|                               ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|mux2:offset                                                          ; work         ;
 ;          |mux4:alumux|                               ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|mux4:alumux                                                          ; work         ;
-;          |mux4:sr1mux|                               ; 21 (21)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|mux4:sr1mux                                                          ; work         ;
-;          |mux4:sr2_mux|                              ; 41 (41)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|mux4:sr2_mux                                                         ; work         ;
+;          |mux4:sr1mux|                               ; 41 (41)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|mux4:sr1mux                                                          ; work         ;
+;          |mux4:sr2_mux|                              ; 42 (42)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|mux4:sr2_mux                                                         ; work         ;
 ;          |mux4:storemux|                             ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|mux4:storemux                                                        ; work         ;
 ;          |mux_decode_sel:pcmux|                      ; 17 (17)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|mux_decode_sel:pcmux                                                 ; work         ;
 ;          |plus2:pc_plus2|                            ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|plus2:pc_plus2                                                       ; work         ;
@@ -462,16 +459,16 @@ applicable agreement for further details.
 ;          |stall_unit:stall_unit|                     ; 24 (24)           ; 19 (19)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|stall_unit:stall_unit                                                ; work         ;
 ;          |stall_unit_2:stall_unit_2|                 ; 5 (5)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|stall_unit_2:stall_unit_2                                            ; work         ;
 ;          |static_branch_prediction:flush|            ; 10 (10)           ; 5 (5)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|mp3:mp3|datapath:the_datapath|static_branch_prediction:flush                                       ; work         ;
-;    |wb_interconnect:interconnect|                    ; 1770 (0)          ; 4524 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect                                                                       ; work         ;
+;    |wb_interconnect:interconnect|                    ; 1764 (0)          ; 4524 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect                                                                       ; work         ;
 ;       |cache:Dcache|                                 ; 928 (0)           ; 2270 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache                                                          ; work         ;
 ;          |cache_control:cache_controller|            ; 15 (15)           ; 6 (6)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_control:cache_controller                           ; work         ;
 ;          |cache_datapath:cache_datapath|             ; 879 (9)           ; 2232 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath                            ; work         ;
-;             |array:LRU|                              ; 10 (10)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:LRU                  ; work         ;
-;             |array:data0|                            ; 264 (264)         ; 1024 (1024)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:data0                ; work         ;
-;             |array:data1|                            ; 264 (264)         ; 1024 (1024)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:data1                ; work         ;
-;             |array:dirty0|                           ; 2 (2)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:dirty0               ; work         ;
-;             |array:dirty1|                           ; 2 (2)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:dirty1               ; work         ;
-;             |array:tag0|                             ; 33 (33)           ; 72 (72)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:tag0                 ; work         ;
+;             |array:LRU|                              ; 17 (17)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:LRU                  ; work         ;
+;             |array:data0|                            ; 256 (256)         ; 1024 (1024)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:data0                ; work         ;
+;             |array:data1|                            ; 256 (256)         ; 1024 (1024)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:data1                ; work         ;
+;             |array:dirty0|                           ; 10 (10)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:dirty0               ; work         ;
+;             |array:dirty1|                           ; 10 (10)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:dirty1               ; work         ;
+;             |array:tag0|                             ; 26 (26)           ; 72 (72)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:tag0                 ; work         ;
 ;             |array:tag1|                             ; 26 (26)           ; 72 (72)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:tag1                 ; work         ;
 ;             |array:valid0|                           ; 2 (2)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:valid0               ; work         ;
 ;             |array:valid1|                           ; 2 (2)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:valid1               ; work         ;
@@ -479,20 +476,20 @@ applicable agreement for further details.
 ;             |mux4:wb2_mux|                           ; 125 (125)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux4:wb2_mux               ; work         ;
 ;          |counter:cache_hits|                        ; 17 (17)           ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|counter:cache_hits                                       ; work         ;
 ;          |counter:cache_misses|                      ; 17 (17)           ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|counter:cache_misses                                     ; work         ;
-;       |cache:Icache|                                 ; 697 (0)           ; 2252 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache                                                          ; work         ;
-;          |cache_control:cache_controller|            ; 8 (8)             ; 4 (4)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_control:cache_controller                           ; work         ;
-;          |cache_datapath:cache_datapath|             ; 655 (8)           ; 2216 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath                            ; work         ;
-;             |array:LRU|                              ; 11 (11)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:LRU                  ; work         ;
+;       |cache:Icache|                                 ; 692 (0)           ; 2252 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache                                                          ; work         ;
+;          |cache_control:cache_controller|            ; 6 (6)             ; 4 (4)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_control:cache_controller                           ; work         ;
+;          |cache_datapath:cache_datapath|             ; 652 (8)           ; 2216 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath                            ; work         ;
+;             |array:LRU|                              ; 12 (12)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:LRU                  ; work         ;
 ;             |array:data0|                            ; 256 (256)         ; 1024 (1024)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:data0                ; work         ;
 ;             |array:data1|                            ; 256 (256)         ; 1024 (1024)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:data1                ; work         ;
-;             |array:tag0|                             ; 30 (30)           ; 72 (72)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:tag0                 ; work         ;
+;             |array:tag0|                             ; 26 (26)           ; 72 (72)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:tag0                 ; work         ;
 ;             |array:tag1|                             ; 26 (26)           ; 72 (72)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:tag1                 ; work         ;
 ;             |array:valid0|                           ; 2 (2)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:valid0               ; work         ;
 ;             |array:valid1|                           ; 2 (2)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:valid1               ; work         ;
 ;             |mux4:wb2_mux|                           ; 64 (64)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux4:wb2_mux               ; work         ;
 ;          |counter:cache_hits|                        ; 17 (17)           ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|counter:cache_hits                                       ; work         ;
 ;          |counter:cache_misses|                      ; 17 (17)           ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|cache:Icache|counter:cache_misses                                     ; work         ;
-;       |l1arbiter:arbiter|                            ; 3 (3)             ; 2 (2)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|l1arbiter:arbiter                                                     ; work         ;
+;       |l1arbiter:arbiter|                            ; 2 (2)             ; 2 (2)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|l1arbiter:arbiter                                                     ; work         ;
 ;       |mux2:adr|                                     ; 12 (12)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|mux2:adr                                                              ; work         ;
 ;       |mux2:dat_m|                                   ; 129 (129)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|mux2:dat_m                                                            ; work         ;
 ;       |mux2:we|                                      ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3_top|wb_interconnect:interconnect|mux2:we                                                               ; work         ;
@@ -509,18 +506,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_1|altsyncram_opk1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 8            ; 16           ; 8            ; 16           ; 128  ; None ;
 ; mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_3|altsyncram_opk1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 8            ; 16           ; 8            ; 16           ; 128  ; None ;
 +---------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
-
-
-Encoding Type:  One-Hot
-+--------------------------------------------------------------------+
-; State Machine - |mp3_top|evict_buffer:evict_buffer|state           ;
-+------------------+------------+------------------+-----------------+
-; Name             ; state.idle ; state.write_back ; state.load_line ;
-+------------------+------------+------------------+-----------------+
-; state.idle       ; 0          ; 0                ; 0               ;
-; state.load_line  ; 1          ; 0                ; 1               ;
-; state.write_back ; 1          ; 1                ; 0               ;
-+------------------+------------+------------------+-----------------+
 
 
 Encoding Type:  One-Hot
@@ -674,36 +659,6 @@ Encoding Type:  One-Hot
 ; mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|mem_byte_enable[1]            ; Merged with mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|mem_byte_enable[0]    ;
 ; mp3:mp3|datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[12..15]           ; Merged with mp3:mp3|datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|branch_offset[11]       ;
 ; mp3:mp3|datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline|sr1[0..15]                      ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~4                                                           ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~5                                                           ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~6                                                           ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~7                                                           ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~8                                                           ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~9                                                           ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~10                                                          ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~11                                                          ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~12                                                          ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~13                                                          ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~14                                                          ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~15                                                          ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~16                                                          ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~17                                                          ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~18                                                          ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~19                                                          ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~20                                                          ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~21                                                          ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~22                                                          ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~23                                                          ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~24                                                          ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~25                                                          ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~26                                                          ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~27                                                          ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~28                                                          ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~29                                                          ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~30                                                          ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~31                                                          ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~32                                                          ; Lost fanout                                                                                     ;
-; evict_buffer:evict_buffer|state~33                                                          ; Lost fanout                                                                                     ;
 ; l2cache:l2cache|cache_control:cache_controller|state~2                                      ; Lost fanout                                                                                     ;
 ; l2cache:l2cache|cache_control:cache_controller|state~3                                      ; Lost fanout                                                                                     ;
 ; l2cache:l2cache|cache_control:cache_controller|state~5                                      ; Lost fanout                                                                                     ;
@@ -938,7 +893,7 @@ Encoding Type:  One-Hot
 ; wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:dirty1|data~6 ; Stuck at GND due to stuck port data_in                                                          ;
 ; wb_interconnect:interconnect|cache:Icache|cache_control:cache_controller|state.write_back   ; Stuck at GND due to stuck port data_in                                                          ;
 ; wb_interconnect:interconnect|cache:Icache|cache_control:cache_controller|state.stall        ; Stuck at GND due to stuck port data_in                                                          ;
-; Total Number of Removed Registers = 370                                                     ;                                                                                                 ;
+; Total Number of Removed Registers = 340                                                     ;                                                                                                 ;
 +---------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
 
 
@@ -973,12 +928,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 7197  ;
+; Total registers                              ; 7066  ;
 ; Number of registers using Synchronous Clear  ; 112   ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 7147  ;
+; Number of registers using Clock Enable       ; 7019  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -997,91 +952,91 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 ALUTs      ; 0 ALUTs              ; 32 ALUTs               ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|counter_rising_edge:counter_stalls_memory|count[1]              ;
+; 3:1                ; 16 bits   ; 32 ALUTs      ; 0 ALUTs              ; 32 ALUTs               ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|counter_rising_edge:counter_stalls_memory|count[8]              ;
 ; 3:1                ; 16 bits   ; 32 ALUTs      ; 0 ALUTs              ; 32 ALUTs               ; Yes        ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|counter:cache_hits|count[8]                         ;
-; 3:1                ; 16 bits   ; 32 ALUTs      ; 0 ALUTs              ; 32 ALUTs               ; Yes        ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|counter:cache_misses|count[10]                      ;
-; 3:1                ; 16 bits   ; 32 ALUTs      ; 0 ALUTs              ; 32 ALUTs               ; Yes        ; |mp3_top|wb_interconnect:interconnect|cache:Icache|counter:cache_hits|count[2]                         ;
-; 3:1                ; 16 bits   ; 32 ALUTs      ; 0 ALUTs              ; 32 ALUTs               ; Yes        ; |mp3_top|wb_interconnect:interconnect|cache:Icache|counter:cache_misses|count[7]                       ;
-; 3:1                ; 16 bits   ; 32 ALUTs      ; 0 ALUTs              ; 32 ALUTs               ; Yes        ; |mp3_top|l2cache:l2cache|counter:cache_hits|count[7]                                                   ;
-; 3:1                ; 16 bits   ; 32 ALUTs      ; 0 ALUTs              ; 32 ALUTs               ; Yes        ; |mp3_top|l2cache:l2cache|counter:cache_misses|count[1]                                                 ;
-; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|dest_data[5]                    ;
-; 8:1                ; 10 bits   ; 50 ALUTs      ; 50 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|IF_ID_pipeline:IF_ID_pipeline|instruction[13]                   ;
-; 16:1               ; 15 bits   ; 150 ALUTs     ; 30 ALUTs             ; 120 ALUTs              ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|register:program_counter|data[8]                                ;
-; 13:1               ; 2 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|alu_out[9]                      ;
+; 3:1                ; 16 bits   ; 32 ALUTs      ; 0 ALUTs              ; 32 ALUTs               ; Yes        ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|counter:cache_misses|count[8]                       ;
+; 3:1                ; 16 bits   ; 32 ALUTs      ; 0 ALUTs              ; 32 ALUTs               ; Yes        ; |mp3_top|wb_interconnect:interconnect|cache:Icache|counter:cache_hits|count[8]                         ;
+; 3:1                ; 16 bits   ; 32 ALUTs      ; 0 ALUTs              ; 32 ALUTs               ; Yes        ; |mp3_top|wb_interconnect:interconnect|cache:Icache|counter:cache_misses|count[3]                       ;
+; 3:1                ; 16 bits   ; 32 ALUTs      ; 0 ALUTs              ; 32 ALUTs               ; Yes        ; |mp3_top|l2cache:l2cache|counter:cache_hits|count[3]                                                   ;
+; 3:1                ; 16 bits   ; 32 ALUTs      ; 0 ALUTs              ; 32 ALUTs               ; Yes        ; |mp3_top|l2cache:l2cache|counter:cache_misses|count[6]                                                 ;
+; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|dest_data[3]                    ;
+; 8:1                ; 10 bits   ; 50 ALUTs      ; 50 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|IF_ID_pipeline:IF_ID_pipeline|instruction[12]                   ;
+; 16:1               ; 15 bits   ; 150 ALUTs     ; 30 ALUTs             ; 120 ALUTs              ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|register:program_counter|data[15]                               ;
+; 13:1               ; 2 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|alu_out[10]                     ;
 ; 14:1               ; 2 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|alu_out[1]                      ;
-; 15:1               ; 2 bits    ; 20 ALUTs      ; 18 ALUTs             ; 2 ALUTs                ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|alu_out[14]                     ;
+; 15:1               ; 2 bits    ; 20 ALUTs      ; 18 ALUTs             ; 2 ALUTs                ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|alu_out[13]                     ;
 ; 16:1               ; 2 bits    ; 20 ALUTs      ; 20 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3_top|mp3:mp3|datapath:the_datapath|EX_MEM_pipeline:EX_MEM_pipeline|alu_out[6]                      ;
-; 4:1                ; 128 bits  ; 256 ALUTs     ; 256 ALUTs            ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux4:wb2_mux|Mux61                              ;
+; 4:1                ; 9 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux4:adrmux|Mux6                                ;
+; 4:1                ; 128 bits  ; 256 ALUTs     ; 256 ALUTs            ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux4:wb2_mux|Mux12                              ;
 ; 4:1                ; 128 bits  ; 256 ALUTs     ; 256 ALUTs            ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux4:wb2_mux|Mux127   ;
-; 4:1                ; 128 bits  ; 256 ALUTs     ; 256 ALUTs            ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux4:wb2_mux|Mux81    ;
+; 4:1                ; 128 bits  ; 256 ALUTs     ; 256 ALUTs            ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux4:wb2_mux|Mux90    ;
 ; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|stall_unit_2:stall_unit_2|next_state.s_load_wait                ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[1]                             ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[11]                            ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[16]                            ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[29]                            ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[39]                            ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[40]                            ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[51]                            ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[58]                            ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[67]                            ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[74]                            ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[80]                            ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[89]                            ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[101]                           ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[110]                           ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[112]                           ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[122]                           ;
 ; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|alu:alu|ShiftLeft0                                              ;
 ; 3:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|alu:alu|ShiftLeft0                                              ;
-; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|mux4:sr1mux|Mux0                                                ;
-; 4:1                ; 9 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux4:adrmux|Mux7                                ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[6]                             ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[13]                            ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[23]                            ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[30]                            ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[32]                            ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[45]                            ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[53]                            ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[62]                            ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[68]                            ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[72]                            ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[80]                            ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[92]                            ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[102]                           ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[104]                           ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[118]                           ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[120]                           ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[0]   ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[10]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[16]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[29]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[35]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[43]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[50]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[59]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[70]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[73]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[84]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[91]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[100] ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[104] ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[117] ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[125] ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[6]   ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[12]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[16]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[28]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[32]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[42]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[48]  ;
+; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|mux4:sr1mux|Mux7                                                ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[5]   ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[8]   ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[18]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[31]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[33]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[41]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[52]  ;
 ; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[58]  ;
 ; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[64]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[79]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[87]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[94]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[99]  ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[106] ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[75]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[84]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[88]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[98]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[104] ;
 ; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[112] ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[122] ;
-; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_control:cache_controller|data1_writeline                                ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[121] ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[5]   ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[14]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[20]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[27]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[36]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[40]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[48]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[56]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[71]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[78]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[83]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[94]  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[102] ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[106] ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[118] ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|mux2:wbsel_mux|f[120] ;
+; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp3_top|l2cache:l2cache|cache_control:cache_controller|data0_writeline                                ;
 ; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_control:cache_controller|data1_writeline      ;
 ; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_control:cache_controller|data1_writeline      ;
 ; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|stall_unit:stall_unit|mem_address[11]                           ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|stall_unit:stall_unit|mem_address[2]                            ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|stall_unit:stall_unit|mem_address[3]                            ;
 ; 8:1                ; 16 bits   ; 80 ALUTs      ; 80 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|line_to_word:memory_line_to_word|Mux0                           ;
 ; 8:1                ; 6 bits    ; 30 ALUTs      ; 30 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|line_to_word:ifetch_line_to_word|Mux4                           ;
 ; 4:1                ; 3 bits    ; 6 ALUTs       ; 6 ALUTs              ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|mux2:adr|f[0]                                                    ;
-; 4:1                ; 128 bits  ; 256 ALUTs     ; 256 ALUTs            ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|mux2:dat_m|f[86]                                                 ;
+; 4:1                ; 128 bits  ; 256 ALUTs     ; 256 ALUTs            ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|mux2:dat_m|f[67]                                                 ;
 ; 5:1                ; 2 bits    ; 6 ALUTs       ; 6 ALUTs              ; 0 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|stall_unit:stall_unit|next_state                                ;
-; 8:1                ; 9 bits    ; 45 ALUTs      ; 45 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|mux2:adr|f[6]                                                    ;
-; 6:1                ; 10 bits   ; 40 ALUTs      ; 40 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|mux4:sr2_mux|Mux0                                               ;
+; 8:1                ; 9 bits    ; 45 ALUTs      ; 45 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|wb_interconnect:interconnect|mux2:adr|f[5]                                                    ;
+; 6:1                ; 10 bits   ; 40 ALUTs      ; 40 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|mux4:sr2_mux|Mux5                                               ;
 ; 7:1                ; 3 bits    ; 12 ALUTs      ; 12 ALUTs             ; 0 ALUTs                ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|mux4:sr2_mux|Mux14                                              ;
-; 22:1               ; 8 bits    ; 112 ALUTs     ; 96 ALUTs             ; 16 ALUTs               ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|mux2:memory_counter_mux|f[8]                                    ;
-; 23:1               ; 7 bits    ; 105 ALUTs     ; 84 ALUTs             ; 21 ALUTs               ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|mux2:memory_counter_mux|f[5]                                    ;
+; 22:1               ; 8 bits    ; 112 ALUTs     ; 96 ALUTs             ; 16 ALUTs               ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|mux2:memory_counter_mux|f[15]                                   ;
+; 23:1               ; 7 bits    ; 105 ALUTs     ; 84 ALUTs             ; 21 ALUTs               ; No         ; |mp3_top|mp3:mp3|datapath:the_datapath|mux2:memory_counter_mux|f[3]                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------+
 
 
@@ -1851,16 +1806,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: evict_buffer:evict_buffer|register:eviction ;
-+----------------+-------+-----------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                            ;
-+----------------+-------+-----------------------------------------------------------------+
-; width          ; 128   ; Signed Integer                                                  ;
-+----------------+-------+-----------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +----------------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2 ;
 +------------------------------------+----------------------+----------------------------------------------------------+
@@ -2168,6 +2113,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "l2cache:l2cache"                                                                          ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; pmem_write ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; pmem_read  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +---------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "wb_interconnect:interconnect|cache:Icache|cache_control:cache_controller"                      ;
 +-----------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -2332,7 +2287,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:10     ;
+; Top            ; 00:00:11     ;
 +----------------+--------------+
 
 
@@ -2355,7 +2310,7 @@ Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: programming logic devices manufactured by Altera and sold by 
     Info: Altera or its authorized distributors.  Please refer to the 
     Info: applicable agreement for further details.
-    Info: Processing started: Sun Apr 15 15:05:25 2018
+    Info: Processing started: Sun Apr 15 16:41:49 2018
 Info: Command: quartus_map mp1 -c mp1
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file counter_rising_edge.sv
@@ -2531,20 +2486,309 @@ Info (12128): Elaborating entity "counter" for hierarchy "wb_interconnect:interc
 Warning (10230): Verilog HDL assignment warning at counter.sv(20): truncated value with size 32 to match size of target (16)
 Info (12128): Elaborating entity "mux2" for hierarchy "wb_interconnect:interconnect|mux2:cyc"
 Info (12128): Elaborating entity "l2cache" for hierarchy "l2cache:l2cache"
-Info (12128): Elaborating entity "evict_buffer" for hierarchy "evict_buffer:evict_buffer"
-Info (12128): Elaborating entity "register" for hierarchy "evict_buffer:evict_buffer|register:eviction"
+Warning (12161): Node "wishbone:wb_evict|wishbone.WE" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.STB" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.SEL[9]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.SEL[8]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.SEL[7]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.SEL[6]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.SEL[5]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.SEL[4]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.SEL[3]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.SEL[2]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.SEL[1]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.SEL[15]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.SEL[14]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.SEL[13]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.SEL[12]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.SEL[11]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.SEL[10]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.SEL[0]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.RTY" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[9]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[99]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[98]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[97]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[96]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[95]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[94]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[93]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[92]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[91]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[90]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[8]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[89]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[88]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[87]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[86]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[85]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[84]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[83]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[82]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[81]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[80]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[7]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[79]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[78]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[77]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[76]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[75]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[74]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[73]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[72]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[71]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[70]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[6]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[69]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[68]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[67]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[66]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[65]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[64]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[63]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[62]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[61]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[60]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[5]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[59]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[58]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[57]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[56]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[55]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[54]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[53]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[52]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[51]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[50]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[4]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[49]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[48]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[47]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[46]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[45]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[44]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[43]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[42]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[41]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[40]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[3]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[39]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[38]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[37]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[36]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[35]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[34]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[33]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[32]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[31]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[30]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[2]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[29]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[28]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[27]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[26]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[25]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[24]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[23]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[22]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[21]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[20]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[1]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[19]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[18]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[17]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[16]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[15]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[14]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[13]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[12]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[127]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[126]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[125]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[124]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[123]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[122]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[121]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[120]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[11]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[119]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[118]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[117]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[116]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[115]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[114]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[113]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[112]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[111]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[110]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[10]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[109]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[108]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[107]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[106]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[105]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[104]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[103]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[102]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[101]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[100]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_S[0]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[9]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[99]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[98]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[97]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[96]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[95]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[94]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[93]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[92]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[91]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[90]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[8]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[89]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[88]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[87]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[86]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[85]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[84]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[83]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[82]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[81]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[80]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[7]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[79]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[78]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[77]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[76]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[75]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[74]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[73]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[72]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[71]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[70]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[6]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[69]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[68]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[67]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[66]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[65]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[64]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[63]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[62]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[61]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[60]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[5]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[59]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[58]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[57]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[56]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[55]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[54]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[53]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[52]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[51]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[50]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[4]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[49]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[48]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[47]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[46]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[45]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[44]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[43]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[42]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[41]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[40]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[3]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[39]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[38]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[37]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[36]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[35]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[34]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[33]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[32]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[31]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[30]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[2]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[29]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[28]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[27]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[26]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[25]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[24]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[23]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[22]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[21]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[20]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[1]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[19]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[18]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[17]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[16]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[15]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[14]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[13]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[12]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[127]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[126]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[125]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[124]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[123]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[122]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[121]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[120]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[11]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[119]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[118]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[117]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[116]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[115]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[114]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[113]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[112]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[111]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[110]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[10]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[109]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[108]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[107]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[106]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[105]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[104]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[103]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[102]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[101]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[100]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.DAT_M[0]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.CYC" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.ADR[9]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.ADR[8]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.ADR[7]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.ADR[6]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.ADR[5]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.ADR[4]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.ADR[3]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.ADR[2]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.ADR[1]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.ADR[11]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.ADR[10]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.ADR[0]" is stuck at GND because node is in wire loop and does not have a source
+Warning (12161): Node "wishbone:wb_evict|wishbone.ACK" is stuck at GND because node is in wire loop and does not have a source
 Warning (276027): Inferred dual-clock RAM node "mp3:mp3|datapath:the_datapath|regfile:regfile|data_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Warning (276027): Inferred dual-clock RAM node "mp3:mp3|datapath:the_datapath|regfile:regfile|data_rtl_1" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Warning (276027): Inferred dual-clock RAM node "mp3:mp3|datapath:the_datapath|regfile:regfile|data_rtl_2" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Warning (276027): Inferred dual-clock RAM node "mp3:mp3|datapath:the_datapath|regfile:regfile|data_rtl_3" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Info (276014): Found 27 instances of uninferred RAM logic
+    Info (276004): RAM logic "l2cache:l2cache|cache_datapath:cache_datapath|array:LRU|data" is uninferred due to inappropriate RAM size
     Info (276007): RAM logic "l2cache:l2cache|cache_datapath:cache_datapath|array:tag0|data" is uninferred due to asynchronous read logic
-    Info (276004): RAM logic "l2cache:l2cache|cache_datapath:cache_datapath|array:valid0|data" is uninferred due to inappropriate RAM size
     Info (276007): RAM logic "l2cache:l2cache|cache_datapath:cache_datapath|array:tag1|data" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "l2cache:l2cache|cache_datapath:cache_datapath|array:data1|data" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "l2cache:l2cache|cache_datapath:cache_datapath|array:data0|data" is uninferred due to asynchronous read logic
+    Info (276004): RAM logic "l2cache:l2cache|cache_datapath:cache_datapath|array:valid0|data" is uninferred due to inappropriate RAM size
     Info (276004): RAM logic "l2cache:l2cache|cache_datapath:cache_datapath|array:valid1|data" is uninferred due to inappropriate RAM size
     Info (276004): RAM logic "l2cache:l2cache|cache_datapath:cache_datapath|array:dirty0|data" is uninferred due to inappropriate RAM size
     Info (276004): RAM logic "l2cache:l2cache|cache_datapath:cache_datapath|array:dirty1|data" is uninferred due to inappropriate RAM size
-    Info (276004): RAM logic "l2cache:l2cache|cache_datapath:cache_datapath|array:LRU|data" is uninferred due to inappropriate RAM size
     Info (276007): RAM logic "wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:tag0|data" is uninferred due to asynchronous read logic
     Info (276004): RAM logic "wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:valid0|data" is uninferred due to inappropriate RAM size
     Info (276007): RAM logic "wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:tag1|data" is uninferred due to asynchronous read logic
@@ -2559,12 +2803,10 @@ Info (276014): Found 27 instances of uninferred RAM logic
     Info (276004): RAM logic "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:dirty0|data" is uninferred due to inappropriate RAM size
     Info (276004): RAM logic "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:dirty1|data" is uninferred due to inappropriate RAM size
     Info (276004): RAM logic "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:LRU|data" is uninferred due to inappropriate RAM size
-    Info (276007): RAM logic "l2cache:l2cache|cache_datapath:cache_datapath|array:data1|data" is uninferred due to asynchronous read logic
-    Info (276007): RAM logic "l2cache:l2cache|cache_datapath:cache_datapath|array:data0|data" is uninferred due to asynchronous read logic
-    Info (276007): RAM logic "wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:data0|data" is uninferred due to asynchronous read logic
-    Info (276007): RAM logic "wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:data1|data" is uninferred due to asynchronous read logic
-    Info (276007): RAM logic "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:data0|data" is uninferred due to asynchronous read logic
     Info (276007): RAM logic "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:data1|data" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "wb_interconnect:interconnect|cache:Icache|cache_datapath:cache_datapath|array:data0|data" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:data1|data" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "wb_interconnect:interconnect|cache:Dcache|cache_datapath:cache_datapath|array:data0|data" is uninferred due to asynchronous read logic
 Info (19000): Inferred 4 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "mp3:mp3|datapath:the_datapath|regfile:regfile|data_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -2699,21 +2941,21 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "wb_mem.SEL[14]" is stuck at VCC
     Warning (13410): Pin "wb_mem.SEL[15]" is stuck at VCC
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 262 registers lost all their fanouts during netlist optimizations.
+Info (17049): 232 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file /home/ridenou2/ece411/risingedge/output_files/mp1.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "wb_mem.RTY"
-Info (21057): Implemented 10715 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 10726 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 131 input pins
     Info (21059): Implemented 159 output pins
-    Info (21061): Implemented 10377 logic cells
+    Info (21061): Implemented 10388 logic cells
     Info (21064): Implemented 48 RAM segments
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 43 warnings
-    Info: Peak virtual memory: 505 megabytes
-    Info: Processing ended: Sun Apr 15 15:05:42 2018
-    Info: Elapsed time: 00:00:17
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 332 warnings
+    Info: Peak virtual memory: 503 megabytes
+    Info: Processing ended: Sun Apr 15 16:42:07 2018
+    Info: Elapsed time: 00:00:18
     Info: Total CPU time (on all processors): 00:00:15
 
 
