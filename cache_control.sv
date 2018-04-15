@@ -31,9 +31,18 @@ module cache_control
 	output logic pmem_read,
 	output logic cpu_resp,
 	output logic wb_sel,
-	output logic [1:0] adrmux_sel
+	output logic [1:0] adrmux_sel,
+	output logic cache_hit_inc,
+	output logic cache_miss_inc
 
 );
+
+logic was_miss, was_miss_next;
+initial was_miss= 1'b0;
+always_ff @ (posedge clk)
+begin
+	was_miss <= was_miss_next;
+end
 
 enum int unsigned {
     /* List of states */
@@ -65,10 +74,21 @@ begin : state_actions
 	cpu_resp = 1'b0;
 	wb_sel = 0;
 	adrmux_sel = 2'b00;
+	cache_hit_inc = 1'b0;
+	cache_miss_inc = 1'b0;
+	was_miss_next = 0;
 	/* Actions for each state */
 	 case(state)
 		idle:begin
 			if(readwrite == 0 && (hit0 || hit1)) begin
+			
+				/* count hit */
+				if (!was_miss) begin
+					cache_hit_inc = 1;
+					was_miss_next = 0;
+				end
+				else was_miss_next = 0;
+			
 				cpu_resp = 1;
 				if((hit0 && !LRU_out) || (hit1 && LRU_out)) begin
 					updateLRU = 1;
@@ -76,6 +96,14 @@ begin : state_actions
 			end
 			
 			if(readwrite == 1 && (hit0 || hit1)) begin
+			
+				/* count hit */
+				if (!was_miss_next) begin
+					cache_hit_inc = 1;
+					was_miss_next = 0;
+				end
+				else was_miss_next = 0;
+				
 				wb_sel = 1;
 				dirty_in = 1;
 				cpu_resp = 1;
@@ -98,8 +126,8 @@ begin : state_actions
 		
 		write_back:begin
 			pmem_write = 1;
-			if(LRU_out) adrmux_sel = 2'b01;
-			else adrmux_sel = 2'b10;
+			if(LRU_out) adrmux_sel = 2'b10;
+			else adrmux_sel = 2'b01;
 		end
 		
 		stall: /* Do nothing. Sets CYC, STB to 0 for ACK */;
@@ -136,23 +164,9 @@ begin : state_actions
 		end
 		
 		update_cache:begin
-			/*valid_in = 1;
-			dirty_in = 0;
-			if(LRU_out) begin
-				data1_writeline = 1;
-				tag1_write = 1;
-				valid1_write = 1;
-				dirty1_write = 1;
-			end
-				
-			else begin
-				data0_writeline = 1;
-				tag0_write = 1;
-				valid0_write = 1;
-				dirty0_write = 1;
-			end*/
-			
-			//updateLRU = 1;
+			/* count miss */
+			cache_miss_inc = 1;
+			was_miss_next= 1;
 		end
 		
 		default: /* Do nothing */;

@@ -24,7 +24,10 @@ module datapath
 	input logic offset_sel,
 	input logic sr2mux_sel,
 	input logic destmux_sel,
-	input logic is_ldb_stb
+	input logic is_ldb_stb,
+	
+	input logic [15:0] c10_out, c11_out, c12_out, c13_out, c14_out, c15_out,
+	output logic c10_clear, c11_clear, c12_clear, c13_clear, c14_clear, c15_clear
 );
 
 logic stall_pipeline;
@@ -114,11 +117,13 @@ lc3b_word sr_out;
 lc3b_word regfilemux_out_MEM_WB;
 logic load_regfile;
 lc3b_opcode operation_out_EX_MEM;
+logic flushed_out_3;
 stall_unit_2 stall_unit_2
 (
 	.clk,
 	.instruction_curr(instruction_out_ID_EX),
 	.instruction_last(instruction_out_EX_MEM),
+	.flushed(flushed_out_3),
 	.stall_pipeline_load(stall_pipeline_load)
 	//output logic sti_write
 );
@@ -325,7 +330,8 @@ forwarding_unit forwarding_unit_1
 	.operation(operation_out_ID_EX),	
 	.destreg_EX(dest_out_EX_MEM),
 	.destreg_MEM(mem_wb_dest),
-	.forwarding_unit_out(forwarding_unit_1_out)
+	.forwarding_unit_out(forwarding_unit_1_out),
+	.is_jssr(instruction_out_ID_EX[11])
 );
 
 logic [1:0] forwarding_unit_2_out;
@@ -343,7 +349,7 @@ forwarding_unit_2 forwarding_unit_2
 	.test(testvalue)
 );
 logic [1:0] forwarding_unit_3_out;
-forwarding_unit forwarding_unit_3
+forwarding_unit_3 forwarding_unit_3
 (
 	.regwrite_EX(load_regfile_EX_MEM),
 	.regwrite_MEM(load_regfile),
@@ -356,21 +362,24 @@ forwarding_unit forwarding_unit_3
 
 lc3b_word sr1mux_out;
 lc3b_word sr2_mux_out;
+lc3b_word regfilemux_out_pre_counter;
 lc3b_word regfilemux_out;
 lc3b_word storemux_out;
 
+logic [1:0] forwarding_mask;
 mux4 sr1mux
 (
-	.sel(forwarding_unit_1_out),
+	.sel(forwarding_unit_1_out & forwarding_mask),
 	.a(sr1_ID_EX),
 	.b(regfilemux_out_MEM_WB),	
 	.c(regfilemux_out),
 	.d(sr1_out),
 	.f(sr1mux_out)
 );
+logic [1:0] forwarding_mask_2;
 mux4 sr2_mux
 (
-	.sel(forwarding_unit_2_out),
+	.sel(forwarding_unit_2_out & forwarding_mask),
 	.a(alumux_out),
 	.b(regfilemux_out_MEM_WB),
 	.c(regfilemux_out),
@@ -380,7 +389,7 @@ mux4 sr2_mux
 
 mux4 storemux
 (
-	.sel(forwarding_unit_3_out),
+	.sel(forwarding_unit_3_out & forwarding_mask),
 	.a(dest_data_out_ID_EX),
 	.b(regfilemux_out_MEM_WB),	
 	.c(regfilemux_out),
@@ -542,12 +551,16 @@ mux2 #(.width (4)) line_offset_mux
 
 logic [3:0] line_offset;
 logic mem_write_out;
+logic mem_read_out;
+logic mem_read_bp;
+logic mem_write_bp;
+logic accessing_counter;
 stall_unit stall_unit
 (
 	.clk,
-	.mem_read_in(mem_read_EX_MEM),
-	.mem_write_in(mem_write_EX_MEM),
-	.mem_resp(mem_resp),
+	.mem_read_in(mem_read_out),
+	.mem_write_in(mem_write_out),
+	.mem_resp(mem_resp || accessing_counter),
 	.ifetch_resp(ifetch_resp),
 	.is_sti(is_sti_EX_MEM),
 	.is_ldi(is_ldi_EX_MEM),
@@ -555,11 +568,12 @@ stall_unit stall_unit
 	.mem_rdata(memory_word_out),
 	.line_offset_in(line_offset_mux_out),
 	//.sti_write(sti_write),
-	.mem_read(mem_read),
-	.mem_write(mem_write_out),
+	.mem_read(mem_read_bp),
+	.mem_write(mem_write_bp),
 	.mem_address(mem_address),
 	.stall_pipeline(stall_pipeline),
-	.line_offset_out(line_offset)
+	.line_offset_out(line_offset),
+	.flushed(flushed_out_3)
 );
 
 line_to_word memory_line_to_word
@@ -577,6 +591,12 @@ set_sel set_sel
 	.out(mem_wdata),
 	.mem_sel(mem_sel)
 );
+logic clear_counter_out;
+logic [15:0] counter_mux_out;
+logic memory_counter_sel;
+//Counter wires
+logic c0_clear;
+logic [15:0] c0_out;
 
 mux8 regfilemux
 (
@@ -589,7 +609,15 @@ mux8 regfilemux
 	 .f(memory_word_out >> 8),
 	 .g(16'b0),
 	 .h(16'b0),
-    .out(regfilemux_out)
+    .out(regfilemux_out_pre_counter)
+);
+mux2 memory_counter_mux
+(
+	.sel(memory_counter_sel),
+	.a(regfilemux_out_pre_counter),
+	.b(counter_mux_out),
+	.f(regfilemux_out)
+
 );
 
 /* CC... Either here or after MEM/WB */
@@ -618,24 +646,79 @@ branch_unit cccomp
 );
 
 assign branch_enable = is_br_out_EX_MEM & branch_unit_out;
-assign jump_enable = is_j_out_EX_MEM;
-assign jsr_enable = is_jsr_out_EX_MEM;
-assign trap_enable = is_trap_out_EX_MEM;
+//assign jump_enable = is_j_out_EX_MEM;
+//assign jsr_enable = is_jsr_out_EX_MEM;
+//assign trap_enable = is_trap_out_EX_MEM;
 
 logic load_regfile_out;
 static_branch_prediction flush
 (
 	.clk,
+	.forwarding_mask(forwarding_mask),
 	.branch_enable(branch_enable),
 	.unconditional_branch(jump_enable || jsr_enable || trap_enable),
 	.load_regfile(load_regfile_EX_MEM),
 	.stall(stall_pipeline),
-	.mem_write_in(mem_write_out),
+	.mem_write_in(mem_write_EX_MEM),
 	.load_regfile_out(load_regfile_out),
-	.mem_write_out(mem_write),
-	.mem_read_in(mem_read),
-	.branch_enable_out(branch_enable_out)
+	.mem_write_out(mem_write_out),
+	.mem_read_in(mem_read_EX_MEM),
+	.mem_read_out(mem_read_out),
+	.branch_enable_out(branch_enable_out),
+	.is_load(operation_out_EX_MEM),
+	.is_j_in(is_j_out_EX_MEM),
+	.is_j_out(jump_enable),
+	.is_jsr_in(is_jsr_out_EX_MEM),
+	.is_jsr_out(jsr_enable),
+	.is_trap_in(is_trap_out_EX_MEM),
+	.is_trap_out(trap_enable),
+	.flushed(flushed_out_3)
 );
+
+assign mem_read = mem_read_bp && !accessing_counter;
+assign mem_write = mem_write_bp && !accessing_counter;
+
+
+counter_control counter_control
+(
+	.is_read(mem_read_bp),
+	.is_write(mem_write_bp),
+	.addr(mem_address),
+	.clear_counter(clear_counter_out),
+	.counter_out_sel(memory_counter_sel),
+	.accessing_counter(accessing_counter)
+);
+
+/* c10 = dcache hit
+	c11 = dcache miss
+	c12 = icache hit
+	c13 = icache miss
+	c4 = l2 hit
+	c5 = l2 miss */
+counter_decoder counter_decoder
+(
+	.clear_counter(clear_counter_out),
+	.offset(line_offset),
+	.c0(c0_clear),
+	.c1(),
+	.c2(),
+	.c3(), .c4(), .c5(),.c6(),.c7(),.c8(),.c9(),.c10(c10_clear),.c11(c11_clear),.c12(c12_clear),.c13(c13_clear),.c14(c14_clear),.c15(c15_clear)
+);
+
+mux16 counter_value_mux
+(
+	.sel(line_offset),
+	.a(c0_out),
+	
+	.k(c10_out),
+	.l(c11_out),
+	.m(c12_out),
+	.n(c13_out),
+	.o(c14_out),
+	.p(c15_out),
+	.out(counter_mux_out)
+);
+
 
 // >>>>> MEM/WB PIPELINE <<<<< //
 lc3b_control_word ctrl_out_MEM_WB;
@@ -660,5 +743,23 @@ MEM_WB_pipeline MEM_WB_pipeline
 );
 // >>>>> MEM/WB PIPELINE <<<<< //
 
+// >>>>> COUNTERS <<<<< //
 
+
+
+counter_rising_edge counter_stalls_memory
+(
+	.clk,
+	.increment_count(stall_pipeline),
+	.clear(c0_clear),
+	.count_out(c0_out)
+);
+
+counter_rising_edge counter_stalls_hazard
+(
+	.clk,
+	.increment_count(stall_pipeline_load),
+	.clear(0),
+	.count_out()
+);
 endmodule : datapath
