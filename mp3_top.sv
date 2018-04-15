@@ -1,5 +1,3 @@
-import lc3b_types::*;
-
 module mp3_top
 (
 	wishbone.master wb_mem

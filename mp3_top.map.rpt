@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mp3_top
-Fri Mar 16 17:26:15 2018
+Sat Apr 14 19:25:17 2018
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Fri Mar 16 17:26:15 2018           ;
+; Analysis & Synthesis Status        ; Failed - Sat Apr 14 19:25:17 2018           ;
 ; Quartus II 32-bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                      ; mp3_top                                     ;
 ; Top-level Entity Name              ; mp3_top                                     ;
@@ -148,15 +148,15 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.0%      ;
+;     Processors 2-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -166,29 +166,19 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
-    Info: Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
-    Info: Your use of Altera Corporation's design tools, logic functions 
-    Info: and other software and tools, and its AMPP partner logic 
-    Info: functions, and any output files from any of the foregoing 
-    Info: (including device programming or simulation files), and any 
-    Info: associated documentation or information are expressly subject 
-    Info: to the terms and conditions of the Altera Program License 
-    Info: Subscription Agreement, Altera MegaCore Function License 
-    Info: Agreement, or other applicable license agreement, including, 
-    Info: without limitation, that your use is for the sole purpose of 
-    Info: programming logic devices manufactured by Altera and sold by 
-    Info: Altera or its authorized distributors.  Please refer to the 
-    Info: applicable agreement for further details.
-    Info: Processing started: Fri Mar 16 17:26:13 2018
-Info: Command: quartus_map mp3_top -c mp3_top
-Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+    Info: Processing started: Sat Apr 14 19:25:11 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp3_top -c mp3_top
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Warning (12125): Using design file mp3_top.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: mp3_top
-Error (10161): Verilog HDL error at mp3_top.sv(1): object "lc3b_types" is not declared File: /home/ridenou2/ece411/risingedge/mp3_top.sv Line: 1
-Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 383 megabytes
-    Error: Processing ended: Fri Mar 16 17:26:15 2018
-    Error: Elapsed time: 00:00:02
-    Error: Total CPU time (on all processors): 00:00:01
+Error (10161): Verilog HDL error at mp3_top.sv(4): object "wishbone" is not declared File: /home/koren3/ece411/mp3/mp3_top.sv Line: 4
+Error (10932): SystemVerilog error at mp3_top.sv(11): can't resolve implicit port connection(s) to instance "mp3" without a module declaration or an extern equivalent File: /home/koren3/ece411/mp3/mp3_top.sv Line: 11
+Error (10932): SystemVerilog error at mp3_top.sv(19): can't resolve implicit port connection(s) to instance "interconnect" without a module declaration or an extern equivalent File: /home/koren3/ece411/mp3/mp3_top.sv Line: 19
+Error (10703): SystemVerilog error at mp3_top.sv(27): can't resolve aggregate expression in connection to port 1 on instance "l2cache" because the instance has no module binding File: /home/koren3/ece411/mp3/mp3_top.sv Line: 27
+Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 4 errors, 1 warning
+    Error: Peak virtual memory: 382 megabytes
+    Error: Processing ended: Sat Apr 14 19:25:17 2018
+    Error: Elapsed time: 00:00:06
+    Error: Total CPU time (on all processors): 00:00:04
 
 

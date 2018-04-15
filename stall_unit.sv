@@ -16,7 +16,8 @@ module stall_unit
 	output logic mem_write,
 	output lc3b_wb_adr mem_address,
 	input lc3b_word mem_rdata,
-	output logic [3:0] line_offset_out
+	output logic [3:0] line_offset_out,
+	input logic flushed
 	//output logic sti_write
 );
 
@@ -43,7 +44,7 @@ begin: state_actions
 	line_offset_out = line_offset_in;
 	case(state)
 		s_read_write: begin
-			if(is_ldi == 1 || is_sti == 1) begin						
+			if((is_ldi == 1 || is_sti == 1) && flushed == 0) begin						
 				stall_pipeline = 1'b1;
 			end
 			else if (((mem_read_in == 1 || mem_write_in == 1) && mem_resp == 0) || ifetch_resp == 0)
@@ -113,7 +114,7 @@ begin: next_state_logic
 		end
 	*/
 		s_read_write: begin
-			if(is_ldi == 1 || is_sti == 1) begin
+			if((is_ldi == 1 || is_sti == 1) && flushed == 0) begin
 				if (mem_resp == 1) begin
 					if(is_ldi == 1)
 						next_state = s_ldi;
@@ -158,8 +159,10 @@ end
 always_ff @(posedge clk)
 begin: next_state_assignment
     /* Assignment of next state on clock edge */
+	 if(state == s_read_write) begin
+		mem_address_buffer <= mem_rdata;
+	 end
 	 state <= next_state;
-	 mem_address_buffer <= mem_rdata;
 end
 	
 endmodule : stall_unit

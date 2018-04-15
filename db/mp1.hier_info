@@ -1900,7 +1900,7 @@ mem_rdata[126] => mem_rdata[126].IN1
 mem_rdata[127] => mem_rdata[127].IN1
 mem_resp => stall_unit:stall_unit.mem_resp
 mem_read <= stall_unit:stall_unit.mem_read
-mem_write <= static_branch_prediction:flush.mem_write_out
+mem_write <= stall_unit:stall_unit.mem_write
 mem_wdata[0] <= set_sel:set_sel.out
 mem_wdata[1] <= set_sel:set_sel.out
 mem_wdata[2] <= set_sel:set_sel.out
@@ -3036,6 +3036,7 @@ instruction_last[14] => Equal2.IN2
 instruction_last[15] => Equal0.IN2
 instruction_last[15] => Equal1.IN0
 instruction_last[15] => Equal2.IN1
+flushed => always0.IN1
 stall_pipeline_load <= stall_pipeline_load.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -5128,40 +5129,37 @@ f[15] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 |mp3_top|mp3:mp3|datapath:the_datapath|forwarding_unit:forwarding_unit_1
 regwrite_EX => always0.IN1
 regwrite_MEM => always0.IN1
+register_num[0] => Equal4.IN2
 register_num[0] => Equal5.IN2
-register_num[0] => Equal6.IN2
+register_num[1] => Equal4.IN1
 register_num[1] => Equal5.IN1
-register_num[1] => Equal6.IN1
+register_num[2] => Equal4.IN0
 register_num[2] => Equal5.IN0
-register_num[2] => Equal6.IN0
 operation[0] => Equal0.IN3
 operation[0] => Equal1.IN3
 operation[0] => Equal2.IN3
 operation[0] => Equal3.IN3
-operation[0] => Equal4.IN3
 operation[1] => Equal0.IN2
 operation[1] => Equal1.IN2
 operation[1] => Equal2.IN2
 operation[1] => Equal3.IN2
-operation[1] => Equal4.IN2
-operation[2] => Equal0.IN1
-operation[2] => Equal1.IN0
+operation[2] => Equal0.IN0
+operation[2] => Equal1.IN1
 operation[2] => Equal2.IN1
 operation[2] => Equal3.IN1
-operation[2] => Equal4.IN1
-operation[3] => Equal0.IN0
-operation[3] => Equal1.IN1
+operation[3] => Equal0.IN1
+operation[3] => Equal1.IN0
 operation[3] => Equal2.IN0
 operation[3] => Equal3.IN0
-operation[3] => Equal4.IN0
-destreg_EX[0] => Equal5.IN5
-destreg_EX[1] => Equal5.IN4
-destreg_EX[2] => Equal5.IN3
-destreg_MEM[0] => Equal6.IN5
-destreg_MEM[1] => Equal6.IN4
-destreg_MEM[2] => Equal6.IN3
+destreg_EX[0] => Equal4.IN5
+destreg_EX[1] => Equal4.IN4
+destreg_EX[2] => Equal4.IN3
+destreg_MEM[0] => Equal5.IN5
+destreg_MEM[1] => Equal5.IN4
+destreg_MEM[2] => Equal5.IN3
 forwarding_unit_out[0] <= forwarding_unit_out.DB_MAX_OUTPUT_PORT_TYPE
 forwarding_unit_out[1] <= forwarding_unit_out.DB_MAX_OUTPUT_PORT_TYPE
+is_jssr => always0.IN1
 
 
 |mp3_top|mp3:mp3|datapath:the_datapath|forwarding_unit_2:forwarding_unit_2
@@ -5196,7 +5194,7 @@ test[2] <= test.DB_MAX_OUTPUT_PORT_TYPE
 test[3] <= <VCC>
 
 
-|mp3_top|mp3:mp3|datapath:the_datapath|forwarding_unit:forwarding_unit_3
+|mp3_top|mp3:mp3|datapath:the_datapath|forwarding_unit_3:forwarding_unit_3
 regwrite_EX => always0.IN1
 regwrite_MEM => always0.IN1
 register_num[0] => Equal5.IN2
@@ -6659,6 +6657,7 @@ line_offset_out[0] <= line_offset_out.DB_MAX_OUTPUT_PORT_TYPE
 line_offset_out[1] <= line_offset_out.DB_MAX_OUTPUT_PORT_TYPE
 line_offset_out[2] <= line_offset_out.DB_MAX_OUTPUT_PORT_TYPE
 line_offset_out[3] <= line_offset_out.DB_MAX_OUTPUT_PORT_TYPE
+flushed => always0.IN1
 
 
 |mp3_top|mp3:mp3|datapath:the_datapath|line_to_word:memory_line_to_word
@@ -7301,12 +7300,6 @@ branch_enable => branch_enable_out.DATAB
 branch_enable => always1.IN0
 load_regfile => load_regfile_out.DATAB
 unconditional_branch => ~NO_FANOUT~
-stall => Selector1.IN6
-stall => Selector3.IN6
-stall => Selector5.IN6
-stall => next_state.OUTPUTSELECT
-stall => next_state.OUTPUTSELECT
-stall => next_state.OUTPUTSELECT
 stall => next_state.OUTPUTSELECT
 stall => next_state.OUTPUTSELECT
 stall => next_state.OUTPUTSELECT
@@ -7315,25 +7308,15 @@ stall => always1.IN1
 stall => next_state.OUTPUTSELECT
 stall => next_state.OUTPUTSELECT
 stall => next_state.OUTPUTSELECT
-stall => next_state.OUTPUTSELECT
-stall => next_state.OUTPUTSELECT
 mem_write_in => mem_write_out.DATAB
 load_regfile_out <= load_regfile_out.DB_MAX_OUTPUT_PORT_TYPE
 mem_write_out <= mem_write_out.DB_MAX_OUTPUT_PORT_TYPE
 branch_enable_out <= branch_enable_out.DB_MAX_OUTPUT_PORT_TYPE
-mem_read_in => ~NO_FANOUT~
-is_load[0] => Equal0.IN3
-is_load[0] => Equal1.IN3
-is_load[0] => Equal2.IN3
-is_load[1] => Equal0.IN1
-is_load[1] => Equal1.IN0
-is_load[1] => Equal2.IN1
-is_load[2] => Equal0.IN0
-is_load[2] => Equal1.IN2
-is_load[2] => Equal2.IN2
-is_load[3] => Equal0.IN2
-is_load[3] => Equal1.IN1
-is_load[3] => Equal2.IN0
+mem_read_in => mem_read_out.DATAB
+is_load[0] => ~NO_FANOUT~
+is_load[1] => ~NO_FANOUT~
+is_load[2] => ~NO_FANOUT~
+is_load[3] => ~NO_FANOUT~
 is_j_in => is_j_out.DATAB
 is_j_in => always1.IN1
 is_j_out <= is_j_out.DB_MAX_OUTPUT_PORT_TYPE
@@ -7343,6 +7326,8 @@ is_jsr_out <= is_jsr_out.DB_MAX_OUTPUT_PORT_TYPE
 is_trap_in => is_trap_out.DATAB
 is_trap_in => always1.IN1
 is_trap_out <= is_trap_out.DB_MAX_OUTPUT_PORT_TYPE
+flushed <= flushed.DB_MAX_OUTPUT_PORT_TYPE
+mem_read_out <= mem_read_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |mp3_top|mp3:mp3|datapath:the_datapath|MEM_WB_pipeline:MEM_WB_pipeline

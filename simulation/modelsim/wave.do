@@ -1,6 +1,8 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
 add wave -noupdate /mp3_tb/Clk
+add wave -noupdate /mp3_tb/Clk
+add wave -noupdate /mp3_tb/Clk
 add wave -noupdate -expand /mp3_tb/dut/mp3/the_datapath/regfile/data
 add wave -noupdate /mp3_tb/dut/mp3/the_datapath/stall_unit/state
 add wave -noupdate /mp3_tb/dut/mp3/the_datapath/stall_unit/next_state
@@ -12,6 +14,8 @@ add wave -noupdate /mp3_tb/dut/mp3/the_datapath/alu_out_out_EX_MEM
 add wave -noupdate /mp3_tb/dut/mp3/the_datapath/regfilemux_out_MEM_WB
 add wave -noupdate /mp3_tb/dut/mp3/the_datapath/stall_unit/mem_read_in
 add wave -noupdate /mp3_tb/dut/mp3/the_datapath/stall_unit/mem_write_in
+add wave -noupdate /mp3_tb/dut/mp3/the_datapath/mem_read
+add wave -noupdate /mp3_tb/dut/mp3/the_datapath/mem_write
 add wave -noupdate /mp3_tb/dut/mp3/the_datapath/stall_unit/mem_resp
 add wave -noupdate /mp3_tb/dut/mp3/the_datapath/stall_unit/ifetch_resp
 add wave -noupdate /mp3_tb/dut/mp3/the_datapath/mem_address
@@ -22,6 +26,8 @@ add wave -noupdate /mp3_tb/dut/mp3/the_datapath/stall_pipeline_load
 add wave -noupdate /mp3_tb/dut/mp3/the_datapath/jump_enable
 add wave -noupdate /mp3_tb/dut/mp3/the_datapath/jsr_enable
 add wave -noupdate /mp3_tb/dut/mp3/the_datapath/trap_enable
+add wave -noupdate /mp3_tb/dut/mp3/the_datapath/branch_enable
+add wave -noupdate /mp3_tb/dut/mp3/the_datapath/branch_enable_out
 add wave -noupdate /mp3_tb/dut/mp3/the_datapath/EX_MEM_pipeline/dest_data_out
 add wave -noupdate /mp3_tb/dut/mp3/the_datapath/addr_adder_out_out_EX_MEM
 add wave -noupdate /mp3_tb/dut/mp3/the_datapath/opcode
@@ -65,7 +71,7 @@ add wave -noupdate /mp3_tb/dut/mp3/the_datapath/alumux/c
 add wave -noupdate /mp3_tb/dut/mp3/the_datapath/alumux/d
 add wave -noupdate /mp3_tb/dut/mp3/the_datapath/alumux/f
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {153973162 ps} 0}
+WaveRestoreCursors {{Cursor 1} {8061290 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 256
 configure wave -valuecolwidth 100
@@ -81,4 +87,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {153956995 ps} {154008291 ps}
+WaveRestoreZoom {8051269 ps} {8102565 ps}
