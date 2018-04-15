@@ -9,7 +9,7 @@ Quartus root          :  /software/altera/13.1/quartus/linux/
 Quartus sim root      :  /software/altera/13.1/quartus/eda/sim_lib
 Simulation Tool       :  modelsim-altera
 Simulation Language   :  verilog
-Simulation Mode       :  GUI
+Simulation Mode       :  Command Line
 Sim Output File       :  
 Sim SDF file          :  
 Sim dir               :  simulation/modelsim
@@ -19,4 +19,511 @@ Sim dir               :  simulation/modelsim
 Info: Starting NativeLink simulation with ModelSim-Altera software
 Sourced NativeLink script /software/altera/13.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
 Warning: File mp1_run_msim_rtl_verilog.do already exists - backing up current file as mp1_run_msim_rtl_verilog.do.bak11
-Info: Spawning ModelSim-Altera Simulation software 
+Probing transcript
+ModelSim-Altera Info: # do mp1_run_msim_rtl_verilog.do 
+ModelSim-Altera Info: # if {[file exists rtl_work]} {
+ModelSim-Altera Info: # 	vdel -lib rtl_work -all
+ModelSim-Altera Info: # }
+ModelSim-Altera Info: # vlib rtl_work
+ModelSim-Altera Info: # vmap work rtl_work
+ModelSim-Altera Info: # Copying /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+ModelSim-Altera Info: # Modifying modelsim.ini
+ModelSim-Altera Warning: # ** Warning: Copied /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+ModelSim-Altera Info: #          Updated modelsim.ini.
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/counter_rising_edge.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module counter_rising_edge
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	counter_rising_edge
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/counter.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module counter
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	counter
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/ldbstblogic.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module ldbstblogic
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	ldbstblogic
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/lc3b_types.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package lc3b_types
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	--none--
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/cache_control.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package cache_control_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module cache_control
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	cache_control
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/wishbone.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling interface wishbone
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	--none--
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/plus2.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module plus2
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	plus2
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/register.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module register
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	register
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/mux2.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module mux2
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	mux2
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/badder.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module badder
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	badder
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/mux4.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module mux4
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	mux4
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/mux8.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module mux8
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	mux8
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/mux_decode_sel.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module mux_decode_sel
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	mux_decode_sel
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/l1arbiter.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package l1arbiter_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module l1arbiter
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	l1arbiter
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/mux16.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module mux16
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	mux16
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/counter_decoder.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package counter_decoder_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module counter_decoder
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	counter_decoder
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/counter_control.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package counter_control_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module counter_control
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	counter_control
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/array.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package array_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module array
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	array
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/cache_writeword.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package cache_writeword_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module cache_writeword
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	cache_writeword
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/mp3.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package mp3_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module mp3
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	mp3
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/adj.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package adj_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module adj
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	adj
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/alu.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package alu_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module alu
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	alu
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/gencc.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package gencc_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module gencc
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	gencc
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/regfile.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package regfile_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module regfile
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	regfile
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/branch_unit.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package branch_unit_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module branch_unit
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	branch_unit
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/sext5.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package sext5_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module sext5
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	sext5
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/zext.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package zext_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module zext
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	zext
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/IF_ID_pipeline.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package IF_ID_pipeline_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module IF_ID_pipeline
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	IF_ID_pipeline
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/ID_EX_pipeline.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package ID_EX_pipeline_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module ID_EX_pipeline
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	ID_EX_pipeline
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/EX_MEM_pipeline.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package EX_MEM_pipeline_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module EX_MEM_pipeline
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	EX_MEM_pipeline
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/MEM_WB_pipeline.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package MEM_WB_pipeline_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module MEM_WB_pipeline
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	MEM_WB_pipeline
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/control_rom.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package control_rom_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module control_rom
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	control_rom
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/line_to_word.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package line_to_word_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module line_to_word
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	line_to_word
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/set_sel.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package set_sel_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module set_sel
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	set_sel
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/stall_unit.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package stall_unit_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module stall_unit
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	stall_unit
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/forwarding_unit.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package forwarding_unit_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module forwarding_unit
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	forwarding_unit
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/stall_unit_2.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package stall_unit_2_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module stall_unit_2
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	stall_unit_2
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/static_branch_prediction.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package static_branch_prediction_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module static_branch_prediction
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	static_branch_prediction
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/forwarding_unit_2.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package forwarding_unit_2_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module forwarding_unit_2
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	forwarding_unit_2
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/evict_buffer.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package evict_buffer_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module evict_buffer
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	evict_buffer
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/forwarding_unit_3.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package forwarding_unit_3_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module forwarding_unit_3
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	forwarding_unit_3
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/cache_datapath.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package cache_datapath_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module cache_datapath
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	cache_datapath
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/datapath.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package datapath_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module datapath
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	datapath
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/cache.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package cache_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module cache
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	cache
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/l2cache.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package l2cache_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module l2cache
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	l2cache
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/wb_interconnect.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package wb_interconnect_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module wb_interconnect
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	wb_interconnect
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/mp3_top.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package mp3_top_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module mp3_top
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	mp3_top
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/mp3_tb.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module mp3_tb
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	mp3_tb
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/mp3_top.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package mp3_top_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module mp3_top
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	mp3_top
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/physical_memory.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module physical_memory
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	physical_memory
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs="+acc"  mp3_tb
+ModelSim-Altera Info: # vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps mp3_tb 
+ModelSim-Altera Info: # Loading sv_std.std
+ModelSim-Altera Info: # Loading work.mp3_tb
+ModelSim-Altera Info: # Loading work.wishbone
+ModelSim-Altera Info: # Loading work.lc3b_types
+ModelSim-Altera Info: # Loading work.mp3_top_sv_unit
+ModelSim-Altera Info: # Loading work.mp3_top
+ModelSim-Altera Info: # Loading work.mp3_sv_unit
+ModelSim-Altera Info: # Loading work.mp3
+ModelSim-Altera Info: # Loading work.datapath_sv_unit
+ModelSim-Altera Info: # Loading work.datapath
+ModelSim-Altera Info: # Loading work.plus2
+ModelSim-Altera Info: # Loading work.mux_decode_sel
+ModelSim-Altera Info: # Loading work.register
+ModelSim-Altera Info: # Loading work.line_to_word_sv_unit
+ModelSim-Altera Info: # Loading work.line_to_word
+ModelSim-Altera Info: # Loading work.IF_ID_pipeline_sv_unit
+ModelSim-Altera Info: # Loading work.IF_ID_pipeline
+ModelSim-Altera Info: # Loading work.stall_unit_2_sv_unit
+ModelSim-Altera Info: # Loading work.stall_unit_2
+ModelSim-Altera Info: # Loading work.regfile_sv_unit
+ModelSim-Altera Info: # Loading work.regfile
+ModelSim-Altera Info: # Loading work.sext5_sv_unit
+ModelSim-Altera Info: # Loading work.sext5
+ModelSim-Altera Info: # Loading work.mux2
+ModelSim-Altera Info: # Loading work.adj_sv_unit
+ModelSim-Altera Info: # Loading work.adj
+ModelSim-Altera Info: # Loading work.zext_sv_unit
+ModelSim-Altera Info: # Loading work.zext
+ModelSim-Altera Info: # Loading work.ID_EX_pipeline_sv_unit
+ModelSim-Altera Info: # Loading work.ID_EX_pipeline
+ModelSim-Altera Info: # Loading work.mux4
+ModelSim-Altera Info: # Loading work.forwarding_unit_sv_unit
+ModelSim-Altera Info: # Loading work.forwarding_unit
+ModelSim-Altera Info: # Loading work.forwarding_unit_2_sv_unit
+ModelSim-Altera Info: # Loading work.forwarding_unit_2
+ModelSim-Altera Info: # Loading work.forwarding_unit_3_sv_unit
+ModelSim-Altera Info: # Loading work.forwarding_unit_3
+ModelSim-Altera Info: # Loading work.alu_sv_unit
+ModelSim-Altera Info: # Loading work.alu
+ModelSim-Altera Info: # Loading work.badder
+ModelSim-Altera Info: # Loading work.EX_MEM_pipeline_sv_unit
+ModelSim-Altera Info: # Loading work.EX_MEM_pipeline
+ModelSim-Altera Info: # Loading work.ldbstblogic
+ModelSim-Altera Info: # Loading work.stall_unit_sv_unit
+ModelSim-Altera Info: # Loading work.stall_unit
+ModelSim-Altera Info: # Loading work.set_sel_sv_unit
+ModelSim-Altera Info: # Loading work.set_sel
+ModelSim-Altera Info: # Loading work.mux8
+ModelSim-Altera Info: # Loading work.gencc_sv_unit
+ModelSim-Altera Info: # Loading work.gencc
+ModelSim-Altera Info: # Loading work.branch_unit_sv_unit
+ModelSim-Altera Info: # Loading work.branch_unit
+ModelSim-Altera Info: # Loading work.static_branch_prediction_sv_unit
+ModelSim-Altera Info: # Loading work.static_branch_prediction
+ModelSim-Altera Info: # Loading work.counter_control_sv_unit
+ModelSim-Altera Info: # Loading work.counter_control
+ModelSim-Altera Info: # Loading work.counter_decoder_sv_unit
+ModelSim-Altera Info: # Loading work.counter_decoder
+ModelSim-Altera Info: # Loading work.mux16
+ModelSim-Altera Info: # Loading work.MEM_WB_pipeline_sv_unit
+ModelSim-Altera Info: # Loading work.MEM_WB_pipeline
+ModelSim-Altera Info: # Loading work.counter_rising_edge
+ModelSim-Altera Info: # Loading work.control_rom_sv_unit
+ModelSim-Altera Info: # Loading work.control_rom
+ModelSim-Altera Info: # Loading work.wb_interconnect_sv_unit
+ModelSim-Altera Info: # Loading work.wb_interconnect
+ModelSim-Altera Info: # Loading work.l1arbiter_sv_unit
+ModelSim-Altera Info: # Loading work.l1arbiter
+ModelSim-Altera Info: # Loading work.cache_sv_unit
+ModelSim-Altera Info: # Loading work.cache
+ModelSim-Altera Info: # Loading work.cache_datapath_sv_unit
+ModelSim-Altera Info: # Loading work.cache_datapath
+ModelSim-Altera Info: # Loading work.cache_writeword_sv_unit
+ModelSim-Altera Info: # Loading work.cache_writeword
+ModelSim-Altera Info: # Loading work.array_sv_unit
+ModelSim-Altera Info: # Loading work.array
+ModelSim-Altera Info: # Loading work.cache_control_sv_unit
+ModelSim-Altera Info: # Loading work.cache_control
+ModelSim-Altera Info: # Loading work.counter
+ModelSim-Altera Info: # Loading work.l2cache_sv_unit
+ModelSim-Altera Info: # Loading work.l2cache
+ModelSim-Altera Info: # Loading work.evict_buffer_sv_unit
+ModelSim-Altera Info: # Loading work.evict_buffer
+ModelSim-Altera Info: # Loading work.physical_memory
+ModelSim-Altera Warning: # ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/datapath.sv(720): [TFMPC] - Too few port connections. Expected 18, found 9.
+ModelSim-Altera Info: #         Region: /mp3_tb/dut/mp3/the_datapath/counter_value_mux
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/datapath.sv(720): [TFMPC] - Missing connection for port 'b'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/datapath.sv(720): [TFMPC] - Missing connection for port 'c'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/datapath.sv(720): [TFMPC] - Missing connection for port 'd'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/datapath.sv(720): [TFMPC] - Missing connection for port 'e'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/datapath.sv(720): [TFMPC] - Missing connection for port 'f'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/datapath.sv(720): [TFMPC] - Missing connection for port 'g'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/datapath.sv(720): [TFMPC] - Missing connection for port 'h'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/datapath.sv(720): [TFMPC] - Missing connection for port 'i'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/datapath.sv(720): [TFMPC] - Missing connection for port 'j'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3015) /home/ridenou2/ece411/risingedge/datapath.sv(764): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'clear'. The port definition is at: /home/ridenou2/ece411/risingedge/counter_rising_edge.sv(5).
+ModelSim-Altera Info: #         Region: /mp3_tb/dut/mp3/the_datapath/counter_stalls_hazard
+ModelSim-Altera Warning: # ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Too few port connections. Expected 6, found 5.
+ModelSim-Altera Info: #         Region: /mp3_tb/dut/interconnect/Icache/cache_datapath/wb2_mux
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Missing connection for port 'a'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Too few port connections. Expected 6, found 5.
+ModelSim-Altera Info: #         Region: /mp3_tb/dut/interconnect/Icache/cache_datapath/adrmux
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Missing connection for port 'd'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Too few port connections. Expected 6, found 5.
+ModelSim-Altera Info: #         Region: /mp3_tb/dut/interconnect/Dcache/cache_datapath/wb2_mux
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Missing connection for port 'a'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Too few port connections. Expected 6, found 5.
+ModelSim-Altera Info: #         Region: /mp3_tb/dut/interconnect/Dcache/cache_datapath/adrmux
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Missing connection for port 'd'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Too few port connections. Expected 6, found 5.
+ModelSim-Altera Info: #         Region: /mp3_tb/dut/l2cache/cache_datapath/wb2_mux
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Missing connection for port 'a'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Too few port connections. Expected 6, found 5.
+ModelSim-Altera Info: #         Region: /mp3_tb/dut/l2cache/cache_datapath/adrmux
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Missing connection for port 'd'.
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: #add wave *
+ModelSim-Altera Info: #view structure
+ModelSim-Altera Info: #view signals
+ModelSim-Altera Info: # run 100 ns
+ModelSim-Altera Info: # quit -f
+Info: NativeLink simulation flow was successful

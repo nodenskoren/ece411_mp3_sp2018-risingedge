@@ -5,6 +5,8 @@ entity l2cache is
         l2_hit_clear    : in     vl_logic;
         l2_miss_clear   : in     vl_logic;
         cache_hit_cnt   : out    vl_logic_vector(15 downto 0);
-        cache_miss_cnt  : out    vl_logic_vector(15 downto 0)
+        cache_miss_cnt  : out    vl_logic_vector(15 downto 0);
+        pmem_read       : out    vl_logic;
+        pmem_write      : out    vl_logic
     );
 end l2cache;

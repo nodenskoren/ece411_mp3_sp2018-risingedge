@@ -36,11 +36,12 @@ state.service_d 1 0 1
 state.service_i 1 1 0 
 
 State Machine - |mp3_top|mp3:mp3|datapath:the_datapath|static_branch_prediction:flush|state
-Name state.s_flush_3 state.s_flush_2 state.s_flush_1 state.s_branch_detection 
-state.s_branch_detection 0 0 0 0 
-state.s_flush_1 0 0 1 1 
-state.s_flush_2 0 1 0 1 
-state.s_flush_3 1 0 0 1 
+Name state.s_flush_3 state.s_flush_2 state.s_flush_1 state.s_branch_detection state.s_post_flush 
+state.s_branch_detection 0 0 0 0 0 
+state.s_flush_1 0 0 1 1 0 
+state.s_flush_2 0 1 0 1 0 
+state.s_flush_3 1 0 0 1 0 
+state.s_post_flush 0 0 0 1 1 
 
 State Machine - |mp3_top|mp3:mp3|datapath:the_datapath|stall_unit:stall_unit|state
 Name state.s_read_write state.s_sti state.s_ldi 

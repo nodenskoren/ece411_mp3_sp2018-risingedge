@@ -126,8 +126,8 @@ begin : state_actions
 		
 		write_back:begin
 			pmem_write = 1;
-			if(LRU_out) adrmux_sel = 2'b01;
-			else adrmux_sel = 2'b10;
+			if(LRU_out) adrmux_sel = 2'b10;
+			else adrmux_sel = 2'b01;
 		end
 		
 		stall: /* Do nothing. Sets CYC, STB to 0 for ACK */;

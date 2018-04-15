@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="mp1">
-		<CBX_INST_ENTRY INSTANCE_NAME="|mp3_top|mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_0" CBX_FILE_NAME="altsyncram_imo1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|mp3_top|mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_1" CBX_FILE_NAME="altsyncram_imo1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|mp3_top|mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2" CBX_FILE_NAME="altsyncram_0co1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|mp3_top|mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_3" CBX_FILE_NAME="altsyncram_imo1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mp3_top|mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_0" CBX_FILE_NAME="altsyncram_opk1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mp3_top|mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_1" CBX_FILE_NAME="altsyncram_opk1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mp3_top|mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_2" CBX_FILE_NAME="altsyncram_6fk1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mp3_top|mp3:mp3|datapath:the_datapath|regfile:regfile|altsyncram:data_rtl_3" CBX_FILE_NAME="altsyncram_opk1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
