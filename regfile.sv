@@ -29,7 +29,7 @@ begin
     end
 end
 
-always_ff @(posedge clk)
+always_ff @(negedge clk)
 begin
     if (load == 1)
     begin

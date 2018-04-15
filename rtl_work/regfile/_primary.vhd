@@ -11,6 +11,10 @@ entity regfile is
         reg_a           : out    vl_logic_vector(15 downto 0);
         reg_b           : out    vl_logic_vector(15 downto 0);
         sr              : in     vl_logic_vector(2 downto 0);
-        sr_out          : out    vl_logic_vector(15 downto 0)
+        sr_out          : out    vl_logic_vector(15 downto 0);
+        src_a_ID_EX     : in     vl_logic_vector(2 downto 0);
+        src_b_ID_EX     : in     vl_logic_vector(2 downto 0);
+        reg_a_ID_EX     : out    vl_logic_vector(15 downto 0);
+        reg_b_ID_EX     : out    vl_logic_vector(15 downto 0)
     );
 end regfile;

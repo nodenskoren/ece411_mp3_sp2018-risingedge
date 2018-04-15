@@ -16,6 +16,7 @@ entity stall_unit is
         mem_write       : out    vl_logic;
         mem_address     : out    vl_logic_vector(11 downto 0);
         mem_rdata       : in     vl_logic_vector(15 downto 0);
-        line_offset_out : out    vl_logic_vector(3 downto 0)
+        line_offset_out : out    vl_logic_vector(3 downto 0);
+        flushed         : in     vl_logic
     );
 end stall_unit;
