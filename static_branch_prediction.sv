@@ -20,7 +20,8 @@ module static_branch_prediction
 	input logic is_trap_in,
 	output logic is_trap_out,
 	output logic flushed,
-	output logic mem_read_out
+	output logic mem_read_out,
+	output logic [1:0] forwarding_mask
 	//output logic sti_write
 );
 
@@ -31,7 +32,8 @@ enum int unsigned {
 	//s_flush_1_wait,
 	s_flush_2,
 	//s_flush_2_wait,
-	s_flush_3
+	s_flush_3,
+	s_post_flush
 	//s_flush_3_wait
 } state, next_state;
 
@@ -45,6 +47,7 @@ begin: state_actions
 	is_jsr_out = is_jsr_in;
 	is_trap_out = is_trap_in;
 	flushed = 1'b0;
+	forwarding_mask = 2'b11;
 	case(state)
 		s_branch_detection: /* do nothing */;
 		s_flush_1: begin
@@ -76,6 +79,7 @@ begin: state_actions
 			is_trap_out = 1'b0;
 			flushed = 1'b1;
 			mem_read_out = 1'b0;
+			forwarding_mask = 2'b00;
 		end
 		/*
 		s_flush_3_wait: begin
@@ -86,6 +90,9 @@ begin: state_actions
 			is_jsr_out = 1'b0;
 			is_trap_out = 1'b0;			
 		end*/
+		s_post_flush: begin
+			forwarding_mask = 2'b10;
+		end
 		default: ;
 	endcase
 end
@@ -144,7 +151,7 @@ begin: next_state_logic
 					next_state = s_flush_3_wait;
 				end
 				else begin */
-				next_state = s_branch_detection;
+				next_state = s_post_flush;
 			end
 				/*
 			end
@@ -152,7 +159,18 @@ begin: next_state_logic
 				next_state = s_flush_3;
 			end*/
 		end	
-	endcase	
+		s_post_flush: begin
+			if((branch_enable == 1 || is_j_in == 1 || is_jsr_in == 1 || is_trap_in == 1) && stall == 0) begin
+				next_state = s_flush_1;
+			end
+			else if(stall == 0) begin
+				next_state = s_branch_detection;
+			end
+			else begin
+				next_state = s_post_flush;
+			end
+		end
+	endcase
 end
 
 always_ff @(posedge clk)

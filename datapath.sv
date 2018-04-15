@@ -361,19 +361,20 @@ lc3b_word sr1mux_out;
 lc3b_word sr2_mux_out;
 lc3b_word regfilemux_out;
 lc3b_word storemux_out;
-
+logic [1:0] forwarding_mask;
 mux4 sr1mux
 (
-	.sel(forwarding_unit_1_out),
+	.sel(forwarding_unit_1_out & forwarding_mask),
 	.a(sr1_ID_EX),
 	.b(regfilemux_out_MEM_WB),	
 	.c(regfilemux_out),
 	.d(sr1_out),
 	.f(sr1mux_out)
 );
+logic [1:0] forwarding_mask_2;
 mux4 sr2_mux
 (
-	.sel(forwarding_unit_2_out),
+	.sel(forwarding_unit_2_out & forwarding_mask),
 	.a(alumux_out),
 	.b(regfilemux_out_MEM_WB),
 	.c(regfilemux_out),
@@ -383,7 +384,7 @@ mux4 sr2_mux
 
 mux4 storemux
 (
-	.sel(forwarding_unit_3_out),
+	.sel(forwarding_unit_3_out & forwarding_mask),
 	.a(dest_data_out_ID_EX),
 	.b(regfilemux_out_MEM_WB),	
 	.c(regfilemux_out),
@@ -631,6 +632,7 @@ logic load_regfile_out;
 static_branch_prediction flush
 (
 	.clk,
+	.forwarding_mask(forwarding_mask),
 	.branch_enable(branch_enable),
 	.unconditional_branch(jump_enable || jsr_enable || trap_enable),
 	.load_regfile(load_regfile_EX_MEM),

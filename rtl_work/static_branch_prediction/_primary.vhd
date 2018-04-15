@@ -21,6 +21,7 @@ entity static_branch_prediction is
         is_trap_in      : in     vl_logic;
         is_trap_out     : out    vl_logic;
         flushed         : out    vl_logic;
-        mem_read_out    : out    vl_logic
+        mem_read_out    : out    vl_logic;
+        forwarding_mask : out    vl_logic_vector(1 downto 0)
     );
 end static_branch_prediction;

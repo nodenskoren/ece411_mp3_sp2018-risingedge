@@ -22,7 +22,7 @@ begin: state_actions
 	case(state)
 		s_check: begin
 			if((instruction_last[15:12] == 4'b0110 || instruction_last[15:12] == 4'b1010 || instruction_last[15:12] == 4'b0010) && flushed == 1'b0) begin
-				if(((instruction_last[11:9] == instruction_curr[8:6]) && !(instruction_curr[15:12] == 4'b0000 && instruction_curr[15:12] == 4'b1110 && instruction_curr[15:12] == 4'b1111 && instruction_curr[15:11] == 5'b01001)) || ((instruction_last[11:9] == instruction_curr[8:6]) && (instruction_curr[5] == 0) && (instruction_curr[15:12] == 4'b0001 || instruction_curr[15:12] == 4'b0101))) begin
+				if(((instruction_last[11:9] == instruction_curr[8:6]) && !(instruction_curr[15:12] == 4'b0000 && instruction_curr[15:12] == 4'b1110 && instruction_curr[15:12] == 4'b1111 && instruction_curr[15:11] == 5'b01001)) || ((instruction_last[11:9] == instruction_curr[2:0]) && (instruction_curr[5] == 0) && (instruction_curr[15:12] == 4'b0001 || instruction_curr[15:12] == 4'b0101))) begin
 					stall_pipeline_load = 1'b1;
 				end
 			end
@@ -40,7 +40,7 @@ begin: next_state_logic
 	case(state)
 		s_check: begin
 			if((instruction_last[15:12] == 4'b0110 || instruction_last[15:12] == 4'b1010 || instruction_last[15:12] == 4'b0010) && flushed == 1'b0) begin
-				if(((instruction_last[11:9] == instruction_curr[8:6]) && !(instruction_curr[15:12] == 4'b0000 && instruction_curr[15:12] == 4'b1110 && instruction_curr[15:12] == 4'b1111 && instruction_curr[15:11] == 5'b01001)) || ((instruction_last[11:9] == instruction_curr[8:6]) && (instruction_curr[5] == 0) && (instruction_curr[15:12] == 4'b0001 || instruction_curr[15:12] == 4'b0101))) begin			
+				if(((instruction_last[11:9] == instruction_curr[8:6]) && !(instruction_curr[15:12] == 4'b0000 && instruction_curr[15:12] == 4'b1110 && instruction_curr[15:12] == 4'b1111 && instruction_curr[15:11] == 5'b01001)) || ((instruction_last[11:9] == instruction_curr[2:0]) && (instruction_curr[5] == 0) && (instruction_curr[15:12] == 4'b0001 || instruction_curr[15:12] == 4'b0101))) begin			
 					next_state = s_load_wait;
 				end
 				else begin

@@ -1,4 +1,4 @@
-# do /tmp/tmp.GPwr2zxumv/do.do 
+# do /tmp/tmp.KvsIXfR2e7/do.do 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
@@ -431,6 +431,6 @@
 #view structure
 #view signals
 # add list -radix hexadecimal [concat [string range [find instances -r regfile] 0 [expr [string first " " [find instances -r regfile]] - 1]] "/data}"]
-# run 1000000ns
-# write list /tmp/tmp.GPwr2zxumv/test_list.lst
+# run 3000000ns
+# write list /tmp/tmp.KvsIXfR2e7/test_list.lst
 # exit
