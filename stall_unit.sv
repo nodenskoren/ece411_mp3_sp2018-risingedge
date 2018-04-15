@@ -55,7 +55,7 @@ begin: state_actions
 			mem_write = 1'b0;
 			mem_address = mem_address_buffer[15:4];
 			line_offset_out = mem_address_buffer[3:0];
-			if (mem_resp == 0)
+			if (mem_resp == 0 || ifetch_resp == 0)
 				stall_pipeline = 1'b1;
 		end
 		s_sti: begin
@@ -63,7 +63,7 @@ begin: state_actions
 			mem_write = 1'b1;
 			mem_address = mem_address_buffer[15:4];
 			line_offset_out = mem_address_buffer[3:0];
-			if (mem_resp == 0)
+			if (mem_resp == 0 || ifetch_resp == 0)
 				stall_pipeline = 1'b1;
 		end
 		default: ;
