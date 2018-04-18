@@ -295,14 +295,6 @@
 # 
 # Top level modules:
 # 	forwarding_unit_2
-# vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/evict_buffer.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package evict_buffer_sv_unit
-# -- Importing package lc3b_types
-# -- Compiling module evict_buffer
-# 
-# Top level modules:
-# 	evict_buffer
 # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/forwarding_unit_3.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package forwarding_unit_3_sv_unit
@@ -464,8 +456,6 @@
 # Loading work.counter
 # Loading work.l2cache_sv_unit
 # Loading work.l2cache
-# Loading work.evict_buffer_sv_unit
-# Loading work.evict_buffer
 # Loading work.physical_memory
 # ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/datapath.sv(720): [TFMPC] - Too few port connections. Expected 18, found 9.
 #         Region: /mp3_tb/dut/mp3/the_datapath/counter_value_mux

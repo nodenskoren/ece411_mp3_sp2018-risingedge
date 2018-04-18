@@ -29,9 +29,12 @@ enum int unsigned {
     /* List of states */
 	s_branch_detection,
 	s_flush_1,
+	//s_flush_1_wait,
 	s_flush_2,
+	//s_flush_2_wait,
 	s_flush_3,
 	s_post_flush
+	//s_flush_3_wait
 } state, next_state;
 
 always_comb
@@ -56,7 +59,6 @@ begin: state_actions
 			is_trap_out = 1'b0;
 			flushed = 1'b1;
 			mem_read_out = 1'b0;
-			forwarding_mask = 2'b00;
 		end
 		s_flush_2: begin
 			mem_write_out = 1'b0;
@@ -64,7 +66,7 @@ begin: state_actions
 			branch_enable_out = 1'b0;
 			is_j_out = 1'b0;
 			is_jsr_out = 1'b0;
-			is_trap_out = 1'b0;	
+			is_trap_out = 1'b0;
 			flushed = 1'b1;
 			mem_read_out = 1'b0;
 		end
@@ -77,11 +79,20 @@ begin: state_actions
 			is_trap_out = 1'b0;
 			flushed = 1'b1;
 			mem_read_out = 1'b0;
-		end	
+			forwarding_mask = 2'b00;
+		end
+		/*
+		s_flush_3_wait: begin
+			mem_write_out = 1'b0;
+			load_regfile_out = 1'b0;
+			branch_enable_out = 1'b0;
+			is_j_out = 1'b0;
+			is_jsr_out = 1'b0;
+			is_trap_out = 1'b0;			
+		end*/
 		s_post_flush: begin
 			forwarding_mask = 2'b10;
 		end
-
 		default: ;
 	endcase
 end
@@ -159,8 +170,7 @@ begin: next_state_logic
 				next_state = s_post_flush;
 			end
 		end
-
-	endcase	
+	endcase
 end
 
 always_ff @(posedge clk)

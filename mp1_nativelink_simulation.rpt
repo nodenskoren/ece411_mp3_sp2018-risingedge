@@ -317,14 +317,6 @@ ModelSim-Altera Info: # -- Compiling module forwarding_unit_2
 ModelSim-Altera Info: # 
 ModelSim-Altera Info: # Top level modules:
 ModelSim-Altera Info: # 	forwarding_unit_2
-ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/evict_buffer.sv}
-ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-ModelSim-Altera Info: # -- Compiling package evict_buffer_sv_unit
-ModelSim-Altera Info: # -- Importing package lc3b_types
-ModelSim-Altera Info: # -- Compiling module evict_buffer
-ModelSim-Altera Info: # 
-ModelSim-Altera Info: # Top level modules:
-ModelSim-Altera Info: # 	evict_buffer
 ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/forwarding_unit_3.sv}
 ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 ModelSim-Altera Info: # -- Compiling package forwarding_unit_3_sv_unit
@@ -486,8 +478,6 @@ ModelSim-Altera Info: # Loading work.cache_control
 ModelSim-Altera Info: # Loading work.counter
 ModelSim-Altera Info: # Loading work.l2cache_sv_unit
 ModelSim-Altera Info: # Loading work.l2cache
-ModelSim-Altera Info: # Loading work.evict_buffer_sv_unit
-ModelSim-Altera Info: # Loading work.evict_buffer
 ModelSim-Altera Info: # Loading work.physical_memory
 ModelSim-Altera Warning: # ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/datapath.sv(720): [TFMPC] - Too few port connections. Expected 18, found 9.
 ModelSim-Altera Info: #         Region: /mp3_tb/dut/mp3/the_datapath/counter_value_mux
