@@ -39,7 +39,7 @@ assign mem_cyc = pmem_write | pmem_read;
 assign mem_stb = pmem_write | pmem_read;
 assign mem_we = pmem_write;
 assign mem_sel = 16'hFFFF;	//always write full line
-assign mem_adr = pmem_adr;
+//assign mem_adr = pmem_adr;
 
 
 logic dirty0_out, dirty1_out, valid1_out, valid0_out;
@@ -53,6 +53,7 @@ logic updateLRU;
 logic wb_sel;
 logic [1:0] adrmux_sel;
 logic cache_hit_inc, cache_miss_inc;
+logic load_adr;
 
 
 
@@ -121,7 +122,8 @@ cache_control cache_controller
 	.adrmux_sel,
 	.req(wb_cpu.STB & wb_cpu.CYC),
 	.cache_hit_inc,
-	.cache_miss_inc
+	.cache_miss_inc,
+	.load_adr
 );
 
 counter cache_hits
@@ -140,7 +142,13 @@ counter cache_misses
 	.count_out(cache_miss_cnt)
 );
 
-
+register #(.width(12)) adr_buffer
+(
+    .clk(wb_cpu.CLK),
+    .load(load_adr),
+    .in(pmem_adr),
+    .out(mem_adr)
+);
 
 
 endmodule : cache

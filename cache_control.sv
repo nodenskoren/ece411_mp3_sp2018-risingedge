@@ -33,7 +33,8 @@ module cache_control
 	output logic wb_sel,
 	output logic [1:0] adrmux_sel,
 	output logic cache_hit_inc,
-	output logic cache_miss_inc
+	output logic cache_miss_inc,
+	output logic load_adr
 
 );
 
@@ -73,7 +74,6 @@ begin : state_actions
 	pmem_read = 1'b0;
 	cpu_resp = 1'b0;
 	wb_sel = 0;
-	adrmux_sel = 2'b00;
 	cache_hit_inc = 1'b0;
 	cache_miss_inc = 1'b0;
 	was_miss_next = 0;
@@ -126,8 +126,7 @@ begin : state_actions
 		
 		write_back:begin
 			pmem_write = 1;
-			if(LRU_out) adrmux_sel = 2'b10;
-			else adrmux_sel = 2'b01;
+			
 		end
 		
 		stall: /* Do nothing. Sets CYC, STB to 0 for ACK */;
@@ -176,13 +175,18 @@ end
 
 always_comb
 begin : next_state_logic
+	load_adr = 0;
+	adrmux_sel = 2'b00;
 	case(state)
 		default: next_state = idle;
 		
 		idle:begin
 			if(req) begin
 				if(!hit0 && !hit1) begin //miss
+					load_adr = 1;
 					if((LRU_out && dirty1_out) || (!LRU_out && dirty0_out)) begin //miss & dirty
+						if(LRU_out) adrmux_sel = 2'b10;
+						else adrmux_sel = 2'b01;
 						next_state = write_back;
 					end
 				
@@ -206,6 +210,7 @@ begin : next_state_logic
 		end
 		
 		stall:begin
+			load_adr = 1;
 			next_state = load_line;
 		end
 		

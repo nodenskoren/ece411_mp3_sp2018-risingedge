@@ -32,7 +32,7 @@ assign wb.CYC = pmem_write | pmem_read;
 assign wb.STB = pmem_write | pmem_read;
 assign wb.WE = pmem_write;
 assign wb.SEL = 16'hFFFF;	//always write full line
-assign wb.ADR = pmem_adr;
+//assign wb.ADR = pmem_adr;
 //assign wb.ADR = {wb2.ADR[15:3], 3'b000};
 
 
@@ -47,7 +47,7 @@ logic updateLRU;
 logic wb_sel;
 logic [1:0] adrmux_sel;
 logic cache_hit_inc, cache_miss_inc;
-
+logic load_adr;
 
 
 cache_datapath cache_datapath
@@ -115,7 +115,8 @@ cache_control cache_controller
 	.adrmux_sel,
 	.req(wb2.STB & wb2.CYC),
 	.cache_hit_inc,
-	.cache_miss_inc
+	.cache_miss_inc,
+	.load_adr
 );
 
 counter cache_hits
@@ -136,7 +137,13 @@ counter cache_misses
 	.count_out(cache_miss_cnt)
 );
 
-
+register #(.width(12)) adr_buffer
+(
+    .clk(wb.CLK),
+    .load(load_adr),
+    .in(pmem_adr),
+    .out(wb.ADR)
+);
 
 
 endmodule : l2cache
