@@ -111,6 +111,20 @@
 # 
 # Top level modules:
 # 	counter_decoder
+# vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/cache_control4way.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cache_control4way_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module cache_control4way
+# 
+# Top level modules:
+# 	cache_control4way
+# vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/wb2sel_4way.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module wb2sel_4way
+# 
+# Top level modules:
+# 	wb2sel_4way
 # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/counter_control.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package counter_control_sv_unit
@@ -295,6 +309,14 @@
 # 
 # Top level modules:
 # 	forwarding_unit_2
+# vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/evict_buffer.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package evict_buffer_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module evict_buffer
+# 
+# Top level modules:
+# 	evict_buffer
 # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/forwarding_unit_3.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package forwarding_unit_3_sv_unit
@@ -303,6 +325,14 @@
 # 
 # Top level modules:
 # 	forwarding_unit_3
+# vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/pseudoLRU4way.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package pseudoLRU4way_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module pseudoLRU4way
+# 
+# Top level modules:
+# 	pseudoLRU4way
 # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/cache_datapath.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cache_datapath_sv_unit
@@ -319,6 +349,14 @@
 # 
 # Top level modules:
 # 	datapath
+# vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/cache_datapath4way.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cache_datapath4way_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module cache_datapath4way
+# 
+# Top level modules:
+# 	cache_datapath4way
 # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/cache.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cache_sv_unit
@@ -327,14 +365,14 @@
 # 
 # Top level modules:
 # 	cache
-# vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/l2cache.sv}
+# vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/l2cache4way.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package l2cache_sv_unit
+# -- Compiling package l2cache4way_sv_unit
 # -- Importing package lc3b_types
-# -- Compiling module l2cache
+# -- Compiling module l2cache4way
 # 
 # Top level modules:
-# 	l2cache
+# 	l2cache4way
 # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/wb_interconnect.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package wb_interconnect_sv_unit
@@ -454,8 +492,17 @@
 # Loading work.cache_control_sv_unit
 # Loading work.cache_control
 # Loading work.counter
-# Loading work.l2cache_sv_unit
-# Loading work.l2cache
+# Loading work.l2cache4way_sv_unit
+# Loading work.l2cache4way
+# Loading work.cache_datapath4way_sv_unit
+# Loading work.cache_datapath4way
+# Loading work.pseudoLRU4way_sv_unit
+# Loading work.pseudoLRU4way
+# Loading work.wb2sel_4way
+# Loading work.cache_control4way_sv_unit
+# Loading work.cache_control4way
+# Loading work.evict_buffer_sv_unit
+# Loading work.evict_buffer
 # Loading work.physical_memory
 # ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/datapath.sv(720): [TFMPC] - Too few port connections. Expected 18, found 9.
 #         Region: /mp3_tb/dut/mp3/the_datapath/counter_value_mux
@@ -482,12 +529,11 @@
 # ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Too few port connections. Expected 6, found 5.
 #         Region: /mp3_tb/dut/interconnect/Dcache/cache_datapath/adrmux
 # ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Missing connection for port 'd'.
-# ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Too few port connections. Expected 6, found 5.
-#         Region: /mp3_tb/dut/l2cache/cache_datapath/wb2_mux
-# ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Missing connection for port 'a'.
-# ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Too few port connections. Expected 6, found 5.
-#         Region: /mp3_tb/dut/l2cache/cache_datapath/adrmux
-# ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Missing connection for port 'd'.
+# ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath4way.sv(309): [TFMPC] - Too few port connections. Expected 10, found 7.
+#         Region: /mp3_tb/dut/l2cache4way/cache_datapath4way/adrmux
+# ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath4way.sv(309): [TFMPC] - Missing connection for port 'f'.
+# ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath4way.sv(309): [TFMPC] - Missing connection for port 'g'.
+# ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath4way.sv(309): [TFMPC] - Missing connection for port 'h'.
 # 
 #add wave *
 #view structure

@@ -133,6 +133,20 @@ ModelSim-Altera Info: # -- Compiling module counter_decoder
 ModelSim-Altera Info: # 
 ModelSim-Altera Info: # Top level modules:
 ModelSim-Altera Info: # 	counter_decoder
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/cache_control4way.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package cache_control4way_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module cache_control4way
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	cache_control4way
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/wb2sel_4way.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module wb2sel_4way
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	wb2sel_4way
 ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/counter_control.sv}
 ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 ModelSim-Altera Info: # -- Compiling package counter_control_sv_unit
@@ -317,6 +331,14 @@ ModelSim-Altera Info: # -- Compiling module forwarding_unit_2
 ModelSim-Altera Info: # 
 ModelSim-Altera Info: # Top level modules:
 ModelSim-Altera Info: # 	forwarding_unit_2
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/evict_buffer.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package evict_buffer_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module evict_buffer
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	evict_buffer
 ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/forwarding_unit_3.sv}
 ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 ModelSim-Altera Info: # -- Compiling package forwarding_unit_3_sv_unit
@@ -325,6 +347,14 @@ ModelSim-Altera Info: # -- Compiling module forwarding_unit_3
 ModelSim-Altera Info: # 
 ModelSim-Altera Info: # Top level modules:
 ModelSim-Altera Info: # 	forwarding_unit_3
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/pseudoLRU4way.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package pseudoLRU4way_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module pseudoLRU4way
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	pseudoLRU4way
 ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/cache_datapath.sv}
 ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 ModelSim-Altera Info: # -- Compiling package cache_datapath_sv_unit
@@ -341,6 +371,14 @@ ModelSim-Altera Info: # -- Compiling module datapath
 ModelSim-Altera Info: # 
 ModelSim-Altera Info: # Top level modules:
 ModelSim-Altera Info: # 	datapath
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/cache_datapath4way.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package cache_datapath4way_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module cache_datapath4way
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	cache_datapath4way
 ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/cache.sv}
 ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 ModelSim-Altera Info: # -- Compiling package cache_sv_unit
@@ -349,14 +387,14 @@ ModelSim-Altera Info: # -- Compiling module cache
 ModelSim-Altera Info: # 
 ModelSim-Altera Info: # Top level modules:
 ModelSim-Altera Info: # 	cache
-ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/l2cache.sv}
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/l2cache4way.sv}
 ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-ModelSim-Altera Info: # -- Compiling package l2cache_sv_unit
+ModelSim-Altera Info: # -- Compiling package l2cache4way_sv_unit
 ModelSim-Altera Info: # -- Importing package lc3b_types
-ModelSim-Altera Info: # -- Compiling module l2cache
+ModelSim-Altera Info: # -- Compiling module l2cache4way
 ModelSim-Altera Info: # 
 ModelSim-Altera Info: # Top level modules:
-ModelSim-Altera Info: # 	l2cache
+ModelSim-Altera Info: # 	l2cache4way
 ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/ridenou2/ece411/risingedge {/home/ridenou2/ece411/risingedge/wb_interconnect.sv}
 ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 ModelSim-Altera Info: # -- Compiling package wb_interconnect_sv_unit
@@ -476,8 +514,17 @@ ModelSim-Altera Info: # Loading work.array
 ModelSim-Altera Info: # Loading work.cache_control_sv_unit
 ModelSim-Altera Info: # Loading work.cache_control
 ModelSim-Altera Info: # Loading work.counter
-ModelSim-Altera Info: # Loading work.l2cache_sv_unit
-ModelSim-Altera Info: # Loading work.l2cache
+ModelSim-Altera Info: # Loading work.l2cache4way_sv_unit
+ModelSim-Altera Info: # Loading work.l2cache4way
+ModelSim-Altera Info: # Loading work.cache_datapath4way_sv_unit
+ModelSim-Altera Info: # Loading work.cache_datapath4way
+ModelSim-Altera Info: # Loading work.pseudoLRU4way_sv_unit
+ModelSim-Altera Info: # Loading work.pseudoLRU4way
+ModelSim-Altera Info: # Loading work.wb2sel_4way
+ModelSim-Altera Info: # Loading work.cache_control4way_sv_unit
+ModelSim-Altera Info: # Loading work.cache_control4way
+ModelSim-Altera Info: # Loading work.evict_buffer_sv_unit
+ModelSim-Altera Info: # Loading work.evict_buffer
 ModelSim-Altera Info: # Loading work.physical_memory
 ModelSim-Altera Warning: # ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/datapath.sv(720): [TFMPC] - Too few port connections. Expected 18, found 9.
 ModelSim-Altera Info: #         Region: /mp3_tb/dut/mp3/the_datapath/counter_value_mux
@@ -504,12 +551,11 @@ ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/ridenou2/ece411/risinge
 ModelSim-Altera Warning: # ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Too few port connections. Expected 6, found 5.
 ModelSim-Altera Info: #         Region: /mp3_tb/dut/interconnect/Dcache/cache_datapath/adrmux
 ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Missing connection for port 'd'.
-ModelSim-Altera Warning: # ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Too few port connections. Expected 6, found 5.
-ModelSim-Altera Info: #         Region: /mp3_tb/dut/l2cache/cache_datapath/wb2_mux
-ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(177): [TFMPC] - Missing connection for port 'a'.
-ModelSim-Altera Warning: # ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Too few port connections. Expected 6, found 5.
-ModelSim-Altera Info: #         Region: /mp3_tb/dut/l2cache/cache_datapath/adrmux
-ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath.sv(194): [TFMPC] - Missing connection for port 'd'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3017) /home/ridenou2/ece411/risingedge/cache_datapath4way.sv(309): [TFMPC] - Too few port connections. Expected 10, found 7.
+ModelSim-Altera Info: #         Region: /mp3_tb/dut/l2cache4way/cache_datapath4way/adrmux
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath4way.sv(309): [TFMPC] - Missing connection for port 'f'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath4way.sv(309): [TFMPC] - Missing connection for port 'g'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/ridenou2/ece411/risingedge/cache_datapath4way.sv(309): [TFMPC] - Missing connection for port 'h'.
 ModelSim-Altera Info: # 
 ModelSim-Altera Info: #add wave *
 ModelSim-Altera Info: #view structure

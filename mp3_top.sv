@@ -51,7 +51,7 @@ wb_interconnect interconnect
 	.icache_miss_clear
 );
 
-l2cache l2cache
+/*l2cache l2cache
 (
 	.wb2(wb_l2),
 	//.wb(wb_mem),
@@ -65,6 +65,20 @@ l2cache l2cache
 	.pmem_write(l2_write),
 	.pmem_read(l2_read)
 	
+);*/
+
+l2cache4way l2cache4way
+(
+	.wb2(wb_l2),
+	.wb(wb_evict),
+	
+	.l2_hit_clear,
+	.l2_miss_clear,
+	.cache_hit_cnt(l2_hits),
+	.cache_miss_cnt(l2_misses),
+	
+	.pmem_write(l2_write),
+	.pmem_read(l2_read)
 );
 
 evict_buffer evict_buffer
