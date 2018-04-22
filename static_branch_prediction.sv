@@ -2,6 +2,8 @@ import lc3b_types::*;
 
 module static_branch_prediction
 (
+	input logic load_cc_in,
+	output logic load_cc_out,
 	input logic clk,
 	input logic branch_enable,
 	input logic load_regfile,
@@ -21,20 +23,28 @@ module static_branch_prediction
 	output logic is_trap_out,
 	output logic flushed,
 	output logic mem_read_out,
-	output logic [1:0] forwarding_mask
+	output logic [1:0] forwarding_mask,
 	//output logic sti_write
+	
+	input lc3b_word br_address,
+	input lc3b_word jsr_address,
+	input lc3b_word jmp_address,
+	input lc3b_word trap_address,
+	input lc3b_word branch_prediction_address,
+	input logic branch_prediction,
+	input lc3b_word instruction,
+	
+	output logic prediction_fail,
+	output logic btb_fail
 );
 
 enum int unsigned {
     /* List of states */
 	s_branch_detection,
 	s_flush_1,
-	//s_flush_1_wait,
 	s_flush_2,
-	//s_flush_2_wait,
 	s_flush_3,
 	s_post_flush
-	//s_flush_3_wait
 } state, next_state;
 
 always_comb
@@ -48,8 +58,20 @@ begin: state_actions
 	is_trap_out = is_trap_in;
 	flushed = 1'b0;
 	forwarding_mask = 2'b11;
+	load_cc_out = load_cc_in;
 	case(state)
-		s_branch_detection: /* do nothing */;
+		s_branch_detection: begin
+		/*
+			if(instruction == 16'h0000) begin
+					load_regfile_out = 1'b0;
+					mem_write_out = 1'b0;
+					mem_read_out = 1'b0;
+					branch_enable_out = 1'b0;
+					is_j_out = 1'b0;
+					is_jsr_out = 1'b0;
+					is_trap_out = 1'b0;
+			end*/
+		end
 		s_flush_1: begin
 			mem_write_out = 1'b0;
 			load_regfile_out = 1'b0;
@@ -59,6 +81,7 @@ begin: state_actions
 			is_trap_out = 1'b0;
 			flushed = 1'b1;
 			mem_read_out = 1'b0;
+			load_cc_out = 1'b0;
 		end
 		s_flush_2: begin
 			mem_write_out = 1'b0;
@@ -69,6 +92,7 @@ begin: state_actions
 			is_trap_out = 1'b0;
 			flushed = 1'b1;
 			mem_read_out = 1'b0;
+			load_cc_out = 1'b0;
 		end
 		s_flush_3: begin
 			mem_write_out = 1'b0;
@@ -80,16 +104,9 @@ begin: state_actions
 			flushed = 1'b1;
 			mem_read_out = 1'b0;
 			forwarding_mask = 2'b00;
+			load_cc_out = 1'b0;
 		end
-		/*
-		s_flush_3_wait: begin
-			mem_write_out = 1'b0;
-			load_regfile_out = 1'b0;
-			branch_enable_out = 1'b0;
-			is_j_out = 1'b0;
-			is_jsr_out = 1'b0;
-			is_trap_out = 1'b0;			
-		end*/
+
 		s_post_flush: begin
 			forwarding_mask = 2'b10;
 		end
@@ -100,10 +117,64 @@ end
 always_comb
 begin: next_state_logic
 	next_state = state;
+	prediction_fail = 0;
+	btb_fail = 1'b1;
 	case(state)
 		s_branch_detection: begin
-			if((branch_enable == 1 || is_j_in == 1 || is_jsr_in == 1 || is_trap_in == 1) && stall == 0) begin
+			if(instruction == 16'h0000) begin
+				next_state = s_branch_detection;
+			end
+			else if(((branch_enable == 1 || is_j_in == 1 || is_jsr_in == 1 || is_trap_in == 1) && branch_prediction == 1'b1) && stall == 0) begin
+				// br case
+				if(branch_enable == 1 && (br_address != branch_prediction_address)) begin
+					next_state = s_flush_1;
+					//btb_fail = 1'b1;
+				end
+				else if(branch_enable == 1 && (br_address == branch_prediction_address)) begin
+					next_state = s_branch_detection;
+					btb_fail = 1'b0;
+				end
+				// jsrr/jmp case
+				else if(is_j_in == 1 && is_jsr_in == 0 && (jmp_address != branch_prediction_address)) begin
+					next_state = s_flush_1;
+					//btb_fail = 1'b1;					
+				end
+				
+				else if(is_j_in == 1 && is_jsr_in == 0 && (jmp_address == branch_prediction_address)) begin
+					next_state = s_branch_detection;
+					btb_fail = 1'b0;					
+				end				
+				// jsr case
+				else if(is_j_in == 1 && is_jsr_in == 1 && (jsr_address != branch_prediction_address)) begin
+					next_state = s_flush_1;
+					//btb_fail = 1'b1;					
+				end
+				else if(is_j_in == 1 && is_jsr_in == 1 && (jsr_address == branch_prediction_address)) begin
+					next_state = s_branch_detection;
+					btb_fail = 1'b0;					
+				end				
+				
+				// trap case
+				else if(is_trap_in == 1 && (trap_address != branch_prediction_address)) begin
+					next_state = s_flush_1;
+					//btb_fail = 1'b1;					
+				end
+				else if(is_trap_in == 1 && (trap_address == branch_prediction_address)) begin
+					next_state = s_branch_detection;
+					btb_fail = 1'b0;					
+				end				
+				
+				else begin
+					next_state = s_branch_detection;
+				end
+			end
+			else if(((branch_enable == 1 || is_j_in == 1 || is_jsr_in == 1 || is_trap_in == 1) && branch_prediction == 1'b0) && stall == 0) begin
 				next_state = s_flush_1;
+				prediction_fail = 1'b1;
+			end			
+			else if(((branch_enable == 0 && is_j_in == 0 && is_jsr_in == 0 && is_trap_in == 0) && branch_prediction == 1'b1) && stall == 0) begin
+				next_state = s_flush_1;
+				prediction_fail = 1'b1;
 			end
 			else begin
 				next_state = s_branch_detection;
@@ -111,58 +182,55 @@ begin: next_state_logic
 		end
 		s_flush_1: begin
 			if(stall == 0) begin
-			/*
-				if(is_load == op_ldr || is_load == op_ldb || is_load == op_ldi) begin
-					next_state = s_flush_1_wait;
-				end
-				else begin*/
-				next_state = s_flush_2;
-				//end
-			end
-		end
-/*		
-		s_flush_1_wait: begin
-			if(stall == 0) begin
 				next_state = s_flush_2;
 			end
 		end
-*/		
-		s_flush_2: begin
-		
+	
+		s_flush_2: begin		
 			if(stall == 0) begin	
-		/*	
-				if(is_load == op_ldr || is_load == op_ldb || is_load == op_ldi) begin
-					next_state = s_flush_2_wait;
-				end 
-				else begin */
 				next_state = s_flush_3;
-			end
-			//end
-			//else begin
-				//next_state = s_flush_2;
-			//end			
+			end		
 		end
 		
 		s_flush_3: begin
-		
 			if(stall == 0) begin
-	/*		
-				if(is_load == op_ldr || is_load == op_ldb || is_load == op_ldi) begin
-					next_state = s_flush_3_wait;
-				end
-				else begin */
 				next_state = s_post_flush;
 			end
-				/*
-			end
-			else begin
-				next_state = s_flush_3;
-			end*/
 		end	
 		s_post_flush: begin
-			if((branch_enable == 1 || is_j_in == 1 || is_jsr_in == 1 || is_trap_in == 1) && stall == 0) begin
-				next_state = s_flush_1;
+			if(((branch_enable == 1 || is_j_in == 1 || is_jsr_in == 1 || is_trap_in == 1) && branch_prediction == 1'b1) && stall == 0) begin
+				// br case
+				if(branch_enable == 1 && (br_address != branch_prediction_address)) begin
+					next_state = s_flush_1;
+					btb_fail = 1'b1;					
+				end
+				// jsrr/jmp case
+				else if(is_j_in == 1 && is_jsr_in == 0 && (jmp_address != branch_prediction_address)) begin
+					next_state = s_flush_1;
+					btb_fail = 1'b1;					
+				end
+				// jsr case
+				else if(is_j_in == 1 && is_jsr_in == 1 && (jsr_address != branch_prediction_address)) begin
+					next_state = s_flush_1;
+					btb_fail = 1'b1;					
+				end
+				// trap case
+				else if(is_trap_in == 1 && (trap_address != branch_prediction_address)) begin
+					next_state = s_flush_1;
+					btb_fail = 1'b1;					
+				end
+				else begin
+					next_state = s_branch_detection;
+				end
 			end
+			else if(((branch_enable == 1 || is_j_in == 1 || is_jsr_in == 1 || is_trap_in == 1) && branch_prediction == 1'b0) && stall == 0) begin
+				next_state = s_flush_1;
+				prediction_fail = 1'b1;				
+			end				
+			else if(((branch_enable == 0 && is_j_in == 0 && is_jsr_in == 0 && is_trap_in == 0) && branch_prediction == 1'b1) && stall == 0) begin
+				next_state = s_flush_1;
+				prediction_fail = 1'b1;				
+			end			
 			else if(stall == 0) begin
 				next_state = s_branch_detection;
 			end

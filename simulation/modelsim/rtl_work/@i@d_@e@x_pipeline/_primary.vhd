@@ -42,6 +42,12 @@ entity ID_EX_pipeline is
         stall_pipeline  : in     vl_logic;
         imm_mode_out    : out    vl_logic;
         sr2mux_sel_out  : out    vl_logic;
-        sext5_out_out   : out    vl_logic_vector(15 downto 0)
+        sext5_out_out   : out    vl_logic_vector(15 downto 0);
+        branch_history_in: in     vl_logic_vector(7 downto 0);
+        branch_history_out: out    vl_logic_vector(7 downto 0);
+        branch_prediction_in: in     vl_logic;
+        branch_prediction_out: out    vl_logic;
+        branch_address_in: in     vl_logic_vector(15 downto 0);
+        branch_address_out: out    vl_logic_vector(15 downto 0)
     );
 end ID_EX_pipeline;

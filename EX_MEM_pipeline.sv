@@ -59,7 +59,14 @@ module EX_MEM_pipeline
 	input lc3b_word instruction_in,
 	output lc3b_word instruction_out,	
 	
-	input logic stall_pipeline
+	input logic stall_pipeline,
+	input logic [7:0] branch_history_in,
+	output logic [7:0] branch_history_out,
+	input logic branch_prediction_in,
+	output logic branch_prediction_out,
+	input lc3b_word branch_address_in,
+	output lc3b_word branch_address_out	
+
 );
 
 lc3b_control_word ctrl;
@@ -88,6 +95,10 @@ logic is_trap;
 logic is_ldb_stb;
 lc3b_opcode operation;
 lc3b_word instruction;
+logic [7:0] branch_history;
+logic branch_prediction;
+lc3b_word branch_address;
+
 
 always_ff @(posedge clk)
 begin
@@ -119,6 +130,10 @@ begin
 		is_ldb_stb <= is_ldb_stb_in;
 		operation <= operation_in;		
 		instruction <= instruction_in;
+		branch_history <= branch_history_in;
+		branch_prediction <= branch_prediction_in;
+		branch_address <= branch_address_in;		
+
 	end
 end
 
@@ -151,5 +166,9 @@ begin
 	is_ldb_stb_out = is_ldb_stb;
 	operation_out = operation;
 	instruction_out = instruction;
+	branch_history_out = branch_history;
+	branch_prediction_out = branch_prediction;
+	branch_address_out = branch_address;	
+
 end
 endmodule : EX_MEM_pipeline
