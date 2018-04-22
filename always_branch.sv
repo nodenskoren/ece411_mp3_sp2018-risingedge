@@ -11,6 +11,7 @@ module always_branch
 	output logic branch_prediction,
 	output lc3b_word branch_prediction_address,
 	output logic [7:0] branch_history_out,
+	output logic prediction_made,
 	
 	input [7:0] pc_EX_MEM,
 	input [7:0] branch_history_EX_MEM,
@@ -44,12 +45,14 @@ begin
 end
 
 always_comb begin
+	prediction_made = 1'b0;
 	if(instruction == op_br || instruction == op_jmp || instruction == op_jsr || instruction == op_trap) begin
 		if(stall == 1'b1 || full_instruction == 16'h0000) begin
 			branch_prediction = 1'b0;
 		end
 		else begin
 			branch_prediction = pht[curr];
+			prediction_made = 1'b1;
 		end
 	end
 	else begin

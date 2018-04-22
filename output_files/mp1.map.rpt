@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mp1
-Sun Apr 22 11:38:13 2018
+Sun Apr 22 12:53:07 2018
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -127,11 +127,13 @@ Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 119. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|ID_EX_pipeline:ID_EX_pipeline"
 120. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|zext:zext8"
 121. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|mux2:destmux"
-122. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|plus2:pc_plus2_EX_MEM"
-123. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|plus2:pc_plus2"
-124. Elapsed Time Per Partition
-125. Analysis & Synthesis Messages
-126. Analysis & Synthesis Suppressed Messages
+122. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|pht_counter:prediction_made_counter"
+123. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|pht_counter:pht_fail_counter"
+124. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|plus2:pc_plus2_EX_MEM"
+125. Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|plus2:pc_plus2"
+126. Elapsed Time Per Partition
+127. Analysis & Synthesis Messages
+128. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -157,7 +159,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Sun Apr 22 11:38:12 2018       ;
+; Analysis & Synthesis Status   ; Successful - Sun Apr 22 12:53:06 2018       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp1                                         ;
 ; Top-level Entity Name         ; mp3_top                                     ;
@@ -334,6 +336,7 @@ applicable agreement for further details.
 ; mux16.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/koren3/ece411/mp3/mux16.sv                                            ;         ;
 ; counter_decoder.sv               ; yes             ; User SystemVerilog HDL File  ; /home/koren3/ece411/mp3/counter_decoder.sv                                  ;         ;
 ; forwarding_unit_3.sv             ; yes             ; User SystemVerilog HDL File  ; /home/koren3/ece411/mp3/forwarding_unit_3.sv                                ;         ;
+; pht_counter.sv                   ; yes             ; User SystemVerilog HDL File  ; /home/koren3/ece411/mp3/pht_counter.sv                                      ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                 ; /software/altera/13.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                 ; /software/altera/13.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                 ; /software/altera/13.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
@@ -2677,6 +2680,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+----------------------------------------------+
 
 
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|pht_counter:prediction_made_counter"                       ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; clear     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; count_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|pht_counter:pht_fail_counter"                              ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; clear     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; count_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +--------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "mp3:mp3|datapath:the_datapath|plus2:pc_plus2_EX_MEM"                                          ;
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -2701,7 +2724,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:52     ;
+; Top            ; 00:01:23     ;
 +----------------+--------------+
 
 
@@ -2711,21 +2734,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
-    Info: Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
-    Info: Your use of Altera Corporation's design tools, logic functions 
-    Info: and other software and tools, and its AMPP partner logic 
-    Info: functions, and any output files from any of the foregoing 
-    Info: (including device programming or simulation files), and any 
-    Info: associated documentation or information are expressly subject 
-    Info: to the terms and conditions of the Altera Program License 
-    Info: Subscription Agreement, Altera MegaCore Function License 
-    Info: Agreement, or other applicable license agreement, including, 
-    Info: without limitation, that your use is for the sole purpose of 
-    Info: programming logic devices manufactured by Altera and sold by 
-    Info: Altera or its authorized distributors.  Please refer to the 
-    Info: applicable agreement for further details.
-    Info: Processing started: Sun Apr 22 11:37:02 2018
-Info: Command: quartus_map mp1 -c mp1
+    Info: Processing started: Sun Apr 22 12:51:16 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp1 -c mp1
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file always_branch.sv
     Info (12023): Found entity 1: always_branch
@@ -2843,15 +2853,18 @@ Info (12021): Found 1 design units, including 1 entities, in source file evict_b
     Info (12023): Found entity 1: evict_buffer
 Info (12021): Found 1 design units, including 1 entities, in source file forwarding_unit_3.sv
     Info (12023): Found entity 1: forwarding_unit_3
+Info (12021): Found 1 design units, including 1 entities, in source file pht_counter.sv
+    Info (12023): Found entity 1: pht_counter
 Info (12127): Elaborating entity "mp3_top" for the top level hierarchy
 Info (12128): Elaborating entity "wishbone" for hierarchy "wishbone:ifetch"
 Info (12128): Elaborating entity "mp3" for hierarchy "mp3:mp3"
 Info (12128): Elaborating entity "datapath" for hierarchy "mp3:mp3|datapath:the_datapath"
 Info (12128): Elaborating entity "plus2" for hierarchy "mp3:mp3|datapath:the_datapath|plus2:pc_plus2"
 Info (12128): Elaborating entity "always_branch" for hierarchy "mp3:mp3|datapath:the_datapath|always_branch:always_branch"
-Warning (10230): Verilog HDL assignment warning at always_branch.sv(52): truncated value with size 2 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at always_branch.sv(54): truncated value with size 2 to match size of target (1)
 Info (12128): Elaborating entity "mux2" for hierarchy "mp3:mp3|datapath:the_datapath|mux2:branch_prediction_mux"
 Info (12128): Elaborating entity "mux_decode_sel" for hierarchy "mp3:mp3|datapath:the_datapath|mux_decode_sel:pcmux"
+Info (12128): Elaborating entity "pht_counter" for hierarchy "mp3:mp3|datapath:the_datapath|pht_counter:pht_fail_counter"
 Info (12128): Elaborating entity "register" for hierarchy "mp3:mp3|datapath:the_datapath|register:program_counter"
 Info (12128): Elaborating entity "line_to_word" for hierarchy "mp3:mp3|datapath:the_datapath|line_to_word:ifetch_line_to_word"
 Info (12128): Elaborating entity "IF_ID_pipeline" for hierarchy "mp3:mp3|datapath:the_datapath|IF_ID_pipeline:IF_ID_pipeline"
@@ -3372,10 +3385,10 @@ Info (21057): Implemented 17626 device resources after synthesis - the final res
     Info (21061): Implemented 17288 logic cells
     Info (21064): Implemented 48 RAM segments
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 333 warnings
-    Info: Peak virtual memory: 573 megabytes
-    Info: Processing ended: Sun Apr 22 11:38:13 2018
-    Info: Elapsed time: 00:01:11
-    Info: Total CPU time (on all processors): 00:01:07
+    Info: Peak virtual memory: 561 megabytes
+    Info: Processing ended: Sun Apr 22 12:53:07 2018
+    Info: Elapsed time: 00:01:51
+    Info: Total CPU time (on all processors): 00:01:46
 
 
 +------------------------------------------+

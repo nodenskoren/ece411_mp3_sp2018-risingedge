@@ -12,6 +12,7 @@ entity always_branch is
         branch_prediction: out    vl_logic;
         branch_prediction_address: out    vl_logic_vector(15 downto 0);
         branch_history_out: out    vl_logic_vector(7 downto 0);
+        prediction_made : out    vl_logic;
         pc_EX_MEM       : in     vl_logic_vector(7 downto 0);
         branch_history_EX_MEM: in     vl_logic_vector(7 downto 0);
         br_address      : in     vl_logic_vector(15 downto 0);

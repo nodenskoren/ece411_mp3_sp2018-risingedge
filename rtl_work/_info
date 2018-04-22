@@ -18,7 +18,7 @@ Z5 8/home/koren3/ece411/mp3/adj.sv
 Z6 F/home/koren3/ece411/mp3/adj.sv
 L0 6
 Z7 OV;L;10.1d;51
-Z8 !s108 1524415118.739585
+Z8 !s108 1524417657.130203
 Z9 !s107 /home/koren3/ece411/mp3/adj.sv|
 Z10 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/adj.sv|
 Z11 o-sv -work work -O0
@@ -67,7 +67,7 @@ Z13 8/home/koren3/ece411/mp3/alu.sv
 Z14 F/home/koren3/ece411/mp3/alu.sv
 L0 3
 R7
-Z15 !s108 1524415118.924816
+Z15 !s108 1524417657.372453
 Z16 !s107 /home/koren3/ece411/mp3/alu.sv|
 Z17 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/alu.sv|
 R11
@@ -116,7 +116,7 @@ Z19 8/home/koren3/ece411/mp3/always_branch.sv
 Z20 F/home/koren3/ece411/mp3/always_branch.sv
 L0 3
 R7
-Z21 !s108 1524415117.812283
+Z21 !s108 1524417656.119930
 Z22 !s107 /home/koren3/ece411/mp3/always_branch.sv|
 Z23 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/always_branch.sv|
 R11
@@ -165,7 +165,7 @@ Z24 8/home/koren3/ece411/mp3/array.sv
 Z25 F/home/koren3/ece411/mp3/array.sv
 L0 3
 R7
-Z26 !s108 1524415118.187641
+Z26 !s108 1524417656.640923
 Z27 !s107 /home/koren3/ece411/mp3/array.sv|
 Z28 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/array.sv|
 R11
@@ -218,7 +218,7 @@ R12
 !s100 LS_VM?XmCNl_FJ:4>O34O3
 !s105 badder_sv_unit
 !s85 0
-!s108 1524415116.804132
+!s108 1524417655.286946
 !s107 /home/koren3/ece411/mp3/badder.sv|
 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/badder.sv|
 !s101 -O0
@@ -237,7 +237,7 @@ Z29 8/home/koren3/ece411/mp3/branch_unit.sv
 Z30 F/home/koren3/ece411/mp3/branch_unit.sv
 L0 3
 R7
-Z31 !s108 1524415119.580726
+Z31 !s108 1524417657.941466
 Z32 !s107 /home/koren3/ece411/mp3/branch_unit.sv|
 Z33 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/branch_unit.sv|
 R11
@@ -286,7 +286,7 @@ Z34 8/home/koren3/ece411/mp3/cache.sv
 Z35 F/home/koren3/ece411/mp3/cache.sv
 L0 3
 R7
-Z36 !s108 1524415123.689587
+Z36 !s108 1524417661.643012
 Z37 !s107 /home/koren3/ece411/mp3/cache.sv|
 Z38 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/cache.sv|
 R11
@@ -311,7 +311,7 @@ Z39 8/home/koren3/ece411/mp3/cache_control.sv
 Z40 F/home/koren3/ece411/mp3/cache_control.sv
 L0 3
 R7
-Z41 !s108 1524415116.134623
+Z41 !s108 1524417654.627398
 Z42 !s107 /home/koren3/ece411/mp3/cache_control.sv|
 Z43 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/cache_control.sv|
 R11
@@ -360,7 +360,7 @@ Z44 8/home/koren3/ece411/mp3/cache_datapath.sv
 Z45 F/home/koren3/ece411/mp3/cache_datapath.sv
 L0 3
 R7
-Z46 !s108 1524415123.294672
+Z46 !s108 1524417661.155543
 Z47 !s107 /home/koren3/ece411/mp3/cache_datapath.sv|
 Z48 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/cache_datapath.sv|
 R11
@@ -433,7 +433,7 @@ Z49 8/home/koren3/ece411/mp3/cache_writeword.sv
 Z50 F/home/koren3/ece411/mp3/cache_writeword.sv
 L0 4
 R7
-Z51 !s108 1524415118.405885
+Z51 !s108 1524417656.785283
 Z52 !s107 /home/koren3/ece411/mp3/cache_writeword.sv|
 Z53 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/cache_writeword.sv|
 R11
@@ -482,7 +482,7 @@ Z54 8/home/koren3/ece411/mp3/control_rom.sv
 Z55 F/home/koren3/ece411/mp3/control_rom.sv
 L0 3
 R7
-Z56 !s108 1524415121.361241
+Z56 !s108 1524417659.407622
 Z57 !s107 /home/koren3/ece411/mp3/control_rom.sv|
 Z58 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/control_rom.sv|
 R11
@@ -535,7 +535,7 @@ R12
 !s100 gWInT4LR7G8F43aB3<0D]3
 !s105 counter_sv_unit
 !s85 0
-!s108 1524415115.785469
+!s108 1524417654.263036
 !s107 /home/koren3/ece411/mp3/counter.sv|
 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/counter.sv|
 !s101 -O0
@@ -554,7 +554,7 @@ Z59 8/home/koren3/ece411/mp3/counter_control.sv
 Z60 F/home/koren3/ece411/mp3/counter_control.sv
 L0 3
 R7
-Z61 !s108 1524415117.979872
+Z61 !s108 1524417656.454132
 Z62 !s107 /home/koren3/ece411/mp3/counter_control.sv|
 Z63 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/counter_control.sv|
 R11
@@ -603,7 +603,7 @@ Z64 8/home/koren3/ece411/mp3/counter_decoder.sv
 Z65 F/home/koren3/ece411/mp3/counter_decoder.sv
 L0 3
 R7
-Z66 !s108 1524415117.621050
+Z66 !s108 1524417655.974091
 Z67 !s107 /home/koren3/ece411/mp3/counter_decoder.sv|
 Z68 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/counter_decoder.sv|
 R11
@@ -656,7 +656,7 @@ R12
 !s100 955@A7Z@<J5?:MeM7<7JH3
 !s105 counter_rising_edge_sv_unit
 !s85 0
-!s108 1524415115.660645
+!s108 1524417653.982461
 !s107 /home/koren3/ece411/mp3/counter_rising_edge.sv|
 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/counter_rising_edge.sv|
 !s101 -O0
@@ -675,7 +675,7 @@ Z70 8/home/koren3/ece411/mp3/datapath.sv
 Z71 F/home/koren3/ece411/mp3/datapath.sv
 L0 3
 R7
-Z72 !s108 1524415123.479575
+Z72 !s108 1524417661.389181
 Z73 !s107 /home/koren3/ece411/mp3/datapath.sv|
 Z74 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/datapath.sv|
 R11
@@ -724,7 +724,7 @@ Z76 8/home/koren3/ece411/mp3/EX_MEM_pipeline.sv
 Z77 F/home/koren3/ece411/mp3/EX_MEM_pipeline.sv
 L0 4
 R7
-Z78 !s108 1524415120.909042
+Z78 !s108 1524417659.048084
 Z79 !s107 /home/koren3/ece411/mp3/EX_MEM_pipeline.sv|
 Z80 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/EX_MEM_pipeline.sv|
 R11
@@ -775,7 +775,7 @@ Z81 8/home/koren3/ece411/mp3/forwarding_unit.sv
 Z82 F/home/koren3/ece411/mp3/forwarding_unit.sv
 L0 3
 R7
-Z83 !s108 1524415122.221879
+Z83 !s108 1524417660.117343
 Z84 !s107 /home/koren3/ece411/mp3/forwarding_unit.sv|
 Z85 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/forwarding_unit.sv|
 R11
@@ -800,7 +800,7 @@ Z86 8/home/koren3/ece411/mp3/forwarding_unit_2.sv
 Z87 F/home/koren3/ece411/mp3/forwarding_unit_2.sv
 L0 3
 R7
-Z88 !s108 1524415122.852886
+Z88 !s108 1524417660.727961
 Z89 !s107 /home/koren3/ece411/mp3/forwarding_unit_2.sv|
 Z90 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/forwarding_unit_2.sv|
 R11
@@ -849,7 +849,7 @@ Z91 8/home/koren3/ece411/mp3/forwarding_unit_3.sv
 Z92 F/home/koren3/ece411/mp3/forwarding_unit_3.sv
 L0 3
 R7
-Z93 !s108 1524415123.098957
+Z93 !s108 1524417660.942138
 Z94 !s107 /home/koren3/ece411/mp3/forwarding_unit_3.sv|
 Z95 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/forwarding_unit_3.sv|
 R11
@@ -922,7 +922,7 @@ Z96 8/home/koren3/ece411/mp3/gencc.sv
 Z97 F/home/koren3/ece411/mp3/gencc.sv
 L0 3
 R7
-Z98 !s108 1524415119.109989
+Z98 !s108 1524417657.584843
 Z99 !s107 /home/koren3/ece411/mp3/gencc.sv|
 Z100 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/gencc.sv|
 R11
@@ -971,7 +971,7 @@ Z102 8/home/koren3/ece411/mp3/ID_EX_pipeline.sv
 Z103 F/home/koren3/ece411/mp3/ID_EX_pipeline.sv
 L0 3
 R7
-Z104 !s108 1524415120.660073
+Z104 !s108 1524417658.624765
 Z105 !s107 /home/koren3/ece411/mp3/ID_EX_pipeline.sv|
 Z106 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/ID_EX_pipeline.sv|
 R11
@@ -1022,7 +1022,7 @@ Z108 8/home/koren3/ece411/mp3/IF_ID_pipeline.sv
 Z109 F/home/koren3/ece411/mp3/IF_ID_pipeline.sv
 L0 3
 R7
-Z110 !s108 1524415120.458094
+Z110 !s108 1524417658.417042
 Z111 !s107 /home/koren3/ece411/mp3/IF_ID_pipeline.sv|
 Z112 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/IF_ID_pipeline.sv|
 R11
@@ -1073,7 +1073,7 @@ Z113 8/home/koren3/ece411/mp3/l1arbiter.sv
 Z114 F/home/koren3/ece411/mp3/l1arbiter.sv
 L0 3
 R7
-Z115 !s108 1524415117.294017
+Z115 !s108 1524417655.740964
 Z116 !s107 /home/koren3/ece411/mp3/l1arbiter.sv|
 Z117 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/l1arbiter.sv|
 R11
@@ -1122,7 +1122,7 @@ Z118 8/home/koren3/ece411/mp3/l2cache.sv
 Z119 F/home/koren3/ece411/mp3/l2cache.sv
 L0 3
 R7
-Z120 !s108 1524415123.879066
+Z120 !s108 1524417661.867724
 Z121 !s107 /home/koren3/ece411/mp3/l2cache.sv|
 Z122 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/l2cache.sv|
 R11
@@ -1174,7 +1174,7 @@ R12
 !i10b 1
 !s100 @2KMDGX=ZP]cYIN??;>@c3
 !s85 0
-!s108 1524415116.019056
+!s108 1524417654.509747
 !s107 /home/koren3/ece411/mp3/lc3b_types.sv|
 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/lc3b_types.sv|
 !s101 -O0
@@ -1197,7 +1197,7 @@ R12
 !s100 >ZbdfZK6dTC9TPGX@fINk0
 !s105 ldbstblogic_sv_unit
 !s85 0
-!s108 1524415115.899944
+!s108 1524417654.370276
 !s107 /home/koren3/ece411/mp3/ldbstblogic.sv|
 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/ldbstblogic.sv|
 !s101 -O0
@@ -1216,7 +1216,7 @@ Z123 8/home/koren3/ece411/mp3/line_to_word.sv
 Z124 F/home/koren3/ece411/mp3/line_to_word.sv
 L0 3
 R7
-Z125 !s108 1524415121.615227
+Z125 !s108 1524417659.606214
 Z126 !s107 /home/koren3/ece411/mp3/line_to_word.sv|
 Z127 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/line_to_word.sv|
 R11
@@ -1265,7 +1265,7 @@ Z129 8/home/koren3/ece411/mp3/MEM_WB_pipeline.sv
 Z130 F/home/koren3/ece411/mp3/MEM_WB_pipeline.sv
 L0 3
 R7
-Z131 !s108 1524415121.156750
+Z131 !s108 1524417659.229022
 Z132 !s107 /home/koren3/ece411/mp3/MEM_WB_pipeline.sv|
 Z133 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/MEM_WB_pipeline.sv|
 R11
@@ -1316,7 +1316,7 @@ Z134 8/home/koren3/ece411/mp3/mp3.sv
 Z135 F/home/koren3/ece411/mp3/mp3.sv
 L0 3
 R7
-Z136 !s108 1524415118.598128
+Z136 !s108 1524417656.929298
 Z137 !s107 /home/koren3/ece411/mp3/mp3.sv|
 Z138 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/mp3.sv|
 R11
@@ -1369,7 +1369,7 @@ R12
 !s100 5`abjQ?44<JbnniM27TUT2
 !s105 mp3_tb_sv_unit
 !s85 0
-!s108 1524415124.436139
+!s108 1524417663.028852
 !s107 /home/koren3/ece411/mp3/mp3_tb.sv|
 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/mp3_tb.sv|
 !s101 -O0
@@ -1388,7 +1388,7 @@ Z139 8/home/koren3/ece411/mp3/mp3_top.sv
 Z140 F/home/koren3/ece411/mp3/mp3_top.sv
 L0 3
 R7
-Z141 !s108 1524415124.568506
+Z141 !s108 1524417663.293866
 Z142 !s107 /home/koren3/ece411/mp3/mp3_top.sv|
 Z143 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/mp3_top.sv|
 R11
@@ -1441,7 +1441,7 @@ R12
 !s100 ;im7HO8TRfi^_[_^4298<3
 !s105 mux16_sv_unit
 !s85 0
-!s108 1524415117.494668
+!s108 1524417655.887404
 !s107 /home/koren3/ece411/mp3/mux16.sv|
 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/mux16.sv|
 !s101 -O0
@@ -1464,7 +1464,7 @@ R12
 !s100 @bG[@mGL];^TWgUJCXEG>3
 !s105 mux2_sv_unit
 !s85 0
-!s108 1524415116.684644
+!s108 1524417655.148927
 !s107 /home/koren3/ece411/mp3/mux2.sv|
 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/mux2.sv|
 !s101 -O0
@@ -1487,7 +1487,7 @@ R12
 !s100 1lhM`jOz:aHRm<@QXOa^Y0
 !s105 mux4_sv_unit
 !s85 0
-!s108 1524415116.903953
+!s108 1524417655.394816
 !s107 /home/koren3/ece411/mp3/mux4.sv|
 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/mux4.sv|
 !s101 -O0
@@ -1510,7 +1510,7 @@ R12
 !s100 0OFSZTRbfjeKamCd4fAAO2
 !s105 mux8_sv_unit
 !s85 0
-!s108 1524415117.029331
+!s108 1524417655.514905
 !s107 /home/koren3/ece411/mp3/mux8.sv|
 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/mux8.sv|
 !s101 -O0
@@ -1533,7 +1533,7 @@ R12
 !s100 a1;zMT<4N_d^ObLenc1df0
 !s105 mux_decode_sel_sv_unit
 !s85 0
-!s108 1524415117.172827
+!s108 1524417655.649964
 !s107 /home/koren3/ece411/mp3/mux_decode_sel.sv|
 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/mux_decode_sel.sv|
 !s101 -O0
@@ -1554,7 +1554,7 @@ R7
 r1
 !s85 0
 31
-!s108 1524415124.816879
+!s108 1524417663.699409
 !s107 /home/koren3/ece411/mp3/physical_memory.sv|
 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/physical_memory.sv|
 !s101 -O0
@@ -1579,7 +1579,7 @@ R12
 !s100 WeR3XU^PXN4kYY4lE?N6h1
 !s105 plus2_sv_unit
 !s85 0
-!s108 1524415116.366058
+!s108 1524417654.890005
 !s107 /home/koren3/ece411/mp3/plus2.sv|
 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/plus2.sv|
 !s101 -O0
@@ -1598,7 +1598,7 @@ Z144 8/home/koren3/ece411/mp3/regfile.sv
 Z145 F/home/koren3/ece411/mp3/regfile.sv
 L0 3
 R7
-Z146 !s108 1524415119.349579
+Z146 !s108 1524417657.778643
 Z147 !s107 /home/koren3/ece411/mp3/regfile.sv|
 Z148 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/regfile.sv|
 R11
@@ -1651,7 +1651,7 @@ R12
 !s100 =>SKHDVZ>=_1h9U^^ABof0
 !s105 register_sv_unit
 !s85 0
-!s108 1524415116.481794
+!s108 1524417655.008558
 !s107 /home/koren3/ece411/mp3/register.sv|
 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/register.sv|
 !s101 -O0
@@ -1670,7 +1670,7 @@ Z149 8/home/koren3/ece411/mp3/set_sel.sv
 Z150 F/home/koren3/ece411/mp3/set_sel.sv
 L0 3
 R7
-Z151 !s108 1524415121.817435
+Z151 !s108 1524417659.774125
 Z152 !s107 /home/koren3/ece411/mp3/set_sel.sv|
 Z153 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/set_sel.sv|
 R11
@@ -1719,7 +1719,7 @@ Z154 8/home/koren3/ece411/mp3/sext5.sv
 Z155 F/home/koren3/ece411/mp3/sext5.sv
 L0 6
 R7
-Z156 !s108 1524415119.815825
+Z156 !s108 1524417658.096634
 Z157 !s107 /home/koren3/ece411/mp3/sext5.sv|
 Z158 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/sext5.sv|
 R11
@@ -1768,7 +1768,7 @@ Z159 8/home/koren3/ece411/mp3/stall_unit.sv
 Z160 F/home/koren3/ece411/mp3/stall_unit.sv
 L0 3
 R7
-Z161 !s108 1524415122.004722
+Z161 !s108 1524417659.960275
 Z162 !s107 /home/koren3/ece411/mp3/stall_unit.sv|
 Z163 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/stall_unit.sv|
 R11
@@ -1793,7 +1793,7 @@ Z164 8/home/koren3/ece411/mp3/stall_unit_2.sv
 Z165 F/home/koren3/ece411/mp3/stall_unit_2.sv
 L0 3
 R7
-Z166 !s108 1524415122.409363
+Z166 !s108 1524417660.320640
 Z167 !s107 /home/koren3/ece411/mp3/stall_unit_2.sv|
 Z168 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/stall_unit_2.sv|
 R11
@@ -1866,7 +1866,7 @@ Z170 8/home/koren3/ece411/mp3/static_branch_prediction.sv
 Z171 F/home/koren3/ece411/mp3/static_branch_prediction.sv
 L0 3
 R7
-Z172 !s108 1524415122.621539
+Z172 !s108 1524417660.510445
 Z173 !s107 /home/koren3/ece411/mp3/static_branch_prediction.sv|
 Z174 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/static_branch_prediction.sv|
 R11
@@ -1915,7 +1915,7 @@ Z175 8/home/koren3/ece411/mp3/wb_interconnect.sv
 Z176 F/home/koren3/ece411/mp3/wb_interconnect.sv
 L0 3
 R7
-Z177 !s108 1524415124.071622
+Z177 !s108 1524417662.096303
 Z178 !s107 /home/koren3/ece411/mp3/wb_interconnect.sv|
 Z179 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/wb_interconnect.sv|
 R11
@@ -1968,7 +1968,7 @@ R12
 !s100 QXc_4a2B8V<_^49:l>Y<E1
 !s105 wishbone_sv_unit
 !s85 0
-!s108 1524415116.267010
+!s108 1524417654.778409
 !s107 /home/koren3/ece411/mp3/wishbone.sv|
 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/wishbone.sv|
 !s101 -O0
@@ -1987,7 +1987,7 @@ Z180 8/home/koren3/ece411/mp3/zext.sv
 Z181 F/home/koren3/ece411/mp3/zext.sv
 L0 6
 R7
-Z182 !s108 1524415120.151589
+Z182 !s108 1524417658.245697
 Z183 !s107 /home/koren3/ece411/mp3/zext.sv|
 Z184 !s90 -sv|-work|work|+incdir+/home/koren3/ece411/mp3|/home/koren3/ece411/mp3/zext.sv|
 R11

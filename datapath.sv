@@ -84,6 +84,7 @@ lc3b_word ifetch_word_out;
 lc3b_word addr_adder_out_out_EX_MEM;
 lc3b_word branch_prediction_address;
 logic [7:0] branch_history;
+logic prediction_made;
 always_branch always_branch
 (
 	.clk,
@@ -106,8 +107,8 @@ always_branch always_branch
 	.jsr_enable(jsr_enable),
 	.branched(jsr_enable || trap_enable || jump_enable || branch_enable_out),
 	.instruction_EX_MEM(lc3b_opcode'(instruction_out_EX_MEM)),
-	.branch_history_EX_MEM(branch_history_out_EX_MEM)
-	
+	.branch_history_EX_MEM(branch_history_out_EX_MEM),
+	.prediction_made(prediction_made)
 );
 
 mux2 #(.width(16)) branch_prediction_mux
@@ -140,6 +141,24 @@ mux_decode_sel pcmux
 	.btb_fail(btb_fail),
 	.prediction_fail(prediction_fail),
 	.f(pcmux_out)
+);
+
+logic [15:0] pht_fail_counter_out;
+pht_counter pht_fail_counter
+(
+	.clk,
+	.increment_count(prediction_fail),
+	.clear(1'b0),
+	.count_out(pht_fail_counter_out)
+);
+
+logic [15:0] prediction_made_counter_out;
+pht_counter prediction_made_counter
+(
+	.clk,
+	.increment_count(prediction_made),
+	.clear(1'b0),
+	.count_out(prediction_made_counter_out)
 );
 
 register program_counter

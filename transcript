@@ -1,4 +1,4 @@
-# do /tmp/tmp.SYCLs6KMjS/do.do 
+# do /tmp/tmp.t9Ze1jjIwf/do.do 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
@@ -519,4 +519,5 @@
 #view signals
 # add list -radix hexadecimal [concat [string range [find instances -r regfile] 0 [expr [string first " " [find instances -r regfile]] - 1]] "/data}"]
 # run 30000000ns
-# FATAL ERROR: Unable to read lock file necessary for use of uncounted nodelocked license. Exiting.
+# write list /tmp/tmp.t9Ze1jjIwf/test_list.lst
+# exit
