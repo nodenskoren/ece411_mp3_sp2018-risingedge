@@ -178,7 +178,7 @@ mux4 #(.width(128))wb2_mux
 
 mux2 #(.width(128)) evict_mux
 (
-	.sel(!LRU_out),
+	.sel(LRU_out),
 	.a(data0_lineout),
 	.b(data1_lineout),
 	.f(pmem_wdata)

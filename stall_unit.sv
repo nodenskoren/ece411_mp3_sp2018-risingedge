@@ -44,7 +44,7 @@ begin: state_actions
 	line_offset_out = line_offset_in;
 	case(state)
 		s_read_write: begin
-			if((is_ldi == 1 || is_sti == 1) && flushed == 0) begin						
+			if((is_ldi == 1 || is_sti == 1) && flushed == 0)  begin						
 				stall_pipeline = 1'b1;
 			end
 			else if (((mem_read_in == 1 || mem_write_in == 1) && mem_resp == 0) || ifetch_resp == 0)
@@ -55,7 +55,7 @@ begin: state_actions
 			mem_write = 1'b0;
 			mem_address = mem_address_buffer[15:4];
 			line_offset_out = mem_address_buffer[3:0];
-			if (mem_resp == 0)
+			if (mem_resp == 0 || ifetch_resp == 0)
 				stall_pipeline = 1'b1;
 		end
 		s_sti: begin
@@ -63,7 +63,7 @@ begin: state_actions
 			mem_write = 1'b1;
 			mem_address = mem_address_buffer[15:4];
 			line_offset_out = mem_address_buffer[3:0];
-			if (mem_resp == 0)
+			if (mem_resp == 0 || ifetch_resp == 0)
 				stall_pipeline = 1'b1;
 		end
 		default: ;
@@ -162,6 +162,7 @@ begin: next_state_assignment
 	 if(state == s_read_write) begin
 		mem_address_buffer <= mem_rdata;
 	 end
+
 	 state <= next_state;
 end
 	

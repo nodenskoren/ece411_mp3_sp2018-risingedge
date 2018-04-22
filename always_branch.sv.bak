@@ -1,0 +1,27 @@
+import lc3b_types::*;
+
+module always_branch
+(
+	input logic clk,
+	input lc3b_word instruction,	
+	input logic stall,
+	output logic branch_prediction,
+);
+
+always_comb begin
+	if(instruction == op_br || instruction == op_jmp || instruction == op_jsr || instruction == op_trap) begin
+		if(pht[curr] == 2'b00 || pht[curr] == 2'b01) begin
+			branch_prediction = 1'b0;
+		end
+		else begin
+			branch_prediction = 1'b1;
+		end		
+	end
+	else begin
+		branch_prediction = 1'b0;
+	end
+	branch_history_out = branch_history;
+	branch_address_out = branch_target_table[curr];
+end
+
+endmodule : always_branch

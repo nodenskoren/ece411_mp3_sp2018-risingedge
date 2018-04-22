@@ -31,18 +31,30 @@ ModelSim-Altera Info: # Modifying modelsim.ini
 ModelSim-Altera Warning: # ** Warning: Copied /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
 ModelSim-Altera Info: #          Updated modelsim.ini.
 ModelSim-Altera Info: # 
-ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/lc3b_types.sv}
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/counter_rising_edge.sv}
 ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-ModelSim-Altera Info: # -- Compiling package lc3b_types
+ModelSim-Altera Info: # -- Compiling module counter_rising_edge
 ModelSim-Altera Info: # 
 ModelSim-Altera Info: # Top level modules:
-ModelSim-Altera Info: # 	--none--
+ModelSim-Altera Info: # 	counter_rising_edge
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/counter.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module counter
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	counter
 ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/ldbstblogic.sv}
 ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 ModelSim-Altera Info: # -- Compiling module ldbstblogic
 ModelSim-Altera Info: # 
 ModelSim-Altera Info: # Top level modules:
 ModelSim-Altera Info: # 	ldbstblogic
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/lc3b_types.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package lc3b_types
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	--none--
 ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/cache_control.sv}
 ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 ModelSim-Altera Info: # -- Compiling package cache_control_sv_unit
@@ -107,6 +119,36 @@ ModelSim-Altera Info: # -- Compiling module l1arbiter
 ModelSim-Altera Info: # 
 ModelSim-Altera Info: # Top level modules:
 ModelSim-Altera Info: # 	l1arbiter
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/mux16.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module mux16
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	mux16
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/counter_decoder.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package counter_decoder_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module counter_decoder
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	counter_decoder
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/always_branch.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package always_branch_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module always_branch
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	always_branch
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/counter_control.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package counter_control_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module counter_control
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	counter_control
 ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/array.sv}
 ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 ModelSim-Altera Info: # -- Compiling package array_sv_unit
@@ -301,9 +343,11 @@ ModelSim-Altera Info: # Top level modules:
 ModelSim-Altera Info: # 	cache_datapath
 ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/datapath.sv}
 ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Warning: # ** Warning: /home/koren3/ece411/mp3/datapath.sv(737): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 ModelSim-Altera Info: # -- Compiling package datapath_sv_unit
 ModelSim-Altera Info: # -- Importing package lc3b_types
 ModelSim-Altera Info: # -- Compiling module datapath
+ModelSim-Altera Warning: # ** Warning: /home/koren3/ece411/mp3/datapath.sv(737): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 ModelSim-Altera Info: # 
 ModelSim-Altera Info: # Top level modules:
 ModelSim-Altera Info: # 	datapath
@@ -333,6 +377,8 @@ ModelSim-Altera Info: # Top level modules:
 ModelSim-Altera Info: # 	wb_interconnect
 ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/mp3_top.sv}
 ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package mp3_top_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
 ModelSim-Altera Info: # -- Compiling module mp3_top
 ModelSim-Altera Info: # 
 ModelSim-Altera Info: # Top level modules:
@@ -346,6 +392,8 @@ ModelSim-Altera Info: # Top level modules:
 ModelSim-Altera Info: # 	mp3_tb
 ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/mp3_top.sv}
 ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package mp3_top_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
 ModelSim-Altera Info: # -- Compiling module mp3_top
 ModelSim-Altera Info: # 
 ModelSim-Altera Info: # Top level modules:
@@ -362,13 +410,17 @@ ModelSim-Altera Info: # vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_
 ModelSim-Altera Info: # Loading sv_std.std
 ModelSim-Altera Info: # Loading work.mp3_tb
 ModelSim-Altera Info: # Loading work.wishbone
-ModelSim-Altera Info: # Loading work.mp3_top
 ModelSim-Altera Info: # Loading work.lc3b_types
+ModelSim-Altera Info: # Loading work.mp3_top_sv_unit
+ModelSim-Altera Info: # Loading work.mp3_top
 ModelSim-Altera Info: # Loading work.mp3_sv_unit
 ModelSim-Altera Info: # Loading work.mp3
 ModelSim-Altera Info: # Loading work.datapath_sv_unit
 ModelSim-Altera Info: # Loading work.datapath
 ModelSim-Altera Info: # Loading work.plus2
+ModelSim-Altera Info: # Loading work.always_branch_sv_unit
+ModelSim-Altera Info: # Loading work.always_branch
+ModelSim-Altera Info: # Loading work.mux2
 ModelSim-Altera Info: # Loading work.mux_decode_sel
 ModelSim-Altera Info: # Loading work.register
 ModelSim-Altera Info: # Loading work.line_to_word_sv_unit
@@ -381,7 +433,6 @@ ModelSim-Altera Info: # Loading work.regfile_sv_unit
 ModelSim-Altera Info: # Loading work.regfile
 ModelSim-Altera Info: # Loading work.sext5_sv_unit
 ModelSim-Altera Info: # Loading work.sext5
-ModelSim-Altera Info: # Loading work.mux2
 ModelSim-Altera Info: # Loading work.adj_sv_unit
 ModelSim-Altera Info: # Loading work.adj
 ModelSim-Altera Info: # Loading work.zext_sv_unit
@@ -412,8 +463,14 @@ ModelSim-Altera Info: # Loading work.branch_unit_sv_unit
 ModelSim-Altera Info: # Loading work.branch_unit
 ModelSim-Altera Info: # Loading work.static_branch_prediction_sv_unit
 ModelSim-Altera Info: # Loading work.static_branch_prediction
+ModelSim-Altera Info: # Loading work.counter_control_sv_unit
+ModelSim-Altera Info: # Loading work.counter_control
+ModelSim-Altera Info: # Loading work.counter_decoder_sv_unit
+ModelSim-Altera Info: # Loading work.counter_decoder
+ModelSim-Altera Info: # Loading work.mux16
 ModelSim-Altera Info: # Loading work.MEM_WB_pipeline_sv_unit
 ModelSim-Altera Info: # Loading work.MEM_WB_pipeline
+ModelSim-Altera Info: # Loading work.counter_rising_edge
 ModelSim-Altera Info: # Loading work.control_rom_sv_unit
 ModelSim-Altera Info: # Loading work.control_rom
 ModelSim-Altera Info: # Loading work.wb_interconnect_sv_unit
@@ -430,9 +487,39 @@ ModelSim-Altera Info: # Loading work.array_sv_unit
 ModelSim-Altera Info: # Loading work.array
 ModelSim-Altera Info: # Loading work.cache_control_sv_unit
 ModelSim-Altera Info: # Loading work.cache_control
+ModelSim-Altera Info: # Loading work.counter
 ModelSim-Altera Info: # Loading work.l2cache_sv_unit
 ModelSim-Altera Info: # Loading work.l2cache
 ModelSim-Altera Info: # Loading work.physical_memory
+ModelSim-Altera Warning: # ** Warning: (vsim-3015) /home/koren3/ece411/mp3/datapath.sv(111): [PCDPC] - Port size (8 or 8) does not match connection size (10) for port 'branch_history_out'. The port definition is at: /home/koren3/ece411/mp3/always_branch.sv(13).
+ModelSim-Altera Info: #         Region: /mp3_tb/dut/mp3/the_datapath/always_branch
+ModelSim-Altera Warning: # ** Warning: (vsim-3015) /home/koren3/ece411/mp3/datapath.sv(111): [PCDPC] - Port size (8 or 8) does not match connection size (10) for port 'branch_history_EX_MEM'. The port definition is at: /home/koren3/ece411/mp3/always_branch.sv(16).
+ModelSim-Altera Info: #         Region: /mp3_tb/dut/mp3/the_datapath/always_branch
+ModelSim-Altera Warning: # ** Warning: (vsim-3015) /home/koren3/ece411/mp3/datapath.sv(181): [PCDPC] - Port size (8 or 8) does not match connection size (10) for port 'branch_history_in'. The port definition is at: /home/koren3/ece411/mp3/IF_ID_pipeline.sv(9).
+ModelSim-Altera Info: #         Region: /mp3_tb/dut/mp3/the_datapath/IF_ID_pipeline
+ModelSim-Altera Warning: # ** Warning: (vsim-3015) /home/koren3/ece411/mp3/datapath.sv(181): [PCDPC] - Port size (8 or 8) does not match connection size (10) for port 'branch_history_out'. The port definition is at: /home/koren3/ece411/mp3/IF_ID_pipeline.sv(10).
+ModelSim-Altera Info: #         Region: /mp3_tb/dut/mp3/the_datapath/IF_ID_pipeline
+ModelSim-Altera Warning: # ** Warning: (vsim-3015) /home/koren3/ece411/mp3/datapath.sv(384): [PCDPC] - Port size (8 or 8) does not match connection size (10) for port 'branch_history_in'. The port definition is at: /home/koren3/ece411/mp3/ID_EX_pipeline.sv(48).
+ModelSim-Altera Info: #         Region: /mp3_tb/dut/mp3/the_datapath/ID_EX_pipeline
+ModelSim-Altera Warning: # ** Warning: (vsim-3015) /home/koren3/ece411/mp3/datapath.sv(384): [PCDPC] - Port size (8 or 8) does not match connection size (10) for port 'branch_history_out'. The port definition is at: /home/koren3/ece411/mp3/ID_EX_pipeline.sv(49).
+ModelSim-Altera Info: #         Region: /mp3_tb/dut/mp3/the_datapath/ID_EX_pipeline
+ModelSim-Altera Warning: # ** Warning: (vsim-3015) /home/koren3/ece411/mp3/datapath.sv(604): [PCDPC] - Port size (8 or 8) does not match connection size (10) for port 'branch_history_in'. The port definition is at: /home/koren3/ece411/mp3/EX_MEM_pipeline.sv(63).
+ModelSim-Altera Info: #         Region: /mp3_tb/dut/mp3/the_datapath/EX_MEM_pipeline
+ModelSim-Altera Warning: # ** Warning: (vsim-3015) /home/koren3/ece411/mp3/datapath.sv(604): [PCDPC] - Port size (8 or 8) does not match connection size (10) for port 'branch_history_out'. The port definition is at: /home/koren3/ece411/mp3/EX_MEM_pipeline.sv(64).
+ModelSim-Altera Info: #         Region: /mp3_tb/dut/mp3/the_datapath/EX_MEM_pipeline
+ModelSim-Altera Warning: # ** Warning: (vsim-3017) /home/koren3/ece411/mp3/datapath.sv(822): [TFMPC] - Too few port connections. Expected 18, found 9.
+ModelSim-Altera Info: #         Region: /mp3_tb/dut/mp3/the_datapath/counter_value_mux
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/koren3/ece411/mp3/datapath.sv(822): [TFMPC] - Missing connection for port 'b'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/koren3/ece411/mp3/datapath.sv(822): [TFMPC] - Missing connection for port 'c'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/koren3/ece411/mp3/datapath.sv(822): [TFMPC] - Missing connection for port 'd'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/koren3/ece411/mp3/datapath.sv(822): [TFMPC] - Missing connection for port 'e'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/koren3/ece411/mp3/datapath.sv(822): [TFMPC] - Missing connection for port 'f'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/koren3/ece411/mp3/datapath.sv(822): [TFMPC] - Missing connection for port 'g'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/koren3/ece411/mp3/datapath.sv(822): [TFMPC] - Missing connection for port 'h'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/koren3/ece411/mp3/datapath.sv(822): [TFMPC] - Missing connection for port 'i'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/koren3/ece411/mp3/datapath.sv(822): [TFMPC] - Missing connection for port 'j'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3015) /home/koren3/ece411/mp3/datapath.sv(868): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'clear'. The port definition is at: /home/koren3/ece411/mp3/counter_rising_edge.sv(5).
+ModelSim-Altera Info: #         Region: /mp3_tb/dut/mp3/the_datapath/counter_stalls_hazard
 ModelSim-Altera Warning: # ** Warning: (vsim-3017) /home/koren3/ece411/mp3/cache_datapath.sv(177): [TFMPC] - Too few port connections. Expected 6, found 5.
 ModelSim-Altera Info: #         Region: /mp3_tb/dut/interconnect/Icache/cache_datapath/wb2_mux
 ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/koren3/ece411/mp3/cache_datapath.sv(177): [TFMPC] - Missing connection for port 'a'.

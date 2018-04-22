@@ -10,6 +10,10 @@ entity cache is
         mem_stb         : out    vl_logic;
         mem_we          : out    vl_logic;
         mem_sel         : out    vl_logic_vector(15 downto 0);
-        mem_adr         : out    vl_logic_vector(11 downto 0)
+        mem_adr         : out    vl_logic_vector(11 downto 0);
+        cache_hit_cnt   : out    vl_logic_vector(15 downto 0);
+        cache_miss_cnt  : out    vl_logic_vector(15 downto 0);
+        hit_clear       : in     vl_logic;
+        miss_clear      : in     vl_logic
     );
 end cache;

@@ -6,10 +6,13 @@ entity mux_decode_sel is
     );
     port(
         sel             : in     vl_logic_vector(3 downto 0);
+        prediction_fail : in     vl_logic;
+        btb_fail        : in     vl_logic;
         a               : in     vl_logic_vector;
         b               : in     vl_logic_vector;
         c               : in     vl_logic_vector;
         d               : in     vl_logic_vector;
+        e               : in     vl_logic_vector;
         f               : out    vl_logic_vector
     );
     attribute mti_svvh_generic_type : integer;

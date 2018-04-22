@@ -1,0 +1,25 @@
+import lc3b_types::*;
+
+module dynamic_branch_prediction
+(
+	input logic clk,
+	input logic [3:0] pc_out,
+	input logic [5:0] branch_history,
+	
+	output logic branch_prediction
+);
+
+logic [1:0] pht[1024];
+
+initial begin
+	for(int i = 0; i < 1024; i++) begin
+		pht[i] = 2'b01;
+	end
+end
+
+always_ff @(posedge clk)
+begin : predict_by_lookup
+	
+end
+	
+endmodule : dynamic_branch_prediction

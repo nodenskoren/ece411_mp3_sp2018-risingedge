@@ -9,18 +9,30 @@
 # ** Warning: Copied /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/lc3b_types.sv}
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/counter_rising_edge.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package lc3b_types
+# -- Compiling module counter_rising_edge
 # 
 # Top level modules:
-# 	--none--
+# 	counter_rising_edge
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/counter.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
 # vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/ldbstblogic.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module ldbstblogic
 # 
 # Top level modules:
 # 	ldbstblogic
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/lc3b_types.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package lc3b_types
+# 
+# Top level modules:
+# 	--none--
 # vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/cache_control.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cache_control_sv_unit
@@ -85,6 +97,36 @@
 # 
 # Top level modules:
 # 	l1arbiter
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/mux16.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux16
+# 
+# Top level modules:
+# 	mux16
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/counter_decoder.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package counter_decoder_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module counter_decoder
+# 
+# Top level modules:
+# 	counter_decoder
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/always_branch.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package always_branch_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module always_branch
+# 
+# Top level modules:
+# 	always_branch
+# vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/counter_control.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package counter_control_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module counter_control
+# 
+# Top level modules:
+# 	counter_control
 # vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/array.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package array_sv_unit
@@ -279,9 +321,11 @@
 # 	cache_datapath
 # vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/datapath.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Warning: /home/koren3/ece411/mp3/datapath.sv(737): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 # -- Compiling package datapath_sv_unit
 # -- Importing package lc3b_types
 # -- Compiling module datapath
+# ** Warning: /home/koren3/ece411/mp3/datapath.sv(737): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 # 
 # Top level modules:
 # 	datapath
@@ -311,6 +355,8 @@
 # 	wb_interconnect
 # vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/mp3_top.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package mp3_top_sv_unit
+# -- Importing package lc3b_types
 # -- Compiling module mp3_top
 # 
 # Top level modules:
@@ -324,6 +370,8 @@
 # 	mp3_tb
 # vlog -sv -work work +incdir+/home/koren3/ece411/mp3 {/home/koren3/ece411/mp3/mp3_top.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package mp3_top_sv_unit
+# -- Importing package lc3b_types
 # -- Compiling module mp3_top
 # 
 # Top level modules:
@@ -340,13 +388,17 @@
 # Loading sv_std.std
 # Loading work.mp3_tb
 # Loading work.wishbone
-# Loading work.mp3_top
 # Loading work.lc3b_types
+# Loading work.mp3_top_sv_unit
+# Loading work.mp3_top
 # Loading work.mp3_sv_unit
 # Loading work.mp3
 # Loading work.datapath_sv_unit
 # Loading work.datapath
 # Loading work.plus2
+# Loading work.always_branch_sv_unit
+# Loading work.always_branch
+# Loading work.mux2
 # Loading work.mux_decode_sel
 # Loading work.register
 # Loading work.line_to_word_sv_unit
@@ -359,7 +411,6 @@
 # Loading work.regfile
 # Loading work.sext5_sv_unit
 # Loading work.sext5
-# Loading work.mux2
 # Loading work.adj_sv_unit
 # Loading work.adj
 # Loading work.zext_sv_unit
@@ -390,8 +441,14 @@
 # Loading work.branch_unit
 # Loading work.static_branch_prediction_sv_unit
 # Loading work.static_branch_prediction
+# Loading work.counter_control_sv_unit
+# Loading work.counter_control
+# Loading work.counter_decoder_sv_unit
+# Loading work.counter_decoder
+# Loading work.mux16
 # Loading work.MEM_WB_pipeline_sv_unit
 # Loading work.MEM_WB_pipeline
+# Loading work.counter_rising_edge
 # Loading work.control_rom_sv_unit
 # Loading work.control_rom
 # Loading work.wb_interconnect_sv_unit
@@ -408,9 +465,39 @@
 # Loading work.array
 # Loading work.cache_control_sv_unit
 # Loading work.cache_control
+# Loading work.counter
 # Loading work.l2cache_sv_unit
 # Loading work.l2cache
 # Loading work.physical_memory
+# ** Warning: (vsim-3015) /home/koren3/ece411/mp3/datapath.sv(111): [PCDPC] - Port size (8 or 8) does not match connection size (10) for port 'branch_history_out'. The port definition is at: /home/koren3/ece411/mp3/always_branch.sv(13).
+#         Region: /mp3_tb/dut/mp3/the_datapath/always_branch
+# ** Warning: (vsim-3015) /home/koren3/ece411/mp3/datapath.sv(111): [PCDPC] - Port size (8 or 8) does not match connection size (10) for port 'branch_history_EX_MEM'. The port definition is at: /home/koren3/ece411/mp3/always_branch.sv(16).
+#         Region: /mp3_tb/dut/mp3/the_datapath/always_branch
+# ** Warning: (vsim-3015) /home/koren3/ece411/mp3/datapath.sv(181): [PCDPC] - Port size (8 or 8) does not match connection size (10) for port 'branch_history_in'. The port definition is at: /home/koren3/ece411/mp3/IF_ID_pipeline.sv(9).
+#         Region: /mp3_tb/dut/mp3/the_datapath/IF_ID_pipeline
+# ** Warning: (vsim-3015) /home/koren3/ece411/mp3/datapath.sv(181): [PCDPC] - Port size (8 or 8) does not match connection size (10) for port 'branch_history_out'. The port definition is at: /home/koren3/ece411/mp3/IF_ID_pipeline.sv(10).
+#         Region: /mp3_tb/dut/mp3/the_datapath/IF_ID_pipeline
+# ** Warning: (vsim-3015) /home/koren3/ece411/mp3/datapath.sv(384): [PCDPC] - Port size (8 or 8) does not match connection size (10) for port 'branch_history_in'. The port definition is at: /home/koren3/ece411/mp3/ID_EX_pipeline.sv(48).
+#         Region: /mp3_tb/dut/mp3/the_datapath/ID_EX_pipeline
+# ** Warning: (vsim-3015) /home/koren3/ece411/mp3/datapath.sv(384): [PCDPC] - Port size (8 or 8) does not match connection size (10) for port 'branch_history_out'. The port definition is at: /home/koren3/ece411/mp3/ID_EX_pipeline.sv(49).
+#         Region: /mp3_tb/dut/mp3/the_datapath/ID_EX_pipeline
+# ** Warning: (vsim-3015) /home/koren3/ece411/mp3/datapath.sv(604): [PCDPC] - Port size (8 or 8) does not match connection size (10) for port 'branch_history_in'. The port definition is at: /home/koren3/ece411/mp3/EX_MEM_pipeline.sv(63).
+#         Region: /mp3_tb/dut/mp3/the_datapath/EX_MEM_pipeline
+# ** Warning: (vsim-3015) /home/koren3/ece411/mp3/datapath.sv(604): [PCDPC] - Port size (8 or 8) does not match connection size (10) for port 'branch_history_out'. The port definition is at: /home/koren3/ece411/mp3/EX_MEM_pipeline.sv(64).
+#         Region: /mp3_tb/dut/mp3/the_datapath/EX_MEM_pipeline
+# ** Warning: (vsim-3017) /home/koren3/ece411/mp3/datapath.sv(822): [TFMPC] - Too few port connections. Expected 18, found 9.
+#         Region: /mp3_tb/dut/mp3/the_datapath/counter_value_mux
+# ** Warning: (vsim-3722) /home/koren3/ece411/mp3/datapath.sv(822): [TFMPC] - Missing connection for port 'b'.
+# ** Warning: (vsim-3722) /home/koren3/ece411/mp3/datapath.sv(822): [TFMPC] - Missing connection for port 'c'.
+# ** Warning: (vsim-3722) /home/koren3/ece411/mp3/datapath.sv(822): [TFMPC] - Missing connection for port 'd'.
+# ** Warning: (vsim-3722) /home/koren3/ece411/mp3/datapath.sv(822): [TFMPC] - Missing connection for port 'e'.
+# ** Warning: (vsim-3722) /home/koren3/ece411/mp3/datapath.sv(822): [TFMPC] - Missing connection for port 'f'.
+# ** Warning: (vsim-3722) /home/koren3/ece411/mp3/datapath.sv(822): [TFMPC] - Missing connection for port 'g'.
+# ** Warning: (vsim-3722) /home/koren3/ece411/mp3/datapath.sv(822): [TFMPC] - Missing connection for port 'h'.
+# ** Warning: (vsim-3722) /home/koren3/ece411/mp3/datapath.sv(822): [TFMPC] - Missing connection for port 'i'.
+# ** Warning: (vsim-3722) /home/koren3/ece411/mp3/datapath.sv(822): [TFMPC] - Missing connection for port 'j'.
+# ** Warning: (vsim-3015) /home/koren3/ece411/mp3/datapath.sv(868): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'clear'. The port definition is at: /home/koren3/ece411/mp3/counter_rising_edge.sv(5).
+#         Region: /mp3_tb/dut/mp3/the_datapath/counter_stalls_hazard
 # ** Warning: (vsim-3017) /home/koren3/ece411/mp3/cache_datapath.sv(177): [TFMPC] - Too few port connections. Expected 6, found 5.
 #         Region: /mp3_tb/dut/interconnect/Icache/cache_datapath/wb2_mux
 # ** Warning: (vsim-3722) /home/koren3/ece411/mp3/cache_datapath.sv(177): [TFMPC] - Missing connection for port 'a'.

@@ -30,6 +30,8 @@ entity cache_control is
         pmem_read       : out    vl_logic;
         cpu_resp        : out    vl_logic;
         wb_sel          : out    vl_logic;
-        adrmux_sel      : out    vl_logic_vector(1 downto 0)
+        adrmux_sel      : out    vl_logic_vector(1 downto 0);
+        cache_hit_inc   : out    vl_logic;
+        cache_miss_inc  : out    vl_logic
     );
 end cache_control;

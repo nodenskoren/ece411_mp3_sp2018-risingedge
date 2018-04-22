@@ -43,7 +43,14 @@ module ID_EX_pipeline
 	input logic stall_pipeline,
 	output logic imm_mode_out,
 	output logic sr2mux_sel_out,
-	output lc3b_word sext5_out_out		
+	output lc3b_word sext5_out_out,
+
+	input logic [7:0] branch_history_in,
+	output logic [7:0] branch_history_out,
+	input logic branch_prediction_in,
+	output logic branch_prediction_out,
+	input lc3b_word branch_address_in,
+	output lc3b_word branch_address_out	
 );
 
 lc3b_control_word ctrl;
@@ -65,6 +72,9 @@ logic imm_mode;
 lc3b_word instruction;
 logic sr2mux_sel;
 lc3b_word sext5_;
+logic [7:0] branch_history;
+logic branch_prediction;
+lc3b_word branch_address;
 
 always_ff @(posedge clk)
 begin
@@ -88,6 +98,9 @@ begin
 		instruction <= instruction_in;
 		sr2mux_sel <= sr2mux_sel_in;
 		sext5_ <= sext5_out_in;
+		branch_history <= branch_history_in;
+		branch_prediction <= branch_prediction_in;
+		branch_address <= branch_address_in;		
 	end	
 end
 
@@ -112,5 +125,8 @@ begin
 	instruction_out = instruction;
 	sr2mux_sel_out = sr2mux_sel;
 	sext5_out_out = sext5_;
+	branch_history_out = branch_history;
+	branch_prediction_out = branch_prediction;
+	branch_address_out = branch_address;	
 end
 endmodule : ID_EX_pipeline

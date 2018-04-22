@@ -52,6 +52,12 @@ entity EX_MEM_pipeline is
         operation_out   : out    work.lc3b_types.lc3b_opcode;
         instruction_in  : in     vl_logic_vector(15 downto 0);
         instruction_out : out    vl_logic_vector(15 downto 0);
-        stall_pipeline  : in     vl_logic
+        stall_pipeline  : in     vl_logic;
+        branch_history_in: in     vl_logic_vector(7 downto 0);
+        branch_history_out: out    vl_logic_vector(7 downto 0);
+        branch_prediction_in: in     vl_logic;
+        branch_prediction_out: out    vl_logic;
+        branch_address_in: in     vl_logic_vector(15 downto 0);
+        branch_address_out: out    vl_logic_vector(15 downto 0)
     );
 end EX_MEM_pipeline;
