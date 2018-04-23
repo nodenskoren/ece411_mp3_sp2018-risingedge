@@ -51,7 +51,10 @@ always_comb begin
 			branch_prediction = 1'b0;
 		end
 		else begin
-			branch_prediction = pht[curr];
+			if(pht[curr] == 2'b00 || pht[curr] == 2'b01)
+				branch_prediction = 1'b0;
+			else
+				branch_prediction = 1'b1;
 			prediction_made = 1'b1;
 		end
 	end
