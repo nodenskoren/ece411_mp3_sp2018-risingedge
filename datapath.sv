@@ -158,7 +158,7 @@ logic [15:0] pht_fail_counter_out;
 pht_counter pht_fail_counter
 (
 	.clk,
-	.increment_count(prediction_fail),
+	.increment_count(prediction_fail && !stall_pipeline && !flushed_out_3),
 	.clear(pht_fail_clear),
 	.count_out(pht_fail_counter_out)
 );
@@ -167,29 +167,28 @@ logic [15:0] prediction_made_counter_out;
 pht_counter prediction_made_counter
 (
 	.clk,
-	.increment_count(prediction_made),
-	.clear(prediction_count_clear),
+	.increment_count(prediction_made && !stall_pipeline && !flushed_out_3),
+	.clear(pht_fail_clear),
 	.count_out(prediction_made_counter_out)
 );
 
-logic [15:0] btb_fail_counter_out;
-pht_counter btb_fail_counter
+logic [15:0] btb_success_counter_out;
+pht_counter btb_success_counter
 (
 	.clk,
-	.increment_count(!btb_fail),
-	.clear(prediction_count_clear),
-	.count_out(btb_fail_counter_out)
+	.increment_count(!btb_fail && !stall_pipeline && !flushed_out_3),
+	.clear(pht_fail_clear),
+	.count_out(btb_success_counter_out)
 );
 
 logic [15:0] btb_access_counter_out;
 pht_counter btb_access_counter
 (
 	.clk,
-	.increment_count(btb_access),
-	.clear(prediction_count_clear),
+	.increment_count(btb_access && !stall_pipeline && !flushed_out_3),
+	.clear(pht_fail_clear),
 	.count_out(btb_access_counter_out)
 );
-
 
 
 register program_counter
