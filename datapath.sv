@@ -56,13 +56,13 @@ plus2 pc_plus2
 	.out(pc_plus2_out)
 );
 
-logic [9:0] btb_index;
+logic [7:0] btb_index;
 lc3b_word branch_prediction_out;
-logic [9:0] branch_history_out;
+logic [7:0] branch_history_out;
 logic branch_prediction;
 lc3b_word branch_address_out;
 lc3b_word pc_out_EX_MEM;
-logic [9:0] branch_history_out_EX_MEM;
+logic [7:0] branch_history_out_EX_MEM;
 lc3b_word branch_address_out_EX_MEM;
 logic branch_prediction_out_EX_MEM;
 lc3b_word instruction;
@@ -89,10 +89,12 @@ lc3b_word addr_adder_out_out_EX_MEM;
 logic prediction_made;
 lc3b_word branch_prediction_address;
 logic [7:0] branch_history;
+logic btb_access;
+logic flushed_out_3;
 always_branch always_branch
 (
 	.clk,
-	.pc(pc[8:1]),
+	.pc(pc_plus2_out[8:1]),
 	.instruction(lc3b_opcode'(ifetch_word_out[15:12])),
 	.full_instruction(ifetch_word_out),
 	.stall(stall_pipeline),
@@ -110,9 +112,11 @@ always_branch always_branch
 	.trap_enable(trap_enable),
 	.jsr_enable(jsr_enable),
 	.branched(jsr_enable || trap_enable || jump_enable || branch_enable_out),
-	.instruction_EX_MEM(lc3b_opcode'(instruction_out_EX_MEM)),
+	.instruction_EX_MEM(lc3b_opcode'(instruction_out_EX_MEM[15:12])),
 	.branch_history_EX_MEM(branch_history_out_EX_MEM),
-	.prediction_made(prediction_made)
+	.prediction_made(prediction_made),
+	.btb_access(btb_access),
+	.flushed(flushed_out_3)
 	
 );
 
@@ -131,7 +135,6 @@ mux2 #(.width(16)) branch_prediction_mux
 // br = jsr = addr_adder_out_out_EX_MEM
 // jmp = jsrr = alu_out_out_EX_MEM
 logic [3:0] pcmux_sel;
-logic flushed_out_3;
 logic prediction_fail;
 logic btb_fail;
 
@@ -169,6 +172,25 @@ pht_counter prediction_made_counter
 	.count_out(prediction_made_counter_out)
 );
 
+logic [15:0] btb_fail_counter_out;
+pht_counter btb_fail_counter
+(
+	.clk,
+	.increment_count(!btb_fail),
+	.clear(prediction_count_clear),
+	.count_out(btb_fail_counter_out)
+);
+
+logic [15:0] btb_access_counter_out;
+pht_counter btb_access_counter
+(
+	.clk,
+	.increment_count(btb_access),
+	.clear(prediction_count_clear),
+	.count_out(btb_access_counter_out)
+);
+
+
 
 register program_counter
 (
@@ -190,7 +212,7 @@ line_to_word ifetch_line_to_word
 
 // >>>>> IF/ID PIPELINE <<<<< //
 //lc3b_word instruction;
-logic [9:0] branch_history_out_IF_ID;
+logic [7:0] branch_history_out_IF_ID;
 logic branch_prediction_out_IF_ID;
 lc3b_word branch_address_out_IF_ID;
 lc3b_word pc_out_IF_ID;
@@ -361,7 +383,7 @@ lc3b_opcode operation_out_ID_EX;
 logic imm_mode_out;
 logic sr2mux_sel_out;
 lc3b_word sext5_out_out;
-logic [9:0] branch_history_out_ID_EX;
+logic [7:0] branch_history_out_ID_EX;
 logic branch_prediction_out_ID_EX;
 lc3b_word branch_address_out_ID_EX;
 
@@ -415,7 +437,7 @@ ID_EX_pipeline ID_EX_pipeline
 	.branch_prediction_in(branch_prediction_out_IF_ID),
 	.branch_prediction_out(branch_prediction_out_ID_EX),
 	.branch_address_in(branch_address_out_IF_ID),
-	.branch_address_out(branch_address_out_ID_EX)	
+	.branch_address_out(branch_address_out_ID_EX)
 
 );
 // >>>>> ID/EX PIPELINE <<<<< //
