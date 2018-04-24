@@ -121,46 +121,54 @@ begin: next_state_logic
 	btb_fail = 1'b1;
 	case(state)
 		s_branch_detection: begin
-			if(instruction == 16'h0000) begin
+			if(instruction == 16'h0000 || instruction === 16'hXXXX) begin
 				next_state = s_branch_detection;
 			end
 			else if(((branch_enable == 1 || is_j_in == 1 || is_jsr_in == 1 || is_trap_in == 1) && branch_prediction == 1'b1) && stall == 0) begin
 				// br case
 				if(branch_enable == 1 && (br_address != branch_prediction_address)) begin
 					next_state = s_flush_1;
-					//btb_fail = 1'b1;
+					//prediction_fail = 1'b1;
+					btb_fail = 1'b1;
 				end
 				else if(branch_enable == 1 && (br_address == branch_prediction_address)) begin
 					next_state = s_branch_detection;
+					//prediction_fail = 1'b1;
 					btb_fail = 1'b0;
 				end
 				// jsrr/jmp case
 				else if(is_j_in == 1 && is_jsr_in == 0 && (jmp_address != branch_prediction_address)) begin
 					next_state = s_flush_1;
-					//btb_fail = 1'b1;					
+					//prediction_fail = 1'b1;
+					btb_fail = 1'b1;					
 				end
 				
 				else if(is_j_in == 1 && is_jsr_in == 0 && (jmp_address == branch_prediction_address)) begin
 					next_state = s_branch_detection;
+					//prediction_fail = 1'b1;
 					btb_fail = 1'b0;					
 				end				
 				// jsr case
 				else if(is_j_in == 1 && is_jsr_in == 1 && (jsr_address != branch_prediction_address)) begin
 					next_state = s_flush_1;
-					//btb_fail = 1'b1;					
+					//prediction_fail = 1'b1;
+					btb_fail = 1'b1;					
 				end
 				else if(is_j_in == 1 && is_jsr_in == 1 && (jsr_address == branch_prediction_address)) begin
 					next_state = s_branch_detection;
+					//prediction_fail = 1'b1;
 					btb_fail = 1'b0;					
 				end				
 				
 				// trap case
 				else if(is_trap_in == 1 && (trap_address != branch_prediction_address)) begin
 					next_state = s_flush_1;
-					//btb_fail = 1'b1;					
+					//prediction_fail = 1'b1;
+					btb_fail = 1'b1;					
 				end
 				else if(is_trap_in == 1 && (trap_address == branch_prediction_address)) begin
 					next_state = s_branch_detection;
+					//prediction_fail = 1'b1;
 					btb_fail = 1'b0;					
 				end				
 				
@@ -204,21 +212,44 @@ begin: next_state_logic
 					next_state = s_flush_1;
 					btb_fail = 1'b1;					
 				end
+				else if(branch_enable == 1 && (br_address == branch_prediction_address)) begin
+					next_state = s_branch_detection;
+					//prediction_fail = 1'b1;
+					btb_fail = 1'b0;
+				end				
 				// jsrr/jmp case
 				else if(is_j_in == 1 && is_jsr_in == 0 && (jmp_address != branch_prediction_address)) begin
 					next_state = s_flush_1;
+					//prediction_fail = 1'b1;					
 					btb_fail = 1'b1;					
 				end
+				else if(is_j_in == 1 && is_jsr_in == 0 && (jmp_address == branch_prediction_address)) begin
+					next_state = s_branch_detection;
+					//vprediction_fail = 1'b1;
+					btb_fail = 1'b0;					
+				end								
 				// jsr case
 				else if(is_j_in == 1 && is_jsr_in == 1 && (jsr_address != branch_prediction_address)) begin
 					next_state = s_flush_1;
+					//prediction_fail = 1'b1;					
 					btb_fail = 1'b1;					
 				end
-				// trap case
+				else if(is_j_in == 1 && is_jsr_in == 1 && (jsr_address == branch_prediction_address)) begin
+					next_state = s_branch_detection;
+					//prediction_fail = 1'b1;					
+					btb_fail = 1'b0;					
+				end				
+				// trap case					
 				else if(is_trap_in == 1 && (trap_address != branch_prediction_address)) begin
 					next_state = s_flush_1;
+					//prediction_fail = 1'b1;					
 					btb_fail = 1'b1;					
 				end
+				else if(is_trap_in == 1 && (trap_address == branch_prediction_address)) begin
+					next_state = s_branch_detection;
+					//prediction_fail = 1'b1;
+					btb_fail = 1'b0;					
+				end					
 				else begin
 					next_state = s_branch_detection;
 				end

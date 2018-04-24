@@ -32,6 +32,7 @@ entity cache_control is
         wb_sel          : out    vl_logic;
         adrmux_sel      : out    vl_logic_vector(1 downto 0);
         cache_hit_inc   : out    vl_logic;
-        cache_miss_inc  : out    vl_logic
+        cache_miss_inc  : out    vl_logic;
+        load_adr        : out    vl_logic
     );
 end cache_control;

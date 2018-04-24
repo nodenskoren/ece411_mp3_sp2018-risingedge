@@ -14,6 +14,7 @@ module IF_ID_pipeline
 	output lc3b_word branch_address_out,
 	input lc3b_word pc_in,
 	output lc3b_word pc_out
+
 );
 
 lc3b_word instruction;
@@ -21,6 +22,7 @@ logic [7:0] branch_history;
 logic branch_prediction;
 lc3b_word branch_address;
 lc3b_word pc;
+
 
 always_ff @(posedge clk)
 begin
@@ -31,6 +33,7 @@ begin
 		branch_address <= branch_address_in;
 		pc <= pc_in;
 	end
+
 end
 
 always_comb
@@ -40,5 +43,6 @@ begin
 	branch_prediction_out = branch_prediction;
 	branch_address_out = branch_address;
 	pc_out = pc;
+
 end
 endmodule : IF_ID_pipeline

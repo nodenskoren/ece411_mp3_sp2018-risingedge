@@ -12,6 +12,7 @@ module always_branch
 	output lc3b_word branch_prediction_address,
 	output logic [7:0] branch_history_out,
 	output logic prediction_made,
+	output logic btb_access,
 	
 	input [7:0] pc_EX_MEM,
 	input [7:0] branch_history_EX_MEM,
@@ -23,13 +24,15 @@ module always_branch
 	input logic jmp_enable,
 	input logic trap_enable,
 	input logic jsr_enable,
-	input logic branched
+	input logic branched,
+	input logic flushed
 );
 
-lc3b_word [255:0] btb;
+lc3b_word btb[255:0];
 logic [1:0] pht[255:0];
 logic [7:0] branch_history;
 logic [7:0] curr, prev;
+logic btb_update;
 
 initial begin
 	for(int i = 0; i < 256; i++) begin
@@ -46,12 +49,18 @@ end
 
 always_comb begin
 	prediction_made = 1'b0;
+	btb_access = 1'b0;
 	if(instruction == op_br || instruction == op_jmp || instruction == op_jsr || instruction == op_trap) begin
-		if(stall == 1'b1 || full_instruction == 16'h0000) begin
+		if(flushed == 1'b1 || stall == 1'b1 || full_instruction == 16'h0000 || instruction === 16'hXXXX) begin
 			branch_prediction = 1'b0;
 		end
 		else begin
-			branch_prediction = pht[curr];
+			if(pht[curr] == 2'b00 || pht[curr] == 2'b01)
+				branch_prediction = 1'b0;
+			else begin
+				branch_prediction = 1'b1;
+				btb_access = 1'b1;
+			end
 			prediction_made = 1'b1;
 		end
 	end
@@ -64,15 +73,25 @@ end
 
 always_ff @(posedge clk) begin
 	if(branched == 1'b1) begin
-		if(branch_enable == 1 && stall != 1)
+		if(branch_enable == 1) begin
 			btb[pc_EX_MEM] <= br_address;
-		else if(jmp_enable == 1 && jsr_enable == 1 && stall != 1)
+			btb_update <= 1'b1;
+		end
+		else if(jmp_enable == 1 && jsr_enable == 1) begin
 			btb[pc_EX_MEM] <= jsr_address;
-		else if(jmp_enable == 1 && jsr_enable == 0 && stall != 1)
+			btb_update <= 1'b1;
+		end
+		else if(jmp_enable == 1 && jsr_enable == 0) begin
 			btb[pc_EX_MEM] <= jmp_address;
-		else if(trap_enable == 1 && stall != 1)
+			btb_update <= 1'b1;
+		end
+		else if(trap_enable == 1) begin
 			btb[pc_EX_MEM] <= trap_address;
+			btb_update <= 1'b1;
+		end
 	end
+	else
+		btb_update <= 0;
 end
 
 always_ff @(posedge clk)

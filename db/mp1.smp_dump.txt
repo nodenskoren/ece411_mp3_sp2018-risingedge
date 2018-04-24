@@ -1,5 +1,14 @@
 
-State Machine - |mp3_top|l2cache:l2cache|cache_control:cache_controller|state
+State Machine - |mp3_top|evict_buffer:evict_buffer|state
+Name state.stall2 state.wait_for_load state.stall state.write_back state.load_line state.idle 
+state.idle 0 0 0 0 0 0 
+state.load_line 0 0 0 0 1 1 
+state.write_back 0 0 0 1 0 1 
+state.stall 0 0 1 0 0 1 
+state.wait_for_load 0 1 0 0 0 1 
+state.stall2 1 0 0 0 0 1 
+
+State Machine - |mp3_top|l2cache4way:l2cache4way|cache_control4way:cache_controller4way|state
 Name state.load_line state.stall state.write_back state.idle state.update_cache 
 state.idle 0 0 0 0 0 
 state.write_back 0 0 1 1 0 
@@ -7,13 +16,18 @@ state.stall 0 1 0 1 0
 state.load_line 1 0 0 1 0 
 state.update_cache 0 0 0 1 1 
 
-State Machine - |mp3_top|wb_interconnect:interconnect|cache:Dcache|cache_control:cache_controller|state
-Name state.load_line state.stall state.write_back state.idle state.update_cache 
-state.idle 0 0 0 0 0 
-state.write_back 0 0 1 1 0 
-state.stall 0 1 0 1 0 
-state.load_line 1 0 0 1 0 
-state.update_cache 0 0 0 1 1 
+State Machine - |mp3_top|wb_interconnect:interconnect|cache_prefetch:Dcache|cache_control_prefetch:cache_controller|state
+Name state.update_cache_prefetch state.load_line_prefetch state.stall_prefetch state.wb_prefetch state.idle_prefetch state.update_cache state.load_line state.stall state.write_back state.idle 
+state.idle 0 0 0 0 0 0 0 0 0 0 
+state.write_back 0 0 0 0 0 0 0 0 1 1 
+state.stall 0 0 0 0 0 0 0 1 0 1 
+state.load_line 0 0 0 0 0 0 1 0 0 1 
+state.update_cache 0 0 0 0 0 1 0 0 0 1 
+state.idle_prefetch 0 0 0 0 1 0 0 0 0 1 
+state.wb_prefetch 0 0 0 1 0 0 0 0 0 1 
+state.stall_prefetch 0 0 1 0 0 0 0 0 0 1 
+state.load_line_prefetch 0 1 0 0 0 0 0 0 0 1 
+state.update_cache_prefetch 1 0 0 0 0 0 0 0 0 1 
 
 State Machine - |mp3_top|wb_interconnect:interconnect|cache:Icache|cache_control:cache_controller|state
 Name state.load_line state.stall state.write_back state.idle state.update_cache 

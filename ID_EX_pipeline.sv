@@ -51,6 +51,7 @@ module ID_EX_pipeline
 	output logic branch_prediction_out,
 	input lc3b_word branch_address_in,
 	output lc3b_word branch_address_out	
+	
 );
 
 lc3b_control_word ctrl;
@@ -75,6 +76,7 @@ lc3b_word sext5_;
 logic [7:0] branch_history;
 logic branch_prediction;
 lc3b_word branch_address;
+
 
 always_ff @(posedge clk)
 begin
@@ -101,6 +103,7 @@ begin
 		branch_history <= branch_history_in;
 		branch_prediction <= branch_prediction_in;
 		branch_address <= branch_address_in;		
+
 	end	
 end
 
@@ -128,5 +131,6 @@ begin
 	branch_history_out = branch_history;
 	branch_prediction_out = branch_prediction;
 	branch_address_out = branch_address;	
+
 end
 endmodule : ID_EX_pipeline

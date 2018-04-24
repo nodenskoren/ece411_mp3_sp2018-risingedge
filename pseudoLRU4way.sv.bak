@@ -1,0 +1,34 @@
+import lc3b_types::*;
+
+module pseudoLRU4way #(parameter width = 16)
+(
+	input clk,
+	input load,
+	input lc3b_c_index index,
+	
+	
+);
+
+
+always_comb
+begin
+	/*case(sel)
+		2'b00:
+			f = a;
+		2'b01:
+			f = b;
+		2'b10:
+			f = c;
+		2'b11:
+			f = d;
+		default: /* nothing */;
+	//endcase
+	if (hit3) f = d;
+	else if (hit2) f = c;
+	else if (hit1) f = b;
+	else if (hit0) f = a;
+	else f = 16'hZZZZ;
+	
+end
+	
+endmodule : pseudoLRU4way

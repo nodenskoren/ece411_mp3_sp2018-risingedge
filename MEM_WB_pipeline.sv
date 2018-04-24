@@ -25,6 +25,7 @@ module MEM_WB_pipeline
 	output lc3b_word instruction_out,
 	input lc3b_word pc_in,
 	output lc3b_word pc_out
+	
 );
 
 lc3b_reg dest;
@@ -50,6 +51,7 @@ begin
 		operation <= operation_in;
 		instruction <= instruction_in;
 		pc <= pc_in;
+
 	end
 end
 
@@ -65,5 +67,6 @@ begin
 	operation_out = operation;	
 	instruction_out = instruction;
 	pc_out = pc;
+
 end
 endmodule : MEM_WB_pipeline

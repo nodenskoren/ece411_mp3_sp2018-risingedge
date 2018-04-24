@@ -12,6 +12,8 @@ entity always_branch is
         branch_prediction: out    vl_logic;
         branch_prediction_address: out    vl_logic_vector(15 downto 0);
         branch_history_out: out    vl_logic_vector(7 downto 0);
+        prediction_made : out    vl_logic;
+        btb_access      : out    vl_logic;
         pc_EX_MEM       : in     vl_logic_vector(7 downto 0);
         branch_history_EX_MEM: in     vl_logic_vector(7 downto 0);
         br_address      : in     vl_logic_vector(15 downto 0);
@@ -22,6 +24,7 @@ entity always_branch is
         jmp_enable      : in     vl_logic;
         trap_enable     : in     vl_logic;
         jsr_enable      : in     vl_logic;
-        branched        : in     vl_logic
+        branched        : in     vl_logic;
+        flushed         : in     vl_logic
     );
 end always_branch;

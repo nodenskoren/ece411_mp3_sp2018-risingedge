@@ -51,7 +51,7 @@ cache Icache
 
 
 
-cache Dcache
+cache_prefetch Dcache
 (
 	.wb_cpu(memory),
 	.mem_dats(wb_l2.DAT_S),

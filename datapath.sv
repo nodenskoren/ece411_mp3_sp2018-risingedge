@@ -38,6 +38,7 @@ lc3b_word alu_out_out_EX_MEM;
 lc3b_word instruction_out_ID_EX;
 lc3b_word instruction_out_EX_MEM;
 
+
 /* PC */
 lc3b_word pc;
 lc3b_word pc_plus2_out;
@@ -55,13 +56,13 @@ plus2 pc_plus2
 	.out(pc_plus2_out)
 );
 
-logic [9:0] btb_index;
+logic [7:0] btb_index;
 lc3b_word branch_prediction_out;
-logic [9:0] branch_history_out;
+logic [7:0] branch_history_out;
 logic branch_prediction;
 lc3b_word branch_address_out;
 lc3b_word pc_out_EX_MEM;
-logic [9:0] branch_history_out_EX_MEM;
+logic [7:0] branch_history_out_EX_MEM;
 lc3b_word branch_address_out_EX_MEM;
 logic branch_prediction_out_EX_MEM;
 lc3b_word instruction;
@@ -81,14 +82,19 @@ plus2 pc_plus2_EX_MEM
 
 logic always_branch_out;
 lc3b_word ifetch_word_out;
+
+
 lc3b_word addr_adder_out_out_EX_MEM;
+
+logic prediction_made;
 lc3b_word branch_prediction_address;
 logic [7:0] branch_history;
-logic prediction_made;
+logic btb_access;
+logic flushed_out_3;
 always_branch always_branch
 (
 	.clk,
-	.pc(pc[8:1]),
+	.pc(pc_plus2_out[8:1]),
 	.instruction(lc3b_opcode'(ifetch_word_out[15:12])),
 	.full_instruction(ifetch_word_out),
 	.stall(stall_pipeline),
@@ -106,9 +112,12 @@ always_branch always_branch
 	.trap_enable(trap_enable),
 	.jsr_enable(jsr_enable),
 	.branched(jsr_enable || trap_enable || jump_enable || branch_enable_out),
-	.instruction_EX_MEM(lc3b_opcode'(instruction_out_EX_MEM)),
+	.instruction_EX_MEM(lc3b_opcode'(instruction_out_EX_MEM[15:12])),
 	.branch_history_EX_MEM(branch_history_out_EX_MEM),
-	.prediction_made(prediction_made)
+	.prediction_made(prediction_made),
+	.btb_access(btb_access),
+	.flushed(flushed_out_3)
+	
 );
 
 mux2 #(.width(16)) branch_prediction_mux
@@ -126,13 +135,14 @@ mux2 #(.width(16)) branch_prediction_mux
 // br = jsr = addr_adder_out_out_EX_MEM
 // jmp = jsrr = alu_out_out_EX_MEM
 logic [3:0] pcmux_sel;
-logic flushed_out_3;
 logic prediction_fail;
 logic btb_fail;
+
 assign pcmux_sel = {jsr_enable, jump_enable, branch_enable_out, trap_enable};
 mux_decode_sel pcmux
 (
 	.sel(pcmux_sel),
+	//.a(pc_plus2_out),
 	.a(branch_prediction_out),
 	.b(addr_adder_out_out_EX_MEM),
 	.c(alu_out_out_EX_MEM),
@@ -142,13 +152,14 @@ mux_decode_sel pcmux
 	.prediction_fail(prediction_fail),
 	.f(pcmux_out)
 );
-
+logic pht_fail_clear;
+logic prediction_count_clear;
 logic [15:0] pht_fail_counter_out;
 pht_counter pht_fail_counter
 (
 	.clk,
 	.increment_count(prediction_fail),
-	.clear(1'b0),
+	.clear(pht_fail_clear),
 	.count_out(pht_fail_counter_out)
 );
 
@@ -157,9 +168,29 @@ pht_counter prediction_made_counter
 (
 	.clk,
 	.increment_count(prediction_made),
-	.clear(1'b0),
+	.clear(prediction_count_clear),
 	.count_out(prediction_made_counter_out)
 );
+
+logic [15:0] btb_fail_counter_out;
+pht_counter btb_fail_counter
+(
+	.clk,
+	.increment_count(!btb_fail),
+	.clear(prediction_count_clear),
+	.count_out(btb_fail_counter_out)
+);
+
+logic [15:0] btb_access_counter_out;
+pht_counter btb_access_counter
+(
+	.clk,
+	.increment_count(btb_access),
+	.clear(prediction_count_clear),
+	.count_out(btb_access_counter_out)
+);
+
+
 
 register program_counter
 (
@@ -171,6 +202,7 @@ register program_counter
 assign ifetch_address = pc[15:4];
 assign ifetch_read = 1'b1;
 
+//lc3b_word ifetch_word_out;
 line_to_word ifetch_line_to_word
 (
 	.in(ifetch_rdata),
@@ -179,10 +211,12 @@ line_to_word ifetch_line_to_word
 );
 
 // >>>>> IF/ID PIPELINE <<<<< //
-logic [9:0] branch_history_out_IF_ID;
+//lc3b_word instruction;
+logic [7:0] branch_history_out_IF_ID;
 logic branch_prediction_out_IF_ID;
 lc3b_word branch_address_out_IF_ID;
 lc3b_word pc_out_IF_ID;
+
 IF_ID_pipeline IF_ID_pipeline
 (
 	.clk,
@@ -197,6 +231,7 @@ IF_ID_pipeline IF_ID_pipeline
 	.branch_address_out(branch_address_out_IF_ID),
 	.pc_in(pc_plus2_out),
 	.pc_out(pc_out_IF_ID)
+
 );
 // >>>>> IF/ID PIPELINE <<<<< //
 assign imm_mode = instruction[5];
@@ -212,6 +247,7 @@ lc3b_word sr_out;
 lc3b_word regfilemux_out_MEM_WB;
 logic load_regfile;
 lc3b_opcode operation_out_EX_MEM;
+//logic flushed_out_3;
 stall_unit_2 stall_unit_2
 (
 	.clk,
@@ -347,9 +383,10 @@ lc3b_opcode operation_out_ID_EX;
 logic imm_mode_out;
 logic sr2mux_sel_out;
 lc3b_word sext5_out_out;
-logic [9:0] branch_history_out_ID_EX;
+logic [7:0] branch_history_out_ID_EX;
 logic branch_prediction_out_ID_EX;
 lc3b_word branch_address_out_ID_EX;
+
 ID_EX_pipeline ID_EX_pipeline
 (
 	.clk,
@@ -360,6 +397,7 @@ ID_EX_pipeline ID_EX_pipeline
 	.branch_offset_in(offset_out),
 	.nzp_in(instruction[11:9]),
 	.dest_in(destmux_out),
+	//.pc_in(pc),
 	.pc_in(pc_out_IF_ID),
 	.dest_data_in(sr_out),
 	.trapvector_in(shifted_trapvector_in),
@@ -399,7 +437,8 @@ ID_EX_pipeline ID_EX_pipeline
 	.branch_prediction_in(branch_prediction_out_IF_ID),
 	.branch_prediction_out(branch_prediction_out_ID_EX),
 	.branch_address_in(branch_address_out_IF_ID),
-	.branch_address_out(branch_address_out_ID_EX)	
+	.branch_address_out(branch_address_out_ID_EX)
+
 );
 // >>>>> ID/EX PIPELINE <<<<< //
 
@@ -546,12 +585,17 @@ assign is_ldi_ID_EX = ctrl_out_ID_EX.is_ldi;
 assign is_sti_ID_EX = ctrl_out_ID_EX.is_sti;
 
 // >>>>> EX/MEM PIPELINE <<<<< //
+//lc3b_word pc_out_EX_MEM;
 lc3b_nzp nzp_out_EX_MEM;
+//logic is_br_out_EX_MEM;
 logic load_cc_EX_MEM;
 logic mem_read_EX_MEM;
 logic mem_write_EX_MEM;
 logic [2:0] regfilemux_sel_EX_MEM;
 lc3b_word dest_data_out_EX_MEM;
+//logic is_j_out_EX_MEM;
+//logic is_jsr_out_EX_MEM;
+//logic is_trap_out_EX_MEM;
 
 lc3b_word trapvector_out_EX_MEM;
 logic [1:0] addr_sel_EX_MEM;
@@ -620,6 +664,7 @@ EX_MEM_pipeline EX_MEM_pipeline
 	.branch_prediction_out(branch_prediction_out_EX_MEM),
 	.branch_address_in(branch_address_out_ID_EX),
 	.branch_address_out(branch_address_out_EX_MEM)		
+
 );
 // >>>>> EX/MEM PIPELINE <<<<< //
 lc3b_wb_adr mem_address_mux_out;
@@ -782,7 +827,7 @@ static_branch_prediction flush
 	.is_jsr_out(jsr_enable),
 	.is_trap_in(is_trap_out_EX_MEM),
 	.is_trap_out(trap_enable),
-
+	
 	.br_address(addr_adder_out_out_EX_MEM),
 	.jsr_address(addr_adder_out_out_EX_MEM),
 	.jmp_address(alu_out_out_EX_MEM),
@@ -792,7 +837,7 @@ static_branch_prediction flush
 	.prediction_fail(prediction_fail),
 	.instruction(instruction_out_EX_MEM),
 	.btb_fail(btb_fail),
-	
+
 	.flushed(flushed_out_3)
 );
 
@@ -821,8 +866,8 @@ counter_decoder counter_decoder
 	.clear_counter(clear_counter_out),
 	.offset(line_offset),
 	.c0(c0_clear),
-	.c1(),
-	.c2(),
+	.c1(pht_fail_clear),
+	.c2(prediction_count_clear),
 	.c3(), .c4(), .c5(),.c6(),.c7(),.c8(),.c9(),.c10(c10_clear),.c11(c11_clear),.c12(c12_clear),.c13(c13_clear),.c14(c14_clear),.c15(c15_clear)
 );
 
@@ -830,6 +875,8 @@ mux16 counter_value_mux
 (
 	.sel(line_offset),
 	.a(c0_out),
+	.b(pht_fail_counter_out),
+	.c(prediction_made_counter_out),
 	
 	.k(c10_out),
 	.l(c11_out),
@@ -863,6 +910,7 @@ MEM_WB_pipeline MEM_WB_pipeline
 	.instruction_out(instruction_out_MEM_WB),
 	.pc_in(pc_out_EX_MEM),
 	.pc_out(pc_out_MEM_WB)
+
 );
 // >>>>> MEM/WB PIPELINE <<<<< //
 
